@@ -1,0 +1,8 @@
+{
+  "best_supervised_model": "Logistic Regression",
+  "best_supervised_macro_f1": 0.6489785490629414,
+  "best_supervised_accuracy": 0.7201172755976545,
+  "vader_baseline_accuracy": 0.64675,
+  "n_train": 17734,
+  "n_test": 4434
+}
