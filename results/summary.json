@@ -1,8 +1,17 @@
 {
-  "best_supervised_model": "Logistic Regression",
-  "best_supervised_macro_f1": 0.6489785490629414,
-  "best_supervised_accuracy": 0.7201172755976545,
-  "vader_baseline_accuracy": 0.64675,
-  "n_train": 17734,
-  "n_test": 4434
+    "best_supervised_model": "Logistic Regression",
+    "best_supervised_accuracy": 0.740500670540903,
+    "best_supervised_macro_precision": 0.6710505217526728,
+    "best_supervised_macro_recall": 0.6780401339050628,
+    "best_supervised_macro_f1": 0.670113058974653,
+    "vader_accuracy": 0.643375,
+    "vader_macro_precision": 0.5752447066782941,
+    "vader_macro_recall": 0.5627637259121654,
+    "vader_macro_f1": 0.5626849087977717,
+    "n_total": 22366,
+    "n_train": 17892,
+    "n_test": 4474,
+    "tfidf_features": 20000,
+    "test_size": 0.2,
+    "random_state": 42
 }
