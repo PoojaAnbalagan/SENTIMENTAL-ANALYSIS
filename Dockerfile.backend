@@ -1,0 +1,81 @@
+# =============================================================================
+# Backend Dockerfile — McDonald's Sentiment Analysis Platform
+# =============================================================================
+# Production-ready FastAPI + Uvicorn image
+# Build context: repository root (run from project root)
+# Usage:
+#   docker build -f Dockerfile.backend -t sentiment-backend .
+#   docker run -p 8000:8000 sentiment-backend
+# =============================================================================
+
+# --- Base image: slim Python 3.11 for a small footprint ---
+FROM python:3.11-slim AS base
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
+
+# Create a non-root user for security
+RUN groupadd --gid 1001 appgroup && \
+    useradd --uid 1001 --gid appgroup --shell /bin/bash --create-home appuser
+
+# Set working directory
+WORKDIR /app
+
+# =============================================================================
+# Stage: dependency installation
+# =============================================================================
+FROM base AS deps
+
+# Install system-level build dependencies (needed for some Python packages)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    g++ \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy and install Python dependencies first (layer cache optimisation)
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# =============================================================================
+# Stage: final production image
+# =============================================================================
+FROM base AS production
+
+# Copy installed packages from deps stage
+COPY --from=deps /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
+COPY --from=deps /usr/local/bin /usr/local/bin
+
+# Copy application source code
+COPY server.py .
+
+# Copy ML model assets (required for inference)
+COPY models/ ./models/
+
+# Copy dataset (required for analytics endpoints)
+COPY data/ ./data/
+
+# Copy pre-computed results (required for model benchmark endpoint)
+COPY results/ ./results/
+
+# Copy static figures (served at /static/figures)
+COPY Figures/ ./Figures/
+
+# Fix ownership
+RUN chown -R appuser:appgroup /app
+
+# Switch to non-root user
+USER appuser
+
+# Expose the API port
+EXPOSE 8000
+
+# Health check — pings the /api/health endpoint every 30s
+HEALTHCHECK --interval=30s --timeout=10s --start-period=15s --retries=3 \
+    CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')" || exit 1
+
+# Production startup command
+# Workers: 1 by default for ML model memory safety (model loaded once per worker)
+CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1"]

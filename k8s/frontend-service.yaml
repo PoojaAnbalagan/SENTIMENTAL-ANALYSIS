@@ -1,0 +1,31 @@
+# =============================================================================
+# Kubernetes Frontend Service — ClusterIP
+# McDonald's Sentiment Analysis Platform
+# =============================================================================
+# Exposes the frontend Nginx pods internally.
+# The Ingress controller routes external HTTP traffic here.
+#
+# Apply: kubectl apply -f k8s/frontend-service.yaml -n sentiment-analysis
+# =============================================================================
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+  namespace: sentiment-analysis
+  labels:
+    app.kubernetes.io/name: sentiment-analysis
+    app.kubernetes.io/component: frontend
+    app: sentiment-frontend
+
+spec:
+  type: ClusterIP
+
+  selector:
+    app: sentiment-frontend
+
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80          # Service port (cluster-internal)
+      targetPort: 80    # Container port (Nginx listens on 80)

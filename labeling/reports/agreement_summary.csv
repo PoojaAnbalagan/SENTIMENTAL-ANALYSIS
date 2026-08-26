@@ -1,0 +1,16 @@
+metric,value
+items,1000.0
+full_agreement_rate,0.664
+mean_pairwise_observed_agreement,0.7696666666666667
+expected_chance_agreement,0.379606
+fleiss_kappa,0.6287305593972004
+all_three_different,19.0
+rating_vs_final_accuracy,0.789
+rating_vs_final_cohen_kappa,0.6543029453061384
+rating_vs_final_macro_f1,0.693624660259489
+annotation_proportion_Positive,0.402
+full_consensus_Positive,307.0
+annotation_proportion_Neutral,0.159
+full_consensus_Neutral,41.0
+annotation_proportion_Negative,0.439
+full_consensus_Negative,316.0

@@ -1,0 +1,139 @@
+# =============================================================================
+# Kubernetes Backend Deployment — FastAPI + Uvicorn
+# McDonald's Sentiment Analysis Platform
+# =============================================================================
+#
+# BEFORE APPLYING: Replace <YOUR_GITHUB_USERNAME> with your actual GitHub
+# username (lowercase). The image must already be pushed to GHCR.
+#
+# Apply: kubectl apply -f k8s/backend-deployment.yaml -n sentiment-analysis
+# =============================================================================
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  namespace: sentiment-analysis
+  labels:
+    app.kubernetes.io/name: sentiment-analysis
+    app.kubernetes.io/component: backend
+    app: sentiment-backend
+spec:
+  # 2 replicas for basic high availability
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: sentiment-backend
+
+  # ---------------------------------------------------------------------------
+  # Rolling update strategy — zero-downtime deployments
+  # maxSurge=1: allows 1 extra pod above desired count during update
+  # maxUnavailable=0: never take a pod down until a new one is healthy
+  # ---------------------------------------------------------------------------
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+
+  template:
+    metadata:
+      labels:
+        app: sentiment-backend
+        version: "2026.1"
+      annotations:
+        # Triggers rolling restart when ConfigMap content changes
+        configmap-hash: "{{ include (print $.Template.BasePath \"/configmap.yaml\") . | sha256sum }}"
+
+    spec:
+      # Graceful shutdown: wait 30s for in-flight requests to complete
+      terminationGracePeriodSeconds: 30
+
+      containers:
+        - name: backend
+          # ⚠️ Replace <YOUR_GITHUB_USERNAME> with your actual GitHub username
+          image: ghcr.io/<YOUR_GITHUB_USERNAME>/sentiment-backend:latest
+
+          imagePullPolicy: Always
+
+          ports:
+            - name: http
+              containerPort: 8000
+              protocol: TCP
+
+          # Load non-sensitive config from ConfigMap
+          envFrom:
+            - configMapRef:
+                name: sentiment-config
+
+          # Load sensitive config from Secret
+          env:
+            - name: SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: sentiment-secrets
+                  key: SECRET_KEY
+
+          # -----------------------------------------------------------------
+          # Resource requests and limits
+          # Requests: minimum guaranteed resources
+          # Limits:   maximum allowed (container killed if exceeded)
+          # -----------------------------------------------------------------
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "250m"
+            limits:
+              memory: "1Gi"
+              cpu: "1000m"
+
+          # -----------------------------------------------------------------
+          # Liveness probe: if this fails repeatedly, K8s restarts the pod
+          # Checks that FastAPI is actually responding
+          # -----------------------------------------------------------------
+          livenessProbe:
+            httpGet:
+              path: /api/health
+              port: 8000
+            initialDelaySeconds: 20   # Give time for model loading
+            periodSeconds: 30
+            timeoutSeconds: 10
+            failureThreshold: 3
+            successThreshold: 1
+
+          # -----------------------------------------------------------------
+          # Readiness probe: if this fails, pod is removed from Service
+          # endpoints (no traffic sent to it)
+          # -----------------------------------------------------------------
+          readinessProbe:
+            httpGet:
+              path: /api/health
+              port: 8000
+            initialDelaySeconds: 15   # Start checking after 15s
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+            successThreshold: 1
+
+          # -----------------------------------------------------------------
+          # Startup probe: gives extra time during initial cold start
+          # (model loading from disk can be slow on first boot)
+          # -----------------------------------------------------------------
+          startupProbe:
+            httpGet:
+              path: /api/health
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 5
+            timeoutSeconds: 5
+            failureThreshold: 12      # 12 * 5s = 60s max startup time
+
+      # Spread pods across nodes for fault tolerance
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels:
+              app: sentiment-backend

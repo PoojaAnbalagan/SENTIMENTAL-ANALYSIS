@@ -41,11 +41,16 @@ export function ModelPerformanceView({ modelsData }) {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-extrabold text-[var(--text-primary)]">Model Performance &amp; Evaluation Metrics</h2>
-        <p className="text-xs text-[var(--text-muted)]">
-          Comparative benchmarking of supervised ML algorithms vs. unsupervised VADER baseline.
-        </p>
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
+        <div>
+          <h2 className="text-xl font-extrabold text-[var(--text-primary)]">Model Performance &amp; Evaluation Metrics</h2>
+          <p className="text-xs text-[var(--text-muted)]">
+            Comparative benchmarking of supervised ML algorithms trained with balanced class weights vs. unsupervised VADER baseline.
+          </p>
+        </div>
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-[var(--positive-bg)] border border-[var(--positive-border)] text-[var(--positive)] text-[11px] font-bold self-start md:self-auto">
+          <span>Cost-Sensitive Balanced Weights Enabled</span>
+        </div>
       </div>
 
       {/* ── Benchmark Table ── */}

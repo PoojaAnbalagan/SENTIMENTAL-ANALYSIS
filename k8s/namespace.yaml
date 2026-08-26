@@ -1,0 +1,16 @@
+# =============================================================================
+# Kubernetes Namespace
+# McDonald's Sentiment Analysis Platform
+# =============================================================================
+# Creates an isolated namespace for all platform resources.
+# Apply first: kubectl apply -f k8s/namespace.yaml
+# =============================================================================
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: sentiment-analysis
+  labels:
+    app.kubernetes.io/name: sentiment-analysis
+    app.kubernetes.io/managed-by: kubectl
+    environment: production

@@ -1,0 +1,36 @@
+# =============================================================================
+# Kubernetes Backend Service — ClusterIP
+# McDonald's Sentiment Analysis Platform
+# =============================================================================
+# Exposes the backend pods internally within the cluster.
+# The frontend Nginx container and Ingress controller reach the backend
+# via this service name: "backend-service" on port 8000.
+#
+# Type: ClusterIP (internal only — not reachable from outside cluster)
+# External access is handled by the Ingress at ingress.yaml
+#
+# Apply: kubectl apply -f k8s/backend-service.yaml -n sentiment-analysis
+# =============================================================================
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+  namespace: sentiment-analysis
+  labels:
+    app.kubernetes.io/name: sentiment-analysis
+    app.kubernetes.io/component: backend
+    app: sentiment-backend
+
+spec:
+  type: ClusterIP
+
+  selector:
+    # Routes traffic to pods with this label
+    app: sentiment-backend
+
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8000        # Service port (cluster-internal)
+      targetPort: 8000  # Container port (matches containerPort in Deployment)

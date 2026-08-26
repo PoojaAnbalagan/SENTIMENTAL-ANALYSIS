@@ -1,0 +1,100 @@
+# =============================================================================
+# Docker Compose — McDonald's Sentiment Analysis Platform
+# =============================================================================
+# Production-ready multi-service compose file
+#
+# Usage:
+#   docker compose up --build          # Build and start all services
+#   docker compose up -d               # Start detached (background)
+#   docker compose logs -f             # Follow logs
+#   docker compose down                # Stop and remove containers
+#   docker compose down -v             # Stop, remove containers AND volumes
+#
+# After startup, open: http://localhost
+# API docs available at: http://localhost/api/docs (via Nginx proxy)
+# =============================================================================
+
+version: "3.9"
+
+services:
+
+  # ---------------------------------------------------------------------------
+  # Backend — FastAPI + Uvicorn
+  # ---------------------------------------------------------------------------
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    image: sentiment-backend:local
+    container_name: sentiment-backend
+    restart: unless-stopped
+
+    # Expose backend on host port 8000 for direct API access during development
+    # In production, remove this and access backend only through frontend/Nginx
+    ports:
+      - "8000:8000"
+
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONDONTWRITEBYTECODE=1
+      # Log level for uvicorn (info | warning | error)
+      - LOG_LEVEL=info
+
+    # Health check — used by Docker and depends_on condition
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+    networks:
+      - sentiment-net
+
+    # Prevent the container from being killed by OOM killer for ML workloads
+    deploy:
+      resources:
+        limits:
+          memory: 1g
+        reservations:
+          memory: 512m
+
+  # ---------------------------------------------------------------------------
+  # Frontend — React (built by Vite) served by Nginx
+  # ---------------------------------------------------------------------------
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: sentiment-frontend:local
+    container_name: sentiment-frontend
+    restart: unless-stopped
+
+    # Expose frontend on port 80 (HTTP)
+    ports:
+      - "80:80"
+
+    # Wait for backend to be healthy before starting
+    depends_on:
+      backend:
+        condition: service_healthy
+
+    # Health check on Nginx /health endpoint
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+    networks:
+      - sentiment-net
+
+# =============================================================================
+# Networks
+# =============================================================================
+networks:
+  sentiment-net:
+    driver: bridge
+    name: sentiment-net

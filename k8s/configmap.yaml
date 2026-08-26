@@ -1,0 +1,41 @@
+# =============================================================================
+# Kubernetes ConfigMap — Non-sensitive Configuration
+# McDonald's Sentiment Analysis Platform
+# =============================================================================
+# Stores environment variables that are safe to commit to git.
+# For sensitive values (passwords, API keys), use secret.yaml instead.
+#
+# Apply: kubectl apply -f k8s/configmap.yaml -n sentiment-analysis
+# =============================================================================
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sentiment-config
+  namespace: sentiment-analysis
+  labels:
+    app.kubernetes.io/name: sentiment-analysis
+    app.kubernetes.io/component: config
+
+data:
+  # ---------------------------------------------------------------------------
+  # Backend (FastAPI / Uvicorn) settings
+  # ---------------------------------------------------------------------------
+  PYTHONUNBUFFERED: "1"
+  PYTHONDONTWRITEBYTECODE: "1"
+  LOG_LEVEL: "info"
+
+  # Number of uvicorn workers
+  # Keep at 1 for ML models (each worker loads the full model into memory)
+  UVICORN_WORKERS: "1"
+
+  # Uvicorn host and port (must match container port and Service port)
+  UVICORN_HOST: "0.0.0.0"
+  UVICORN_PORT: "8000"
+
+  # ---------------------------------------------------------------------------
+  # Application metadata
+  # ---------------------------------------------------------------------------
+  APP_NAME: "McDonald's Sentiment Analysis Platform"
+  APP_VERSION: "2026.1"
+  ENVIRONMENT: "production"

@@ -1,0 +1,43 @@
+# =============================================================================
+# Docker Compose Override — Development Convenience
+# =============================================================================
+# This file is automatically merged with docker-compose.yml by Docker Compose
+# when you run: docker compose up
+#
+# It mounts local source code for hot-reload during development.
+# Do NOT use this file in production — it overrides the baked-in image code.
+#
+# Usage:
+#   docker compose up                     # Uses both files (auto-merged)
+#   docker compose -f docker-compose.yml up  # Production only (no override)
+# =============================================================================
+
+version: "3.9"
+
+services:
+
+  # ---------------------------------------------------------------------------
+  # Backend — mount source for live reload
+  # ---------------------------------------------------------------------------
+  backend:
+    # Override CMD to enable Uvicorn auto-reload in development
+    command: ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+
+    volumes:
+      # Mount server.py for live code changes without rebuild
+      - ./server.py:/app/server.py:ro
+      # Mount results so you can update model outputs without rebuild
+      - ./results:/app/results:ro
+
+    environment:
+      - LOG_LEVEL=debug
+
+  # ---------------------------------------------------------------------------
+  # Frontend — note: Nginx serves a compiled build, so hot-reload isn't possible
+  # For true hot-reload, run the frontend with: npm run dev (outside Docker)
+  # ---------------------------------------------------------------------------
+  frontend:
+    # No volume mount needed — Nginx serves the compiled build
+    # For frontend development, prefer running: cd frontend && npm run dev
+    environment:
+      - NGINX_ENTRYPOINT_QUIET_LOGS=1

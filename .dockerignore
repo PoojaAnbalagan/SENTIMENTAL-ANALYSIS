@@ -1,0 +1,59 @@
+# =============================================================================
+# Root .dockerignore — applies to Dockerfile.backend
+# Excludes files not needed inside the backend Docker image
+# =============================================================================
+
+# Frontend application (not needed in backend image)
+frontend/
+
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# Git history
+.git/
+.gitignore
+
+# Node artifacts
+node_modules/
+
+# Jupyter notebooks (not needed at runtime)
+notebooks/
+
+# Test files (not in production image)
+tests/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Documentation and reports
+*.pdf
+*.docx
+README.md
+
+# Docker files (don't need to copy Dockerfiles into the image)
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Kubernetes manifests
+k8s/
+
+# GitHub Actions
+.github/
+
+# Labeling scripts (not needed at runtime)
+labeling/
+generate_pipeline_pdf.py
+
+# CI artifacts
+.pytest_cache/
+htmlcov/
+.coverage

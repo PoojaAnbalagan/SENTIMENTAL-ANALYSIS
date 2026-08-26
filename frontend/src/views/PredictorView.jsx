@@ -102,7 +102,7 @@ export function PredictorView() {
     'Custom Review Text': '',
     'Negative Review (Slow & Cold)': 'The drive-thru was extremely slow, took over 25 minutes! The fries were cold, soggy, and un-salted. Terrible customer service.',
     'Positive Review (Fast & Fresh)': 'Amazing experience! The staff was super friendly, order was accurate, and the burger was fresh and delicious. Quick service!',
-    'Neutral Review (Standard Visit)': 'It was okay. Ordered a coffee and a donut. Nothing special, average waiting time.'
+    'Neutral Review (Standard Visit)': 'It was an average visit. The food was okay and the service was standard for fast food. Neither good nor bad.'
   };
 
   const [preset, setPreset] = useState('Custom Review Text');
@@ -261,18 +261,29 @@ export function PredictorView() {
               {/* Key Token Contributions */}
               {result.contributions && result.contributions.length > 0 && (
                 <div className="space-y-2 pt-2 border-t border-[var(--border)]">
-                  <h4 className="text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider">Key Contributing Terms</h4>
+                  <div className="flex items-center justify-between">
+                    <h4 className="text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider">
+                      Key Influential Terms for {result.predicted_sentiment}
+                    </h4>
+                    <span className="text-[10px] text-[var(--text-muted)] font-semibold">
+                      Model Feature Weight
+                    </span>
+                  </div>
                   <div className="flex flex-wrap gap-1.5">
                     {result.contributions.map((c, i) => {
-                      const isPos = c.score > 0;
+                      const badgeClass =
+                        result.predicted_sentiment === 'Positive'
+                          ? 'bg-[var(--positive-bg)] border-[var(--positive-border)] text-[var(--positive)]'
+                          : result.predicted_sentiment === 'Neutral'
+                          ? 'bg-[var(--neutral-bg)] border-[var(--neutral-border)] text-[var(--neutral)]'
+                          : 'bg-[var(--negative-bg)] border-[var(--negative-border)] text-[var(--negative)]';
+
                       return (
                         <span
                           key={i}
-                          className={`text-xs font-bold px-2.5 py-1 rounded-lg border ${
-                            isPos ? 'bg-[var(--positive-bg)] border-[var(--positive-border)] text-[var(--positive)]' : 'bg-[var(--negative-bg)] border-[var(--negative-border)] text-[var(--negative)]'
-                          }`}
+                          className={`text-xs font-bold px-2.5 py-1 rounded-lg border ${badgeClass}`}
                         >
-                          {c.word} ({isPos ? '+' : ''}{c.score.toFixed(2)})
+                          {c.word} ({c.score > 0 ? '+' : ''}{c.score.toFixed(2)})
                         </span>
                       );
                     })}

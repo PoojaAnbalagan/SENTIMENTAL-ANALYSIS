@@ -1,0 +1,12 @@
+{
+  "approved": true,
+  "strategy": "rating_proxy_with_limitations",
+  "acknowledged_limitations": true,
+  "decision_date": "2026-08-24",
+  "reviewed_by": "Project team",
+  "pilot_fleiss_kappa": 0.6287,
+  "rating_vs_final_accuracy": 0.789,
+  "rating_vs_final_cohen_kappa": 0.6543,
+  "rating_vs_final_macro_f1": 0.6936,
+  "rationale": "Manual annotation of the remaining corpus is not feasible within the capstone scope. The rating mapping is retained as a weak, rating-derived proxy. The 1,000 pilot records retain their resolved human final_sentiment labels; all remaining records are marked rating_derived. Results and limitations, especially weak Neutral-class alignment, must be reported. Rating must not be used as an ML input feature."
+}

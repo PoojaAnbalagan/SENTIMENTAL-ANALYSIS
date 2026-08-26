@@ -103,12 +103,12 @@ export function OverviewView({ analytics, metrics }) {
             </div>
 
             <div className="flex justify-between items-center pb-2 border-b border-[var(--border)]">
-              <span className="font-semibold text-[var(--text-primary)]">Vocabulary Size</span>
-              <span className="font-extrabold text-[var(--text-secondary)]">{vocabSize} n-gram features</span>
+              <span className="font-semibold text-[var(--text-primary)]">Class Balance Strategy</span>
+              <span className="font-extrabold text-[var(--accent)] text-xs">Stratified + Weighted Loss</span>
             </div>
 
             <div className="flex justify-between items-center">
-              <span className="font-semibold text-[var(--text-primary)]">Primary Complaint Categories</span>
+              <span className="font-semibold text-[var(--text-primary)]">Primary Complaint Drivers</span>
               <span className="font-extrabold text-[var(--negative)]">Drive-thru delay, Cold food</span>
             </div>
           </div>

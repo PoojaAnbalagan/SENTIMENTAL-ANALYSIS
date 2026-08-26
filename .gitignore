@@ -1,0 +1,110 @@
+# =============================================================================
+# McDonald's Sentiment Analysis Platform — Root .gitignore
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Python
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.env
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+
+# mypy / type checkers
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# -----------------------------------------------------------------------------
+# Node / Frontend
+# -----------------------------------------------------------------------------
+node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.cache/
+*.local
+
+# npm / yarn logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# -----------------------------------------------------------------------------
+# Docker
+# -----------------------------------------------------------------------------
+# Don't ignore Dockerfiles themselves — they must be committed
+# Ignore any local docker override files with credentials
+docker-compose.local.yml
+.docker/
+
+# -----------------------------------------------------------------------------
+# Kubernetes
+# -----------------------------------------------------------------------------
+# Never commit real secrets — keep secret.yaml as a template only
+# If you have a filled-in secrets file, put it here:
+k8s/secret.filled.yaml
+kubeconfig
+*.kubeconfig
+
+# -----------------------------------------------------------------------------
+# IDE / Editor
+# -----------------------------------------------------------------------------
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+
+# -----------------------------------------------------------------------------
+# OS
+# -----------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# -----------------------------------------------------------------------------
+# Project-specific — keep data & model files tracked (needed for Docker build)
+# Exclude very large raw datasets if needed
+# -----------------------------------------------------------------------------
+# Uncomment below if you do NOT want to track raw data in git:
+# data/DATASET.csv
+# data/*.csv
+# models/*.pkl
+
+# Exclude generated PDFs and Word docs (not needed in CI)
+*.pdf
+*.docx
+
+# Exclude generated report scripts
+generate_pipeline_pdf.py

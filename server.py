@@ -43,7 +43,9 @@ if os.path.exists(figures_dir):
 # -----------------------------------------------------------------------------
 MODEL_PATH = os.path.join("models", "best_sentiment_model.pkl")
 VECTORIZER_PATH = os.path.join("models", "tfidf_vectorizer.pkl")
-CSV_PATH = os.path.join("data", "cleaned_reviews.csv")
+CSV_PATH = os.path.join("data", "final_pseudo_labeled_dataset.csv")
+if not os.path.exists(CSV_PATH):
+    CSV_PATH = os.path.join("data", "cleaned_reviews.csv")
 SUMMARY_PATH = os.path.join("results", "summary.json")
 RESULTS_PATH = os.path.join("results", "model_results.csv")
 
@@ -56,10 +58,18 @@ model_results = []
 def load_ml_assets():
     global model, vectorizer
     try:
-        if os.path.exists(MODEL_PATH) and os.path.exists(VECTORIZER_PATH):
-            model = joblib.load(MODEL_PATH)
+        if os.path.exists(MODEL_PATH):
+            loaded = joblib.load(MODEL_PATH)
+            if isinstance(loaded, dict) and "classifier" in loaded:
+                model = loaded["classifier"]
+                if "vectorizer" in loaded:
+                    vectorizer = loaded["vectorizer"]
+            else:
+                model = loaded
+
+        if vectorizer is None and os.path.exists(VECTORIZER_PATH):
             vectorizer = joblib.load(VECTORIZER_PATH)
-            print("Successfully loaded pre-trained model & TF-IDF vectorizer.")
+        print("Successfully loaded pre-trained model & TF-IDF vectorizer.")
     except Exception as e:
         print(f"Warning: Failed to load ML assets: {e}")
 
@@ -68,12 +78,22 @@ def load_dataset():
     if os.path.exists(CSV_PATH):
         try:
             df_reviews = pd.read_csv(CSV_PATH)
+            # Standardize column aliases across schemas
+            if "review" in df_reviews.columns and "review_clean" not in df_reviews.columns:
+                df_reviews["review_clean"] = df_reviews["review"]
+            if "rating" in df_reviews.columns and "rating_num" not in df_reviews.columns:
+                df_reviews["rating_num"] = df_reviews["rating"]
+            if "review_id" in df_reviews.columns and "reviewer_id" not in df_reviews.columns:
+                df_reviews["reviewer_id"] = df_reviews["review_id"]
+            if "is_autotag" not in df_reviews.columns:
+                df_reviews["is_autotag"] = False
+
             anchor_date = pd.to_datetime("2023-06-01")
             if "days_ago" in df_reviews.columns:
                 df_reviews["derived_date"] = anchor_date - pd.to_timedelta(df_reviews["days_ago"].fillna(0), unit="D")
             else:
                 df_reviews["derived_date"] = anchor_date
-            print(f"Successfully loaded dataset with {len(df_reviews):,} reviews.")
+            print(f"Successfully loaded dataset from {CSV_PATH} with {len(df_reviews):,} reviews.")
         except Exception as e:
             print(f"Error loading CSV dataset: {e}")
 
@@ -219,10 +239,23 @@ def predict_sentiment(req: PredictRequest):
 
     clean_t = preprocess_text(req.text)
     x_vec = vectorizer.transform([clean_t])
-    pred_class = model.predict(x_vec)[0]
-    proba_arr = model.predict_proba(x_vec)[0]
-    proba_dict = {c: float(p) for c, p in zip(model.classes_, proba_arr)}
-    conf_pct = float(proba_dict[pred_class] * 100)
+    pred_class = str(model.predict(x_vec)[0])
+
+    if hasattr(model, "predict_proba"):
+        proba_arr = model.predict_proba(x_vec)[0]
+    elif hasattr(model, "decision_function"):
+        decision = model.decision_function(x_vec)[0]
+        if np.isscalar(decision) or decision.ndim == 0 or len(model.classes_) == 2:
+            prob_pos = 1.0 / (1.0 + np.exp(-decision))
+            proba_arr = np.array([1.0 - prob_pos, prob_pos])
+        else:
+            exp_scores = np.exp(decision - np.max(decision))
+            proba_arr = exp_scores / np.sum(exp_scores)
+    else:
+        proba_arr = np.array([1.0 if c == pred_class else 0.0 for c in model.classes_])
+
+    proba_dict = {str(c): float(p) for c, p in zip(model.classes_, proba_arr)}
+    conf_pct = float(proba_dict.get(pred_class, 1.0) * 100)
 
     contribs = get_token_contributions(req.text, pred_class)
 
@@ -263,7 +296,10 @@ def get_reviews(
     start_idx = (page - 1) * pageSize
     end_idx = start_idx + pageSize
 
-    cols = ["reviewer_id", "store_name", "store_address", "rating_num", "sentiment", "review_clean", "derived_date"]
+    cols = [
+        "reviewer_id", "review_id", "store_name", "store_address", "rating_num", "rating",
+        "sentiment", "review_clean", "review", "derived_date", "label_source", "prediction_confidence", "split_role"
+    ]
     available_cols = [c for c in cols if c in filtered.columns]
     
     subset = filtered[available_cols].iloc[start_idx:end_idx].copy()

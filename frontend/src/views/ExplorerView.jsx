@@ -191,6 +191,26 @@ export function ExplorerView({ filters }) {
                     {selectedReview.sentiment}
                   </span>
                 </div>
+                {selectedReview.label_source && (
+                  <div className="flex justify-between items-center font-bold">
+                    <span className="text-[var(--text-muted)]">Label Source:</span>
+                    <span className={`px-2 py-0.5 rounded text-[10px] font-extrabold ${
+                      selectedReview.label_source === 'human_annotated'
+                        ? 'bg-purple-100 text-purple-700 dark:bg-purple-950 dark:text-purple-300'
+                        : 'bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300'
+                    }`}>
+                      {selectedReview.label_source === 'human_annotated' ? 'Human Pilot Gold' : 'Model Pseudo-Label'}
+                    </span>
+                  </div>
+                )}
+                {selectedReview.prediction_confidence !== undefined && (
+                  <div className="flex justify-between items-center font-bold">
+                    <span className="text-[var(--text-muted)]">Confidence:</span>
+                    <span className="text-[var(--text-primary)]">
+                      {(selectedReview.prediction_confidence * 100).toFixed(1)}%
+                    </span>
+                  </div>
+                )}
                 {selectedReview.derived_date && (
                   <div className="flex justify-between items-center font-bold">
                     <span className="text-[var(--text-muted)]">Date:</span>

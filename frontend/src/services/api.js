@@ -1,6 +1,14 @@
 import axios from 'axios';
 
-export const BACKEND_URL = 'http://localhost:8000';
+// In development: VITE_API_BASE_URL is unset → falls back to '' (same origin)
+// Vite's dev proxy forwards /api/* → http://localhost:8000 (see vite.config.js)
+//
+// In production Docker / Kubernetes: VITE_API_BASE_URL is also '' (same origin)
+// Nginx reverse-proxies /api/* → http://backend:8000
+//
+// If you ever need to point at a remote backend, set VITE_API_BASE_URL at build time:
+//   VITE_API_BASE_URL=https://api.yourdomain.com npm run build
+export const BACKEND_URL = import.meta.env.VITE_API_BASE_URL || '';
 const API_BASE = `${BACKEND_URL}/api`;
 
 export const api = {

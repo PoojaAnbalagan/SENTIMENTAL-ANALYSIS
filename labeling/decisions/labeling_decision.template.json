@@ -1,0 +1,10 @@
+{
+  "approved": false,
+  "strategy": "pending",
+  "decision_date": "YYYY-MM-DD",
+  "reviewed_by": "Name or team",
+  "pilot_fleiss_kappa": null,
+  "rating_vs_final_accuracy": null,
+  "rating_vs_final_cohen_kappa": null,
+  "rationale": "Complete only after resolving all pilot labels and reviewing the agreement summary. Set strategy to validated_rating_based only when the mapping is academically defensible."
+}

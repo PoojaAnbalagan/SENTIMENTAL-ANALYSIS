@@ -1,0 +1,111 @@
+# =============================================================================
+# Kubernetes Ingress — External Traffic Routing
+# McDonald's Sentiment Analysis Platform
+# =============================================================================
+#
+# Routes external HTTP traffic into the cluster:
+#   /api/*    → backend-service:8000  (FastAPI)
+#   /static/* → backend-service:8000  (Static figures)
+#   /*        → frontend-service:80   (React / Nginx)
+#
+# Prerequisites:
+#   1. Install Nginx Ingress Controller:
+#      kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.2/deploy/static/provider/cloud/deploy.yaml
+#
+#   2. For local Docker Desktop K8s:
+#      kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.2/deploy/static/provider/baremetal/deploy.yaml
+#
+#   3. Wait for Ingress controller to be ready:
+#      kubectl wait --namespace ingress-nginx \
+#        --for=condition=ready pod \
+#        --selector=app.kubernetes.io/component=controller \
+#        --timeout=120s
+#
+# Access after apply:
+#   Local:  http://localhost  (Docker Desktop K8s, NodePort)
+#   Cloud:  http://<EXTERNAL-IP>  (check: kubectl get ingress -n sentiment-analysis)
+#
+# Apply: kubectl apply -f k8s/ingress.yaml -n sentiment-analysis
+# =============================================================================
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sentiment-ingress
+  namespace: sentiment-analysis
+  labels:
+    app.kubernetes.io/name: sentiment-analysis
+    app.kubernetes.io/component: ingress
+
+  annotations:
+    # Use the Nginx Ingress controller
+    kubernetes.io/ingress.class: "nginx"
+
+    # Nginx Ingress specific annotations
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "10"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "60"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "60"
+
+    # Allow large request bodies (for any future file uploads)
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+
+    # Rewrite: strip /api prefix when proxying to backend
+    # (FastAPI expects /api/health not /health)
+    # No rewrite needed — backend routes include /api/ prefix
+
+spec:
+  ingressClassName: nginx
+
+  rules:
+    - http:
+        paths:
+          # ------------------------------------------------------------------
+          # API traffic → FastAPI backend
+          # Must come BEFORE the catch-all / rule
+          # ------------------------------------------------------------------
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-service
+                port:
+                  number: 8000
+
+          # ------------------------------------------------------------------
+          # Static figures → FastAPI backend (served via StaticFiles mount)
+          # ------------------------------------------------------------------
+          - path: /static
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-service
+                port:
+                  number: 8000
+
+          # ------------------------------------------------------------------
+          # Everything else → React frontend (Nginx serves SPA)
+          # Nginx handles SPA routing internally with try_files
+          # ------------------------------------------------------------------
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend-service
+                port:
+                  number: 80
+
+# =============================================================================
+# To add HTTPS (TLS):
+#   1. Install cert-manager: https://cert-manager.io/docs/installation/
+#   2. Create a ClusterIssuer for Let's Encrypt
+#   3. Uncomment and fill in the tls section below:
+#
+# spec:
+#   tls:
+#     - hosts:
+#         - your-domain.com
+#       secretName: sentiment-tls-secret
+#   rules:
+#     - host: your-domain.com
+#       http: ...
+# =============================================================================
