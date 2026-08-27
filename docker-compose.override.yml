@@ -12,8 +12,6 @@
 #   docker compose -f docker-compose.yml up  # Production only (no override)
 # =============================================================================
 
-version: "3.9"
-
 services:
 
   # ---------------------------------------------------------------------------
@@ -28,6 +26,8 @@ services:
       - ./server.py:/app/server.py:ro
       # Mount results so you can update model outputs without rebuild
       - ./results:/app/results:ro
+      # Mount static figures for diagnostics gallery
+      - ./Figures:/app/Figures:ro
 
     environment:
       - LOG_LEVEL=debug

@@ -11,7 +11,7 @@
 # =============================================================================
 # Stage 1: BUILD — compile React app with Vite
 # =============================================================================
-FROM node:20-alpine AS builder
+FROM node:20-slim AS builder
 
 # Set working directory
 WORKDIR /app

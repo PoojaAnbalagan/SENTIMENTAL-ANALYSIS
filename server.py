@@ -38,6 +38,18 @@ figures_dir = os.path.join(os.path.dirname(__file__), "Figures")
 if os.path.exists(figures_dir):
     app.mount("/static/figures", StaticFiles(directory=figures_dir), name="figures")
 
+@app.get("/")
+@app.get("/api")
+@app.get("/api/")
+def api_root():
+    return {
+        "name": "McDonald's Customer Review Sentiment Intelligence API",
+        "version": "2026.1",
+        "docs": "/docs",
+        "health": "/api/health",
+        "status": "online"
+    }
+
 # -----------------------------------------------------------------------------
 # 2. CACHED ASSETS & DATA PIPELINE
 # -----------------------------------------------------------------------------
