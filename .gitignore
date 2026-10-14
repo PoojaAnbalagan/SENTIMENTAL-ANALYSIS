@@ -110,3 +110,8 @@ desktop.ini
 
 # Exclude generated report scripts
 generate_pipeline_pdf.py
+
+# Exclude large model binary weights (>100MB exceeds GitHub limits)
+models/distilbert_sentiment/*.safetensors
+models/distilbert_sentiment/*.bin
+models/best_sentiment_model_distilbert.pkl
