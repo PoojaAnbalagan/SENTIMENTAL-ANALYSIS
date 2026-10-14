@@ -37,7 +37,7 @@ export function KpiCards({ metrics, filteredCount, analytics }) {
           </div>
           <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)]">Supervised Accuracy</div>
           <div className="text-2xl font-extrabold text-[var(--text-primary)] my-1">{bestAcc.toFixed(1)}%</div>
-          <div className="text-xs text-[var(--text-secondary)] font-medium">Logistic Regression Classifier</div>
+          <div className="text-xs text-[var(--text-secondary)] font-medium">{metrics?.best_model_name || 'Champion Classifier'}</div>
         </div>
 
         {/* Card 3 - Macro F1-Score */}

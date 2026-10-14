@@ -1,0 +1,7 @@
+model,train_time_sec,inference_latency_ms_per_1k,model_size_mb,parameter_count
+Logistic Regression,1.45,113.4,0.47,61746
+Linear SVM,0.437,110.15,0.47,61746
+Multinomial Naive Bayes,0.075,105.81,0.0,0
+SGDClassifier,0.196,99.64,0.0,61746
+RidgeClassifier,0.472,96.88,0.0,61746
+DistilBERT (Transformer),0.0,197507.98,256.11,66955779

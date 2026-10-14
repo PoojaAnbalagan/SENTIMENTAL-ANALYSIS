@@ -5,8 +5,9 @@ import {
 } from 'recharts';
 import { Image as ImageIcon, BarChart3 } from 'lucide-react';
 import { BACKEND_URL } from '../services/api';
+import { FilterBar } from '../components/FilterBar';
 
-export function AnalyticsView({ analytics }) {
+export function AnalyticsView({ analytics, filters, setFilters, stores }) {
   const [activeTab, setActiveTab] = useState('interactive');
 
   const sentimentData = analytics?.sentiment_share || [
@@ -29,10 +30,16 @@ export function AnalyticsView({ analytics }) {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-extrabold text-[var(--text-primary)]">Interactive Sentiment Analytics</h2>
-        <p className="text-xs text-[var(--text-muted)]">Deep-dive analytics on review sentiment distributions, star ratings, and store volume.</p>
-      </div>
+
+      {/* Filter Bar */}
+      {filters && setFilters && (
+        <FilterBar 
+          filters={filters} 
+          setFilters={setFilters} 
+          stores={stores} 
+          matchingCount={analytics?.filtered_count || 0} 
+        />
+      )}
 
       {/* View Switcher Tabs */}
       <div className="flex border-b border-[var(--border)]">

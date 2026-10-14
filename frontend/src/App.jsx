@@ -3,16 +3,14 @@ import { ThemeProvider } from './context/ThemeContext';
 import { api } from './services/api';
 import { Sidebar } from './components/Sidebar';
 import { Header } from './components/Header';
-import { KpiCards } from './components/KpiCards';
-import { FilterBar } from './components/FilterBar';
 
 import { OverviewView } from './views/OverviewView';
 import { PredictorView } from './views/PredictorView';
+import { BatchUploadView } from './views/BatchUploadView';
 import { AnalyticsView } from './views/AnalyticsView';
 import { ExplorerView } from './views/ExplorerView';
 import { ModelPerformanceView } from './views/ModelPerformanceView';
 import { ReportsView } from './views/ReportsView';
-import { ProjectInfoView } from './views/ProjectInfoView';
 
 export default function App() {
   const [currentTab, setTab] = useState('Overview');
@@ -36,7 +34,7 @@ export default function App() {
     fetchInitialData();
     const timer = setInterval(() => {
       checkHealth();
-    }, 5000);
+    }, 8000);
     return () => clearInterval(timer);
   }, []);
 
@@ -55,15 +53,19 @@ export default function App() {
 
   const fetchInitialData = async () => {
     try {
-      const [m, md] = await Promise.all([
+      const [m, md, r] = await Promise.all([
         api.getMetrics(),
-        api.getModels()
+        api.getModels(),
+        api.getReviews(filters, 1, 1)
       ]);
       setMetrics(m);
       setModelsData(md);
+      if (r?.stores) {
+        setStores(r.stores);
+      }
       setIsApiOnline(true);
     } catch (e) {
-      console.error('Failed to fetch metrics:', e);
+      console.error('Failed to fetch initial data:', e);
       setIsApiOnline(false);
     }
   };
@@ -101,35 +103,50 @@ export default function App() {
 
           {/* Hero Header */}
           <Header 
-            filteredCount={analytics?.filtered_count || metrics?.total_corpus_count || 22366} 
-            totalCount={metrics?.total_corpus_count || 22366} 
+            filteredCount={analytics?.filtered_count || metrics?.total_corpus_count || 22124} 
+            totalCount={metrics?.total_corpus_count || 22124} 
             isApiOnline={isApiOnline}
-          />
-
-          {/* KPI & Sentiment Cards */}
-          <KpiCards 
-            metrics={metrics} 
-            filteredCount={analytics?.filtered_count || 22366} 
-            analytics={analytics} 
-          />
-
-          {/* Global Filter Bar */}
-          <FilterBar 
-            filters={filters} 
-            setFilters={setFilters} 
-            stores={stores} 
-            matchingCount={analytics?.filtered_count || 0} 
+            currentTab={currentTab}
           />
 
           {/* Dynamic Tab Views */}
-          <div className="mt-6">
-            {currentTab === 'Overview' && <OverviewView analytics={analytics} metrics={metrics} />}
+          <div key={currentTab} className="mt-2 animate-tabFadeIn">
+            {currentTab === 'Overview' && (
+              <OverviewView 
+                analytics={analytics} 
+                metrics={metrics} 
+                filters={filters} 
+                setFilters={setFilters} 
+                stores={stores} 
+              />
+            )}
             {currentTab === 'Live Predictor' && <PredictorView />}
-            {currentTab === 'Sentiment Analytics' && <AnalyticsView analytics={analytics} />}
-            {currentTab === 'Review Explorer' && <ExplorerView filters={filters} />}
+            {currentTab === 'Batch Upload' && <BatchUploadView />}
+            {currentTab === 'Sentiment Analytics' && (
+              <AnalyticsView 
+                analytics={analytics} 
+                filters={filters} 
+                setFilters={setFilters} 
+                stores={stores} 
+              />
+            )}
+            {currentTab === 'Review Explorer' && (
+              <ExplorerView 
+                filters={filters} 
+                setFilters={setFilters} 
+                stores={stores} 
+              />
+            )}
             {currentTab === 'Model Performance' && <ModelPerformanceView modelsData={modelsData} />}
-            {currentTab === 'Reports' && <ReportsView analytics={analytics} filters={filters} metrics={metrics} />}
-            {currentTab === 'Project Information' && <ProjectInfoView />}
+            {currentTab === 'Reports' && (
+              <ReportsView 
+                analytics={analytics} 
+                filters={filters} 
+                metrics={metrics} 
+                setFilters={setFilters} 
+                stores={stores} 
+              />
+            )}
           </div>
         </main>
       </div>

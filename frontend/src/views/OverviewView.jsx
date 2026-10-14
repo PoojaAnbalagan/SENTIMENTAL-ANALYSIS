@@ -1,8 +1,9 @@
 import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
-import { CheckCircle, MinusCircle, AlertCircle, Award, BookOpen, AlertTriangle } from 'lucide-react';
+import { KpiCards } from '../components/KpiCards';
+import { FilterBar } from '../components/FilterBar';
 
-export function OverviewView({ analytics, metrics }) {
+export function OverviewView({ analytics, metrics, filters, setFilters, stores }) {
   const sentimentData = analytics?.sentiment_share || [
     { name: 'Positive', count: 0, percentage: 0 },
     { name: 'Neutral', count: 0, percentage: 0 },
@@ -15,18 +16,33 @@ export function OverviewView({ analytics, metrics }) {
     Negative: 'var(--negative)',
   };
 
-  const avgRating = analytics?.average_rating || 0.0;
-  const bestAcc = ((metrics?.best_accuracy || 0.7405) * 100).toFixed(1);
-  const gain = ((metrics?.accuracy_gain || 0.0971) * 100).toFixed(1);
-  const vocabSize = (metrics?.vocab_size || 20000).toLocaleString();
+  const avgRating = analytics?.average_rating !== undefined ? analytics.average_rating : 0.0;
+  const bestAcc = ((metrics?.best_accuracy || 0.8569) * 100).toFixed(1);
+  const gain = ((metrics?.accuracy_gain || 0.2398) * 100).toFixed(1);
+  const bestModelName = metrics?.best_model_name || 'Logistic Regression (Balanced)';
+  const totalReviews = (metrics?.total_corpus_count || 22124).toLocaleString();
+  const filteredCount = analytics?.filtered_count || metrics?.total_corpus_count || 0;
 
   return (
     <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-extrabold text-[var(--text-primary)]">Overview Dashboard</h2>
-        <p className="text-xs text-[var(--text-muted)]">High-level summary of customer sentiment distribution and model benchmark insights.</p>
-      </div>
+      {/* Dynamic KPI Cards */}
+      <KpiCards 
+        metrics={metrics} 
+        filteredCount={filteredCount} 
+        analytics={analytics} 
+      />
 
+      {/* Dynamic Filter Controls */}
+      {filters && setFilters && (
+        <FilterBar 
+          filters={filters} 
+          setFilters={setFilters} 
+          stores={stores} 
+          matchingCount={filteredCount} 
+        />
+      )}
+
+      {/* Main Charts & Overview Row */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
         {/* Sentiment Donut Chart */}
         <div className="md:col-span-7 card-2026 p-5">
@@ -69,7 +85,7 @@ export function OverviewView({ analytics, metrics }) {
             <div className="flex justify-between items-center text-xs font-bold mb-1.5">
               <span className="text-[var(--text-muted)] uppercase tracking-wider text-[10px]">Sentiment Spectrum Ratio</span>
               <span className="text-[var(--positive)] font-extrabold">
-                {(sentimentData.find(s=>s.name==='Positive')?.percentage || 0)}% Positive Ratio
+                {(sentimentData.find(s => s.name === 'Positive')?.percentage || 0)}% Positive Ratio
               </span>
             </div>
             <div className="w-full h-3 bg-black/10 rounded-full overflow-hidden flex">
@@ -103,13 +119,23 @@ export function OverviewView({ analytics, metrics }) {
             </div>
 
             <div className="flex justify-between items-center pb-2 border-b border-[var(--border)]">
+              <span className="font-semibold text-[var(--text-primary)]">Champion Model</span>
+              <span className="font-extrabold text-[var(--accent)] text-xs">{bestModelName}</span>
+            </div>
+
+            <div className="flex justify-between items-center pb-2 border-b border-[var(--border)]">
               <span className="font-semibold text-[var(--text-primary)]">Class Balance Strategy</span>
-              <span className="font-extrabold text-[var(--accent)] text-xs">Stratified + Weighted Loss</span>
+              <span className="font-extrabold text-[var(--positive)] text-xs">Stratified Split + Cost-Sensitive Loss</span>
+            </div>
+
+            <div className="flex justify-between items-center pb-2 border-b border-[var(--border)]">
+              <span className="font-semibold text-[var(--text-primary)]">Primary Complaint Drivers</span>
+              <span className="font-extrabold text-[var(--negative)] text-xs">Drive-thru delay, Cold food</span>
             </div>
 
             <div className="flex justify-between items-center">
-              <span className="font-semibold text-[var(--text-primary)]">Primary Complaint Drivers</span>
-              <span className="font-extrabold text-[var(--negative)]">Drive-thru delay, Cold food</span>
+              <span className="font-semibold text-[var(--text-primary)]">Evaluated Corpus Size</span>
+              <span className="font-extrabold text-[var(--text-secondary)]">{totalReviews} Cleaned Reviews</span>
             </div>
           </div>
         </div>

@@ -1,0 +1,104 @@
+# Default values for sentiment-analysis Helm Chart
+global:
+  namespace: sentiment-analysis
+  imagePullSecrets:
+    - name: ghcr-secret
+
+# Backend Configuration (FastAPI ML Service)
+backend:
+  replicaCount: 2
+  image:
+    repository: ghcr.io/poojaanbalagan/sentiment-backend
+    tag: latest
+    pullPolicy: Always
+  service:
+    type: ClusterIP
+    port: 8000
+    targetPort: 8000
+  env:
+    logLevel: info
+    pythonUnbuffered: "1"
+    pythonDontWriteBytecode: "1"
+  resources:
+    limits:
+      cpu: "1000m"
+      memory: "1536Mi"
+    requests:
+      cpu: "250m"
+      memory: "512Mi"
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 8
+    targetCPUUtilizationPercentage: 75
+    targetMemoryUtilizationPercentage: 80
+  probes:
+    liveness:
+      path: /api/health
+      initialDelaySeconds: 30
+      periodSeconds: 30
+    readiness:
+      path: /api/health
+      initialDelaySeconds: 15
+      periodSeconds: 10
+    startup:
+      path: /api/health
+      initialDelaySeconds: 10
+      periodSeconds: 5
+      failureThreshold: 12
+
+# Frontend Configuration (React + Vite + Nginx)
+frontend:
+  replicaCount: 2
+  image:
+    repository: ghcr.io/poojaanbalagan/sentiment-frontend
+    tag: latest
+    pullPolicy: Always
+  service:
+    type: ClusterIP
+    port: 80
+    targetPort: 80
+  resources:
+    limits:
+      cpu: "250m"
+      memory: "256Mi"
+    requests:
+      cpu: "50m"
+      memory: "64Mi"
+  autoscaling:
+    enabled: false
+  probes:
+    liveness:
+      path: /health
+      initialDelaySeconds: 15
+      periodSeconds: 30
+    readiness:
+      path: /health
+      initialDelaySeconds: 5
+      periodSeconds: 10
+
+# Ingress Configuration (Nginx Ingress Controller)
+ingress:
+  enabled: true
+  className: nginx
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/proxy-body-size: 50m
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "120"
+  hosts:
+    - host: sentiment.local
+      paths:
+        - path: /
+          pathType: Prefix
+          service: frontend
+        - path: /api
+          pathType: Prefix
+          service: backend
+        - path: /metrics
+          pathType: Exact
+          service: backend
+  tls: []
+  # tls:
+  #   - secretName: sentiment-tls
+  #     hosts:
+  #       - sentiment.example.com

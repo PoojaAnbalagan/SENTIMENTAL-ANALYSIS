@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { api } from '../services/api';
 import { Download, ChevronLeft, ChevronRight, Eye, MapPin } from 'lucide-react';
+import { FilterBar } from '../components/FilterBar';
 
-export function ExplorerView({ filters }) {
+export function ExplorerView({ filters, setFilters, stores }) {
   const [reviewsData, setReviewsData] = useState({ reviews: [], total_filtered: 0, stores: [] });
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
@@ -57,10 +58,6 @@ export function ExplorerView({ filters }) {
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div>
-          <h2 className="text-xl font-extrabold text-[var(--text-primary)]">Review Dataset Explorer</h2>
-          <p className="text-xs text-[var(--text-muted)]">Search, sort, filter, and inspect individual customer reviews.</p>
-        </div>
 
         <div className="flex items-center gap-3">
           <select
@@ -84,6 +81,16 @@ export function ExplorerView({ filters }) {
           </button>
         </div>
       </div>
+
+      {/* Filter Bar */}
+      {filters && setFilters && (
+        <FilterBar 
+          filters={filters} 
+          setFilters={setFilters} 
+          stores={stores} 
+          matchingCount={reviewsData?.total_filtered || 0} 
+        />
+      )}
 
       {/* Main Content Layout */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">

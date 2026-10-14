@@ -1,0 +1,22 @@
+model,sentiment_class,precision,recall,f1,support
+Logistic Regression,Negative,0.9162,0.8815,0.8985,1587
+Logistic Regression,Neutral,0.6036,0.7836,0.6819,513
+Logistic Regression,Positive,0.9263,0.8556,0.8896,1219
+Linear SVM,Negative,0.897,0.9055,0.9012,1587
+Linear SVM,Neutral,0.6591,0.6784,0.6686,513
+Linear SVM,Positive,0.8999,0.8778,0.8887,1219
+Multinomial Naive Bayes,Negative,0.7434,0.9584,0.8373,1587
+Multinomial Naive Bayes,Neutral,1.0,0.0468,0.0894,513
+Multinomial Naive Bayes,Positive,0.8223,0.8425,0.8323,1219
+SGDClassifier,Negative,0.8716,0.9156,0.8931,1587
+SGDClassifier,Neutral,0.6582,0.6569,0.6576,513
+SGDClassifier,Positive,0.9132,0.854,0.8826,1219
+RidgeClassifier,Negative,0.9018,0.874,0.8877,1587
+RidgeClassifier,Neutral,0.5829,0.7329,0.6494,513
+RidgeClassifier,Positive,0.897,0.8359,0.8654,1219
+VADER (Baseline),Negative,0.8098,0.5608,0.6627,1587
+VADER (Baseline),Neutral,0.2705,0.3275,0.2963,513
+VADER (Baseline),Positive,0.6191,0.8121,0.7026,1219
+DistilBERT (Transformer),Negative,0.9534,0.903,0.9275,1587
+DistilBERT (Transformer),Neutral,0.7492,0.8908,0.8139,513
+DistilBERT (Transformer),Positive,0.9353,0.9253,0.9303,1219

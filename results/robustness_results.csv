@@ -1,0 +1,24 @@
+category,challenge_text,expected_sentiment,linguistic_property,pred_Logistic Regression,pass_Logistic Regression,pred_Linear SVM,pass_Linear SVM,pred_Multinomial Naive Bayes,pass_Multinomial Naive Bayes,pred_SGDClassifier,pass_SGDClassifier,pred_RidgeClassifier,pass_RidgeClassifier,pred_VADER (Baseline),pass_VADER (Baseline),pred_DistilBERT (Transformer),pass_DistilBERT (Transformer)
+Negation,The burger was good.,Positive,Baseline positive,Neutral,False,Positive,True,Negative,False,Positive,True,Negative,False,Positive,True,Positive,True
+Negation,The burger was not good.,Negative,Standard negation flip,Negative,True,Negative,True,Negative,True,Negative,True,Negative,True,Negative,True,Positive,False
+Negation,The fries were never fresh.,Negative,Adverbial negation,Negative,True,Negative,True,Negative,True,Negative,True,Negative,True,Negative,True,Positive,False
+Negation,"Not bad at all, actually enjoyed it.",Positive,Double negation / positive sense,Neutral,False,Neutral,False,Neutral,False,Neutral,False,Neutral,False,Positive,True,Neutral,False
+Intensifiers,The milkshake was good.,Positive,Base positive,Neutral,False,Positive,True,Positive,True,Neutral,False,Neutral,False,Positive,True,Positive,True
+Intensifiers,The milkshake was very good.,Positive,Moderately intensified,Positive,True,Positive,True,Positive,True,Positive,True,Positive,True,Positive,True,Positive,True
+Intensifiers,The milkshake was extremely good and delightful.,Positive,Strongly intensified,Neutral,False,Positive,True,Negative,False,Positive,True,Positive,True,Positive,True,Positive,True
+Intensifiers,The staff was horribly rude and disrespectful.,Negative,Strongly intensified negative,Negative,True,Negative,True,Negative,True,Negative,True,Negative,True,Negative,True,Negative,True
+Mixed Sentiment,The food was excellent but the service was terrible.,Negative,Concession clause with dominant negative end,Positive,False,Positive,False,Positive,False,Positive,False,Positive,False,Negative,True,Negative,True
+Mixed Sentiment,"Long waiting line, but the manager was polite and food was hot.",Positive,Negative premise resolved positively,Negative,False,Negative,False,Negative,False,Negative,False,Positive,True,Neutral,False,Negative,False
+Mixed Sentiment,"Average fries, decent drinks, nothing special.",Neutral,Balanced indifferent sentiment,Neutral,True,Neutral,True,Positive,False,Neutral,True,Neutral,True,Negative,False,Neutral,True
+Sarcasm,"Great, another two-hour wait for a cold burger.",Negative,Sarcastic 'Great' with negative reality,Negative,True,Negative,True,Negative,True,Negative,True,Negative,True,Positive,False,Negative,True
+Sarcasm,"Oh wonderful, missing half my order once again!",Negative,Sarcastic exclamation with complaint,Negative,True,Negative,True,Negative,True,Negative,True,Neutral,False,Positive,False,Negative,True
+Short Text,Bad.,Negative,Single word negative,Neutral,False,Neutral,False,Negative,True,Neutral,False,Neutral,False,Negative,True,Neutral,False
+Short Text,Awesome!,Positive,Single word positive,Positive,True,Positive,True,Positive,True,Positive,True,Positive,True,Positive,True,Positive,True
+Short Text,Okay.,Neutral,Single word neutral,Neutral,True,Neutral,True,Neutral,True,Neutral,True,Neutral,True,Positive,False,Neutral,True
+Long Text,"We stopped by during our road trip hoping for a quick lunch. The drive-thru was reasonably fast, the cashier greeted us with a genuine smile, and our customized burgers came out exactly as ordered, hot and fresh. Highly satisfied with this visit!",Positive,Multi-sentence coherent positive review,Positive,True,Positive,True,Positive,True,Positive,True,Positive,True,Positive,True,Positive,True
+Long Text,"Entered the restaurant at 8 PM and found trash overflowing from every bin. The floor was sticky, self-service kiosks were malfunctioning, and we waited thirty minutes for cold nuggets. Nobody apologized.",Negative,Multi-sentence coherent negative review,Negative,True,Negative,True,Negative,True,Negative,True,Negative,True,Positive,False,Negative,True
+Spelling/Noise,gud food and suuuuper fast servce,Positive,Common typos & elongated positive,Positive,True,Positive,True,Positive,True,Positive,True,Positive,True,Neutral,False,Positive,True
+Spelling/Noise,servce was terrble and burgur waz completly coldd,Negative,Heavy typos in negative review,Negative,True,Negative,True,Negative,True,Negative,True,Negative,True,Neutral,False,Neutral,False
+Punctuation,Great food,Positive,Unpunctuated,Positive,True,Positive,True,Positive,True,Positive,True,Positive,True,Positive,True,Positive,True
+Punctuation,Great food...,Neutral,Trailing ellipsis creating ambiguity,Positive,False,Positive,False,Positive,False,Positive,False,Positive,False,Positive,False,Positive,False
+Punctuation,Great food!!!,Positive,Triple exclamation mark,Positive,True,Positive,True,Positive,True,Positive,True,Positive,True,Positive,True,Positive,True

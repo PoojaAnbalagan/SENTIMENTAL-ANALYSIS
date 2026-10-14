@@ -1,0 +1,76 @@
+sentiment_class,rank,top_positive_term,positive_coefficient,top_negative_term,negative_coefficient
+Negative,1,worst,4.1136,great,-4.9861
+Negative,2,slow,3.8604,friendly,-4.3931
+Negative,3,rude,3.8117,fast,-3.7763
+Negative,4,dirty,3.6722,love,-3.5087
+Negative,5,horrible,3.5806,nice,-3.4225
+Negative,6,cold,3.3303,good,-3.1731
+Negative,7,terrible,3.2052,quick,-3.1533
+Negative,8,donalds,2.7924,clean,-2.8824
+Negative,9,poor,2.7382,best,-2.6218
+Negative,10,minutes,2.6957,better,-2.3727
+Negative,11,closed,2.6837,hot,-2.346
+Negative,12,bad service,2.6445,delicious,-1.9139
+Negative,13,missing,2.5427,awesome,-1.9062
+Negative,14,waited,2.4622,decent,-1.6811
+Negative,15,wrong,2.4097,amazing,-1.673
+Negative,16,manager,2.3614,excellent,-1.5782
+Negative,17,line,2.2976,fine,-1.576
+Negative,18,got,2.1578,typical,-1.5745
+Negative,19,money,2.1529,beach,-1.5587
+Negative,20,orders,2.15,tourists,-1.5447
+Negative,21,don,2.0945,bit,-1.5163
+Negative,22,not,2.0518,fast service,-1.4862
+Negative,23,hours,2.0385,cleaned,-1.4711
+Negative,24,mins,2.0098,kids,-1.4707
+Negative,25,old,2.0037,big,-1.4266
+Neutral,1,kinda,2.7779,great,-5.2206
+Neutral,2,have not,2.627,love,-3.7754
+Neutral,3,hit,2.4779,fast,-3.6895
+Neutral,4,fine,2.4155,fresh,-3.4928
+Neutral,5,cleaning,2.2623,quick,-3.3116
+Neutral,6,lines,2.2485,friendly,-3.1461
+Neutral,7,pies,2.2243,worst,-3.1391
+Neutral,8,mickey,2.1354,bad service,-2.96
+Neutral,9,options,2.1135,rude,-2.8968
+Neutral,10,condiments,2.0699,employees,-2.8955
+Neutral,11,did not,2.057,awesome,-2.8101
+Neutral,12,okay,1.9851,horrible,-2.7323
+Neutral,13,stopped,1.9813,delicious,-2.7151
+Neutral,14,double,1.9739,dirty,-2.6692
+Neutral,15,best time,1.9323,staff,-2.6361
+Neutral,16,chicken nuggets,1.854,old,-2.6262
+Neutral,17,area,1.8319,went,-2.5277
+Neutral,18,typical,1.7715,people,-2.5
+Neutral,19,average,1.7362,slow,-2.4665
+Neutral,20,getting,1.7276,hot,-2.448
+Neutral,21,haven,1.7245,terrible,-2.4248
+Neutral,22,review,1.6985,new,-2.3937
+Neutral,23,life,1.6789,cold,-2.36
+Neutral,24,clean table,1.6762,manager,-2.3581
+Neutral,25,that nice,1.6638,closed,-2.3343
+Positive,1,great,7.4877,slow,-3.3617
+Positive,2,friendly,5.4897,worst,-2.916
+Positive,3,love,5.4456,rude,-2.7645
+Positive,4,fast,5.385,dirty,-2.6114
+Positive,5,quick,4.8136,cold,-2.5701
+Positive,6,nice,3.8636,poor,-2.3373
+Positive,7,hot,3.8387,horrible,-2.3088
+Positive,8,clean,3.7467,bad,-1.9548
+Positive,9,awesome,3.4497,terrible,-1.9348
+Positive,10,best,3.3504,tables,-1.8227
+Positive,11,delicious,3.1134,wrong,-1.7314
+Positive,12,kids,3.0715,waited,-1.7265
+Positive,13,new,2.9101,minutes,-1.6736
+Positive,14,better,2.8943,half,-1.5572
+Positive,15,like,2.7647,kinda,-1.5253
+Positive,16,decent,2.6814,places eat,-1.523
+Positive,17,excellent,2.5479,average,-1.4869
+Positive,18,pleasant,2.3976,long,-1.46
+Positive,19,easy,2.2519,closed,-1.4574
+Positive,20,loved,2.2396,mins,-1.4443
+Positive,21,fresh,2.1879,missing,-1.4333
+Positive,22,good,2.1732,lot,-1.4304
+Positive,23,staff,2.1125,gross,-1.3934
+Positive,24,pizza,2.0992,took,-1.3925
+Positive,25,cool,2.0773,lines,-1.3915

@@ -1,0 +1,1001 @@
+﻿review_id,customer_id,restaurant_name,review,rating,order_type,verified_review,review_date,platform,location
+REV-0001,CUST-42098,Google Maps Grill,The food was okay and arrived on time. Nothing especially memorable. The experience was similar to my previous order.,4,Delivery,Yes,2026-11-24,UberEats,Jaffna
+REV-0002,CUST-40495,Urban Bites,The food was delicious and arrived fresh and hot. Great experience. I used the mobile app.,4,Delivery,Yes,2026-12-21,Google Maps,Kandy
+REV-0003,CUST-65392,Green Leaf Restaurant,The restaurant was excellent and the order arrived earlier than expected. This was my first order.,4,Pickup,Yes,2026-04-25,Yelp,Colombo
+REV-0004,CUST-89131,Downtown Diner,Excellent service and very friendly staff. I would definitely order again. The restaurant was busy at the time.,5,Delivery,No,2026-09-04,Google Maps,Colombo
+REV-0005,CUST-19116,Uber Eats Kitchen,The packaging was fine and the food was neither great nor disappointing. I used the mobile app.,4,Delivery,Yes,2026-02-28,Amazon,Colombo
+REV-0006,CUST-58520,Green Leaf Restaurant,The delivery was quick and the customer service was helpful. This was my first order.,5,Delivery,Yes,2026-12-22,UberEats,Jaffna
+REV-0007,CUST-59735,Downtown Diner,"The meal was fine, although there was nothing particularly special about it.",3,Delivery,Yes,2026-01-08,UberEats,Galle
+REV-0008,CUST-37869,Sunrise Cafe,Excellent service and very friendly staff. I would definitely order again. The restaurant was busy at the time.,4,Pickup,No,2026-03-09,Amazon,Kandy
+REV-0009,CUST-57447,Google Maps Grill,Customer service was unhelpful and my complaint was not resolved. Delivery instructions were followed.,2,Delivery,No,2026-02-25,UberEats,Colombo
+REV-0010,CUST-60432,City Pizza,"Fast delivery, good packaging, and the meal tasted amazing. I ordered during the evening.",5,Pickup,Yes,2026-09-28,UberEats,Negombo
+REV-0011,CUST-48469,City Pizza,Customer service was unhelpful and my complaint was not resolved. I ordered during the evening.,2,Delivery,No,2026-01-24,Yelp,Jaffna
+REV-0012,CUST-30032,Green Leaf Restaurant,Very disappointing experience. The meal was poorly prepared and late. I used the mobile app.,2,Delivery,Yes,2026-10-11,Google Maps,Colombo
+REV-0013,CUST-17592,Google Maps Grill,Great value for money. The food was tasty and well prepared. I used the mobile app.,5,Delivery,Yes,2026-12-16,UberEats,Jaffna
+REV-0014,CUST-44741,Urban Bites,The delivery took far too long and the food was not fresh. This was my first order.,2,Pickup,Yes,2026-09-25,Amazon,Negombo
+REV-0015,CUST-25860,Google Maps Grill,Great value for money. The food was tasty and well prepared.,5,Delivery,Yes,2026-06-01,Amazon,Jaffna
+REV-0016,CUST-18834,Uber Eats Kitchen,Excellent service and very friendly staff. I would definitely order again. I used the mobile app.,4,Pickup,Yes,2026-09-08,Yelp,Negombo
+REV-0017,CUST-41850,Sunrise Cafe,The order was correct and delivered within the expected time.,4,Pickup,Yes,2026-02-04,Google Maps,Galle
+REV-0018,CUST-17944,City Pizza,The delivery was quick and the customer service was helpful. I ordered during the evening.,4,Pickup,Yes,2026-04-07,Amazon,Jaffna
+REV-0019,CUST-70637,Google Maps Grill,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The experience was similar to my previous order.,4,Delivery,No,2026-09-04,UberEats,Negombo
+REV-0020,CUST-31798,City Pizza,The food arrived cold and the order was missing an item. I used the mobile app.,1,Pickup,No,2026-04-28,Google Maps,Colombo
+REV-0021,CUST-69638,Downtown Diner,The food was delicious and arrived fresh and hot. Great experience. The experience was similar to my previous order.,5,Pickup,No,2026-03-07,Yelp,Kandy
+REV-0022,CUST-16572,Family Kitchen,The food arrived cold and the order was missing an item. The staff were polite.,2,Pickup,Yes,2026-01-17,UberEats,Kandy
+REV-0023,CUST-25713,Family Kitchen,Excellent service and very friendly staff. I would definitely order again. Delivery instructions were followed.,4,Delivery,Yes,2026-10-03,Google Maps,Negombo
+REV-0024,CUST-97782,Green Leaf Restaurant,The packaging was fine and the food was neither great nor disappointing. I used the mobile app.,3,Delivery,Yes,2026-07-05,Yelp,Anuradhapura
+REV-0025,CUST-91416,Family Kitchen,Excellent service and very friendly staff. I would definitely order again.,4,Delivery,Yes,2026-09-07,Yelp,Kandy
+REV-0026,CUST-47353,Yelp Bistro,Very disappointing experience. The meal was poorly prepared and late. The restaurant was busy at the time.,1,Pickup,Yes,2026-10-26,UberEats,Negombo
+REV-0027,CUST-44664,Amazon Cafe,Customer service was unhelpful and my complaint was not resolved. This was my first order.,1,Delivery,Yes,2026-05-10,Amazon,Negombo
+REV-0028,CUST-16658,Amazon Cafe,The restaurant was excellent and the order arrived earlier than expected. The experience was similar to my previous order.,5,Pickup,Yes,2026-01-01,Yelp,Kandy
+REV-0029,CUST-82309,City Pizza,Service was normal and the food quality was acceptable.,3,Delivery,Yes,2026-02-23,Amazon,Jaffna
+REV-0030,CUST-26704,Uber Eats Kitchen,Great value for money. The food was tasty and well prepared. Delivery instructions were followed.,4,Pickup,Yes,2026-01-12,Amazon,Negombo
+REV-0031,CUST-91351,Yelp Bistro,Excellent service and very friendly staff. I would definitely order again. Delivery instructions were followed.,5,Delivery,Yes,2026-03-14,UberEats,Kandy
+REV-0032,CUST-44970,Yelp Bistro,The order was incorrect and the packaging was damaged. I used the mobile app.,2,Delivery,No,2026-01-28,Google Maps,Kandy
+REV-0033,CUST-39831,Google Maps Grill,The delivery was quick and the customer service was helpful. The experience was similar to my previous order.,5,Delivery,Yes,2026-07-11,Yelp,Colombo
+REV-0034,CUST-99065,Urban Bites,Customer service was unhelpful and my complaint was not resolved. Delivery instructions were followed.,2,Pickup,Yes,2026-02-09,Amazon,Jaffna
+REV-0035,CUST-88193,City Pizza,Customer service was unhelpful and my complaint was not resolved. I ordered during the evening.,1,Pickup,Yes,2026-07-20,UberEats,Anuradhapura
+REV-0036,CUST-67154,Uber Eats Kitchen,The portion was small and the food did not taste good. The staff were polite.,2,Delivery,Yes,2026-07-03,Yelp,Jaffna
+REV-0037,CUST-97410,City Pizza,Excellent service and very friendly staff. I would definitely order again. The experience was similar to my previous order.,5,Pickup,No,2026-12-10,Amazon,Kandy
+REV-0038,CUST-63225,Urban Bites,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The experience was similar to my previous order.,4,Delivery,Yes,2026-05-07,Google Maps,Jaffna
+REV-0039,CUST-67954,Google Maps Grill,The packaging was fine and the food was neither great nor disappointing.,3,Pickup,Yes,2026-11-03,Yelp,Jaffna
+REV-0040,CUST-98184,Downtown Diner,The packaging was fine and the food was neither great nor disappointing. I used the mobile app.,3,Delivery,Yes,2026-03-01,UberEats,Kandy
+REV-0041,CUST-92544,Family Kitchen,Very disappointing experience. The meal was poorly prepared and late. Delivery instructions were followed.,2,Delivery,No,2026-08-13,Amazon,Kandy
+REV-0042,CUST-38683,Yelp Bistro,The food was okay and arrived on time. Nothing especially memorable. Delivery instructions were followed.,3,Pickup,Yes,2026-09-08,UberEats,Anuradhapura
+REV-0043,CUST-90301,Urban Bites,The delivery was quick and the customer service was helpful.,5,Pickup,No,2026-03-24,Google Maps,Anuradhapura
+REV-0044,CUST-92149,Google Maps Grill,Really happy with the quality and portion size. Everything was perfect.,5,Pickup,No,2026-02-23,Yelp,Kandy
+REV-0045,CUST-29769,Google Maps Grill,Great value for money. The food was tasty and well prepared. This was my first order.,4,Pickup,Yes,2026-12-07,UberEats,Anuradhapura
+REV-0046,CUST-37110,City Pizza,The delivery was quick and the customer service was helpful. The staff were polite.,5,Pickup,Yes,2026-10-13,Google Maps,Colombo
+REV-0047,CUST-80545,Urban Bites,Customer service was unhelpful and my complaint was not resolved. Delivery instructions were followed.,2,Delivery,No,2026-04-09,Google Maps,Anuradhapura
+REV-0048,CUST-71261,Yelp Bistro,Great value for money. The food was tasty and well prepared. This was my first order.,5,Delivery,No,2026-10-19,UberEats,Colombo
+REV-0049,CUST-16590,Downtown Diner,The order was correct and delivered within the expected time. This was my first order.,3,Pickup,Yes,2026-04-15,Yelp,Galle
+REV-0050,CUST-43065,Amazon Cafe,"The meal was cold, soggy, and clearly had been sitting for a long time. Delivery instructions were followed.",2,Pickup,Yes,2026-12-18,UberEats,Galle
+REV-0051,CUST-42411,Google Maps Grill,Excellent service and very friendly staff. I would definitely order again. The staff were polite.,4,Delivery,Yes,2026-04-05,Google Maps,Negombo
+REV-0052,CUST-58351,Yelp Bistro,Really happy with the quality and portion size. Everything was perfect. The experience was similar to my previous order.,5,Delivery,Yes,2026-05-04,UberEats,Galle
+REV-0053,CUST-19961,Family Kitchen,An ordinary experience with average taste and delivery time. I used the mobile app.,3,Delivery,Yes,2026-12-25,Yelp,Negombo
+REV-0054,CUST-55508,Urban Bites,Average experience. The portion was reasonable and the taste was acceptable. The staff were polite.,4,Pickup,Yes,2026-02-17,Yelp,Colombo
+REV-0055,CUST-57472,Sunrise Cafe,Poor experience overall. I would not order from this restaurant again. Delivery instructions were followed.,1,Delivery,No,2026-03-24,Yelp,Jaffna
+REV-0056,CUST-87656,Downtown Diner,Poor experience overall. I would not order from this restaurant again. Delivery instructions were followed.,2,Pickup,Yes,2026-02-09,Google Maps,Kandy
+REV-0057,CUST-74789,Green Leaf Restaurant,"The meal was cold, soggy, and clearly had been sitting for a long time. The staff were polite.",2,Delivery,No,2026-04-12,Yelp,Galle
+REV-0058,CUST-21221,Google Maps Grill,The restaurant was excellent and the order arrived earlier than expected. I used the mobile app.,4,Pickup,No,2026-09-25,Amazon,Negombo
+REV-0059,CUST-22196,Downtown Diner,"Everything worked as expected, but there was room for improvement. The staff were polite.",3,Delivery,No,2026-12-08,Yelp,Negombo
+REV-0060,CUST-65771,Urban Bites,"Everything worked as expected, but there was room for improvement. The restaurant was busy at the time.",4,Pickup,Yes,2026-12-15,Yelp,Galle
+REV-0061,CUST-25670,Urban Bites,Excellent service and very friendly staff. I would definitely order again. The restaurant was busy at the time.,4,Delivery,Yes,2026-04-24,Google Maps,Galle
+REV-0062,CUST-48829,Google Maps Grill,Customer service was unhelpful and my complaint was not resolved. I used the mobile app.,1,Pickup,Yes,2026-05-01,Amazon,Galle
+REV-0063,CUST-93606,Sunrise Cafe,The food was delicious and arrived fresh and hot. Great experience. This was my first order.,5,Delivery,Yes,2026-10-10,Google Maps,Anuradhapura
+REV-0064,CUST-72616,Amazon Cafe,"Fast delivery, good packaging, and the meal tasted amazing. The experience was similar to my previous order.",4,Delivery,No,2026-08-03,UberEats,Kandy
+REV-0065,CUST-25525,Urban Bites,The restaurant was excellent and the order arrived earlier than expected. I used the mobile app.,4,Pickup,Yes,2026-09-13,Google Maps,Anuradhapura
+REV-0066,CUST-89905,Amazon Cafe,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The staff were polite.,5,Delivery,Yes,2026-05-22,UberEats,Kandy
+REV-0067,CUST-63545,Sunrise Cafe,Excellent service and very friendly staff. I would definitely order again. The staff were polite.,4,Pickup,Yes,2026-01-08,Yelp,Negombo
+REV-0068,CUST-44675,Family Kitchen,The delivery was quick and the customer service was helpful. I used the mobile app.,4,Delivery,No,2026-02-18,Amazon,Negombo
+REV-0069,CUST-17816,Yelp Bistro,The restaurant was excellent and the order arrived earlier than expected. I ordered during the evening.,4,Pickup,Yes,2026-08-04,Google Maps,Negombo
+REV-0070,CUST-67377,Amazon Cafe,Absolutely loved the meal. Fresh ingredients and wonderful flavor.,5,Delivery,No,2026-12-11,Yelp,Colombo
+REV-0071,CUST-32962,Sunrise Cafe,The food was delicious and arrived fresh and hot. Great experience. The staff were polite.,5,Pickup,Yes,2026-03-19,Google Maps,Negombo
+REV-0072,CUST-63523,Green Leaf Restaurant,Very disappointing experience. The meal was poorly prepared and late. The restaurant was busy at the time.,2,Pickup,Yes,2026-03-11,Google Maps,Negombo
+REV-0073,CUST-69614,Amazon Cafe,An ordinary experience with average taste and delivery time. The staff were polite.,4,Pickup,Yes,2026-06-04,Google Maps,Jaffna
+REV-0074,CUST-17104,Google Maps Grill,The food arrived cold and the order was missing an item. Delivery instructions were followed.,2,Pickup,No,2026-11-15,UberEats,Kandy
+REV-0075,CUST-73532,Amazon Cafe,"Fast delivery, good packaging, and the meal tasted amazing.",5,Delivery,Yes,2026-12-06,Yelp,Jaffna
+REV-0076,CUST-24871,Sunrise Cafe,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I used the mobile app.,4,Delivery,Yes,2026-08-23,Yelp,Jaffna
+REV-0077,CUST-41946,Sunrise Cafe,"The meal was cold, soggy, and clearly had been sitting for a long time.",2,Delivery,No,2026-04-20,Amazon,Colombo
+REV-0078,CUST-10336,Downtown Diner,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The experience was similar to my previous order.,5,Pickup,No,2026-03-15,Google Maps,Galle
+REV-0079,CUST-34727,Google Maps Grill,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The restaurant was busy at the time.,5,Pickup,Yes,2026-07-02,Yelp,Negombo
+REV-0080,CUST-74923,Uber Eats Kitchen,An ordinary experience with average taste and delivery time. This was my first order.,3,Delivery,Yes,2026-02-28,Google Maps,Colombo
+REV-0081,CUST-63736,Yelp Bistro,"Everything worked as expected, but there was room for improvement. This was my first order.",3,Delivery,No,2026-05-11,Google Maps,Negombo
+REV-0082,CUST-92155,Sunrise Cafe,Great value for money. The food was tasty and well prepared. The restaurant was busy at the time.,5,Delivery,Yes,2026-04-21,Yelp,Kandy
+REV-0083,CUST-68153,Yelp Bistro,"The meal was cold, soggy, and clearly had been sitting for a long time. I ordered during the evening.",1,Pickup,Yes,2026-01-11,UberEats,Galle
+REV-0084,CUST-79621,City Pizza,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I used the mobile app.,4,Delivery,Yes,2026-03-03,Google Maps,Jaffna
+REV-0085,CUST-40433,Sunrise Cafe,"Everything worked as expected, but there was room for improvement. This was my first order.",4,Pickup,No,2026-05-22,UberEats,Anuradhapura
+REV-0086,CUST-55293,Family Kitchen,The delivery took far too long and the food was not fresh.,1,Pickup,No,2026-12-09,Google Maps,Galle
+REV-0087,CUST-41091,City Pizza,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I ordered during the evening.,5,Pickup,Yes,2026-12-10,UberEats,Negombo
+REV-0088,CUST-47512,Google Maps Grill,The food was delicious and arrived fresh and hot. Great experience.,4,Pickup,Yes,2026-11-07,Yelp,Negombo
+REV-0089,CUST-50492,Sunrise Cafe,The delivery took far too long and the food was not fresh. The staff were polite.,1,Delivery,Yes,2026-12-05,UberEats,Galle
+REV-0090,CUST-27322,Urban Bites,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I used the mobile app.,4,Pickup,Yes,2026-03-09,Google Maps,Galle
+REV-0091,CUST-19869,Yelp Bistro,The order was incorrect and the packaging was damaged.,1,Delivery,No,2026-09-12,UberEats,Anuradhapura
+REV-0092,CUST-98188,Downtown Diner,Excellent service and very friendly staff. I would definitely order again. The restaurant was busy at the time.,5,Pickup,Yes,2026-02-22,Amazon,Anuradhapura
+REV-0093,CUST-93283,Sunrise Cafe,Great value for money. The food was tasty and well prepared. I ordered during the evening.,4,Pickup,No,2026-02-05,UberEats,Colombo
+REV-0094,CUST-40775,Urban Bites,The delivery was quick and the customer service was helpful. I ordered during the evening.,4,Delivery,No,2026-08-12,Google Maps,Jaffna
+REV-0095,CUST-74139,Family Kitchen,The delivery took far too long and the food was not fresh. I ordered during the evening.,2,Pickup,Yes,2026-01-23,Yelp,Kandy
+REV-0096,CUST-99873,Green Leaf Restaurant,Really happy with the quality and portion size. Everything was perfect. I ordered during the evening.,5,Pickup,Yes,2026-07-09,Amazon,Colombo
+REV-0097,CUST-94109,Family Kitchen,Poor experience overall. I would not order from this restaurant again. I used the mobile app.,1,Delivery,Yes,2026-06-08,Amazon,Jaffna
+REV-0098,CUST-53064,Yelp Bistro,Really happy with the quality and portion size. Everything was perfect. I used the mobile app.,4,Delivery,Yes,2026-03-05,Yelp,Kandy
+REV-0099,CUST-56955,Google Maps Grill,The food was delicious and arrived fresh and hot. Great experience. The staff were polite.,4,Pickup,Yes,2026-03-09,UberEats,Kandy
+REV-0100,CUST-68756,Green Leaf Restaurant,Very disappointing experience. The meal was poorly prepared and late.,1,Delivery,No,2026-09-08,UberEats,Negombo
+REV-0101,CUST-17972,Sunrise Cafe,Customer service was unhelpful and my complaint was not resolved. The staff were polite.,2,Pickup,No,2026-11-04,Google Maps,Negombo
+REV-0102,CUST-89730,Yelp Bistro,Very disappointing experience. The meal was poorly prepared and late. The restaurant was busy at the time.,1,Delivery,Yes,2026-05-20,Yelp,Anuradhapura
+REV-0103,CUST-22999,Amazon Cafe,Customer service was unhelpful and my complaint was not resolved. Delivery instructions were followed.,2,Delivery,No,2026-08-08,Google Maps,Galle
+REV-0104,CUST-50966,City Pizza,"The meal was cold, soggy, and clearly had been sitting for a long time. I ordered during the evening.",2,Pickup,Yes,2026-06-05,Google Maps,Colombo
+REV-0105,CUST-22656,Green Leaf Restaurant,Excellent service and very friendly staff. I would definitely order again. Delivery instructions were followed.,4,Delivery,Yes,2026-10-18,Yelp,Negombo
+REV-0106,CUST-47700,Family Kitchen,Great value for money. The food was tasty and well prepared. The staff were polite.,5,Pickup,Yes,2026-02-19,Amazon,Kandy
+REV-0107,CUST-82910,Green Leaf Restaurant,"The meal was fine, although there was nothing particularly special about it. The restaurant was busy at the time.",3,Delivery,Yes,2026-10-08,Google Maps,Jaffna
+REV-0108,CUST-33647,Downtown Diner,The food arrived cold and the order was missing an item. The staff were polite.,2,Pickup,Yes,2026-06-01,Amazon,Kandy
+REV-0109,CUST-92991,Uber Eats Kitchen,An ordinary experience with average taste and delivery time. This was my first order.,3,Delivery,Yes,2026-07-14,Google Maps,Galle
+REV-0110,CUST-16895,Yelp Bistro,The restaurant was excellent and the order arrived earlier than expected. I ordered during the evening.,5,Delivery,Yes,2026-11-03,Yelp,Anuradhapura
+REV-0111,CUST-64287,Downtown Diner,"Everything worked as expected, but there was room for improvement.",4,Delivery,Yes,2026-06-14,UberEats,Galle
+REV-0112,CUST-15952,Google Maps Grill,"Everything worked as expected, but there was room for improvement. The experience was similar to my previous order.",4,Pickup,Yes,2026-01-07,Yelp,Kandy
+REV-0113,CUST-25726,Uber Eats Kitchen,Customer service was unhelpful and my complaint was not resolved. The restaurant was busy at the time.,2,Pickup,No,2026-03-05,Google Maps,Jaffna
+REV-0114,CUST-15544,City Pizza,The order was incorrect and the packaging was damaged. Delivery instructions were followed.,1,Delivery,No,2026-02-28,Yelp,Jaffna
+REV-0115,CUST-25096,City Pizza,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The experience was similar to my previous order.,5,Delivery,Yes,2026-03-26,Google Maps,Negombo
+REV-0116,CUST-41891,City Pizza,Very disappointing experience. The meal was poorly prepared and late. I ordered during the evening.,2,Pickup,Yes,2026-07-28,Yelp,Negombo
+REV-0117,CUST-76910,Amazon Cafe,Great value for money. The food was tasty and well prepared. I ordered during the evening.,4,Delivery,Yes,2026-06-24,Amazon,Kandy
+REV-0118,CUST-88957,Yelp Bistro,The restaurant was excellent and the order arrived earlier than expected. This was my first order.,4,Delivery,Yes,2026-11-16,Google Maps,Jaffna
+REV-0119,CUST-29786,Sunrise Cafe,Poor experience overall. I would not order from this restaurant again. The restaurant was busy at the time.,2,Delivery,No,2026-08-21,Yelp,Galle
+REV-0120,CUST-50685,Sunrise Cafe,The packaging was fine and the food was neither great nor disappointing. I ordered during the evening.,4,Pickup,Yes,2026-01-12,Yelp,Colombo
+REV-0121,CUST-70648,Family Kitchen,Average experience. The portion was reasonable and the taste was acceptable. Delivery instructions were followed.,4,Delivery,No,2026-10-21,Amazon,Galle
+REV-0122,CUST-23566,Green Leaf Restaurant,The order was correct and delivered within the expected time.,3,Delivery,Yes,2026-01-08,Google Maps,Anuradhapura
+REV-0123,CUST-47079,City Pizza,The order was correct and delivered within the expected time. The restaurant was busy at the time.,3,Pickup,Yes,2026-11-20,UberEats,Negombo
+REV-0124,CUST-83133,City Pizza,Average experience. The portion was reasonable and the taste was acceptable. I ordered during the evening.,3,Pickup,Yes,2026-12-28,Amazon,Galle
+REV-0125,CUST-95990,City Pizza,"Fast delivery, good packaging, and the meal tasted amazing. The experience was similar to my previous order.",5,Delivery,Yes,2026-05-18,Google Maps,Negombo
+REV-0126,CUST-76648,Green Leaf Restaurant,The delivery took far too long and the food was not fresh. Delivery instructions were followed.,1,Delivery,Yes,2026-05-06,Amazon,Galle
+REV-0127,CUST-28030,Yelp Bistro,Poor experience overall. I would not order from this restaurant again. I used the mobile app.,1,Delivery,Yes,2026-02-17,UberEats,Negombo
+REV-0128,CUST-31266,Yelp Bistro,"Fast delivery, good packaging, and the meal tasted amazing. This was my first order.",5,Delivery,No,2026-01-14,Yelp,Negombo
+REV-0129,CUST-40671,Urban Bites,Poor experience overall. I would not order from this restaurant again.,2,Delivery,Yes,2026-08-27,Amazon,Galle
+REV-0130,CUST-60052,Urban Bites,"Everything worked as expected, but there was room for improvement. The experience was similar to my previous order.",3,Pickup,Yes,2026-04-26,Amazon,Galle
+REV-0131,CUST-77621,Amazon Cafe,The delivery was quick and the customer service was helpful. I ordered during the evening.,5,Pickup,Yes,2026-03-09,Google Maps,Jaffna
+REV-0132,CUST-69130,Green Leaf Restaurant,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I used the mobile app.,4,Delivery,No,2026-01-13,Yelp,Kandy
+REV-0133,CUST-13694,Green Leaf Restaurant,Excellent service and very friendly staff. I would definitely order again. I used the mobile app.,5,Delivery,Yes,2026-03-05,UberEats,Galle
+REV-0134,CUST-68799,Family Kitchen,Poor experience overall. I would not order from this restaurant again.,1,Delivery,Yes,2026-01-09,Amazon,Kandy
+REV-0135,CUST-41147,Downtown Diner,An ordinary experience with average taste and delivery time. The experience was similar to my previous order.,3,Delivery,Yes,2026-04-14,Google Maps,Colombo
+REV-0136,CUST-28818,Downtown Diner,The delivery was quick and the customer service was helpful. I used the mobile app.,4,Pickup,Yes,2026-10-12,Amazon,Jaffna
+REV-0137,CUST-78951,Urban Bites,Excellent service and very friendly staff. I would definitely order again. I ordered during the evening.,5,Delivery,No,2026-08-02,Google Maps,Galle
+REV-0138,CUST-55193,Google Maps Grill,The food was delicious and arrived fresh and hot. Great experience. I ordered during the evening.,5,Delivery,Yes,2026-03-02,Yelp,Jaffna
+REV-0139,CUST-92802,Yelp Bistro,"Fast delivery, good packaging, and the meal tasted amazing.",5,Delivery,Yes,2026-12-25,Google Maps,Colombo
+REV-0140,CUST-51365,Downtown Diner,The food was delicious and arrived fresh and hot. Great experience. The staff were polite.,4,Pickup,No,2026-05-02,Amazon,Galle
+REV-0141,CUST-26315,Green Leaf Restaurant,The food was delicious and arrived fresh and hot. Great experience. The experience was similar to my previous order.,5,Pickup,No,2026-12-15,Google Maps,Galle
+REV-0142,CUST-78062,Downtown Diner,Poor experience overall. I would not order from this restaurant again. The restaurant was busy at the time.,2,Delivery,No,2026-02-14,Amazon,Jaffna
+REV-0143,CUST-96628,Downtown Diner,Excellent service and very friendly staff. I would definitely order again. The restaurant was busy at the time.,4,Pickup,No,2026-10-23,Google Maps,Kandy
+REV-0144,CUST-56210,Family Kitchen,The packaging was fine and the food was neither great nor disappointing. The staff were polite.,3,Pickup,Yes,2026-11-26,UberEats,Colombo
+REV-0145,CUST-14081,Yelp Bistro,An ordinary experience with average taste and delivery time. This was my first order.,3,Pickup,Yes,2026-03-03,Amazon,Negombo
+REV-0146,CUST-99006,Sunrise Cafe,Absolutely loved the meal. Fresh ingredients and wonderful flavor. This was my first order.,4,Pickup,Yes,2026-08-25,UberEats,Jaffna
+REV-0147,CUST-95139,Downtown Diner,Great value for money. The food was tasty and well prepared. The restaurant was busy at the time.,5,Delivery,Yes,2026-01-24,Amazon,Anuradhapura
+REV-0148,CUST-68493,Google Maps Grill,Average experience. The portion was reasonable and the taste was acceptable. The experience was similar to my previous order.,3,Pickup,No,2026-04-04,Amazon,Colombo
+REV-0149,CUST-97535,Green Leaf Restaurant,"Everything worked as expected, but there was room for improvement. The restaurant was busy at the time.",3,Delivery,Yes,2026-05-28,Amazon,Negombo
+REV-0150,CUST-25907,Google Maps Grill,The delivery took far too long and the food was not fresh. I used the mobile app.,2,Delivery,Yes,2026-08-01,Yelp,Jaffna
+REV-0151,CUST-90209,Amazon Cafe,"Everything worked as expected, but there was room for improvement. This was my first order.",4,Delivery,Yes,2026-07-23,Google Maps,Jaffna
+REV-0152,CUST-51553,Amazon Cafe,Absolutely loved the meal. Fresh ingredients and wonderful flavor. This was my first order.,4,Pickup,No,2026-11-17,Yelp,Kandy
+REV-0153,CUST-75911,Uber Eats Kitchen,The delivery took far too long and the food was not fresh. Delivery instructions were followed.,1,Delivery,Yes,2026-05-06,Amazon,Galle
+REV-0154,CUST-20336,Downtown Diner,The portion was small and the food did not taste good. The experience was similar to my previous order.,2,Delivery,Yes,2026-03-21,Yelp,Jaffna
+REV-0155,CUST-32439,Family Kitchen,The order was correct and delivered within the expected time. This was my first order.,4,Pickup,Yes,2026-01-03,UberEats,Negombo
+REV-0156,CUST-91016,Uber Eats Kitchen,Customer service was unhelpful and my complaint was not resolved. Delivery instructions were followed.,1,Pickup,Yes,2026-11-10,Google Maps,Kandy
+REV-0157,CUST-19564,Uber Eats Kitchen,"The meal was cold, soggy, and clearly had been sitting for a long time.",2,Delivery,No,2026-07-16,Google Maps,Kandy
+REV-0158,CUST-55268,City Pizza,"Fast delivery, good packaging, and the meal tasted amazing. The restaurant was busy at the time.",5,Delivery,Yes,2026-09-18,UberEats,Galle
+REV-0159,CUST-42495,Yelp Bistro,Excellent service and very friendly staff. I would definitely order again.,5,Delivery,Yes,2026-05-13,Google Maps,Kandy
+REV-0160,CUST-34881,Yelp Bistro,The delivery took far too long and the food was not fresh. The restaurant was busy at the time.,2,Pickup,No,2026-08-10,Google Maps,Colombo
+REV-0161,CUST-38199,Family Kitchen,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I used the mobile app.,5,Pickup,Yes,2026-01-10,Google Maps,Jaffna
+REV-0162,CUST-24089,City Pizza,Poor experience overall. I would not order from this restaurant again. The staff were polite.,2,Delivery,Yes,2026-12-12,Google Maps,Galle
+REV-0163,CUST-82512,Downtown Diner,The food was delicious and arrived fresh and hot. Great experience. The restaurant was busy at the time.,4,Delivery,No,2026-09-15,Yelp,Jaffna
+REV-0164,CUST-61629,Green Leaf Restaurant,Average experience. The portion was reasonable and the taste was acceptable. I ordered during the evening.,3,Pickup,Yes,2026-03-07,Google Maps,Jaffna
+REV-0165,CUST-72094,Urban Bites,The food was delicious and arrived fresh and hot. Great experience. The restaurant was busy at the time.,4,Pickup,Yes,2026-10-17,Amazon,Galle
+REV-0166,CUST-90805,Downtown Diner,The order was incorrect and the packaging was damaged. Delivery instructions were followed.,1,Pickup,No,2026-12-19,Yelp,Anuradhapura
+REV-0167,CUST-64596,Family Kitchen,The order was incorrect and the packaging was damaged. I ordered during the evening.,2,Pickup,Yes,2026-10-16,Yelp,Negombo
+REV-0168,CUST-32349,Urban Bites,The portion was small and the food did not taste good.,1,Pickup,Yes,2026-11-08,UberEats,Jaffna
+REV-0169,CUST-67807,Green Leaf Restaurant,Very disappointing experience. The meal was poorly prepared and late. The staff were polite.,1,Pickup,Yes,2026-07-23,Amazon,Anuradhapura
+REV-0170,CUST-28098,Urban Bites,"Everything worked as expected, but there was room for improvement. The staff were polite.",4,Delivery,Yes,2026-11-16,Google Maps,Galle
+REV-0171,CUST-98587,Downtown Diner,Poor experience overall. I would not order from this restaurant again. The restaurant was busy at the time.,2,Pickup,Yes,2026-04-09,Yelp,Kandy
+REV-0172,CUST-74094,Green Leaf Restaurant,Customer service was unhelpful and my complaint was not resolved. I used the mobile app.,2,Pickup,Yes,2026-09-26,Yelp,Galle
+REV-0173,CUST-29198,Downtown Diner,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The restaurant was busy at the time.,5,Delivery,Yes,2026-12-03,Yelp,Anuradhapura
+REV-0174,CUST-80592,Downtown Diner,"Everything worked as expected, but there was room for improvement. I used the mobile app.",3,Pickup,Yes,2026-02-20,Amazon,Kandy
+REV-0175,CUST-23133,City Pizza,Really happy with the quality and portion size. Everything was perfect. The staff were polite.,4,Pickup,No,2026-02-22,Amazon,Colombo
+REV-0176,CUST-72580,Google Maps Grill,The delivery took far too long and the food was not fresh.,2,Pickup,Yes,2026-05-21,UberEats,Colombo
+REV-0177,CUST-32946,City Pizza,"The meal was fine, although there was nothing particularly special about it. The staff were polite.",4,Delivery,Yes,2026-07-26,Google Maps,Kandy
+REV-0178,CUST-49110,Family Kitchen,Customer service was unhelpful and my complaint was not resolved. The staff were polite.,1,Delivery,Yes,2026-05-15,Google Maps,Kandy
+REV-0179,CUST-24764,Green Leaf Restaurant,Poor experience overall. I would not order from this restaurant again. I used the mobile app.,2,Delivery,No,2026-11-09,Amazon,Colombo
+REV-0180,CUST-90079,City Pizza,Customer service was unhelpful and my complaint was not resolved. This was my first order.,1,Pickup,Yes,2026-02-13,UberEats,Kandy
+REV-0181,CUST-10895,Downtown Diner,Poor experience overall. I would not order from this restaurant again. I used the mobile app.,2,Pickup,Yes,2026-08-25,Yelp,Galle
+REV-0182,CUST-40972,Uber Eats Kitchen,The food was delicious and arrived fresh and hot. Great experience. The restaurant was busy at the time.,5,Delivery,No,2026-05-06,Google Maps,Negombo
+REV-0183,CUST-93717,Downtown Diner,Service was normal and the food quality was acceptable. I ordered during the evening.,4,Pickup,Yes,2026-04-05,Google Maps,Kandy
+REV-0184,CUST-80453,Google Maps Grill,The packaging was fine and the food was neither great nor disappointing.,3,Delivery,Yes,2026-09-15,Yelp,Colombo
+REV-0185,CUST-85065,Urban Bites,Very disappointing experience. The meal was poorly prepared and late. I used the mobile app.,1,Delivery,Yes,2026-06-28,Google Maps,Colombo
+REV-0186,CUST-17292,Sunrise Cafe,"Everything worked as expected, but there was room for improvement.",3,Delivery,No,2026-08-19,UberEats,Jaffna
+REV-0187,CUST-61897,Downtown Diner,Service was normal and the food quality was acceptable. The staff were polite.,4,Delivery,Yes,2026-10-03,UberEats,Anuradhapura
+REV-0188,CUST-71875,Uber Eats Kitchen,Excellent service and very friendly staff. I would definitely order again. I ordered during the evening.,4,Pickup,No,2026-03-25,Amazon,Negombo
+REV-0189,CUST-68790,City Pizza,"The meal was cold, soggy, and clearly had been sitting for a long time. Delivery instructions were followed.",2,Pickup,Yes,2026-11-22,Amazon,Negombo
+REV-0190,CUST-79316,Yelp Bistro,Very disappointing experience. The meal was poorly prepared and late. Delivery instructions were followed.,1,Delivery,Yes,2026-01-10,Google Maps,Negombo
+REV-0191,CUST-42441,Sunrise Cafe,"The meal was cold, soggy, and clearly had been sitting for a long time. I used the mobile app.",2,Pickup,Yes,2026-05-07,UberEats,Colombo
+REV-0192,CUST-37011,Amazon Cafe,"The meal was cold, soggy, and clearly had been sitting for a long time. I used the mobile app.",1,Delivery,Yes,2026-08-20,UberEats,Kandy
+REV-0193,CUST-80747,Google Maps Grill,"The meal was cold, soggy, and clearly had been sitting for a long time. I used the mobile app.",2,Delivery,Yes,2026-09-10,Amazon,Negombo
+REV-0194,CUST-28777,Urban Bites,The packaging was fine and the food was neither great nor disappointing. The experience was similar to my previous order.,3,Delivery,No,2026-05-09,UberEats,Jaffna
+REV-0195,CUST-16145,Green Leaf Restaurant,The delivery took far too long and the food was not fresh.,2,Pickup,Yes,2026-12-14,Google Maps,Kandy
+REV-0196,CUST-39536,Downtown Diner,"Fast delivery, good packaging, and the meal tasted amazing. I used the mobile app.",5,Delivery,No,2026-01-18,Google Maps,Anuradhapura
+REV-0197,CUST-43422,Google Maps Grill,The order was correct and delivered within the expected time. I used the mobile app.,3,Pickup,Yes,2026-08-28,Yelp,Colombo
+REV-0198,CUST-59436,Family Kitchen,"The meal was fine, although there was nothing particularly special about it. The experience was similar to my previous order.",3,Delivery,Yes,2026-04-26,Amazon,Anuradhapura
+REV-0199,CUST-37762,Google Maps Grill,Great value for money. The food was tasty and well prepared. The staff were polite.,5,Delivery,No,2026-04-23,Amazon,Anuradhapura
+REV-0200,CUST-71112,Urban Bites,The order was incorrect and the packaging was damaged. Delivery instructions were followed.,2,Pickup,Yes,2026-05-12,Google Maps,Anuradhapura
+REV-0201,CUST-58589,Green Leaf Restaurant,The delivery was quick and the customer service was helpful. I used the mobile app.,5,Pickup,Yes,2026-10-28,Amazon,Negombo
+REV-0202,CUST-29976,Google Maps Grill,The restaurant was excellent and the order arrived earlier than expected. The experience was similar to my previous order.,5,Pickup,Yes,2026-07-19,Amazon,Anuradhapura
+REV-0203,CUST-94108,Sunrise Cafe,The packaging was fine and the food was neither great nor disappointing.,3,Pickup,Yes,2026-12-26,Yelp,Kandy
+REV-0204,CUST-78674,Uber Eats Kitchen,The delivery was quick and the customer service was helpful. The staff were polite.,4,Delivery,Yes,2026-01-14,Amazon,Negombo
+REV-0205,CUST-76287,Sunrise Cafe,"Fast delivery, good packaging, and the meal tasted amazing. I used the mobile app.",4,Pickup,Yes,2026-10-21,Google Maps,Negombo
+REV-0206,CUST-11553,Uber Eats Kitchen,The food was okay and arrived on time. Nothing especially memorable. Delivery instructions were followed.,4,Pickup,Yes,2026-01-17,Google Maps,Kandy
+REV-0207,CUST-35156,Family Kitchen,Excellent service and very friendly staff. I would definitely order again. I used the mobile app.,4,Pickup,Yes,2026-05-26,Google Maps,Colombo
+REV-0208,CUST-39603,Downtown Diner,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I used the mobile app.,5,Delivery,Yes,2026-02-13,Google Maps,Anuradhapura
+REV-0209,CUST-32463,Amazon Cafe,The food was okay and arrived on time. Nothing especially memorable. The staff were polite.,4,Pickup,No,2026-11-26,Yelp,Jaffna
+REV-0210,CUST-37710,Family Kitchen,Very disappointing experience. The meal was poorly prepared and late. I used the mobile app.,1,Pickup,Yes,2026-01-03,Yelp,Jaffna
+REV-0211,CUST-12052,Google Maps Grill,The food was okay and arrived on time. Nothing especially memorable. The restaurant was busy at the time.,3,Delivery,No,2026-02-10,Amazon,Jaffna
+REV-0212,CUST-28343,Amazon Cafe,Absolutely loved the meal. Fresh ingredients and wonderful flavor. Delivery instructions were followed.,5,Pickup,Yes,2026-02-14,Amazon,Colombo
+REV-0213,CUST-93115,Downtown Diner,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The staff were polite.,5,Pickup,No,2026-04-12,Google Maps,Anuradhapura
+REV-0214,CUST-42302,Amazon Cafe,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The experience was similar to my previous order.,4,Delivery,Yes,2026-03-13,Amazon,Negombo
+REV-0215,CUST-10680,Downtown Diner,Great value for money. The food was tasty and well prepared. I ordered during the evening.,4,Pickup,Yes,2026-05-04,Amazon,Colombo
+REV-0216,CUST-13442,Amazon Cafe,The delivery was quick and the customer service was helpful. I ordered during the evening.,5,Pickup,Yes,2026-10-20,Yelp,Anuradhapura
+REV-0217,CUST-83339,Google Maps Grill,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I ordered during the evening.,5,Delivery,No,2026-03-05,Yelp,Galle
+REV-0218,CUST-66973,Downtown Diner,"Fast delivery, good packaging, and the meal tasted amazing. This was my first order.",4,Pickup,Yes,2026-08-26,UberEats,Galle
+REV-0219,CUST-70012,Amazon Cafe,Really happy with the quality and portion size. Everything was perfect. I used the mobile app.,5,Delivery,Yes,2026-01-13,Yelp,Jaffna
+REV-0220,CUST-66441,Family Kitchen,Great value for money. The food was tasty and well prepared. The restaurant was busy at the time.,5,Delivery,Yes,2026-06-20,Amazon,Anuradhapura
+REV-0221,CUST-92955,Sunrise Cafe,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The experience was similar to my previous order.,5,Delivery,Yes,2026-07-09,Google Maps,Galle
+REV-0222,CUST-70505,Google Maps Grill,Really happy with the quality and portion size. Everything was perfect. The staff were polite.,4,Pickup,Yes,2026-12-03,Google Maps,Negombo
+REV-0223,CUST-96332,Yelp Bistro,Service was normal and the food quality was acceptable. The experience was similar to my previous order.,3,Pickup,No,2026-02-15,Google Maps,Jaffna
+REV-0224,CUST-80373,Family Kitchen,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The restaurant was busy at the time.,4,Delivery,Yes,2026-04-22,Yelp,Kandy
+REV-0225,CUST-53463,City Pizza,The food was okay and arrived on time. Nothing especially memorable. Delivery instructions were followed.,4,Delivery,Yes,2026-02-09,Amazon,Jaffna
+REV-0226,CUST-61266,Sunrise Cafe,The portion was small and the food did not taste good. The restaurant was busy at the time.,2,Delivery,Yes,2026-01-16,UberEats,Galle
+REV-0227,CUST-55656,Downtown Diner,Excellent service and very friendly staff. I would definitely order again. This was my first order.,4,Pickup,No,2026-04-17,Google Maps,Galle
+REV-0228,CUST-51800,Amazon Cafe,"Everything worked as expected, but there was room for improvement.",4,Pickup,Yes,2026-12-04,UberEats,Galle
+REV-0229,CUST-77632,Yelp Bistro,The order was correct and delivered within the expected time. I used the mobile app.,4,Delivery,Yes,2026-09-14,Google Maps,Kandy
+REV-0230,CUST-61849,Uber Eats Kitchen,The delivery took far too long and the food was not fresh. Delivery instructions were followed.,1,Delivery,No,2026-10-14,Google Maps,Colombo
+REV-0231,CUST-85674,Amazon Cafe,The portion was small and the food did not taste good. I ordered during the evening.,2,Delivery,Yes,2026-06-07,Google Maps,Colombo
+REV-0232,CUST-90125,City Pizza,The delivery was quick and the customer service was helpful. Delivery instructions were followed.,5,Delivery,Yes,2026-06-28,Google Maps,Jaffna
+REV-0233,CUST-51049,Amazon Cafe,The restaurant was excellent and the order arrived earlier than expected. This was my first order.,4,Delivery,Yes,2026-02-06,Yelp,Negombo
+REV-0234,CUST-85340,City Pizza,Absolutely loved the meal. Fresh ingredients and wonderful flavor. This was my first order.,5,Pickup,Yes,2026-08-21,Amazon,Jaffna
+REV-0235,CUST-51232,Sunrise Cafe,The restaurant was excellent and the order arrived earlier than expected. This was my first order.,4,Delivery,Yes,2026-01-16,Amazon,Kandy
+REV-0236,CUST-64477,Sunrise Cafe,Poor experience overall. I would not order from this restaurant again.,2,Pickup,Yes,2026-02-19,UberEats,Kandy
+REV-0237,CUST-32047,Sunrise Cafe,The restaurant was excellent and the order arrived earlier than expected. The experience was similar to my previous order.,4,Pickup,Yes,2026-10-04,Yelp,Jaffna
+REV-0238,CUST-81611,Google Maps Grill,The order was incorrect and the packaging was damaged.,1,Pickup,Yes,2026-12-27,Amazon,Galle
+REV-0239,CUST-55688,Amazon Cafe,The food arrived cold and the order was missing an item. The experience was similar to my previous order.,2,Pickup,Yes,2026-04-07,Yelp,Negombo
+REV-0240,CUST-37082,Google Maps Grill,An ordinary experience with average taste and delivery time. This was my first order.,3,Delivery,Yes,2026-09-09,Amazon,Galle
+REV-0241,CUST-77425,Amazon Cafe,Customer service was unhelpful and my complaint was not resolved. The experience was similar to my previous order.,2,Delivery,No,2026-01-09,Amazon,Negombo
+REV-0242,CUST-42447,City Pizza,The portion was small and the food did not taste good. The restaurant was busy at the time.,1,Pickup,Yes,2026-10-21,Yelp,Negombo
+REV-0243,CUST-62802,Urban Bites,The delivery was quick and the customer service was helpful. I ordered during the evening.,4,Pickup,Yes,2026-08-16,Yelp,Jaffna
+REV-0244,CUST-18300,Urban Bites,Excellent service and very friendly staff. I would definitely order again. The restaurant was busy at the time.,5,Pickup,Yes,2026-07-27,Amazon,Anuradhapura
+REV-0245,CUST-84205,Sunrise Cafe,The restaurant was excellent and the order arrived earlier than expected. This was my first order.,5,Pickup,Yes,2026-01-04,Google Maps,Colombo
+REV-0246,CUST-10088,City Pizza,"Fast delivery, good packaging, and the meal tasted amazing.",5,Delivery,Yes,2026-11-10,Amazon,Galle
+REV-0247,CUST-58738,Yelp Bistro,Great value for money. The food was tasty and well prepared. I ordered during the evening.,5,Delivery,No,2026-11-10,Amazon,Anuradhapura
+REV-0248,CUST-72496,Amazon Cafe,Average experience. The portion was reasonable and the taste was acceptable. I used the mobile app.,3,Delivery,Yes,2026-09-22,Google Maps,Colombo
+REV-0249,CUST-27324,Sunrise Cafe,Great value for money. The food was tasty and well prepared. Delivery instructions were followed.,4,Delivery,Yes,2026-07-03,UberEats,Colombo
+REV-0250,CUST-27451,Yelp Bistro,The restaurant was excellent and the order arrived earlier than expected. Delivery instructions were followed.,4,Delivery,Yes,2026-10-21,Amazon,Anuradhapura
+REV-0251,CUST-90750,Sunrise Cafe,Really happy with the quality and portion size. Everything was perfect. Delivery instructions were followed.,4,Delivery,Yes,2026-02-05,UberEats,Jaffna
+REV-0252,CUST-28327,Google Maps Grill,The order was incorrect and the packaging was damaged. The restaurant was busy at the time.,2,Pickup,Yes,2026-04-18,Yelp,Negombo
+REV-0253,CUST-61347,Downtown Diner,The restaurant was excellent and the order arrived earlier than expected. I used the mobile app.,4,Delivery,Yes,2026-08-13,UberEats,Kandy
+REV-0254,CUST-57329,Green Leaf Restaurant,Average experience. The portion was reasonable and the taste was acceptable. The staff were polite.,4,Delivery,No,2026-10-14,Yelp,Jaffna
+REV-0255,CUST-86986,Amazon Cafe,"Everything worked as expected, but there was room for improvement. The staff were polite.",3,Delivery,Yes,2026-04-02,UberEats,Anuradhapura
+REV-0256,CUST-20803,Urban Bites,An ordinary experience with average taste and delivery time. Delivery instructions were followed.,3,Delivery,Yes,2026-02-10,UberEats,Jaffna
+REV-0257,CUST-86865,Amazon Cafe,The delivery took far too long and the food was not fresh. Delivery instructions were followed.,2,Pickup,No,2026-12-28,Amazon,Colombo
+REV-0258,CUST-90254,Family Kitchen,Absolutely loved the meal. Fresh ingredients and wonderful flavor.,4,Delivery,Yes,2026-11-24,Amazon,Colombo
+REV-0259,CUST-75065,Green Leaf Restaurant,"Fast delivery, good packaging, and the meal tasted amazing. This was my first order.",4,Pickup,Yes,2026-06-05,Yelp,Negombo
+REV-0260,CUST-45649,Urban Bites,The food arrived cold and the order was missing an item. Delivery instructions were followed.,2,Delivery,Yes,2026-12-19,UberEats,Anuradhapura
+REV-0261,CUST-84302,Yelp Bistro,The packaging was fine and the food was neither great nor disappointing.,3,Pickup,Yes,2026-05-25,UberEats,Jaffna
+REV-0262,CUST-15772,Uber Eats Kitchen,Average experience. The portion was reasonable and the taste was acceptable. The staff were polite.,3,Delivery,Yes,2026-08-12,Google Maps,Kandy
+REV-0263,CUST-52179,Google Maps Grill,The food was delicious and arrived fresh and hot. Great experience. I used the mobile app.,5,Pickup,Yes,2026-05-27,UberEats,Jaffna
+REV-0264,CUST-77603,Uber Eats Kitchen,The food was delicious and arrived fresh and hot. Great experience. I used the mobile app.,4,Pickup,Yes,2026-08-28,Yelp,Galle
+REV-0265,CUST-36302,Downtown Diner,The delivery was quick and the customer service was helpful. The restaurant was busy at the time.,4,Pickup,Yes,2026-08-12,Google Maps,Kandy
+REV-0266,CUST-63744,Uber Eats Kitchen,The portion was small and the food did not taste good. The staff were polite.,1,Delivery,Yes,2026-11-27,UberEats,Galle
+REV-0267,CUST-36895,Urban Bites,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I ordered during the evening.,5,Delivery,No,2026-08-02,Amazon,Negombo
+REV-0268,CUST-58823,Sunrise Cafe,The food was delicious and arrived fresh and hot. Great experience. Delivery instructions were followed.,4,Delivery,Yes,2026-09-05,Google Maps,Colombo
+REV-0269,CUST-41034,Downtown Diner,The food was okay and arrived on time. Nothing especially memorable. This was my first order.,3,Pickup,Yes,2026-07-23,Yelp,Galle
+REV-0270,CUST-27840,Family Kitchen,"The meal was fine, although there was nothing particularly special about it. I used the mobile app.",3,Delivery,Yes,2026-02-06,Google Maps,Anuradhapura
+REV-0271,CUST-69233,Downtown Diner,Excellent service and very friendly staff. I would definitely order again. I used the mobile app.,5,Pickup,Yes,2026-02-03,Amazon,Negombo
+REV-0272,CUST-29441,Amazon Cafe,The food was delicious and arrived fresh and hot. Great experience. The restaurant was busy at the time.,4,Delivery,Yes,2026-07-17,UberEats,Negombo
+REV-0273,CUST-69270,Urban Bites,"Fast delivery, good packaging, and the meal tasted amazing. Delivery instructions were followed.",4,Delivery,Yes,2026-08-04,Amazon,Colombo
+REV-0274,CUST-62505,Green Leaf Restaurant,Really happy with the quality and portion size. Everything was perfect. I used the mobile app.,4,Delivery,Yes,2026-02-01,UberEats,Kandy
+REV-0275,CUST-53456,Amazon Cafe,Poor experience overall. I would not order from this restaurant again. I ordered during the evening.,1,Delivery,No,2026-01-06,Google Maps,Negombo
+REV-0276,CUST-32650,Green Leaf Restaurant,The food was delicious and arrived fresh and hot. Great experience. Delivery instructions were followed.,5,Delivery,Yes,2026-05-09,Google Maps,Kandy
+REV-0277,CUST-64000,Urban Bites,Really happy with the quality and portion size. Everything was perfect.,5,Pickup,Yes,2026-02-09,Google Maps,Kandy
+REV-0278,CUST-57069,Sunrise Cafe,Really happy with the quality and portion size. Everything was perfect. Delivery instructions were followed.,4,Pickup,Yes,2026-10-17,Yelp,Anuradhapura
+REV-0279,CUST-13840,Downtown Diner,The food was delicious and arrived fresh and hot. Great experience. I used the mobile app.,5,Delivery,No,2026-09-12,Amazon,Kandy
+REV-0280,CUST-38758,Family Kitchen,Really happy with the quality and portion size. Everything was perfect. The staff were polite.,5,Pickup,Yes,2026-03-06,Amazon,Jaffna
+REV-0281,CUST-84403,Family Kitchen,Great value for money. The food was tasty and well prepared. The restaurant was busy at the time.,4,Delivery,Yes,2026-08-18,Yelp,Kandy
+REV-0282,CUST-88861,Google Maps Grill,Average experience. The portion was reasonable and the taste was acceptable. I used the mobile app.,3,Delivery,No,2026-01-11,Amazon,Kandy
+REV-0283,CUST-12872,Yelp Bistro,"Fast delivery, good packaging, and the meal tasted amazing. The staff were polite.",5,Delivery,Yes,2026-09-28,Yelp,Colombo
+REV-0284,CUST-49552,Green Leaf Restaurant,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The restaurant was busy at the time.,4,Delivery,Yes,2026-12-14,Google Maps,Negombo
+REV-0285,CUST-59595,Downtown Diner,Great value for money. The food was tasty and well prepared. This was my first order.,4,Pickup,Yes,2026-03-24,UberEats,Negombo
+REV-0286,CUST-88956,Green Leaf Restaurant,"The meal was cold, soggy, and clearly had been sitting for a long time. This was my first order.",1,Delivery,Yes,2026-08-05,Yelp,Negombo
+REV-0287,CUST-93386,Amazon Cafe,Great value for money. The food was tasty and well prepared. This was my first order.,5,Pickup,No,2026-01-09,Amazon,Kandy
+REV-0288,CUST-10167,Uber Eats Kitchen,The packaging was fine and the food was neither great nor disappointing. I ordered during the evening.,3,Pickup,No,2026-12-14,Amazon,Anuradhapura
+REV-0289,CUST-23294,Sunrise Cafe,An ordinary experience with average taste and delivery time. Delivery instructions were followed.,3,Delivery,Yes,2026-08-03,UberEats,Galle
+REV-0290,CUST-54801,Yelp Bistro,The restaurant was excellent and the order arrived earlier than expected. I ordered during the evening.,4,Pickup,Yes,2026-12-03,UberEats,Galle
+REV-0291,CUST-66534,Yelp Bistro,"Everything worked as expected, but there was room for improvement. The staff were polite.",4,Pickup,Yes,2026-01-04,Yelp,Kandy
+REV-0292,CUST-48980,Google Maps Grill,"The meal was cold, soggy, and clearly had been sitting for a long time. The experience was similar to my previous order.",2,Delivery,Yes,2026-07-19,Google Maps,Kandy
+REV-0293,CUST-48607,Family Kitchen,The food was delicious and arrived fresh and hot. Great experience. I ordered during the evening.,5,Pickup,Yes,2026-02-01,Amazon,Kandy
+REV-0294,CUST-50416,City Pizza,Average experience. The portion was reasonable and the taste was acceptable. I ordered during the evening.,3,Pickup,No,2026-11-09,UberEats,Negombo
+REV-0295,CUST-58418,Yelp Bistro,The order was correct and delivered within the expected time. Delivery instructions were followed.,3,Pickup,Yes,2026-05-15,Google Maps,Galle
+REV-0296,CUST-97486,Amazon Cafe,The restaurant was excellent and the order arrived earlier than expected. This was my first order.,4,Delivery,Yes,2026-09-14,Amazon,Jaffna
+REV-0297,CUST-85066,Google Maps Grill,Absolutely loved the meal. Fresh ingredients and wonderful flavor.,5,Pickup,Yes,2026-02-13,UberEats,Jaffna
+REV-0298,CUST-32659,Yelp Bistro,The order was correct and delivered within the expected time.,3,Delivery,Yes,2026-03-02,Google Maps,Colombo
+REV-0299,CUST-87994,Downtown Diner,"The meal was cold, soggy, and clearly had been sitting for a long time. This was my first order.",1,Pickup,Yes,2026-02-13,Google Maps,Jaffna
+REV-0300,CUST-91665,Family Kitchen,The restaurant was excellent and the order arrived earlier than expected. The staff were polite.,5,Pickup,Yes,2026-07-05,Amazon,Jaffna
+REV-0301,CUST-47498,Urban Bites,Average experience. The portion was reasonable and the taste was acceptable. I ordered during the evening.,3,Pickup,No,2026-05-13,Google Maps,Jaffna
+REV-0302,CUST-62818,Yelp Bistro,The food was okay and arrived on time. Nothing especially memorable. The experience was similar to my previous order.,3,Pickup,Yes,2026-07-11,Amazon,Colombo
+REV-0303,CUST-54284,Downtown Diner,Customer service was unhelpful and my complaint was not resolved. The staff were polite.,2,Pickup,Yes,2026-08-28,UberEats,Kandy
+REV-0304,CUST-64627,Family Kitchen,The delivery was quick and the customer service was helpful. The experience was similar to my previous order.,5,Delivery,Yes,2026-08-07,Google Maps,Negombo
+REV-0305,CUST-18600,Downtown Diner,The packaging was fine and the food was neither great nor disappointing. This was my first order.,3,Pickup,Yes,2026-09-19,UberEats,Kandy
+REV-0306,CUST-14334,Sunrise Cafe,Really happy with the quality and portion size. Everything was perfect. I used the mobile app.,4,Delivery,Yes,2026-12-07,Yelp,Galle
+REV-0307,CUST-41711,Green Leaf Restaurant,"The meal was cold, soggy, and clearly had been sitting for a long time. The staff were polite.",1,Pickup,No,2026-03-28,Google Maps,Jaffna
+REV-0308,CUST-21847,Downtown Diner,The packaging was fine and the food was neither great nor disappointing. The experience was similar to my previous order.,3,Delivery,No,2026-01-06,Amazon,Kandy
+REV-0309,CUST-77276,Uber Eats Kitchen,"The meal was fine, although there was nothing particularly special about it. Delivery instructions were followed.",3,Delivery,No,2026-03-21,Amazon,Jaffna
+REV-0310,CUST-94245,Downtown Diner,The portion was small and the food did not taste good. The experience was similar to my previous order.,2,Pickup,No,2026-06-15,Yelp,Kandy
+REV-0311,CUST-10963,Urban Bites,An ordinary experience with average taste and delivery time. I ordered during the evening.,4,Pickup,Yes,2026-05-22,UberEats,Anuradhapura
+REV-0312,CUST-44229,Downtown Diner,The restaurant was excellent and the order arrived earlier than expected. The experience was similar to my previous order.,5,Delivery,Yes,2026-09-25,Amazon,Colombo
+REV-0313,CUST-13336,Sunrise Cafe,"The meal was cold, soggy, and clearly had been sitting for a long time. This was my first order.",2,Pickup,Yes,2026-07-13,Google Maps,Negombo
+REV-0314,CUST-99957,Urban Bites,Really happy with the quality and portion size. Everything was perfect. I used the mobile app.,5,Pickup,Yes,2026-09-10,Amazon,Negombo
+REV-0315,CUST-71706,Yelp Bistro,The delivery took far too long and the food was not fresh. I ordered during the evening.,2,Pickup,Yes,2026-11-11,UberEats,Kandy
+REV-0316,CUST-58717,Downtown Diner,The restaurant was excellent and the order arrived earlier than expected. The restaurant was busy at the time.,5,Pickup,No,2026-02-16,UberEats,Negombo
+REV-0317,CUST-75598,Amazon Cafe,Average experience. The portion was reasonable and the taste was acceptable. I used the mobile app.,3,Pickup,Yes,2026-07-02,Amazon,Kandy
+REV-0318,CUST-28772,Green Leaf Restaurant,The order was incorrect and the packaging was damaged.,2,Delivery,Yes,2026-08-11,Amazon,Galle
+REV-0319,CUST-37444,Yelp Bistro,The food was okay and arrived on time. Nothing especially memorable. The experience was similar to my previous order.,3,Delivery,No,2026-02-05,Google Maps,Negombo
+REV-0320,CUST-10611,Uber Eats Kitchen,Absolutely loved the meal. Fresh ingredients and wonderful flavor. Delivery instructions were followed.,5,Delivery,Yes,2026-01-11,Amazon,Colombo
+REV-0321,CUST-50906,Yelp Bistro,"The meal was fine, although there was nothing particularly special about it. The restaurant was busy at the time.",3,Delivery,No,2026-09-19,Yelp,Kandy
+REV-0322,CUST-69759,Urban Bites,The food was delicious and arrived fresh and hot. Great experience. The experience was similar to my previous order.,5,Pickup,No,2026-11-05,Yelp,Anuradhapura
+REV-0323,CUST-12506,Google Maps Grill,Really happy with the quality and portion size. Everything was perfect. Delivery instructions were followed.,4,Delivery,Yes,2026-04-24,UberEats,Jaffna
+REV-0324,CUST-59177,Downtown Diner,Average experience. The portion was reasonable and the taste was acceptable. The staff were polite.,3,Delivery,Yes,2026-11-04,UberEats,Colombo
+REV-0325,CUST-26199,Urban Bites,An ordinary experience with average taste and delivery time. Delivery instructions were followed.,3,Pickup,No,2026-12-05,Amazon,Negombo
+REV-0326,CUST-96725,Amazon Cafe,The food was okay and arrived on time. Nothing especially memorable. Delivery instructions were followed.,3,Pickup,Yes,2026-07-27,UberEats,Jaffna
+REV-0327,CUST-23928,Sunrise Cafe,Very disappointing experience. The meal was poorly prepared and late. I ordered during the evening.,2,Delivery,Yes,2026-05-27,Amazon,Galle
+REV-0328,CUST-81845,Sunrise Cafe,Customer service was unhelpful and my complaint was not resolved. The staff were polite.,1,Delivery,No,2026-06-08,UberEats,Colombo
+REV-0329,CUST-29548,Amazon Cafe,Average experience. The portion was reasonable and the taste was acceptable.,4,Delivery,Yes,2026-05-21,Amazon,Anuradhapura
+REV-0330,CUST-16564,Amazon Cafe,Customer service was unhelpful and my complaint was not resolved.,2,Delivery,Yes,2026-05-12,Yelp,Anuradhapura
+REV-0331,CUST-28139,Yelp Bistro,Very disappointing experience. The meal was poorly prepared and late. The staff were polite.,1,Pickup,Yes,2026-08-20,Yelp,Negombo
+REV-0332,CUST-62530,City Pizza,Great value for money. The food was tasty and well prepared. I ordered during the evening.,4,Pickup,Yes,2026-07-23,Google Maps,Anuradhapura
+REV-0333,CUST-17686,Yelp Bistro,The order was correct and delivered within the expected time. This was my first order.,3,Delivery,No,2026-10-16,Google Maps,Kandy
+REV-0334,CUST-99714,Yelp Bistro,The packaging was fine and the food was neither great nor disappointing. The staff were polite.,4,Pickup,No,2026-02-14,Google Maps,Colombo
+REV-0335,CUST-97797,Green Leaf Restaurant,Great value for money. The food was tasty and well prepared. I used the mobile app.,4,Delivery,No,2026-11-24,Amazon,Anuradhapura
+REV-0336,CUST-11526,Yelp Bistro,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The staff were polite.,4,Pickup,No,2026-03-03,Google Maps,Galle
+REV-0337,CUST-82154,City Pizza,The restaurant was excellent and the order arrived earlier than expected. I used the mobile app.,4,Pickup,Yes,2026-02-15,Google Maps,Jaffna
+REV-0338,CUST-25559,Sunrise Cafe,The delivery was quick and the customer service was helpful. The restaurant was busy at the time.,5,Delivery,Yes,2026-07-14,UberEats,Jaffna
+REV-0339,CUST-76628,Urban Bites,Average experience. The portion was reasonable and the taste was acceptable. The experience was similar to my previous order.,4,Delivery,No,2026-06-12,UberEats,Kandy
+REV-0340,CUST-69314,Amazon Cafe,The order was incorrect and the packaging was damaged. The restaurant was busy at the time.,2,Delivery,Yes,2026-01-11,Yelp,Negombo
+REV-0341,CUST-16000,Yelp Bistro,Customer service was unhelpful and my complaint was not resolved. I ordered during the evening.,2,Pickup,Yes,2026-12-24,Google Maps,Colombo
+REV-0342,CUST-61497,Google Maps Grill,Really happy with the quality and portion size. Everything was perfect. I ordered during the evening.,4,Pickup,Yes,2026-12-11,UberEats,Anuradhapura
+REV-0343,CUST-96305,Family Kitchen,Excellent service and very friendly staff. I would definitely order again.,5,Delivery,No,2026-01-17,UberEats,Jaffna
+REV-0344,CUST-26827,Amazon Cafe,Poor experience overall. I would not order from this restaurant again. This was my first order.,1,Pickup,Yes,2026-09-13,Google Maps,Jaffna
+REV-0345,CUST-54939,Downtown Diner,The portion was small and the food did not taste good. Delivery instructions were followed.,2,Pickup,Yes,2026-03-14,Yelp,Negombo
+REV-0346,CUST-36330,Google Maps Grill,The packaging was fine and the food was neither great nor disappointing. I used the mobile app.,4,Pickup,Yes,2026-11-05,Amazon,Jaffna
+REV-0347,CUST-56168,Urban Bites,The packaging was fine and the food was neither great nor disappointing. I ordered during the evening.,4,Pickup,No,2026-11-24,Yelp,Anuradhapura
+REV-0348,CUST-29048,Uber Eats Kitchen,Very disappointing experience. The meal was poorly prepared and late. Delivery instructions were followed.,1,Delivery,Yes,2026-05-25,Amazon,Galle
+REV-0349,CUST-36738,Urban Bites,The order was correct and delivered within the expected time. The experience was similar to my previous order.,3,Delivery,Yes,2026-08-04,Amazon,Negombo
+REV-0350,CUST-97096,Uber Eats Kitchen,An ordinary experience with average taste and delivery time. The experience was similar to my previous order.,3,Pickup,No,2026-07-26,Yelp,Jaffna
+REV-0351,CUST-39563,Green Leaf Restaurant,The restaurant was excellent and the order arrived earlier than expected.,4,Delivery,Yes,2026-05-15,Amazon,Negombo
+REV-0352,CUST-15326,City Pizza,"Fast delivery, good packaging, and the meal tasted amazing. Delivery instructions were followed.",4,Pickup,Yes,2026-03-06,Yelp,Colombo
+REV-0353,CUST-52287,Family Kitchen,"Fast delivery, good packaging, and the meal tasted amazing. This was my first order.",4,Delivery,Yes,2026-08-26,Yelp,Colombo
+REV-0354,CUST-78236,Amazon Cafe,The order was incorrect and the packaging was damaged. This was my first order.,1,Delivery,No,2026-09-18,Google Maps,Colombo
+REV-0355,CUST-57290,Downtown Diner,Really happy with the quality and portion size. Everything was perfect. The restaurant was busy at the time.,5,Delivery,No,2026-09-27,UberEats,Colombo
+REV-0356,CUST-15226,Green Leaf Restaurant,"Everything worked as expected, but there was room for improvement. I used the mobile app.",3,Pickup,Yes,2026-07-09,Yelp,Colombo
+REV-0357,CUST-15747,Downtown Diner,The order was incorrect and the packaging was damaged.,2,Delivery,Yes,2026-09-03,UberEats,Kandy
+REV-0358,CUST-97862,Google Maps Grill,The food arrived cold and the order was missing an item. I used the mobile app.,1,Pickup,Yes,2026-04-18,Google Maps,Negombo
+REV-0359,CUST-70191,Green Leaf Restaurant,Very disappointing experience. The meal was poorly prepared and late. The staff were polite.,1,Delivery,Yes,2026-02-02,Amazon,Galle
+REV-0360,CUST-60860,Sunrise Cafe,"The meal was fine, although there was nothing particularly special about it. Delivery instructions were followed.",3,Pickup,No,2026-06-01,Google Maps,Negombo
+REV-0361,CUST-19514,Green Leaf Restaurant,The food was delicious and arrived fresh and hot. Great experience. The staff were polite.,4,Delivery,Yes,2026-11-10,UberEats,Galle
+REV-0362,CUST-96602,Uber Eats Kitchen,Poor experience overall. I would not order from this restaurant again. Delivery instructions were followed.,2,Pickup,Yes,2026-09-08,Amazon,Negombo
+REV-0363,CUST-98773,Green Leaf Restaurant,The restaurant was excellent and the order arrived earlier than expected. The experience was similar to my previous order.,4,Delivery,Yes,2026-02-02,UberEats,Jaffna
+REV-0364,CUST-55069,Google Maps Grill,Average experience. The portion was reasonable and the taste was acceptable. I used the mobile app.,3,Pickup,Yes,2026-03-06,Amazon,Jaffna
+REV-0365,CUST-97946,Family Kitchen,The portion was small and the food did not taste good. This was my first order.,1,Delivery,No,2026-11-18,UberEats,Galle
+REV-0366,CUST-86099,Sunrise Cafe,Service was normal and the food quality was acceptable. I used the mobile app.,3,Pickup,Yes,2026-03-22,Amazon,Colombo
+REV-0367,CUST-73682,Sunrise Cafe,Excellent service and very friendly staff. I would definitely order again. The restaurant was busy at the time.,4,Pickup,Yes,2026-12-19,Amazon,Jaffna
+REV-0368,CUST-10633,Green Leaf Restaurant,The packaging was fine and the food was neither great nor disappointing. This was my first order.,3,Delivery,Yes,2026-12-24,Google Maps,Galle
+REV-0369,CUST-70666,Sunrise Cafe,The delivery took far too long and the food was not fresh.,2,Pickup,Yes,2026-08-18,UberEats,Kandy
+REV-0370,CUST-80597,Google Maps Grill,Average experience. The portion was reasonable and the taste was acceptable. This was my first order.,3,Pickup,Yes,2026-12-03,UberEats,Jaffna
+REV-0371,CUST-14804,Urban Bites,An ordinary experience with average taste and delivery time. I used the mobile app.,4,Pickup,No,2026-11-25,Amazon,Galle
+REV-0372,CUST-75683,Urban Bites,The restaurant was excellent and the order arrived earlier than expected.,4,Delivery,No,2026-06-17,UberEats,Negombo
+REV-0373,CUST-30869,Yelp Bistro,"Fast delivery, good packaging, and the meal tasted amazing.",4,Delivery,No,2026-06-02,Amazon,Anuradhapura
+REV-0374,CUST-15610,Google Maps Grill,The restaurant was excellent and the order arrived earlier than expected. I used the mobile app.,5,Pickup,No,2026-08-15,UberEats,Colombo
+REV-0375,CUST-44513,Family Kitchen,The order was incorrect and the packaging was damaged. The experience was similar to my previous order.,1,Delivery,No,2026-11-13,Yelp,Jaffna
+REV-0376,CUST-59326,Google Maps Grill,Average experience. The portion was reasonable and the taste was acceptable. The experience was similar to my previous order.,4,Pickup,Yes,2026-06-16,Google Maps,Jaffna
+REV-0377,CUST-40145,Amazon Cafe,"Fast delivery, good packaging, and the meal tasted amazing. This was my first order.",5,Pickup,Yes,2026-03-06,Amazon,Galle
+REV-0378,CUST-64344,Green Leaf Restaurant,Average experience. The portion was reasonable and the taste was acceptable. I used the mobile app.,4,Delivery,No,2026-11-16,Google Maps,Kandy
+REV-0379,CUST-15655,Yelp Bistro,An ordinary experience with average taste and delivery time. I used the mobile app.,3,Delivery,Yes,2026-11-17,UberEats,Jaffna
+REV-0380,CUST-77717,City Pizza,"Fast delivery, good packaging, and the meal tasted amazing. This was my first order.",5,Delivery,Yes,2026-02-07,Google Maps,Jaffna
+REV-0381,CUST-63840,Family Kitchen,Poor experience overall. I would not order from this restaurant again. I used the mobile app.,1,Delivery,Yes,2026-10-22,Yelp,Kandy
+REV-0382,CUST-40122,City Pizza,The order was incorrect and the packaging was damaged. I ordered during the evening.,2,Pickup,Yes,2026-02-01,Amazon,Jaffna
+REV-0383,CUST-33255,Sunrise Cafe,"The meal was cold, soggy, and clearly had been sitting for a long time. I ordered during the evening.",1,Delivery,Yes,2026-02-16,Amazon,Jaffna
+REV-0384,CUST-78425,City Pizza,The food was okay and arrived on time. Nothing especially memorable. Delivery instructions were followed.,4,Pickup,Yes,2026-12-17,Google Maps,Kandy
+REV-0385,CUST-87207,Family Kitchen,Poor experience overall. I would not order from this restaurant again. The restaurant was busy at the time.,2,Delivery,No,2026-03-09,Google Maps,Kandy
+REV-0386,CUST-43791,Google Maps Grill,Very disappointing experience. The meal was poorly prepared and late. Delivery instructions were followed.,2,Delivery,Yes,2026-10-17,UberEats,Jaffna
+REV-0387,CUST-57483,Amazon Cafe,Really happy with the quality and portion size. Everything was perfect. Delivery instructions were followed.,5,Delivery,No,2026-11-19,Yelp,Galle
+REV-0388,CUST-99208,City Pizza,"The meal was cold, soggy, and clearly had been sitting for a long time. The experience was similar to my previous order.",2,Delivery,No,2026-09-26,Google Maps,Kandy
+REV-0389,CUST-85713,Green Leaf Restaurant,The delivery was quick and the customer service was helpful. The experience was similar to my previous order.,5,Pickup,Yes,2026-11-04,Amazon,Anuradhapura
+REV-0390,CUST-76629,City Pizza,The delivery took far too long and the food was not fresh. I used the mobile app.,1,Pickup,Yes,2026-03-13,UberEats,Colombo
+REV-0391,CUST-18399,Downtown Diner,Poor experience overall. I would not order from this restaurant again. I ordered during the evening.,2,Delivery,Yes,2026-02-20,UberEats,Negombo
+REV-0392,CUST-32973,Sunrise Cafe,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The staff were polite.,5,Pickup,Yes,2026-04-28,Yelp,Kandy
+REV-0393,CUST-57151,Google Maps Grill,Really happy with the quality and portion size. Everything was perfect. The staff were polite.,4,Delivery,Yes,2026-02-09,Google Maps,Galle
+REV-0394,CUST-77861,Uber Eats Kitchen,An ordinary experience with average taste and delivery time. I used the mobile app.,4,Delivery,Yes,2026-09-10,Yelp,Galle
+REV-0395,CUST-69606,City Pizza,Customer service was unhelpful and my complaint was not resolved. I used the mobile app.,1,Delivery,Yes,2026-03-14,UberEats,Jaffna
+REV-0396,CUST-77277,Downtown Diner,The restaurant was excellent and the order arrived earlier than expected. I ordered during the evening.,5,Pickup,No,2026-07-19,Google Maps,Kandy
+REV-0397,CUST-73172,Amazon Cafe,Poor experience overall. I would not order from this restaurant again. The staff were polite.,2,Pickup,Yes,2026-07-21,Amazon,Negombo
+REV-0398,CUST-77699,Urban Bites,The order was incorrect and the packaging was damaged. The restaurant was busy at the time.,2,Delivery,Yes,2026-04-10,UberEats,Anuradhapura
+REV-0399,CUST-72463,Green Leaf Restaurant,The packaging was fine and the food was neither great nor disappointing. This was my first order.,3,Pickup,Yes,2026-10-09,Amazon,Negombo
+REV-0400,CUST-40783,Google Maps Grill,"The meal was fine, although there was nothing particularly special about it. I used the mobile app.",3,Pickup,Yes,2026-04-07,Amazon,Jaffna
+REV-0401,CUST-98580,Sunrise Cafe,Excellent service and very friendly staff. I would definitely order again. I ordered during the evening.,4,Delivery,Yes,2026-08-12,Yelp,Anuradhapura
+REV-0402,CUST-76995,Downtown Diner,Customer service was unhelpful and my complaint was not resolved. This was my first order.,2,Pickup,Yes,2026-10-05,UberEats,Jaffna
+REV-0403,CUST-61605,Yelp Bistro,Poor experience overall. I would not order from this restaurant again. The restaurant was busy at the time.,1,Pickup,Yes,2026-12-17,Google Maps,Galle
+REV-0404,CUST-59732,Family Kitchen,The food was okay and arrived on time. Nothing especially memorable. I used the mobile app.,4,Delivery,Yes,2026-06-20,Yelp,Kandy
+REV-0405,CUST-90358,Green Leaf Restaurant,"The meal was fine, although there was nothing particularly special about it.",3,Pickup,Yes,2026-08-14,Amazon,Anuradhapura
+REV-0406,CUST-46651,Sunrise Cafe,The order was incorrect and the packaging was damaged. Delivery instructions were followed.,2,Delivery,Yes,2026-10-22,Amazon,Colombo
+REV-0407,CUST-35698,Yelp Bistro,The portion was small and the food did not taste good. Delivery instructions were followed.,2,Delivery,No,2026-01-06,Google Maps,Anuradhapura
+REV-0408,CUST-42895,Urban Bites,Great value for money. The food was tasty and well prepared. The experience was similar to my previous order.,5,Delivery,No,2026-02-23,Amazon,Colombo
+REV-0409,CUST-68963,Green Leaf Restaurant,The restaurant was excellent and the order arrived earlier than expected. I ordered during the evening.,5,Pickup,Yes,2026-06-18,Yelp,Galle
+REV-0410,CUST-85609,Family Kitchen,Excellent service and very friendly staff. I would definitely order again. I used the mobile app.,5,Delivery,Yes,2026-06-11,Google Maps,Negombo
+REV-0411,CUST-70784,Yelp Bistro,Excellent service and very friendly staff. I would definitely order again. The experience was similar to my previous order.,5,Delivery,Yes,2026-07-21,Google Maps,Colombo
+REV-0412,CUST-51533,Downtown Diner,Great value for money. The food was tasty and well prepared. The restaurant was busy at the time.,4,Pickup,No,2026-05-15,Yelp,Negombo
+REV-0413,CUST-34102,Uber Eats Kitchen,"Everything worked as expected, but there was room for improvement. This was my first order.",3,Delivery,Yes,2026-11-09,UberEats,Kandy
+REV-0414,CUST-72021,Urban Bites,Excellent service and very friendly staff. I would definitely order again. I ordered during the evening.,4,Delivery,Yes,2026-07-17,UberEats,Colombo
+REV-0415,CUST-50549,Google Maps Grill,"Fast delivery, good packaging, and the meal tasted amazing. Delivery instructions were followed.",4,Delivery,Yes,2026-08-21,Amazon,Kandy
+REV-0416,CUST-96972,Green Leaf Restaurant,The order was correct and delivered within the expected time. The staff were polite.,3,Pickup,No,2026-08-28,Yelp,Jaffna
+REV-0417,CUST-78610,Urban Bites,"Fast delivery, good packaging, and the meal tasted amazing. Delivery instructions were followed.",5,Pickup,Yes,2026-08-18,Amazon,Colombo
+REV-0418,CUST-30410,Downtown Diner,Great value for money. The food was tasty and well prepared. The experience was similar to my previous order.,5,Delivery,Yes,2026-09-27,Amazon,Galle
+REV-0419,CUST-49270,Uber Eats Kitchen,The food was delicious and arrived fresh and hot. Great experience.,5,Pickup,Yes,2026-10-08,UberEats,Jaffna
+REV-0420,CUST-42754,Yelp Bistro,Absolutely loved the meal. Fresh ingredients and wonderful flavor. Delivery instructions were followed.,5,Pickup,No,2026-04-09,UberEats,Anuradhapura
+REV-0421,CUST-64120,Google Maps Grill,Service was normal and the food quality was acceptable. The experience was similar to my previous order.,3,Delivery,Yes,2026-03-10,UberEats,Negombo
+REV-0422,CUST-34613,Green Leaf Restaurant,"Everything worked as expected, but there was room for improvement.",3,Delivery,Yes,2026-01-18,UberEats,Kandy
+REV-0423,CUST-67464,Uber Eats Kitchen,Customer service was unhelpful and my complaint was not resolved. This was my first order.,2,Delivery,Yes,2026-03-01,Google Maps,Kandy
+REV-0424,CUST-70776,Uber Eats Kitchen,The restaurant was excellent and the order arrived earlier than expected. The restaurant was busy at the time.,5,Pickup,Yes,2026-03-02,Yelp,Anuradhapura
+REV-0425,CUST-42778,City Pizza,The delivery was quick and the customer service was helpful. I used the mobile app.,4,Delivery,Yes,2026-12-08,Google Maps,Anuradhapura
+REV-0426,CUST-22315,Urban Bites,The food was delicious and arrived fresh and hot. Great experience.,4,Delivery,No,2026-07-22,Yelp,Galle
+REV-0427,CUST-73075,Downtown Diner,The food was delicious and arrived fresh and hot. Great experience. The experience was similar to my previous order.,4,Delivery,Yes,2026-01-28,Amazon,Colombo
+REV-0428,CUST-31936,Downtown Diner,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The staff were polite.,5,Delivery,No,2026-04-01,UberEats,Jaffna
+REV-0429,CUST-21728,Google Maps Grill,Poor experience overall. I would not order from this restaurant again. The restaurant was busy at the time.,1,Delivery,No,2026-02-22,Yelp,Negombo
+REV-0430,CUST-26492,Sunrise Cafe,Great value for money. The food was tasty and well prepared. I ordered during the evening.,4,Delivery,Yes,2026-09-26,Yelp,Anuradhapura
+REV-0431,CUST-27659,Downtown Diner,The food arrived cold and the order was missing an item. The restaurant was busy at the time.,2,Delivery,No,2026-12-15,Yelp,Jaffna
+REV-0432,CUST-81253,Green Leaf Restaurant,"The meal was fine, although there was nothing particularly special about it. This was my first order.",4,Pickup,No,2026-05-28,Amazon,Colombo
+REV-0433,CUST-80989,Green Leaf Restaurant,"Everything worked as expected, but there was room for improvement. The experience was similar to my previous order.",3,Pickup,Yes,2026-11-17,Google Maps,Negombo
+REV-0434,CUST-52034,Amazon Cafe,The food was delicious and arrived fresh and hot. Great experience. I used the mobile app.,5,Pickup,Yes,2026-09-22,Google Maps,Jaffna
+REV-0435,CUST-94004,Green Leaf Restaurant,The restaurant was excellent and the order arrived earlier than expected. Delivery instructions were followed.,5,Delivery,Yes,2026-09-22,UberEats,Colombo
+REV-0436,CUST-36486,Amazon Cafe,The delivery took far too long and the food was not fresh. The staff were polite.,1,Pickup,Yes,2026-02-02,Google Maps,Negombo
+REV-0437,CUST-38930,Family Kitchen,Service was normal and the food quality was acceptable. The restaurant was busy at the time.,3,Delivery,Yes,2026-04-21,Google Maps,Colombo
+REV-0438,CUST-58374,Uber Eats Kitchen,The food was okay and arrived on time. Nothing especially memorable. Delivery instructions were followed.,3,Pickup,Yes,2026-12-03,Yelp,Colombo
+REV-0439,CUST-79685,City Pizza,Very disappointing experience. The meal was poorly prepared and late. I used the mobile app.,1,Delivery,Yes,2026-09-22,Amazon,Jaffna
+REV-0440,CUST-23829,Family Kitchen,The order was correct and delivered within the expected time. Delivery instructions were followed.,4,Pickup,No,2026-12-22,Google Maps,Colombo
+REV-0441,CUST-96184,Yelp Bistro,"Fast delivery, good packaging, and the meal tasted amazing. The restaurant was busy at the time.",5,Pickup,Yes,2026-06-18,Yelp,Galle
+REV-0442,CUST-83812,Urban Bites,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I used the mobile app.,5,Delivery,No,2026-09-24,Yelp,Galle
+REV-0443,CUST-14543,Downtown Diner,Poor experience overall. I would not order from this restaurant again. The staff were polite.,2,Delivery,Yes,2026-05-01,Yelp,Kandy
+REV-0444,CUST-82569,Urban Bites,Great value for money. The food was tasty and well prepared. The experience was similar to my previous order.,4,Delivery,Yes,2026-01-15,Yelp,Kandy
+REV-0445,CUST-43586,Downtown Diner,Great value for money. The food was tasty and well prepared. I used the mobile app.,4,Delivery,No,2026-10-07,UberEats,Negombo
+REV-0446,CUST-85527,Amazon Cafe,The delivery was quick and the customer service was helpful.,4,Pickup,Yes,2026-12-26,Google Maps,Colombo
+REV-0447,CUST-64594,Amazon Cafe,The order was incorrect and the packaging was damaged. Delivery instructions were followed.,2,Delivery,Yes,2026-11-25,Google Maps,Colombo
+REV-0448,CUST-52838,Urban Bites,The food was delicious and arrived fresh and hot. Great experience. This was my first order.,5,Delivery,Yes,2026-01-22,Google Maps,Anuradhapura
+REV-0449,CUST-47982,City Pizza,Very disappointing experience. The meal was poorly prepared and late. Delivery instructions were followed.,1,Delivery,Yes,2026-06-03,Google Maps,Jaffna
+REV-0450,CUST-62235,Urban Bites,"The meal was cold, soggy, and clearly had been sitting for a long time. I ordered during the evening.",2,Pickup,Yes,2026-03-16,Amazon,Anuradhapura
+REV-0451,CUST-19390,Downtown Diner,Really happy with the quality and portion size. Everything was perfect. I used the mobile app.,4,Pickup,Yes,2026-11-19,UberEats,Colombo
+REV-0452,CUST-34967,Green Leaf Restaurant,An ordinary experience with average taste and delivery time. The restaurant was busy at the time.,3,Pickup,Yes,2026-05-06,Yelp,Jaffna
+REV-0453,CUST-15882,Google Maps Grill,Poor experience overall. I would not order from this restaurant again.,1,Delivery,Yes,2026-03-25,UberEats,Colombo
+REV-0454,CUST-11800,Green Leaf Restaurant,The portion was small and the food did not taste good. The experience was similar to my previous order.,1,Delivery,Yes,2026-08-16,UberEats,Galle
+REV-0455,CUST-81932,Sunrise Cafe,Really happy with the quality and portion size. Everything was perfect. The experience was similar to my previous order.,4,Delivery,Yes,2026-07-19,UberEats,Galle
+REV-0456,CUST-16957,Sunrise Cafe,The restaurant was excellent and the order arrived earlier than expected. The experience was similar to my previous order.,4,Delivery,Yes,2026-07-22,Yelp,Negombo
+REV-0457,CUST-48337,City Pizza,The order was incorrect and the packaging was damaged. The staff were polite.,1,Delivery,No,2026-09-23,UberEats,Galle
+REV-0458,CUST-75621,Sunrise Cafe,Average experience. The portion was reasonable and the taste was acceptable. I used the mobile app.,3,Delivery,Yes,2026-04-17,Yelp,Galle
+REV-0459,CUST-99694,Green Leaf Restaurant,The order was correct and delivered within the expected time. The restaurant was busy at the time.,3,Pickup,Yes,2026-04-17,Yelp,Colombo
+REV-0460,CUST-39567,Yelp Bistro,An ordinary experience with average taste and delivery time. The experience was similar to my previous order.,3,Pickup,No,2026-11-05,UberEats,Negombo
+REV-0461,CUST-85090,Yelp Bistro,Really happy with the quality and portion size. Everything was perfect. I used the mobile app.,5,Pickup,Yes,2026-10-11,Google Maps,Jaffna
+REV-0462,CUST-50501,Urban Bites,"Fast delivery, good packaging, and the meal tasted amazing. This was my first order.",4,Delivery,No,2026-03-21,Amazon,Galle
+REV-0463,CUST-29073,Uber Eats Kitchen,Excellent service and very friendly staff. I would definitely order again. The restaurant was busy at the time.,4,Pickup,No,2026-07-10,Google Maps,Negombo
+REV-0464,CUST-23994,Yelp Bistro,Customer service was unhelpful and my complaint was not resolved. I used the mobile app.,1,Delivery,Yes,2026-10-20,Yelp,Jaffna
+REV-0465,CUST-40266,Uber Eats Kitchen,"The meal was fine, although there was nothing particularly special about it. I used the mobile app.",4,Pickup,Yes,2026-12-25,Google Maps,Kandy
+REV-0466,CUST-34114,City Pizza,"Everything worked as expected, but there was room for improvement. The restaurant was busy at the time.",4,Pickup,No,2026-03-06,Amazon,Kandy
+REV-0467,CUST-39170,Google Maps Grill,The food was delicious and arrived fresh and hot. Great experience. Delivery instructions were followed.,5,Delivery,Yes,2026-03-15,Google Maps,Negombo
+REV-0468,CUST-63066,Uber Eats Kitchen,The delivery was quick and the customer service was helpful. Delivery instructions were followed.,4,Pickup,Yes,2026-07-20,UberEats,Jaffna
+REV-0469,CUST-77987,Urban Bites,The delivery was quick and the customer service was helpful. I used the mobile app.,4,Pickup,Yes,2026-09-13,UberEats,Kandy
+REV-0470,CUST-70469,Yelp Bistro,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The experience was similar to my previous order.,5,Pickup,Yes,2026-10-02,Amazon,Anuradhapura
+REV-0471,CUST-33562,Family Kitchen,Poor experience overall. I would not order from this restaurant again. I ordered during the evening.,1,Delivery,No,2026-07-11,Google Maps,Colombo
+REV-0472,CUST-42778,Green Leaf Restaurant,Really happy with the quality and portion size. Everything was perfect. I ordered during the evening.,5,Delivery,Yes,2026-02-04,Google Maps,Negombo
+REV-0473,CUST-82134,City Pizza,Absolutely loved the meal. Fresh ingredients and wonderful flavor. Delivery instructions were followed.,4,Delivery,Yes,2026-06-19,Amazon,Kandy
+REV-0474,CUST-50378,Downtown Diner,The delivery took far too long and the food was not fresh. Delivery instructions were followed.,1,Pickup,Yes,2026-11-06,UberEats,Kandy
+REV-0475,CUST-70115,Sunrise Cafe,The food arrived cold and the order was missing an item. The staff were polite.,2,Pickup,Yes,2026-10-16,Amazon,Kandy
+REV-0476,CUST-67917,Amazon Cafe,"Everything worked as expected, but there was room for improvement. Delivery instructions were followed.",3,Delivery,Yes,2026-09-09,Amazon,Colombo
+REV-0477,CUST-29054,Uber Eats Kitchen,The food was delicious and arrived fresh and hot. Great experience. The staff were polite.,5,Pickup,Yes,2026-02-02,UberEats,Anuradhapura
+REV-0478,CUST-69682,Family Kitchen,The delivery took far too long and the food was not fresh. This was my first order.,2,Pickup,Yes,2026-02-25,Yelp,Galle
+REV-0479,CUST-82151,Amazon Cafe,Absolutely loved the meal. Fresh ingredients and wonderful flavor. Delivery instructions were followed.,4,Pickup,No,2026-03-04,Yelp,Galle
+REV-0480,CUST-90223,Uber Eats Kitchen,"The meal was fine, although there was nothing particularly special about it. I used the mobile app.",4,Delivery,Yes,2026-08-24,Yelp,Anuradhapura
+REV-0481,CUST-27001,Family Kitchen,The packaging was fine and the food was neither great nor disappointing. The restaurant was busy at the time.,3,Pickup,No,2026-08-26,Amazon,Jaffna
+REV-0482,CUST-25493,Uber Eats Kitchen,The restaurant was excellent and the order arrived earlier than expected. The staff were polite.,4,Pickup,Yes,2026-12-28,Amazon,Jaffna
+REV-0483,CUST-55829,Urban Bites,"The meal was cold, soggy, and clearly had been sitting for a long time. The restaurant was busy at the time.",1,Delivery,Yes,2026-11-07,Yelp,Galle
+REV-0484,CUST-10803,Amazon Cafe,Customer service was unhelpful and my complaint was not resolved. The restaurant was busy at the time.,2,Pickup,Yes,2026-07-24,UberEats,Kandy
+REV-0485,CUST-14660,Yelp Bistro,Great value for money. The food was tasty and well prepared.,5,Pickup,Yes,2026-11-15,Yelp,Anuradhapura
+REV-0486,CUST-84048,Green Leaf Restaurant,"The meal was cold, soggy, and clearly had been sitting for a long time. The experience was similar to my previous order.",1,Delivery,Yes,2026-10-22,Yelp,Galle
+REV-0487,CUST-54453,City Pizza,"Fast delivery, good packaging, and the meal tasted amazing. The staff were polite.",5,Delivery,No,2026-03-20,UberEats,Galle
+REV-0488,CUST-64246,Amazon Cafe,The order was incorrect and the packaging was damaged. The experience was similar to my previous order.,1,Pickup,Yes,2026-06-15,Yelp,Kandy
+REV-0489,CUST-14901,Google Maps Grill,The order was correct and delivered within the expected time. The restaurant was busy at the time.,3,Delivery,No,2026-09-01,Google Maps,Jaffna
+REV-0490,CUST-52904,Yelp Bistro,Great value for money. The food was tasty and well prepared. The experience was similar to my previous order.,5,Delivery,Yes,2026-04-24,UberEats,Anuradhapura
+REV-0491,CUST-15771,Family Kitchen,Excellent service and very friendly staff. I would definitely order again. The experience was similar to my previous order.,4,Delivery,Yes,2026-08-02,UberEats,Jaffna
+REV-0492,CUST-93735,Google Maps Grill,Customer service was unhelpful and my complaint was not resolved. The experience was similar to my previous order.,1,Pickup,Yes,2026-04-10,Yelp,Jaffna
+REV-0493,CUST-29571,Yelp Bistro,The delivery was quick and the customer service was helpful. The experience was similar to my previous order.,4,Pickup,Yes,2026-01-20,UberEats,Kandy
+REV-0494,CUST-47128,Family Kitchen,The packaging was fine and the food was neither great nor disappointing. This was my first order.,3,Delivery,Yes,2026-02-10,Yelp,Jaffna
+REV-0495,CUST-98538,Uber Eats Kitchen,"Fast delivery, good packaging, and the meal tasted amazing.",4,Delivery,No,2026-01-03,Google Maps,Anuradhapura
+REV-0496,CUST-53559,Google Maps Grill,The delivery was quick and the customer service was helpful. The experience was similar to my previous order.,5,Delivery,No,2026-10-05,UberEats,Negombo
+REV-0497,CUST-71675,Google Maps Grill,"Everything worked as expected, but there was room for improvement.",3,Delivery,Yes,2026-10-09,Yelp,Anuradhapura
+REV-0498,CUST-73898,Uber Eats Kitchen,Great value for money. The food was tasty and well prepared.,5,Delivery,No,2026-02-12,Google Maps,Anuradhapura
+REV-0499,CUST-76577,Amazon Cafe,Customer service was unhelpful and my complaint was not resolved. This was my first order.,2,Pickup,Yes,2026-06-18,UberEats,Galle
+REV-0500,CUST-41270,Family Kitchen,An ordinary experience with average taste and delivery time. Delivery instructions were followed.,4,Delivery,Yes,2026-08-13,UberEats,Galle
+REV-0501,CUST-81372,Google Maps Grill,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The restaurant was busy at the time.,5,Delivery,Yes,2026-12-23,Google Maps,Colombo
+REV-0502,CUST-68355,Yelp Bistro,"Everything worked as expected, but there was room for improvement. I ordered during the evening.",3,Pickup,No,2026-02-20,UberEats,Negombo
+REV-0503,CUST-94540,Uber Eats Kitchen,"The meal was cold, soggy, and clearly had been sitting for a long time.",2,Delivery,Yes,2026-03-19,UberEats,Kandy
+REV-0504,CUST-61115,Family Kitchen,"Everything worked as expected, but there was room for improvement. The experience was similar to my previous order.",4,Pickup,Yes,2026-04-22,Yelp,Galle
+REV-0505,CUST-21703,Family Kitchen,Service was normal and the food quality was acceptable. The restaurant was busy at the time.,3,Delivery,No,2026-03-28,Yelp,Colombo
+REV-0506,CUST-24378,Downtown Diner,The food was delicious and arrived fresh and hot. Great experience. The restaurant was busy at the time.,4,Delivery,Yes,2026-07-23,Google Maps,Negombo
+REV-0507,CUST-67041,Urban Bites,Absolutely loved the meal. Fresh ingredients and wonderful flavor. Delivery instructions were followed.,5,Delivery,Yes,2026-08-05,Amazon,Jaffna
+REV-0508,CUST-47810,Yelp Bistro,Great value for money. The food was tasty and well prepared. This was my first order.,5,Delivery,Yes,2026-02-21,UberEats,Kandy
+REV-0509,CUST-21097,Yelp Bistro,Poor experience overall. I would not order from this restaurant again. This was my first order.,2,Pickup,No,2026-12-20,Google Maps,Jaffna
+REV-0510,CUST-56570,Google Maps Grill,Absolutely loved the meal. Fresh ingredients and wonderful flavor. Delivery instructions were followed.,5,Delivery,No,2026-10-01,Google Maps,Negombo
+REV-0511,CUST-14385,Uber Eats Kitchen,The restaurant was excellent and the order arrived earlier than expected. The restaurant was busy at the time.,5,Pickup,Yes,2026-02-19,Google Maps,Negombo
+REV-0512,CUST-78597,Family Kitchen,The restaurant was excellent and the order arrived earlier than expected. I ordered during the evening.,5,Delivery,Yes,2026-08-21,UberEats,Negombo
+REV-0513,CUST-55029,Urban Bites,Service was normal and the food quality was acceptable. The staff were polite.,4,Delivery,No,2026-08-17,Google Maps,Jaffna
+REV-0514,CUST-47907,Yelp Bistro,"The meal was cold, soggy, and clearly had been sitting for a long time. The experience was similar to my previous order.",2,Delivery,Yes,2026-12-26,Yelp,Colombo
+REV-0515,CUST-96025,Downtown Diner,The order was correct and delivered within the expected time. The staff were polite.,4,Delivery,Yes,2026-08-03,Amazon,Jaffna
+REV-0516,CUST-90713,Downtown Diner,The restaurant was excellent and the order arrived earlier than expected. This was my first order.,5,Pickup,Yes,2026-01-24,UberEats,Jaffna
+REV-0517,CUST-32989,Downtown Diner,"Fast delivery, good packaging, and the meal tasted amazing. The restaurant was busy at the time.",5,Delivery,No,2026-03-26,UberEats,Galle
+REV-0518,CUST-64125,City Pizza,The delivery took far too long and the food was not fresh.,1,Delivery,No,2026-12-21,Amazon,Kandy
+REV-0519,CUST-25203,Uber Eats Kitchen,The packaging was fine and the food was neither great nor disappointing. The experience was similar to my previous order.,3,Delivery,No,2026-07-16,Yelp,Anuradhapura
+REV-0520,CUST-72205,Downtown Diner,The portion was small and the food did not taste good. Delivery instructions were followed.,2,Delivery,No,2026-01-10,Google Maps,Anuradhapura
+REV-0521,CUST-66595,Family Kitchen,The food was okay and arrived on time. Nothing especially memorable. The restaurant was busy at the time.,3,Pickup,Yes,2026-05-09,UberEats,Galle
+REV-0522,CUST-98065,Family Kitchen,An ordinary experience with average taste and delivery time. I used the mobile app.,3,Delivery,Yes,2026-11-23,Amazon,Galle
+REV-0523,CUST-63903,Amazon Cafe,The food was okay and arrived on time. Nothing especially memorable. The staff were polite.,3,Delivery,No,2026-06-08,Yelp,Galle
+REV-0524,CUST-87874,Google Maps Grill,The food was delicious and arrived fresh and hot. Great experience. The staff were polite.,4,Delivery,Yes,2026-02-28,Amazon,Anuradhapura
+REV-0525,CUST-43205,Downtown Diner,The order was correct and delivered within the expected time. This was my first order.,3,Pickup,Yes,2026-11-15,Yelp,Anuradhapura
+REV-0526,CUST-19698,Downtown Diner,The packaging was fine and the food was neither great nor disappointing. This was my first order.,3,Delivery,No,2026-07-11,UberEats,Galle
+REV-0527,CUST-19096,Sunrise Cafe,Customer service was unhelpful and my complaint was not resolved.,1,Delivery,No,2026-03-21,Google Maps,Colombo
+REV-0528,CUST-67878,Downtown Diner,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I ordered during the evening.,4,Delivery,Yes,2026-02-03,Yelp,Anuradhapura
+REV-0529,CUST-14959,City Pizza,The delivery was quick and the customer service was helpful. The staff were polite.,4,Pickup,Yes,2026-12-11,Google Maps,Jaffna
+REV-0530,CUST-62941,Amazon Cafe,The delivery was quick and the customer service was helpful. Delivery instructions were followed.,5,Delivery,Yes,2026-07-23,Google Maps,Colombo
+REV-0531,CUST-62509,Uber Eats Kitchen,The packaging was fine and the food was neither great nor disappointing. The experience was similar to my previous order.,3,Delivery,Yes,2026-09-28,Yelp,Colombo
+REV-0532,CUST-82676,Uber Eats Kitchen,Customer service was unhelpful and my complaint was not resolved. This was my first order.,1,Pickup,Yes,2026-05-23,Google Maps,Colombo
+REV-0533,CUST-92941,Sunrise Cafe,The packaging was fine and the food was neither great nor disappointing. I ordered during the evening.,3,Delivery,Yes,2026-01-07,UberEats,Negombo
+REV-0534,CUST-18256,Urban Bites,The portion was small and the food did not taste good. Delivery instructions were followed.,2,Pickup,No,2026-09-27,Google Maps,Colombo
+REV-0535,CUST-63150,Amazon Cafe,The food was delicious and arrived fresh and hot. Great experience. The staff were polite.,5,Delivery,No,2026-11-28,Amazon,Negombo
+REV-0536,CUST-74080,Uber Eats Kitchen,Average experience. The portion was reasonable and the taste was acceptable. This was my first order.,3,Pickup,Yes,2026-04-23,Amazon,Colombo
+REV-0537,CUST-69793,Family Kitchen,The food was delicious and arrived fresh and hot. Great experience. I ordered during the evening.,5,Delivery,Yes,2026-02-04,Google Maps,Jaffna
+REV-0538,CUST-65864,Green Leaf Restaurant,The portion was small and the food did not taste good. I used the mobile app.,1,Pickup,Yes,2026-02-22,Amazon,Galle
+REV-0539,CUST-53975,Amazon Cafe,The portion was small and the food did not taste good. This was my first order.,1,Delivery,Yes,2026-03-25,Google Maps,Kandy
+REV-0540,CUST-86282,Uber Eats Kitchen,The order was correct and delivered within the expected time. I used the mobile app.,3,Delivery,Yes,2026-11-20,Google Maps,Kandy
+REV-0541,CUST-10946,Yelp Bistro,The delivery was quick and the customer service was helpful. The staff were polite.,4,Delivery,Yes,2026-07-23,Google Maps,Negombo
+REV-0542,CUST-64005,Google Maps Grill,"Fast delivery, good packaging, and the meal tasted amazing.",5,Delivery,Yes,2026-10-06,Google Maps,Jaffna
+REV-0543,CUST-10599,Urban Bites,Customer service was unhelpful and my complaint was not resolved. Delivery instructions were followed.,2,Delivery,Yes,2026-02-17,UberEats,Jaffna
+REV-0544,CUST-46231,Uber Eats Kitchen,Really happy with the quality and portion size. Everything was perfect. I used the mobile app.,5,Delivery,Yes,2026-03-22,Google Maps,Anuradhapura
+REV-0545,CUST-47363,Google Maps Grill,The food was delicious and arrived fresh and hot. Great experience. The restaurant was busy at the time.,4,Pickup,Yes,2026-06-20,Google Maps,Colombo
+REV-0546,CUST-13809,Sunrise Cafe,The food was delicious and arrived fresh and hot. Great experience. This was my first order.,4,Delivery,Yes,2026-04-24,Google Maps,Jaffna
+REV-0547,CUST-40154,Amazon Cafe,An ordinary experience with average taste and delivery time. The restaurant was busy at the time.,3,Pickup,Yes,2026-02-08,Google Maps,Kandy
+REV-0548,CUST-86689,Sunrise Cafe,Really happy with the quality and portion size. Everything was perfect.,4,Delivery,No,2026-03-07,Google Maps,Kandy
+REV-0549,CUST-92840,Green Leaf Restaurant,"Fast delivery, good packaging, and the meal tasted amazing. I used the mobile app.",5,Pickup,Yes,2026-06-05,UberEats,Negombo
+REV-0550,CUST-71018,Sunrise Cafe,Service was normal and the food quality was acceptable. I ordered during the evening.,3,Pickup,Yes,2026-06-08,Yelp,Jaffna
+REV-0551,CUST-63961,Urban Bites,"Fast delivery, good packaging, and the meal tasted amazing. I ordered during the evening.",4,Pickup,Yes,2026-10-16,Google Maps,Galle
+REV-0552,CUST-52899,City Pizza,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I used the mobile app.,4,Delivery,Yes,2026-10-01,Google Maps,Colombo
+REV-0553,CUST-79615,City Pizza,The delivery was quick and the customer service was helpful. Delivery instructions were followed.,4,Pickup,Yes,2026-08-16,Amazon,Colombo
+REV-0554,CUST-38574,Yelp Bistro,The food was okay and arrived on time. Nothing especially memorable. Delivery instructions were followed.,4,Pickup,Yes,2026-04-21,UberEats,Colombo
+REV-0555,CUST-84760,Family Kitchen,Service was normal and the food quality was acceptable.,3,Delivery,No,2026-08-25,Amazon,Negombo
+REV-0556,CUST-92222,Amazon Cafe,Great value for money. The food was tasty and well prepared. The staff were polite.,5,Pickup,Yes,2026-09-02,Yelp,Anuradhapura
+REV-0557,CUST-17184,Urban Bites,The portion was small and the food did not taste good. The restaurant was busy at the time.,1,Pickup,Yes,2026-02-13,Yelp,Anuradhapura
+REV-0558,CUST-94957,Urban Bites,The packaging was fine and the food was neither great nor disappointing. This was my first order.,3,Delivery,Yes,2026-03-11,Amazon,Jaffna
+REV-0559,CUST-52003,Green Leaf Restaurant,The delivery was quick and the customer service was helpful. I used the mobile app.,4,Pickup,No,2026-05-02,UberEats,Galle
+REV-0560,CUST-79717,Urban Bites,The delivery was quick and the customer service was helpful.,4,Pickup,No,2026-10-12,UberEats,Kandy
+REV-0561,CUST-61207,Yelp Bistro,Poor experience overall. I would not order from this restaurant again. I ordered during the evening.,1,Pickup,Yes,2026-02-06,Yelp,Colombo
+REV-0562,CUST-78247,Uber Eats Kitchen,"Everything worked as expected, but there was room for improvement. I used the mobile app.",3,Pickup,No,2026-11-18,Amazon,Anuradhapura
+REV-0563,CUST-34780,Amazon Cafe,The delivery was quick and the customer service was helpful. The experience was similar to my previous order.,4,Delivery,Yes,2026-09-21,Yelp,Anuradhapura
+REV-0564,CUST-70031,Downtown Diner,The packaging was fine and the food was neither great nor disappointing.,3,Delivery,Yes,2026-03-26,Yelp,Kandy
+REV-0565,CUST-56284,Downtown Diner,Service was normal and the food quality was acceptable. This was my first order.,3,Pickup,Yes,2026-10-06,Yelp,Kandy
+REV-0566,CUST-25324,Uber Eats Kitchen,The delivery took far too long and the food was not fresh. I used the mobile app.,1,Pickup,Yes,2026-08-09,Yelp,Kandy
+REV-0567,CUST-29391,Green Leaf Restaurant,The food was delicious and arrived fresh and hot. Great experience. The restaurant was busy at the time.,5,Pickup,Yes,2026-09-10,UberEats,Colombo
+REV-0568,CUST-51971,Yelp Bistro,The delivery was quick and the customer service was helpful.,4,Delivery,Yes,2026-11-23,Yelp,Anuradhapura
+REV-0569,CUST-24721,Sunrise Cafe,The delivery took far too long and the food was not fresh. The restaurant was busy at the time.,2,Delivery,Yes,2026-11-18,UberEats,Galle
+REV-0570,CUST-22121,Green Leaf Restaurant,Really happy with the quality and portion size. Everything was perfect. The restaurant was busy at the time.,5,Delivery,Yes,2026-10-17,Amazon,Galle
+REV-0571,CUST-77081,City Pizza,Excellent service and very friendly staff. I would definitely order again. I ordered during the evening.,5,Delivery,No,2026-06-20,UberEats,Negombo
+REV-0572,CUST-60608,Green Leaf Restaurant,"Fast delivery, good packaging, and the meal tasted amazing. The restaurant was busy at the time.",5,Delivery,Yes,2026-06-12,Yelp,Anuradhapura
+REV-0573,CUST-64474,Sunrise Cafe,Very disappointing experience. The meal was poorly prepared and late.,1,Pickup,Yes,2026-12-14,Google Maps,Kandy
+REV-0574,CUST-49745,Sunrise Cafe,Very disappointing experience. The meal was poorly prepared and late. I used the mobile app.,1,Pickup,Yes,2026-10-25,Google Maps,Colombo
+REV-0575,CUST-82851,Sunrise Cafe,The restaurant was excellent and the order arrived earlier than expected. This was my first order.,5,Delivery,Yes,2026-03-27,Google Maps,Galle
+REV-0576,CUST-74762,Urban Bites,The food was okay and arrived on time. Nothing especially memorable. The experience was similar to my previous order.,3,Pickup,Yes,2026-01-26,UberEats,Kandy
+REV-0577,CUST-64677,Yelp Bistro,The delivery was quick and the customer service was helpful. The experience was similar to my previous order.,4,Pickup,Yes,2026-01-04,Yelp,Anuradhapura
+REV-0578,CUST-84130,City Pizza,Very disappointing experience. The meal was poorly prepared and late.,2,Pickup,No,2026-12-27,UberEats,Galle
+REV-0579,CUST-86238,Uber Eats Kitchen,The food was okay and arrived on time. Nothing especially memorable. This was my first order.,3,Delivery,Yes,2026-08-23,Amazon,Galle
+REV-0580,CUST-93394,Green Leaf Restaurant,The restaurant was excellent and the order arrived earlier than expected. Delivery instructions were followed.,5,Delivery,Yes,2026-05-17,UberEats,Jaffna
+REV-0581,CUST-81265,Green Leaf Restaurant,"Fast delivery, good packaging, and the meal tasted amazing. This was my first order.",4,Pickup,Yes,2026-05-22,Yelp,Colombo
+REV-0582,CUST-27950,Urban Bites,The packaging was fine and the food was neither great nor disappointing. The staff were polite.,3,Pickup,Yes,2026-08-14,Yelp,Kandy
+REV-0583,CUST-83224,Family Kitchen,"Fast delivery, good packaging, and the meal tasted amazing. I used the mobile app.",4,Delivery,No,2026-08-03,UberEats,Kandy
+REV-0584,CUST-57522,Yelp Bistro,Poor experience overall. I would not order from this restaurant again. The experience was similar to my previous order.,2,Pickup,Yes,2026-03-23,Yelp,Colombo
+REV-0585,CUST-28659,Google Maps Grill,Very disappointing experience. The meal was poorly prepared and late. This was my first order.,1,Pickup,Yes,2026-04-05,UberEats,Anuradhapura
+REV-0586,CUST-73472,City Pizza,Average experience. The portion was reasonable and the taste was acceptable. The staff were polite.,3,Delivery,Yes,2026-02-02,UberEats,Anuradhapura
+REV-0587,CUST-49537,Uber Eats Kitchen,The restaurant was excellent and the order arrived earlier than expected. I ordered during the evening.,4,Delivery,Yes,2026-10-07,Amazon,Kandy
+REV-0588,CUST-46356,Family Kitchen,The food was okay and arrived on time. Nothing especially memorable. This was my first order.,3,Pickup,Yes,2026-03-28,Amazon,Jaffna
+REV-0589,CUST-79315,Google Maps Grill,Average experience. The portion was reasonable and the taste was acceptable. The staff were polite.,4,Delivery,Yes,2026-03-25,UberEats,Negombo
+REV-0590,CUST-87251,Yelp Bistro,Really happy with the quality and portion size. Everything was perfect. The restaurant was busy at the time.,5,Pickup,Yes,2026-03-27,Yelp,Anuradhapura
+REV-0591,CUST-51193,Amazon Cafe,Really happy with the quality and portion size. Everything was perfect. I ordered during the evening.,5,Pickup,Yes,2026-09-05,Google Maps,Galle
+REV-0592,CUST-74711,Amazon Cafe,The food arrived cold and the order was missing an item. The restaurant was busy at the time.,1,Pickup,Yes,2026-08-20,Yelp,Negombo
+REV-0593,CUST-48088,City Pizza,Poor experience overall. I would not order from this restaurant again. Delivery instructions were followed.,1,Delivery,Yes,2026-08-22,Yelp,Kandy
+REV-0594,CUST-67417,Urban Bites,The delivery was quick and the customer service was helpful. Delivery instructions were followed.,4,Delivery,Yes,2026-03-13,Google Maps,Negombo
+REV-0595,CUST-18481,Green Leaf Restaurant,Average experience. The portion was reasonable and the taste was acceptable. This was my first order.,4,Delivery,Yes,2026-04-20,Google Maps,Colombo
+REV-0596,CUST-86273,Family Kitchen,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The experience was similar to my previous order.,5,Pickup,No,2026-06-16,Google Maps,Anuradhapura
+REV-0597,CUST-26015,Downtown Diner,The order was correct and delivered within the expected time. I ordered during the evening.,3,Pickup,No,2026-04-21,Amazon,Colombo
+REV-0598,CUST-98880,Uber Eats Kitchen,The food was delicious and arrived fresh and hot. Great experience.,4,Delivery,No,2026-10-22,Yelp,Kandy
+REV-0599,CUST-71082,Google Maps Grill,Excellent service and very friendly staff. I would definitely order again.,4,Pickup,No,2026-08-17,Yelp,Jaffna
+REV-0600,CUST-25615,City Pizza,The food was delicious and arrived fresh and hot. Great experience. Delivery instructions were followed.,4,Pickup,Yes,2026-07-15,Google Maps,Colombo
+REV-0601,CUST-66450,Yelp Bistro,The restaurant was excellent and the order arrived earlier than expected.,4,Pickup,No,2026-08-25,UberEats,Jaffna
+REV-0602,CUST-76412,Uber Eats Kitchen,"Everything worked as expected, but there was room for improvement. This was my first order.",3,Pickup,Yes,2026-08-19,Google Maps,Jaffna
+REV-0603,CUST-13689,Family Kitchen,Service was normal and the food quality was acceptable. The staff were polite.,3,Delivery,Yes,2026-06-12,UberEats,Negombo
+REV-0604,CUST-56840,City Pizza,Excellent service and very friendly staff. I would definitely order again. The restaurant was busy at the time.,5,Pickup,Yes,2026-11-08,Amazon,Kandy
+REV-0605,CUST-49965,Amazon Cafe,Average experience. The portion was reasonable and the taste was acceptable. I ordered during the evening.,4,Pickup,Yes,2026-01-18,Yelp,Colombo
+REV-0606,CUST-44946,Uber Eats Kitchen,An ordinary experience with average taste and delivery time. Delivery instructions were followed.,4,Pickup,Yes,2026-06-13,Google Maps,Galle
+REV-0607,CUST-54035,Sunrise Cafe,"Everything worked as expected, but there was room for improvement. I used the mobile app.",3,Pickup,Yes,2026-10-10,Yelp,Anuradhapura
+REV-0608,CUST-44754,Uber Eats Kitchen,Excellent service and very friendly staff. I would definitely order again. The experience was similar to my previous order.,4,Pickup,No,2026-04-20,UberEats,Negombo
+REV-0609,CUST-18817,Family Kitchen,Very disappointing experience. The meal was poorly prepared and late. The experience was similar to my previous order.,2,Pickup,No,2026-04-12,UberEats,Negombo
+REV-0610,CUST-36224,City Pizza,Customer service was unhelpful and my complaint was not resolved. The restaurant was busy at the time.,2,Pickup,Yes,2026-10-17,Google Maps,Negombo
+REV-0611,CUST-85608,Sunrise Cafe,The delivery took far too long and the food was not fresh. This was my first order.,1,Delivery,No,2026-05-21,Google Maps,Jaffna
+REV-0612,CUST-70619,Yelp Bistro,The food arrived cold and the order was missing an item. The restaurant was busy at the time.,1,Delivery,Yes,2026-12-22,Yelp,Anuradhapura
+REV-0613,CUST-44987,Downtown Diner,Excellent service and very friendly staff. I would definitely order again. Delivery instructions were followed.,4,Delivery,Yes,2026-11-20,Amazon,Anuradhapura
+REV-0614,CUST-42189,Downtown Diner,"Fast delivery, good packaging, and the meal tasted amazing. The staff were polite.",4,Pickup,No,2026-09-14,Google Maps,Negombo
+REV-0615,CUST-27882,Uber Eats Kitchen,The portion was small and the food did not taste good. The experience was similar to my previous order.,1,Pickup,Yes,2026-11-18,Amazon,Negombo
+REV-0616,CUST-21000,Green Leaf Restaurant,Poor experience overall. I would not order from this restaurant again. The staff were polite.,1,Pickup,Yes,2026-07-12,UberEats,Anuradhapura
+REV-0617,CUST-84838,Urban Bites,The delivery took far too long and the food was not fresh. I ordered during the evening.,1,Delivery,Yes,2026-08-03,Amazon,Jaffna
+REV-0618,CUST-40924,City Pizza,Great value for money. The food was tasty and well prepared. Delivery instructions were followed.,5,Delivery,Yes,2026-02-06,Amazon,Galle
+REV-0619,CUST-79922,Green Leaf Restaurant,The restaurant was excellent and the order arrived earlier than expected.,4,Delivery,Yes,2026-09-14,Google Maps,Negombo
+REV-0620,CUST-72288,Green Leaf Restaurant,The restaurant was excellent and the order arrived earlier than expected. The restaurant was busy at the time.,4,Pickup,Yes,2026-11-20,UberEats,Negombo
+REV-0621,CUST-43158,Urban Bites,The food was okay and arrived on time. Nothing especially memorable. I used the mobile app.,4,Pickup,Yes,2026-11-23,Yelp,Negombo
+REV-0622,CUST-11031,City Pizza,Really happy with the quality and portion size. Everything was perfect. Delivery instructions were followed.,5,Pickup,Yes,2026-02-27,Amazon,Galle
+REV-0623,CUST-94466,City Pizza,"Fast delivery, good packaging, and the meal tasted amazing. The restaurant was busy at the time.",5,Delivery,Yes,2026-02-27,Google Maps,Anuradhapura
+REV-0624,CUST-31016,Downtown Diner,The order was incorrect and the packaging was damaged. I ordered during the evening.,2,Delivery,Yes,2026-07-20,Yelp,Anuradhapura
+REV-0625,CUST-92595,Sunrise Cafe,The food was okay and arrived on time. Nothing especially memorable. This was my first order.,4,Delivery,Yes,2026-07-07,Yelp,Galle
+REV-0626,CUST-77681,Yelp Bistro,Average experience. The portion was reasonable and the taste was acceptable. I used the mobile app.,3,Pickup,Yes,2026-08-16,Amazon,Galle
+REV-0627,CUST-21062,City Pizza,Great value for money. The food was tasty and well prepared. I used the mobile app.,5,Pickup,Yes,2026-07-13,Amazon,Colombo
+REV-0628,CUST-35987,Downtown Diner,The portion was small and the food did not taste good.,1,Delivery,Yes,2026-07-20,Google Maps,Jaffna
+REV-0629,CUST-84349,Amazon Cafe,Excellent service and very friendly staff. I would definitely order again. This was my first order.,5,Delivery,No,2026-08-27,Google Maps,Colombo
+REV-0630,CUST-47743,Sunrise Cafe,Really happy with the quality and portion size. Everything was perfect. The experience was similar to my previous order.,4,Pickup,Yes,2026-07-28,Amazon,Jaffna
+REV-0631,CUST-33641,City Pizza,The restaurant was excellent and the order arrived earlier than expected. Delivery instructions were followed.,4,Delivery,Yes,2026-05-09,Amazon,Jaffna
+REV-0632,CUST-21237,Uber Eats Kitchen,"The meal was fine, although there was nothing particularly special about it.",3,Pickup,Yes,2026-06-23,Google Maps,Negombo
+REV-0633,CUST-19575,Amazon Cafe,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The experience was similar to my previous order.,5,Delivery,Yes,2026-06-08,Google Maps,Galle
+REV-0634,CUST-76131,Family Kitchen,The food arrived cold and the order was missing an item. The experience was similar to my previous order.,1,Pickup,Yes,2026-07-22,Yelp,Kandy
+REV-0635,CUST-32264,Urban Bites,The food arrived cold and the order was missing an item. The experience was similar to my previous order.,1,Pickup,Yes,2026-08-05,UberEats,Galle
+REV-0636,CUST-25314,Green Leaf Restaurant,"The meal was cold, soggy, and clearly had been sitting for a long time. The experience was similar to my previous order.",1,Delivery,Yes,2026-08-28,Yelp,Negombo
+REV-0637,CUST-90338,Downtown Diner,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The experience was similar to my previous order.,5,Pickup,No,2026-03-11,Google Maps,Kandy
+REV-0638,CUST-29480,Uber Eats Kitchen,"Everything worked as expected, but there was room for improvement. I used the mobile app.",3,Delivery,Yes,2026-01-16,Yelp,Kandy
+REV-0639,CUST-15346,Sunrise Cafe,"The meal was cold, soggy, and clearly had been sitting for a long time.",1,Pickup,No,2026-08-16,UberEats,Negombo
+REV-0640,CUST-36703,Downtown Diner,Very disappointing experience. The meal was poorly prepared and late. I ordered during the evening.,2,Delivery,Yes,2026-12-17,Yelp,Jaffna
+REV-0641,CUST-64580,Amazon Cafe,The portion was small and the food did not taste good. This was my first order.,1,Delivery,No,2026-11-04,Yelp,Colombo
+REV-0642,CUST-87376,Amazon Cafe,Excellent service and very friendly staff. I would definitely order again. The restaurant was busy at the time.,5,Pickup,Yes,2026-01-03,Google Maps,Negombo
+REV-0643,CUST-87883,Uber Eats Kitchen,"Everything worked as expected, but there was room for improvement. The experience was similar to my previous order.",4,Pickup,Yes,2026-11-20,Google Maps,Galle
+REV-0644,CUST-94363,Downtown Diner,The delivery took far too long and the food was not fresh. The staff were polite.,1,Pickup,Yes,2026-12-03,Google Maps,Colombo
+REV-0645,CUST-21690,Uber Eats Kitchen,"Fast delivery, good packaging, and the meal tasted amazing. Delivery instructions were followed.",4,Delivery,Yes,2026-07-25,Google Maps,Galle
+REV-0646,CUST-74336,City Pizza,The order was correct and delivered within the expected time. The experience was similar to my previous order.,3,Pickup,Yes,2026-06-22,UberEats,Galle
+REV-0647,CUST-72447,Downtown Diner,"Everything worked as expected, but there was room for improvement. Delivery instructions were followed.",3,Pickup,Yes,2026-07-26,Yelp,Jaffna
+REV-0648,CUST-77284,Green Leaf Restaurant,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The staff were polite.,4,Pickup,Yes,2026-11-22,Amazon,Anuradhapura
+REV-0649,CUST-67325,Amazon Cafe,Average experience. The portion was reasonable and the taste was acceptable.,3,Pickup,Yes,2026-03-05,Yelp,Kandy
+REV-0650,CUST-82219,Amazon Cafe,Service was normal and the food quality was acceptable. The staff were polite.,4,Delivery,Yes,2026-09-14,Google Maps,Colombo
+REV-0651,CUST-86751,Amazon Cafe,Service was normal and the food quality was acceptable. The experience was similar to my previous order.,3,Delivery,Yes,2026-12-22,Google Maps,Kandy
+REV-0652,CUST-64558,Downtown Diner,"The meal was cold, soggy, and clearly had been sitting for a long time. I ordered during the evening.",1,Pickup,No,2026-11-15,Yelp,Galle
+REV-0653,CUST-20252,Family Kitchen,The delivery took far too long and the food was not fresh. This was my first order.,1,Pickup,Yes,2026-07-18,UberEats,Colombo
+REV-0654,CUST-70314,City Pizza,The food was delicious and arrived fresh and hot. Great experience.,4,Pickup,Yes,2026-10-27,Yelp,Negombo
+REV-0655,CUST-26395,Yelp Bistro,An ordinary experience with average taste and delivery time. I ordered during the evening.,3,Delivery,Yes,2026-02-27,UberEats,Negombo
+REV-0656,CUST-95016,Yelp Bistro,The food arrived cold and the order was missing an item.,1,Delivery,No,2026-11-28,Amazon,Colombo
+REV-0657,CUST-65296,Uber Eats Kitchen,The delivery was quick and the customer service was helpful.,4,Delivery,Yes,2026-03-24,Google Maps,Anuradhapura
+REV-0658,CUST-36389,Downtown Diner,"Everything worked as expected, but there was room for improvement. I used the mobile app.",4,Pickup,Yes,2026-06-01,UberEats,Negombo
+REV-0659,CUST-85846,Family Kitchen,"The meal was cold, soggy, and clearly had been sitting for a long time.",2,Pickup,Yes,2026-08-13,Google Maps,Jaffna
+REV-0660,CUST-79246,Uber Eats Kitchen,"Everything worked as expected, but there was room for improvement. The staff were polite.",3,Pickup,Yes,2026-09-03,Yelp,Negombo
+REV-0661,CUST-91618,Green Leaf Restaurant,The delivery was quick and the customer service was helpful.,4,Pickup,No,2026-01-06,Yelp,Negombo
+REV-0662,CUST-76536,Google Maps Grill,Great value for money. The food was tasty and well prepared. I used the mobile app.,5,Pickup,No,2026-03-10,Google Maps,Anuradhapura
+REV-0663,CUST-91506,Google Maps Grill,The order was incorrect and the packaging was damaged. This was my first order.,2,Pickup,Yes,2026-11-16,Amazon,Kandy
+REV-0664,CUST-74713,Downtown Diner,The delivery was quick and the customer service was helpful. Delivery instructions were followed.,4,Delivery,Yes,2026-09-02,UberEats,Galle
+REV-0665,CUST-75991,Uber Eats Kitchen,The order was incorrect and the packaging was damaged. This was my first order.,1,Delivery,Yes,2026-07-04,Amazon,Colombo
+REV-0666,CUST-56562,Uber Eats Kitchen,"Everything worked as expected, but there was room for improvement. The restaurant was busy at the time.",3,Pickup,Yes,2026-12-28,UberEats,Negombo
+REV-0667,CUST-23879,Family Kitchen,The delivery was quick and the customer service was helpful. I ordered during the evening.,5,Delivery,Yes,2026-09-04,Amazon,Negombo
+REV-0668,CUST-48289,Sunrise Cafe,Really happy with the quality and portion size. Everything was perfect. This was my first order.,5,Pickup,Yes,2026-03-21,Yelp,Galle
+REV-0669,CUST-64493,Uber Eats Kitchen,Very disappointing experience. The meal was poorly prepared and late.,1,Delivery,No,2026-06-10,Amazon,Colombo
+REV-0670,CUST-29871,Urban Bites,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I used the mobile app.,5,Pickup,Yes,2026-03-26,Google Maps,Anuradhapura
+REV-0671,CUST-68009,Yelp Bistro,Poor experience overall. I would not order from this restaurant again. The staff were polite.,2,Delivery,Yes,2026-02-11,Yelp,Anuradhapura
+REV-0672,CUST-61546,Uber Eats Kitchen,The delivery took far too long and the food was not fresh. The staff were polite.,2,Delivery,Yes,2026-11-23,Yelp,Anuradhapura
+REV-0673,CUST-11035,Downtown Diner,The restaurant was excellent and the order arrived earlier than expected. The restaurant was busy at the time.,5,Delivery,No,2026-08-21,Amazon,Jaffna
+REV-0674,CUST-95033,City Pizza,"Everything worked as expected, but there was room for improvement. The restaurant was busy at the time.",4,Delivery,Yes,2026-02-02,Yelp,Anuradhapura
+REV-0675,CUST-22166,Urban Bites,The delivery took far too long and the food was not fresh. I used the mobile app.,2,Pickup,Yes,2026-11-06,UberEats,Colombo
+REV-0676,CUST-65410,Urban Bites,Customer service was unhelpful and my complaint was not resolved. The experience was similar to my previous order.,1,Delivery,Yes,2026-06-09,Yelp,Colombo
+REV-0677,CUST-85030,Uber Eats Kitchen,Excellent service and very friendly staff. I would definitely order again. The experience was similar to my previous order.,5,Pickup,Yes,2026-04-26,Amazon,Galle
+REV-0678,CUST-23792,Green Leaf Restaurant,"Fast delivery, good packaging, and the meal tasted amazing. I used the mobile app.",5,Delivery,Yes,2026-08-04,Amazon,Negombo
+REV-0679,CUST-18151,City Pizza,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I ordered during the evening.,4,Delivery,No,2026-04-15,UberEats,Galle
+REV-0680,CUST-44562,Family Kitchen,An ordinary experience with average taste and delivery time. Delivery instructions were followed.,4,Pickup,No,2026-08-23,Google Maps,Negombo
+REV-0681,CUST-73539,Sunrise Cafe,The delivery took far too long and the food was not fresh. This was my first order.,1,Delivery,Yes,2026-12-07,Google Maps,Anuradhapura
+REV-0682,CUST-88852,City Pizza,"Fast delivery, good packaging, and the meal tasted amazing. I ordered during the evening.",5,Delivery,Yes,2026-06-19,Yelp,Colombo
+REV-0683,CUST-59081,Downtown Diner,Average experience. The portion was reasonable and the taste was acceptable. The experience was similar to my previous order.,3,Pickup,No,2026-01-26,Amazon,Kandy
+REV-0684,CUST-47156,Google Maps Grill,"The meal was cold, soggy, and clearly had been sitting for a long time. The experience was similar to my previous order.",1,Delivery,No,2026-01-04,Yelp,Colombo
+REV-0685,CUST-84155,Sunrise Cafe,"The meal was cold, soggy, and clearly had been sitting for a long time. The experience was similar to my previous order.",2,Pickup,No,2026-08-27,Amazon,Kandy
+REV-0686,CUST-29527,Green Leaf Restaurant,"Everything worked as expected, but there was room for improvement.",3,Delivery,No,2026-07-08,Google Maps,Galle
+REV-0687,CUST-94661,Amazon Cafe,"Everything worked as expected, but there was room for improvement. The experience was similar to my previous order.",4,Delivery,Yes,2026-10-21,Yelp,Jaffna
+REV-0688,CUST-84743,Urban Bites,Average experience. The portion was reasonable and the taste was acceptable. The staff were polite.,3,Delivery,No,2026-09-01,UberEats,Negombo
+REV-0689,CUST-36975,Google Maps Grill,The delivery took far too long and the food was not fresh. The experience was similar to my previous order.,1,Pickup,Yes,2026-09-20,Yelp,Anuradhapura
+REV-0690,CUST-67280,Yelp Bistro,"Everything worked as expected, but there was room for improvement. The restaurant was busy at the time.",3,Pickup,Yes,2026-09-11,Google Maps,Galle
+REV-0691,CUST-28878,Yelp Bistro,Excellent service and very friendly staff. I would definitely order again. The experience was similar to my previous order.,4,Pickup,Yes,2026-03-10,Google Maps,Negombo
+REV-0692,CUST-17667,Downtown Diner,Great value for money. The food was tasty and well prepared. The staff were polite.,4,Pickup,Yes,2026-06-05,Google Maps,Galle
+REV-0693,CUST-41407,Family Kitchen,Excellent service and very friendly staff. I would definitely order again. I used the mobile app.,4,Delivery,No,2026-09-25,Google Maps,Colombo
+REV-0694,CUST-18579,Sunrise Cafe,Great value for money. The food was tasty and well prepared. Delivery instructions were followed.,5,Delivery,No,2026-11-08,UberEats,Galle
+REV-0695,CUST-49926,Family Kitchen,Average experience. The portion was reasonable and the taste was acceptable. This was my first order.,3,Pickup,No,2026-02-28,Amazon,Kandy
+REV-0696,CUST-82764,Sunrise Cafe,"Fast delivery, good packaging, and the meal tasted amazing. Delivery instructions were followed.",4,Delivery,Yes,2026-08-27,Yelp,Negombo
+REV-0697,CUST-45822,Family Kitchen,The food arrived cold and the order was missing an item.,1,Pickup,No,2026-06-27,Amazon,Jaffna
+REV-0698,CUST-80004,Family Kitchen,Customer service was unhelpful and my complaint was not resolved. This was my first order.,1,Delivery,Yes,2026-02-13,UberEats,Kandy
+REV-0699,CUST-90012,Urban Bites,Customer service was unhelpful and my complaint was not resolved. I used the mobile app.,2,Pickup,Yes,2026-11-09,Google Maps,Galle
+REV-0700,CUST-70266,Family Kitchen,Great value for money. The food was tasty and well prepared. I used the mobile app.,5,Pickup,Yes,2026-12-05,UberEats,Jaffna
+REV-0701,CUST-64154,Urban Bites,The food was okay and arrived on time. Nothing especially memorable. This was my first order.,4,Pickup,No,2026-09-03,UberEats,Jaffna
+REV-0702,CUST-59332,Family Kitchen,The delivery was quick and the customer service was helpful. The restaurant was busy at the time.,4,Pickup,No,2026-03-27,UberEats,Colombo
+REV-0703,CUST-39035,Uber Eats Kitchen,"The meal was fine, although there was nothing particularly special about it. The staff were polite.",3,Pickup,Yes,2026-04-03,Yelp,Negombo
+REV-0704,CUST-46799,Sunrise Cafe,The delivery was quick and the customer service was helpful. The staff were polite.,5,Delivery,Yes,2026-04-27,Google Maps,Colombo
+REV-0705,CUST-96486,Family Kitchen,Poor experience overall. I would not order from this restaurant again. I used the mobile app.,1,Delivery,Yes,2026-10-05,UberEats,Kandy
+REV-0706,CUST-98864,Uber Eats Kitchen,Really happy with the quality and portion size. Everything was perfect. I used the mobile app.,5,Pickup,No,2026-01-14,UberEats,Galle
+REV-0707,CUST-99151,Urban Bites,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I ordered during the evening.,5,Pickup,No,2026-06-17,UberEats,Negombo
+REV-0708,CUST-51450,Uber Eats Kitchen,The restaurant was excellent and the order arrived earlier than expected.,5,Pickup,Yes,2026-06-03,UberEats,Negombo
+REV-0709,CUST-35805,Yelp Bistro,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I used the mobile app.,4,Pickup,Yes,2026-02-21,UberEats,Colombo
+REV-0710,CUST-42821,Google Maps Grill,The food was okay and arrived on time. Nothing especially memorable. The restaurant was busy at the time.,4,Delivery,No,2026-04-11,UberEats,Galle
+REV-0711,CUST-22539,Sunrise Cafe,"The meal was fine, although there was nothing particularly special about it.",3,Delivery,Yes,2026-01-02,Google Maps,Galle
+REV-0712,CUST-67923,Uber Eats Kitchen,Very disappointing experience. The meal was poorly prepared and late. The staff were polite.,1,Pickup,No,2026-02-04,UberEats,Jaffna
+REV-0713,CUST-90911,City Pizza,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I ordered during the evening.,5,Delivery,Yes,2026-08-13,Google Maps,Anuradhapura
+REV-0714,CUST-69516,Urban Bites,Very disappointing experience. The meal was poorly prepared and late. The staff were polite.,2,Pickup,Yes,2026-02-04,UberEats,Jaffna
+REV-0715,CUST-56581,City Pizza,The portion was small and the food did not taste good. The experience was similar to my previous order.,1,Pickup,No,2026-03-08,Amazon,Colombo
+REV-0716,CUST-50788,Family Kitchen,The restaurant was excellent and the order arrived earlier than expected. The restaurant was busy at the time.,5,Delivery,Yes,2026-08-10,Yelp,Galle
+REV-0717,CUST-41114,Urban Bites,The food was delicious and arrived fresh and hot. Great experience. The staff were polite.,4,Delivery,No,2026-06-07,Amazon,Negombo
+REV-0718,CUST-97537,Sunrise Cafe,Very disappointing experience. The meal was poorly prepared and late. I used the mobile app.,2,Pickup,Yes,2026-10-19,Yelp,Jaffna
+REV-0719,CUST-69546,Uber Eats Kitchen,Great value for money. The food was tasty and well prepared. I ordered during the evening.,4,Pickup,Yes,2026-01-21,Amazon,Negombo
+REV-0720,CUST-53452,City Pizza,Really happy with the quality and portion size. Everything was perfect.,4,Delivery,No,2026-03-27,UberEats,Galle
+REV-0721,CUST-28664,Downtown Diner,Great value for money. The food was tasty and well prepared. I ordered during the evening.,4,Pickup,Yes,2026-11-19,Yelp,Colombo
+REV-0722,CUST-32825,Google Maps Grill,The portion was small and the food did not taste good. The experience was similar to my previous order.,1,Pickup,Yes,2026-06-28,Amazon,Kandy
+REV-0723,CUST-12751,Yelp Bistro,"Fast delivery, good packaging, and the meal tasted amazing. I ordered during the evening.",5,Pickup,Yes,2026-06-07,Yelp,Anuradhapura
+REV-0724,CUST-18569,Amazon Cafe,Great value for money. The food was tasty and well prepared. Delivery instructions were followed.,4,Delivery,Yes,2026-04-07,Google Maps,Negombo
+REV-0725,CUST-90744,Family Kitchen,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The staff were polite.,4,Delivery,Yes,2026-03-11,Amazon,Colombo
+REV-0726,CUST-37425,Amazon Cafe,Service was normal and the food quality was acceptable.,3,Pickup,Yes,2026-03-17,Google Maps,Negombo
+REV-0727,CUST-33461,Green Leaf Restaurant,The order was incorrect and the packaging was damaged.,2,Pickup,No,2026-12-16,Google Maps,Galle
+REV-0728,CUST-36607,Sunrise Cafe,The food was okay and arrived on time. Nothing especially memorable. I used the mobile app.,3,Delivery,No,2026-04-10,Google Maps,Anuradhapura
+REV-0729,CUST-27606,Amazon Cafe,The packaging was fine and the food was neither great nor disappointing. I ordered during the evening.,3,Pickup,No,2026-09-12,Amazon,Jaffna
+REV-0730,CUST-71282,City Pizza,Great value for money. The food was tasty and well prepared.,5,Pickup,Yes,2026-08-11,Yelp,Anuradhapura
+REV-0731,CUST-94587,Amazon Cafe,The delivery was quick and the customer service was helpful. The experience was similar to my previous order.,4,Pickup,Yes,2026-05-27,UberEats,Galle
+REV-0732,CUST-57216,Uber Eats Kitchen,Very disappointing experience. The meal was poorly prepared and late. I ordered during the evening.,1,Delivery,Yes,2026-04-22,Yelp,Galle
+REV-0733,CUST-81188,Downtown Diner,The restaurant was excellent and the order arrived earlier than expected. This was my first order.,4,Delivery,Yes,2026-05-27,Yelp,Anuradhapura
+REV-0734,CUST-62101,Google Maps Grill,The food arrived cold and the order was missing an item. This was my first order.,2,Delivery,Yes,2026-08-08,Google Maps,Negombo
+REV-0735,CUST-34621,City Pizza,The order was incorrect and the packaging was damaged. The restaurant was busy at the time.,1,Pickup,Yes,2026-08-15,UberEats,Galle
+REV-0736,CUST-75509,Green Leaf Restaurant,"Fast delivery, good packaging, and the meal tasted amazing. The staff were polite.",5,Pickup,Yes,2026-07-14,Google Maps,Negombo
+REV-0737,CUST-84393,Uber Eats Kitchen,The packaging was fine and the food was neither great nor disappointing. The staff were polite.,4,Delivery,Yes,2026-06-19,Google Maps,Anuradhapura
+REV-0738,CUST-34685,Sunrise Cafe,Absolutely loved the meal. Fresh ingredients and wonderful flavor. Delivery instructions were followed.,4,Delivery,Yes,2026-10-15,Yelp,Colombo
+REV-0739,CUST-13517,Yelp Bistro,"Fast delivery, good packaging, and the meal tasted amazing.",4,Delivery,Yes,2026-07-10,Amazon,Kandy
+REV-0740,CUST-58319,Urban Bites,Excellent service and very friendly staff. I would definitely order again. The staff were polite.,5,Delivery,Yes,2026-06-28,Google Maps,Anuradhapura
+REV-0741,CUST-72685,Amazon Cafe,Excellent service and very friendly staff. I would definitely order again. Delivery instructions were followed.,4,Pickup,Yes,2026-03-28,Amazon,Galle
+REV-0742,CUST-87003,Google Maps Grill,The delivery was quick and the customer service was helpful. The experience was similar to my previous order.,4,Pickup,Yes,2026-04-01,Amazon,Anuradhapura
+REV-0743,CUST-84609,Sunrise Cafe,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The restaurant was busy at the time.,4,Pickup,No,2026-10-02,UberEats,Galle
+REV-0744,CUST-61260,Family Kitchen,"Everything worked as expected, but there was room for improvement. The experience was similar to my previous order.",3,Delivery,No,2026-04-06,Google Maps,Anuradhapura
+REV-0745,CUST-15723,Google Maps Grill,"Fast delivery, good packaging, and the meal tasted amazing. Delivery instructions were followed.",4,Delivery,Yes,2026-11-18,Yelp,Negombo
+REV-0746,CUST-82459,Amazon Cafe,The portion was small and the food did not taste good. Delivery instructions were followed.,2,Pickup,Yes,2026-02-17,Yelp,Anuradhapura
+REV-0747,CUST-70577,Uber Eats Kitchen,Service was normal and the food quality was acceptable. The staff were polite.,3,Delivery,No,2026-07-11,Google Maps,Kandy
+REV-0748,CUST-27888,Green Leaf Restaurant,The food was delicious and arrived fresh and hot. Great experience. I ordered during the evening.,5,Pickup,No,2026-08-03,UberEats,Jaffna
+REV-0749,CUST-46587,Yelp Bistro,"Everything worked as expected, but there was room for improvement.",3,Delivery,Yes,2026-10-04,Amazon,Galle
+REV-0750,CUST-98000,Uber Eats Kitchen,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I ordered during the evening.,4,Pickup,Yes,2026-08-12,Amazon,Kandy
+REV-0751,CUST-93203,Urban Bites,The portion was small and the food did not taste good. The staff were polite.,2,Delivery,No,2026-12-10,Google Maps,Colombo
+REV-0752,CUST-42728,Green Leaf Restaurant,The food was okay and arrived on time. Nothing especially memorable. I used the mobile app.,3,Delivery,Yes,2026-02-01,Google Maps,Colombo
+REV-0753,CUST-38910,Amazon Cafe,The order was incorrect and the packaging was damaged. I ordered during the evening.,1,Delivery,Yes,2026-01-14,UberEats,Galle
+REV-0754,CUST-66083,Amazon Cafe,Really happy with the quality and portion size. Everything was perfect. Delivery instructions were followed.,4,Delivery,Yes,2026-02-12,Yelp,Kandy
+REV-0755,CUST-37887,Sunrise Cafe,Great value for money. The food was tasty and well prepared. Delivery instructions were followed.,4,Delivery,Yes,2026-11-27,Yelp,Negombo
+REV-0756,CUST-63883,Downtown Diner,The food was okay and arrived on time. Nothing especially memorable. I used the mobile app.,3,Pickup,Yes,2026-12-18,Amazon,Galle
+REV-0757,CUST-53522,Yelp Bistro,The order was incorrect and the packaging was damaged. This was my first order.,2,Pickup,No,2026-02-11,UberEats,Jaffna
+REV-0758,CUST-75984,Family Kitchen,Poor experience overall. I would not order from this restaurant again. I used the mobile app.,2,Delivery,Yes,2026-01-20,UberEats,Galle
+REV-0759,CUST-17854,Yelp Bistro,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I ordered during the evening.,4,Pickup,No,2026-05-07,Amazon,Anuradhapura
+REV-0760,CUST-53082,Yelp Bistro,The food was delicious and arrived fresh and hot. Great experience.,4,Pickup,Yes,2026-11-26,UberEats,Jaffna
+REV-0761,CUST-40016,Green Leaf Restaurant,"The meal was cold, soggy, and clearly had been sitting for a long time. The staff were polite.",2,Pickup,Yes,2026-04-18,UberEats,Negombo
+REV-0762,CUST-34057,Sunrise Cafe,The portion was small and the food did not taste good. The restaurant was busy at the time.,2,Delivery,Yes,2026-08-03,Amazon,Colombo
+REV-0763,CUST-22027,Yelp Bistro,The order was correct and delivered within the expected time. This was my first order.,3,Delivery,Yes,2026-09-03,Google Maps,Negombo
+REV-0764,CUST-42102,City Pizza,The order was correct and delivered within the expected time. I used the mobile app.,4,Delivery,Yes,2026-05-10,Google Maps,Negombo
+REV-0765,CUST-62198,City Pizza,The delivery was quick and the customer service was helpful. The restaurant was busy at the time.,4,Delivery,No,2026-08-14,Google Maps,Kandy
+REV-0766,CUST-66019,Amazon Cafe,Poor experience overall. I would not order from this restaurant again. Delivery instructions were followed.,1,Pickup,Yes,2026-09-24,Amazon,Galle
+REV-0767,CUST-59171,Urban Bites,The restaurant was excellent and the order arrived earlier than expected. The experience was similar to my previous order.,5,Pickup,Yes,2026-06-05,Google Maps,Kandy
+REV-0768,CUST-75627,Green Leaf Restaurant,Really happy with the quality and portion size. Everything was perfect. The staff were polite.,4,Pickup,No,2026-07-13,Yelp,Anuradhapura
+REV-0769,CUST-26315,City Pizza,Average experience. The portion was reasonable and the taste was acceptable. The staff were polite.,3,Delivery,Yes,2026-07-09,Yelp,Jaffna
+REV-0770,CUST-65579,Google Maps Grill,The order was incorrect and the packaging was damaged. Delivery instructions were followed.,1,Delivery,No,2026-01-27,Yelp,Negombo
+REV-0771,CUST-89355,Sunrise Cafe,The food arrived cold and the order was missing an item. The experience was similar to my previous order.,1,Delivery,Yes,2026-04-20,Amazon,Colombo
+REV-0772,CUST-86829,Amazon Cafe,Excellent service and very friendly staff. I would definitely order again. Delivery instructions were followed.,5,Delivery,No,2026-03-27,Google Maps,Galle
+REV-0773,CUST-63950,Amazon Cafe,An ordinary experience with average taste and delivery time. The experience was similar to my previous order.,4,Delivery,Yes,2026-03-09,Amazon,Negombo
+REV-0774,CUST-74451,Uber Eats Kitchen,The restaurant was excellent and the order arrived earlier than expected. This was my first order.,4,Delivery,Yes,2026-12-14,Google Maps,Negombo
+REV-0775,CUST-59106,Yelp Bistro,Absolutely loved the meal. Fresh ingredients and wonderful flavor. This was my first order.,4,Delivery,Yes,2026-08-06,UberEats,Anuradhapura
+REV-0776,CUST-17730,Yelp Bistro,"The meal was fine, although there was nothing particularly special about it. I used the mobile app.",3,Delivery,Yes,2026-07-15,UberEats,Negombo
+REV-0777,CUST-26342,Downtown Diner,The restaurant was excellent and the order arrived earlier than expected. Delivery instructions were followed.,4,Delivery,Yes,2026-01-19,Amazon,Anuradhapura
+REV-0778,CUST-44875,Uber Eats Kitchen,Average experience. The portion was reasonable and the taste was acceptable. The staff were polite.,3,Delivery,Yes,2026-04-17,UberEats,Anuradhapura
+REV-0779,CUST-54175,Family Kitchen,Service was normal and the food quality was acceptable.,3,Pickup,Yes,2026-06-22,Yelp,Galle
+REV-0780,CUST-90059,Uber Eats Kitchen,The order was incorrect and the packaging was damaged. Delivery instructions were followed.,2,Pickup,Yes,2026-02-01,Google Maps,Negombo
+REV-0781,CUST-79550,Downtown Diner,"Fast delivery, good packaging, and the meal tasted amazing. I ordered during the evening.",4,Delivery,Yes,2026-08-20,Google Maps,Jaffna
+REV-0782,CUST-12179,Green Leaf Restaurant,Really happy with the quality and portion size. Everything was perfect. The restaurant was busy at the time.,4,Delivery,Yes,2026-11-15,Amazon,Jaffna
+REV-0783,CUST-72406,Amazon Cafe,Average experience. The portion was reasonable and the taste was acceptable. Delivery instructions were followed.,3,Pickup,Yes,2026-10-07,Amazon,Jaffna
+REV-0784,CUST-21415,Downtown Diner,The food arrived cold and the order was missing an item.,1,Pickup,Yes,2026-08-04,Google Maps,Negombo
+REV-0785,CUST-96474,Amazon Cafe,"The meal was fine, although there was nothing particularly special about it. This was my first order.",3,Delivery,No,2026-12-01,Amazon,Galle
+REV-0786,CUST-97285,Sunrise Cafe,Customer service was unhelpful and my complaint was not resolved. The experience was similar to my previous order.,1,Delivery,Yes,2026-09-21,Google Maps,Colombo
+REV-0787,CUST-94408,Green Leaf Restaurant,The order was incorrect and the packaging was damaged. I ordered during the evening.,1,Pickup,No,2026-11-21,Google Maps,Kandy
+REV-0788,CUST-24599,Amazon Cafe,Excellent service and very friendly staff. I would definitely order again. I ordered during the evening.,5,Pickup,Yes,2026-12-04,Yelp,Kandy
+REV-0789,CUST-18111,Family Kitchen,"The meal was cold, soggy, and clearly had been sitting for a long time. The experience was similar to my previous order.",1,Delivery,No,2026-07-11,Yelp,Negombo
+REV-0790,CUST-61814,Uber Eats Kitchen,The delivery took far too long and the food was not fresh. I ordered during the evening.,1,Pickup,Yes,2026-03-27,Yelp,Kandy
+REV-0791,CUST-29119,Uber Eats Kitchen,"Everything worked as expected, but there was room for improvement. The experience was similar to my previous order.",3,Pickup,Yes,2026-09-23,UberEats,Galle
+REV-0792,CUST-48206,City Pizza,Poor experience overall. I would not order from this restaurant again.,1,Delivery,Yes,2026-03-27,Amazon,Negombo
+REV-0793,CUST-73898,City Pizza,The portion was small and the food did not taste good. This was my first order.,1,Pickup,Yes,2026-01-18,Google Maps,Galle
+REV-0794,CUST-61257,Amazon Cafe,The delivery was quick and the customer service was helpful. Delivery instructions were followed.,5,Pickup,Yes,2026-12-07,Google Maps,Colombo
+REV-0795,CUST-95804,Yelp Bistro,The food was delicious and arrived fresh and hot. Great experience.,5,Delivery,No,2026-12-16,Yelp,Kandy
+REV-0796,CUST-85455,Amazon Cafe,Really happy with the quality and portion size. Everything was perfect. The restaurant was busy at the time.,4,Delivery,No,2026-07-22,Amazon,Colombo
+REV-0797,CUST-25380,Urban Bites,The delivery was quick and the customer service was helpful. The staff were polite.,4,Pickup,No,2026-03-21,Google Maps,Kandy
+REV-0798,CUST-49674,Family Kitchen,Really happy with the quality and portion size. Everything was perfect.,5,Delivery,No,2026-12-26,UberEats,Anuradhapura
+REV-0799,CUST-58145,Uber Eats Kitchen,"The meal was cold, soggy, and clearly had been sitting for a long time.",2,Delivery,Yes,2026-02-04,Google Maps,Negombo
+REV-0800,CUST-45877,Amazon Cafe,"The meal was fine, although there was nothing particularly special about it.",3,Delivery,No,2026-08-21,Google Maps,Galle
+REV-0801,CUST-80452,Yelp Bistro,Average experience. The portion was reasonable and the taste was acceptable. I ordered during the evening.,3,Pickup,Yes,2026-07-18,Google Maps,Colombo
+REV-0802,CUST-33680,Family Kitchen,Average experience. The portion was reasonable and the taste was acceptable. I ordered during the evening.,3,Delivery,Yes,2026-09-15,Yelp,Colombo
+REV-0803,CUST-83727,Downtown Diner,Really happy with the quality and portion size. Everything was perfect. I ordered during the evening.,4,Delivery,Yes,2026-02-17,Yelp,Galle
+REV-0804,CUST-42550,Downtown Diner,The delivery took far too long and the food was not fresh. The staff were polite.,2,Delivery,Yes,2026-11-18,Google Maps,Kandy
+REV-0805,CUST-89452,Urban Bites,The packaging was fine and the food was neither great nor disappointing. The restaurant was busy at the time.,4,Delivery,Yes,2026-11-27,UberEats,Kandy
+REV-0806,CUST-27590,Family Kitchen,"Fast delivery, good packaging, and the meal tasted amazing. I used the mobile app.",5,Delivery,Yes,2026-05-05,Google Maps,Colombo
+REV-0807,CUST-62436,Sunrise Cafe,Service was normal and the food quality was acceptable. This was my first order.,3,Delivery,Yes,2026-11-14,Amazon,Jaffna
+REV-0808,CUST-83877,Urban Bites,The restaurant was excellent and the order arrived earlier than expected. The restaurant was busy at the time.,4,Delivery,No,2026-03-11,Google Maps,Anuradhapura
+REV-0809,CUST-26334,Urban Bites,Really happy with the quality and portion size. Everything was perfect. The experience was similar to my previous order.,4,Delivery,No,2026-02-11,UberEats,Galle
+REV-0810,CUST-45867,Uber Eats Kitchen,Customer service was unhelpful and my complaint was not resolved. I used the mobile app.,1,Delivery,No,2026-04-13,UberEats,Colombo
+REV-0811,CUST-79331,Green Leaf Restaurant,The restaurant was excellent and the order arrived earlier than expected. I ordered during the evening.,5,Pickup,Yes,2026-10-04,UberEats,Kandy
+REV-0812,CUST-98842,Urban Bites,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The restaurant was busy at the time.,4,Pickup,No,2026-10-05,Yelp,Colombo
+REV-0813,CUST-28700,City Pizza,The order was correct and delivered within the expected time. This was my first order.,4,Pickup,Yes,2026-12-21,Yelp,Negombo
+REV-0814,CUST-67535,Green Leaf Restaurant,"The meal was cold, soggy, and clearly had been sitting for a long time. This was my first order.",2,Pickup,Yes,2026-05-14,Amazon,Galle
+REV-0815,CUST-50991,Amazon Cafe,Average experience. The portion was reasonable and the taste was acceptable. Delivery instructions were followed.,3,Delivery,Yes,2026-12-08,UberEats,Kandy
+REV-0816,CUST-82634,Sunrise Cafe,Average experience. The portion was reasonable and the taste was acceptable. The experience was similar to my previous order.,4,Delivery,No,2026-11-17,Amazon,Anuradhapura
+REV-0817,CUST-90777,Google Maps Grill,Average experience. The portion was reasonable and the taste was acceptable. The staff were polite.,3,Delivery,No,2026-12-18,Yelp,Kandy
+REV-0818,CUST-98410,Urban Bites,The food arrived cold and the order was missing an item. This was my first order.,2,Delivery,Yes,2026-02-12,Amazon,Jaffna
+REV-0819,CUST-59688,Yelp Bistro,The food was delicious and arrived fresh and hot. Great experience.,5,Pickup,Yes,2026-06-22,Amazon,Jaffna
+REV-0820,CUST-73324,Downtown Diner,Very disappointing experience. The meal was poorly prepared and late. The experience was similar to my previous order.,2,Pickup,Yes,2026-01-24,Google Maps,Kandy
+REV-0821,CUST-17536,Green Leaf Restaurant,The food arrived cold and the order was missing an item.,2,Delivery,No,2026-06-10,Yelp,Colombo
+REV-0822,CUST-11161,Amazon Cafe,"Fast delivery, good packaging, and the meal tasted amazing. The restaurant was busy at the time.",5,Pickup,No,2026-04-03,Amazon,Anuradhapura
+REV-0823,CUST-96066,Downtown Diner,The delivery was quick and the customer service was helpful. This was my first order.,4,Delivery,No,2026-07-12,Yelp,Galle
+REV-0824,CUST-67484,Sunrise Cafe,"Fast delivery, good packaging, and the meal tasted amazing. I ordered during the evening.",5,Delivery,Yes,2026-06-24,Google Maps,Colombo
+REV-0825,CUST-47342,Uber Eats Kitchen,Really happy with the quality and portion size. Everything was perfect. I used the mobile app.,4,Delivery,No,2026-07-24,Yelp,Colombo
+REV-0826,CUST-25570,City Pizza,Really happy with the quality and portion size. Everything was perfect. The experience was similar to my previous order.,5,Pickup,No,2026-11-23,Amazon,Galle
+REV-0827,CUST-24382,Amazon Cafe,"The meal was cold, soggy, and clearly had been sitting for a long time. This was my first order.",2,Delivery,Yes,2026-03-12,UberEats,Negombo
+REV-0828,CUST-66928,Sunrise Cafe,Great value for money. The food was tasty and well prepared. The staff were polite.,5,Pickup,Yes,2026-08-03,Google Maps,Kandy
+REV-0829,CUST-25075,Downtown Diner,The order was correct and delivered within the expected time. The experience was similar to my previous order.,3,Delivery,No,2026-04-16,UberEats,Negombo
+REV-0830,CUST-40065,Amazon Cafe,The delivery took far too long and the food was not fresh. This was my first order.,1,Delivery,No,2026-01-09,Amazon,Kandy
+REV-0831,CUST-59853,City Pizza,Really happy with the quality and portion size. Everything was perfect. The staff were polite.,4,Pickup,Yes,2026-04-11,Google Maps,Anuradhapura
+REV-0832,CUST-24425,Downtown Diner,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The experience was similar to my previous order.,4,Pickup,Yes,2026-06-23,Google Maps,Kandy
+REV-0833,CUST-10070,Uber Eats Kitchen,The food was delicious and arrived fresh and hot. Great experience. The staff were polite.,4,Pickup,Yes,2026-05-16,Yelp,Jaffna
+REV-0834,CUST-57655,Green Leaf Restaurant,"Fast delivery, good packaging, and the meal tasted amazing.",5,Pickup,Yes,2026-02-22,UberEats,Negombo
+REV-0835,CUST-57367,Family Kitchen,The order was correct and delivered within the expected time. The restaurant was busy at the time.,3,Pickup,Yes,2026-11-09,Amazon,Jaffna
+REV-0836,CUST-15379,Family Kitchen,Excellent service and very friendly staff. I would definitely order again. I ordered during the evening.,4,Delivery,Yes,2026-12-15,UberEats,Colombo
+REV-0837,CUST-36476,Urban Bites,The order was incorrect and the packaging was damaged.,2,Delivery,Yes,2026-03-07,Google Maps,Jaffna
+REV-0838,CUST-92557,Amazon Cafe,The order was incorrect and the packaging was damaged.,2,Pickup,Yes,2026-08-14,UberEats,Kandy
+REV-0839,CUST-84209,Uber Eats Kitchen,The order was correct and delivered within the expected time. The staff were polite.,3,Delivery,No,2026-08-22,UberEats,Kandy
+REV-0840,CUST-89589,Downtown Diner,Absolutely loved the meal. Fresh ingredients and wonderful flavor. Delivery instructions were followed.,5,Delivery,Yes,2026-01-06,Amazon,Jaffna
+REV-0841,CUST-49768,Google Maps Grill,"Everything worked as expected, but there was room for improvement. The experience was similar to my previous order.",4,Pickup,Yes,2026-09-04,Amazon,Kandy
+REV-0842,CUST-93835,Yelp Bistro,Really happy with the quality and portion size. Everything was perfect. The staff were polite.,5,Pickup,Yes,2026-05-28,UberEats,Negombo
+REV-0843,CUST-95019,Green Leaf Restaurant,The portion was small and the food did not taste good. The staff were polite.,1,Pickup,Yes,2026-02-23,Yelp,Negombo
+REV-0844,CUST-92045,Uber Eats Kitchen,The restaurant was excellent and the order arrived earlier than expected. The staff were polite.,5,Pickup,Yes,2026-12-09,Amazon,Galle
+REV-0845,CUST-92081,Family Kitchen,Very disappointing experience. The meal was poorly prepared and late. The experience was similar to my previous order.,2,Delivery,No,2026-04-11,Yelp,Kandy
+REV-0846,CUST-40372,City Pizza,An ordinary experience with average taste and delivery time.,3,Pickup,Yes,2026-08-03,Google Maps,Kandy
+REV-0847,CUST-33646,Downtown Diner,The order was correct and delivered within the expected time.,3,Delivery,Yes,2026-03-06,Google Maps,Negombo
+REV-0848,CUST-65888,Google Maps Grill,Average experience. The portion was reasonable and the taste was acceptable. I ordered during the evening.,3,Pickup,No,2026-02-24,Amazon,Negombo
+REV-0849,CUST-60330,Uber Eats Kitchen,The food arrived cold and the order was missing an item. Delivery instructions were followed.,1,Delivery,Yes,2026-11-02,Amazon,Kandy
+REV-0850,CUST-11231,Amazon Cafe,Customer service was unhelpful and my complaint was not resolved. The staff were polite.,1,Pickup,Yes,2026-04-05,Google Maps,Jaffna
+REV-0851,CUST-72771,Yelp Bistro,The delivery took far too long and the food was not fresh. The restaurant was busy at the time.,2,Delivery,Yes,2026-09-23,Yelp,Negombo
+REV-0852,CUST-81387,Downtown Diner,The food was okay and arrived on time. Nothing especially memorable. I ordered during the evening.,3,Delivery,No,2026-03-01,Amazon,Colombo
+REV-0853,CUST-95899,Downtown Diner,Absolutely loved the meal. Fresh ingredients and wonderful flavor. The restaurant was busy at the time.,4,Delivery,No,2026-11-23,UberEats,Anuradhapura
+REV-0854,CUST-46937,Green Leaf Restaurant,Excellent service and very friendly staff. I would definitely order again. I ordered during the evening.,4,Delivery,Yes,2026-02-12,UberEats,Colombo
+REV-0855,CUST-88592,Yelp Bistro,The order was correct and delivered within the expected time. The restaurant was busy at the time.,3,Pickup,Yes,2026-11-22,Yelp,Jaffna
+REV-0856,CUST-75437,Green Leaf Restaurant,The order was incorrect and the packaging was damaged. The experience was similar to my previous order.,1,Pickup,Yes,2026-01-28,Amazon,Negombo
+REV-0857,CUST-72709,Amazon Cafe,"Fast delivery, good packaging, and the meal tasted amazing.",5,Delivery,No,2026-12-09,Amazon,Colombo
+REV-0858,CUST-56217,Green Leaf Restaurant,"Fast delivery, good packaging, and the meal tasted amazing. Delivery instructions were followed.",4,Pickup,No,2026-08-23,Google Maps,Jaffna
+REV-0859,CUST-60224,City Pizza,The order was incorrect and the packaging was damaged. I used the mobile app.,1,Pickup,No,2026-09-18,Amazon,Anuradhapura
+REV-0860,CUST-40827,Green Leaf Restaurant,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I ordered during the evening.,4,Delivery,Yes,2026-01-12,Google Maps,Kandy
+REV-0861,CUST-28264,Downtown Diner,The food arrived cold and the order was missing an item. The restaurant was busy at the time.,2,Pickup,Yes,2026-09-14,Amazon,Kandy
+REV-0862,CUST-28753,City Pizza,The food arrived cold and the order was missing an item. I ordered during the evening.,1,Delivery,No,2026-06-02,UberEats,Negombo
+REV-0863,CUST-13956,Yelp Bistro,"Everything worked as expected, but there was room for improvement. This was my first order.",4,Pickup,Yes,2026-02-08,UberEats,Colombo
+REV-0864,CUST-71573,Yelp Bistro,An ordinary experience with average taste and delivery time. This was my first order.,3,Pickup,No,2026-07-24,Yelp,Anuradhapura
+REV-0865,CUST-30432,Uber Eats Kitchen,The food arrived cold and the order was missing an item. I ordered during the evening.,2,Delivery,Yes,2026-09-06,UberEats,Anuradhapura
+REV-0866,CUST-39794,City Pizza,Poor experience overall. I would not order from this restaurant again. The experience was similar to my previous order.,2,Delivery,Yes,2026-02-17,Google Maps,Kandy
+REV-0867,CUST-61418,Yelp Bistro,"The meal was cold, soggy, and clearly had been sitting for a long time. I used the mobile app.",1,Delivery,No,2026-08-11,Google Maps,Anuradhapura
+REV-0868,CUST-45378,Amazon Cafe,Great value for money. The food was tasty and well prepared. I used the mobile app.,5,Delivery,Yes,2026-06-20,Yelp,Colombo
+REV-0869,CUST-37775,Family Kitchen,"Fast delivery, good packaging, and the meal tasted amazing. I ordered during the evening.",4,Delivery,Yes,2026-04-18,Amazon,Negombo
+REV-0870,CUST-84727,Family Kitchen,The portion was small and the food did not taste good. I ordered during the evening.,2,Delivery,No,2026-01-02,Yelp,Colombo
+REV-0871,CUST-62184,Urban Bites,The food arrived cold and the order was missing an item. The experience was similar to my previous order.,2,Delivery,Yes,2026-07-24,Yelp,Kandy
+REV-0872,CUST-76005,Amazon Cafe,Very disappointing experience. The meal was poorly prepared and late. Delivery instructions were followed.,2,Delivery,Yes,2026-10-26,Google Maps,Anuradhapura
+REV-0873,CUST-29862,Sunrise Cafe,The food was okay and arrived on time. Nothing especially memorable. This was my first order.,3,Delivery,Yes,2026-12-08,Amazon,Negombo
+REV-0874,CUST-68652,Yelp Bistro,The order was correct and delivered within the expected time. The restaurant was busy at the time.,4,Pickup,Yes,2026-06-20,Google Maps,Colombo
+REV-0875,CUST-90004,Family Kitchen,"The meal was cold, soggy, and clearly had been sitting for a long time. I used the mobile app.",1,Delivery,Yes,2026-10-21,Google Maps,Colombo
+REV-0876,CUST-75393,Amazon Cafe,The delivery took far too long and the food was not fresh. I ordered during the evening.,2,Pickup,Yes,2026-03-10,Amazon,Colombo
+REV-0877,CUST-19323,Yelp Bistro,Great value for money. The food was tasty and well prepared. I ordered during the evening.,5,Pickup,Yes,2026-08-09,Google Maps,Negombo
+REV-0878,CUST-57641,Downtown Diner,Very disappointing experience. The meal was poorly prepared and late. The staff were polite.,2,Pickup,No,2026-10-22,Amazon,Anuradhapura
+REV-0879,CUST-99417,City Pizza,Great value for money. The food was tasty and well prepared. I ordered during the evening.,5,Pickup,Yes,2026-11-02,UberEats,Negombo
+REV-0880,CUST-48097,City Pizza,The food arrived cold and the order was missing an item. I ordered during the evening.,1,Delivery,No,2026-02-08,Google Maps,Anuradhapura
+REV-0881,CUST-94211,Urban Bites,The packaging was fine and the food was neither great nor disappointing.,3,Pickup,Yes,2026-02-06,UberEats,Anuradhapura
+REV-0882,CUST-18450,Green Leaf Restaurant,The portion was small and the food did not taste good. The restaurant was busy at the time.,2,Pickup,No,2026-04-23,Google Maps,Colombo
+REV-0883,CUST-29072,Google Maps Grill,The food was delicious and arrived fresh and hot. Great experience.,4,Pickup,Yes,2026-10-25,Google Maps,Colombo
+REV-0884,CUST-37973,Uber Eats Kitchen,The order was incorrect and the packaging was damaged.,2,Delivery,Yes,2026-11-14,Yelp,Galle
+REV-0885,CUST-45901,City Pizza,Average experience. The portion was reasonable and the taste was acceptable. I ordered during the evening.,3,Delivery,Yes,2026-12-15,Google Maps,Jaffna
+REV-0886,CUST-22116,City Pizza,The restaurant was excellent and the order arrived earlier than expected. The staff were polite.,4,Pickup,Yes,2026-03-07,Yelp,Anuradhapura
+REV-0887,CUST-56490,Family Kitchen,The order was correct and delivered within the expected time. Delivery instructions were followed.,4,Pickup,Yes,2026-09-26,Amazon,Colombo
+REV-0888,CUST-11859,Yelp Bistro,The delivery took far too long and the food was not fresh. The restaurant was busy at the time.,2,Pickup,Yes,2026-08-28,Yelp,Colombo
+REV-0889,CUST-69055,Yelp Bistro,"The meal was cold, soggy, and clearly had been sitting for a long time. The staff were polite.",2,Pickup,Yes,2026-01-07,Amazon,Anuradhapura
+REV-0890,CUST-38329,Green Leaf Restaurant,The order was correct and delivered within the expected time. Delivery instructions were followed.,4,Delivery,Yes,2026-11-19,UberEats,Galle
+REV-0891,CUST-75809,Amazon Cafe,The food arrived cold and the order was missing an item. The experience was similar to my previous order.,2,Pickup,No,2026-07-14,Yelp,Galle
+REV-0892,CUST-33044,Sunrise Cafe,"The meal was cold, soggy, and clearly had been sitting for a long time. I ordered during the evening.",2,Pickup,Yes,2026-03-18,Amazon,Jaffna
+REV-0893,CUST-91313,Amazon Cafe,The restaurant was excellent and the order arrived earlier than expected. The experience was similar to my previous order.,5,Delivery,Yes,2026-02-21,UberEats,Jaffna
+REV-0894,CUST-93037,Sunrise Cafe,Very disappointing experience. The meal was poorly prepared and late. I ordered during the evening.,2,Delivery,Yes,2026-07-07,Amazon,Anuradhapura
+REV-0895,CUST-26310,Green Leaf Restaurant,Average experience. The portion was reasonable and the taste was acceptable.,3,Pickup,No,2026-11-23,Google Maps,Colombo
+REV-0896,CUST-96334,Downtown Diner,The portion was small and the food did not taste good. The experience was similar to my previous order.,2,Pickup,No,2026-11-08,UberEats,Anuradhapura
+REV-0897,CUST-78021,Family Kitchen,The food was delicious and arrived fresh and hot. Great experience. The restaurant was busy at the time.,4,Pickup,Yes,2026-03-19,Google Maps,Kandy
+REV-0898,CUST-16760,Family Kitchen,An ordinary experience with average taste and delivery time. Delivery instructions were followed.,3,Pickup,Yes,2026-11-13,Amazon,Anuradhapura
+REV-0899,CUST-23051,Yelp Bistro,The delivery took far too long and the food was not fresh. I used the mobile app.,2,Delivery,No,2026-11-09,Amazon,Galle
+REV-0900,CUST-11512,Family Kitchen,Excellent service and very friendly staff. I would definitely order again. Delivery instructions were followed.,4,Delivery,Yes,2026-10-23,UberEats,Jaffna
+REV-0901,CUST-34452,Google Maps Grill,"Fast delivery, good packaging, and the meal tasted amazing. The restaurant was busy at the time.",5,Delivery,Yes,2026-04-18,Amazon,Negombo
+REV-0902,CUST-46040,Amazon Cafe,"The meal was cold, soggy, and clearly had been sitting for a long time. The staff were polite.",2,Delivery,Yes,2026-11-19,UberEats,Colombo
+REV-0903,CUST-47022,Downtown Diner,Average experience. The portion was reasonable and the taste was acceptable. This was my first order.,3,Delivery,Yes,2026-02-16,Yelp,Kandy
+REV-0904,CUST-19643,Sunrise Cafe,The delivery was quick and the customer service was helpful. Delivery instructions were followed.,4,Delivery,Yes,2026-11-14,Google Maps,Galle
+REV-0905,CUST-49158,Uber Eats Kitchen,"Everything worked as expected, but there was room for improvement. This was my first order.",3,Delivery,Yes,2026-02-11,Yelp,Anuradhapura
+REV-0906,CUST-25937,Google Maps Grill,The food arrived cold and the order was missing an item. The experience was similar to my previous order.,1,Delivery,Yes,2026-09-17,Amazon,Kandy
+REV-0907,CUST-52931,Yelp Bistro,Very disappointing experience. The meal was poorly prepared and late. The staff were polite.,1,Delivery,Yes,2026-12-23,Amazon,Galle
+REV-0908,CUST-82285,Downtown Diner,Really happy with the quality and portion size. Everything was perfect. The restaurant was busy at the time.,4,Pickup,No,2026-07-17,Google Maps,Kandy
+REV-0909,CUST-23486,Family Kitchen,Really happy with the quality and portion size. Everything was perfect. Delivery instructions were followed.,5,Pickup,Yes,2026-04-24,Google Maps,Anuradhapura
+REV-0910,CUST-91646,Amazon Cafe,"The meal was cold, soggy, and clearly had been sitting for a long time. The restaurant was busy at the time.",2,Pickup,No,2026-04-19,Yelp,Galle
+REV-0911,CUST-14424,Urban Bites,Very disappointing experience. The meal was poorly prepared and late. This was my first order.,2,Pickup,No,2026-05-20,Yelp,Anuradhapura
+REV-0912,CUST-34368,Green Leaf Restaurant,"Fast delivery, good packaging, and the meal tasted amazing. Delivery instructions were followed.",5,Delivery,Yes,2026-04-22,Yelp,Galle
+REV-0913,CUST-51758,Uber Eats Kitchen,Great value for money. The food was tasty and well prepared. The staff were polite.,4,Pickup,Yes,2026-08-19,Yelp,Kandy
+REV-0914,CUST-79109,Google Maps Grill,An ordinary experience with average taste and delivery time. I used the mobile app.,3,Delivery,Yes,2026-12-20,UberEats,Jaffna
+REV-0915,CUST-51958,Google Maps Grill,"The meal was cold, soggy, and clearly had been sitting for a long time. The restaurant was busy at the time.",2,Delivery,Yes,2026-08-16,UberEats,Galle
+REV-0916,CUST-88830,Green Leaf Restaurant,Excellent service and very friendly staff. I would definitely order again. This was my first order.,5,Pickup,Yes,2026-10-01,Yelp,Colombo
+REV-0917,CUST-27178,City Pizza,The food was okay and arrived on time. Nothing especially memorable. The experience was similar to my previous order.,3,Delivery,Yes,2026-06-21,UberEats,Colombo
+REV-0918,CUST-46002,Green Leaf Restaurant,An ordinary experience with average taste and delivery time. The experience was similar to my previous order.,4,Pickup,No,2026-02-18,Yelp,Anuradhapura
+REV-0919,CUST-74662,Amazon Cafe,An ordinary experience with average taste and delivery time.,3,Pickup,Yes,2026-01-08,UberEats,Colombo
+REV-0920,CUST-32307,Amazon Cafe,Great value for money. The food was tasty and well prepared. I used the mobile app.,5,Delivery,Yes,2026-09-01,UberEats,Galle
+REV-0921,CUST-49883,Amazon Cafe,The food arrived cold and the order was missing an item. The staff were polite.,1,Pickup,Yes,2026-12-20,Google Maps,Galle
+REV-0922,CUST-25715,Yelp Bistro,The order was correct and delivered within the expected time.,4,Pickup,Yes,2026-10-28,Google Maps,Negombo
+REV-0923,CUST-96673,Sunrise Cafe,Excellent service and very friendly staff. I would definitely order again.,4,Pickup,Yes,2026-12-16,Amazon,Colombo
+REV-0924,CUST-83205,Google Maps Grill,The restaurant was excellent and the order arrived earlier than expected. The restaurant was busy at the time.,4,Delivery,Yes,2026-02-16,UberEats,Kandy
+REV-0925,CUST-34630,Sunrise Cafe,Really happy with the quality and portion size. Everything was perfect. Delivery instructions were followed.,5,Delivery,Yes,2026-04-27,Yelp,Galle
+REV-0926,CUST-38676,Green Leaf Restaurant,The delivery took far too long and the food was not fresh. This was my first order.,1,Pickup,No,2026-10-17,Amazon,Anuradhapura
+REV-0927,CUST-99950,Downtown Diner,The restaurant was excellent and the order arrived earlier than expected. This was my first order.,5,Delivery,Yes,2026-08-04,UberEats,Kandy
+REV-0928,CUST-13746,Sunrise Cafe,The delivery was quick and the customer service was helpful. The experience was similar to my previous order.,4,Pickup,Yes,2026-05-04,UberEats,Galle
+REV-0929,CUST-76574,Green Leaf Restaurant,"Fast delivery, good packaging, and the meal tasted amazing. Delivery instructions were followed.",5,Delivery,No,2026-05-12,UberEats,Colombo
+REV-0930,CUST-34831,City Pizza,An ordinary experience with average taste and delivery time. The experience was similar to my previous order.,3,Delivery,Yes,2026-09-20,Google Maps,Jaffna
+REV-0931,CUST-38780,Amazon Cafe,The food was delicious and arrived fresh and hot. Great experience. I ordered during the evening.,4,Delivery,Yes,2026-10-09,Amazon,Colombo
+REV-0932,CUST-61368,City Pizza,Service was normal and the food quality was acceptable. Delivery instructions were followed.,3,Delivery,Yes,2026-12-27,Yelp,Anuradhapura
+REV-0933,CUST-88159,Downtown Diner,Really happy with the quality and portion size. Everything was perfect. The experience was similar to my previous order.,5,Delivery,Yes,2026-03-17,Google Maps,Negombo
+REV-0934,CUST-99318,Amazon Cafe,Really happy with the quality and portion size. Everything was perfect. The restaurant was busy at the time.,4,Delivery,Yes,2026-06-15,Amazon,Colombo
+REV-0935,CUST-33267,Downtown Diner,An ordinary experience with average taste and delivery time. The staff were polite.,3,Delivery,Yes,2026-11-25,UberEats,Jaffna
+REV-0936,CUST-42441,Sunrise Cafe,The delivery was quick and the customer service was helpful.,4,Delivery,Yes,2026-01-19,Yelp,Kandy
+REV-0937,CUST-23106,Downtown Diner,The order was correct and delivered within the expected time. I ordered during the evening.,3,Pickup,No,2026-08-24,Yelp,Jaffna
+REV-0938,CUST-70129,Uber Eats Kitchen,The delivery was quick and the customer service was helpful. The restaurant was busy at the time.,5,Pickup,Yes,2026-12-11,Google Maps,Colombo
+REV-0939,CUST-38869,Yelp Bistro,The food was delicious and arrived fresh and hot. Great experience. Delivery instructions were followed.,4,Pickup,No,2026-01-08,Google Maps,Galle
+REV-0940,CUST-93720,Amazon Cafe,Excellent service and very friendly staff. I would definitely order again. Delivery instructions were followed.,4,Pickup,No,2026-09-06,Yelp,Negombo
+REV-0941,CUST-46208,Downtown Diner,Great value for money. The food was tasty and well prepared. Delivery instructions were followed.,5,Delivery,Yes,2026-10-17,Yelp,Jaffna
+REV-0942,CUST-24442,Uber Eats Kitchen,The delivery was quick and the customer service was helpful. The experience was similar to my previous order.,5,Pickup,Yes,2026-08-22,Amazon,Jaffna
+REV-0943,CUST-47782,Amazon Cafe,The delivery took far too long and the food was not fresh.,2,Pickup,Yes,2026-08-02,Amazon,Galle
+REV-0944,CUST-50084,Uber Eats Kitchen,Very disappointing experience. The meal was poorly prepared and late.,1,Pickup,Yes,2026-11-27,UberEats,Colombo
+REV-0945,CUST-21272,Downtown Diner,Great value for money. The food was tasty and well prepared. This was my first order.,5,Delivery,Yes,2026-07-19,UberEats,Galle
+REV-0946,CUST-98932,City Pizza,The delivery was quick and the customer service was helpful. I used the mobile app.,5,Pickup,No,2026-02-09,Yelp,Jaffna
+REV-0947,CUST-99564,Google Maps Grill,Absolutely loved the meal. Fresh ingredients and wonderful flavor. This was my first order.,5,Pickup,Yes,2026-07-18,Amazon,Galle
+REV-0948,CUST-59278,City Pizza,The restaurant was excellent and the order arrived earlier than expected. This was my first order.,5,Delivery,Yes,2026-09-15,Yelp,Jaffna
+REV-0949,CUST-66055,Sunrise Cafe,The order was incorrect and the packaging was damaged. The restaurant was busy at the time.,2,Pickup,No,2026-08-01,UberEats,Anuradhapura
+REV-0950,CUST-86064,Urban Bites,"Fast delivery, good packaging, and the meal tasted amazing. I used the mobile app.",5,Pickup,Yes,2026-10-18,Yelp,Colombo
+REV-0951,CUST-97828,Uber Eats Kitchen,"The meal was cold, soggy, and clearly had been sitting for a long time. Delivery instructions were followed.",1,Pickup,No,2026-01-03,UberEats,Galle
+REV-0952,CUST-48086,Family Kitchen,Very disappointing experience. The meal was poorly prepared and late. I ordered during the evening.,2,Pickup,Yes,2026-01-04,UberEats,Negombo
+REV-0953,CUST-39300,Yelp Bistro,"Fast delivery, good packaging, and the meal tasted amazing. This was my first order.",5,Pickup,Yes,2026-12-01,Google Maps,Jaffna
+REV-0954,CUST-30056,Family Kitchen,Average experience. The portion was reasonable and the taste was acceptable. The staff were polite.,3,Delivery,Yes,2026-04-07,UberEats,Anuradhapura
+REV-0955,CUST-25966,Downtown Diner,The delivery was quick and the customer service was helpful. The staff were polite.,5,Pickup,No,2026-03-27,Amazon,Jaffna
+REV-0956,CUST-29168,Uber Eats Kitchen,The delivery was quick and the customer service was helpful. Delivery instructions were followed.,4,Delivery,Yes,2026-12-22,Amazon,Kandy
+REV-0957,CUST-48015,Downtown Diner,"The meal was fine, although there was nothing particularly special about it.",3,Delivery,No,2026-06-22,Yelp,Anuradhapura
+REV-0958,CUST-65683,Yelp Bistro,Excellent service and very friendly staff. I would definitely order again. Delivery instructions were followed.,5,Delivery,Yes,2026-08-04,Google Maps,Colombo
+REV-0959,CUST-15587,Green Leaf Restaurant,The food was okay and arrived on time. Nothing especially memorable.,4,Delivery,No,2026-12-15,Yelp,Colombo
+REV-0960,CUST-78820,City Pizza,The order was incorrect and the packaging was damaged. The restaurant was busy at the time.,1,Delivery,Yes,2026-11-05,Yelp,Negombo
+REV-0961,CUST-46482,Downtown Diner,The order was incorrect and the packaging was damaged. This was my first order.,2,Pickup,Yes,2026-11-16,Google Maps,Anuradhapura
+REV-0962,CUST-26963,Green Leaf Restaurant,The order was correct and delivered within the expected time. The experience was similar to my previous order.,4,Pickup,No,2026-02-02,UberEats,Negombo
+REV-0963,CUST-99040,Sunrise Cafe,Excellent service and very friendly staff. I would definitely order again.,4,Pickup,Yes,2026-12-26,Amazon,Colombo
+REV-0964,CUST-18437,Uber Eats Kitchen,The delivery took far too long and the food was not fresh. Delivery instructions were followed.,2,Pickup,Yes,2026-01-28,UberEats,Anuradhapura
+REV-0965,CUST-24111,Sunrise Cafe,The food arrived cold and the order was missing an item. The restaurant was busy at the time.,1,Pickup,Yes,2026-11-19,Amazon,Kandy
+REV-0966,CUST-36370,Yelp Bistro,The delivery was quick and the customer service was helpful. I used the mobile app.,5,Pickup,Yes,2026-02-19,UberEats,Negombo
+REV-0967,CUST-28423,Uber Eats Kitchen,Very disappointing experience. The meal was poorly prepared and late. The staff were polite.,1,Pickup,No,2026-10-18,UberEats,Galle
+REV-0968,CUST-84759,Sunrise Cafe,The delivery was quick and the customer service was helpful. I used the mobile app.,4,Pickup,Yes,2026-10-18,Amazon,Colombo
+REV-0969,CUST-26671,Urban Bites,Absolutely loved the meal. Fresh ingredients and wonderful flavor. I ordered during the evening.,4,Pickup,Yes,2026-02-16,Amazon,Colombo
+REV-0970,CUST-47997,Downtown Diner,The packaging was fine and the food was neither great nor disappointing. I used the mobile app.,3,Pickup,Yes,2026-02-28,Amazon,Galle
+REV-0971,CUST-91087,Uber Eats Kitchen,Really happy with the quality and portion size. Everything was perfect. Delivery instructions were followed.,5,Delivery,No,2026-05-21,UberEats,Colombo
+REV-0972,CUST-17784,Yelp Bistro,The restaurant was excellent and the order arrived earlier than expected. The restaurant was busy at the time.,4,Delivery,Yes,2026-11-02,Amazon,Anuradhapura
+REV-0973,CUST-64557,Family Kitchen,The food was delicious and arrived fresh and hot. Great experience. I ordered during the evening.,5,Delivery,No,2026-03-09,UberEats,Colombo
+REV-0974,CUST-72599,Downtown Diner,Really happy with the quality and portion size. Everything was perfect. Delivery instructions were followed.,5,Delivery,Yes,2026-01-01,Amazon,Jaffna
+REV-0975,CUST-82416,Sunrise Cafe,An ordinary experience with average taste and delivery time. The staff were polite.,4,Delivery,No,2026-07-23,Amazon,Anuradhapura
+REV-0976,CUST-25465,Family Kitchen,The delivery took far too long and the food was not fresh.,1,Pickup,Yes,2026-04-11,Google Maps,Colombo
+REV-0977,CUST-64141,Urban Bites,Excellent service and very friendly staff. I would definitely order again. I used the mobile app.,4,Delivery,Yes,2026-12-08,UberEats,Colombo
+REV-0978,CUST-15730,Green Leaf Restaurant,The delivery was quick and the customer service was helpful. The experience was similar to my previous order.,4,Pickup,Yes,2026-05-05,Google Maps,Anuradhapura
+REV-0979,CUST-81256,Google Maps Grill,Average experience. The portion was reasonable and the taste was acceptable. The experience was similar to my previous order.,3,Pickup,Yes,2026-04-15,Yelp,Galle
+REV-0980,CUST-51793,Urban Bites,Customer service was unhelpful and my complaint was not resolved. The experience was similar to my previous order.,1,Delivery,Yes,2026-06-14,Google Maps,Galle
+REV-0981,CUST-82478,Google Maps Grill,"Fast delivery, good packaging, and the meal tasted amazing. The experience was similar to my previous order.",4,Delivery,Yes,2026-12-27,Amazon,Colombo
+REV-0982,CUST-12790,Sunrise Cafe,Poor experience overall. I would not order from this restaurant again. I ordered during the evening.,2,Delivery,Yes,2026-05-19,Google Maps,Galle
+REV-0983,CUST-89920,City Pizza,Very disappointing experience. The meal was poorly prepared and late. The experience was similar to my previous order.,1,Pickup,Yes,2026-07-13,Google Maps,Colombo
+REV-0984,CUST-79794,Uber Eats Kitchen,Absolutely loved the meal. Fresh ingredients and wonderful flavor. Delivery instructions were followed.,4,Pickup,Yes,2026-09-25,Yelp,Colombo
+REV-0985,CUST-13584,Green Leaf Restaurant,The order was incorrect and the packaging was damaged. I used the mobile app.,2,Pickup,No,2026-12-24,UberEats,Colombo
+REV-0986,CUST-65552,Family Kitchen,Service was normal and the food quality was acceptable.,4,Pickup,Yes,2026-07-15,Amazon,Kandy
+REV-0987,CUST-42759,Urban Bites,Customer service was unhelpful and my complaint was not resolved. I ordered during the evening.,2,Pickup,Yes,2026-10-13,UberEats,Jaffna
+REV-0988,CUST-26293,Downtown Diner,The restaurant was excellent and the order arrived earlier than expected. The staff were polite.,5,Pickup,Yes,2026-03-15,Google Maps,Colombo
+REV-0989,CUST-72941,Urban Bites,The delivery was quick and the customer service was helpful. The restaurant was busy at the time.,4,Delivery,No,2026-01-19,UberEats,Galle
+REV-0990,CUST-33567,Downtown Diner,The order was incorrect and the packaging was damaged.,1,Pickup,Yes,2026-08-05,Amazon,Negombo
+REV-0991,CUST-95799,Uber Eats Kitchen,The food was delicious and arrived fresh and hot. Great experience. I ordered during the evening.,4,Delivery,No,2026-10-11,UberEats,Jaffna
+REV-0992,CUST-12112,Green Leaf Restaurant,The food arrived cold and the order was missing an item. The experience was similar to my previous order.,2,Delivery,Yes,2026-06-04,UberEats,Jaffna
+REV-0993,CUST-52701,Family Kitchen,Excellent service and very friendly staff. I would definitely order again. I used the mobile app.,4,Pickup,No,2026-02-21,Google Maps,Galle
+REV-0994,CUST-63495,Green Leaf Restaurant,Great value for money. The food was tasty and well prepared. The restaurant was busy at the time.,5,Pickup,Yes,2026-10-01,Amazon,Galle
+REV-0995,CUST-89827,Google Maps Grill,"Fast delivery, good packaging, and the meal tasted amazing. I ordered during the evening.",4,Pickup,Yes,2026-04-13,UberEats,Negombo
+REV-0996,CUST-39436,Family Kitchen,"The meal was cold, soggy, and clearly had been sitting for a long time. I ordered during the evening.",1,Pickup,Yes,2026-09-26,UberEats,Jaffna
+REV-0997,CUST-35562,Family Kitchen,"Everything worked as expected, but there was room for improvement. The experience was similar to my previous order.",3,Pickup,Yes,2026-06-08,Yelp,Kandy
+REV-0998,CUST-68328,City Pizza,Average experience. The portion was reasonable and the taste was acceptable. I used the mobile app.,4,Pickup,Yes,2026-06-18,UberEats,Galle
+REV-0999,CUST-40115,Family Kitchen,"The meal was fine, although there was nothing particularly special about it. Delivery instructions were followed.",3,Delivery,Yes,2026-07-22,Amazon,Jaffna
+REV-1000,CUST-25461,Amazon Cafe,The restaurant was excellent and the order arrived earlier than expected. The restaurant was busy at the time.,5,Pickup,No,2026-09-05,Google Maps,Negombo

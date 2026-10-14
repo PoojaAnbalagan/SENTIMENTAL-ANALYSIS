@@ -6,9 +6,7 @@ import {
   Database, 
   Cpu, 
   FileText, 
-  Info,
-  Sun,
-  Moon,
+  UploadCloud,
   ChevronLeft,
   ChevronRight,
   MessageSquareHeart
@@ -22,12 +20,13 @@ export function Sidebar({ currentTab, setTab }) {
   const navItems = [
     { id: 'Overview', label: 'Overview', icon: LayoutDashboard },
     { id: 'Live Predictor', label: 'Live Predictor', icon: Zap },
+    { id: 'Batch Upload', label: 'Batch Upload', icon: UploadCloud },
     { id: 'Sentiment Analytics', label: 'Sentiment Analytics', icon: BarChart3 },
     { id: 'Review Explorer', label: 'Review Explorer', icon: Database },
     { id: 'Model Performance', label: 'Model Performance', icon: Cpu },
     { id: 'Reports', label: 'Reports', icon: FileText },
-    { id: 'Project Information', label: 'Project Info', icon: Info },
   ];
+
 
   return (
     <aside className={`border-r border-[var(--border)] bg-[var(--surface)] p-3.5 flex flex-col justify-between min-h-screen transition-all duration-300 ${

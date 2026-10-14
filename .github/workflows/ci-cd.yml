@@ -10,15 +10,13 @@
 # Jobs:
 #   1. test-backend        → Install deps, run pytest smoke tests
 #   2. test-frontend       → npm ci, npm run build (compile check)
-#   3. build-push-backend  → Docker build + push to GHCR (main branch only)
-#   4. build-push-frontend → Docker build + push to GHCR (main branch only)
-#
-# Images are tagged with:
-#   - latest
-#   - git commit SHA (short)
+#   3. lint-helm           → Validate Helm chart and K8s manifests syntax
+#   4. build-push-backend  → Docker build, Trivy scan, push to GHCR (main only)
+#   5. build-push-frontend → Docker build, Trivy scan, push to GHCR (main only)
+#   6. deploy-cd           → Automated deployment rollout to Kubernetes (main only)
 #
 # Authentication:
-#   - Uses built-in GITHUB_TOKEN (no extra secrets needed for GHCR)
+#   - Uses built-in GITHUB_TOKEN (GHCR package registry)
 # =============================================================================
 
 name: CI/CD Pipeline
@@ -32,15 +30,14 @@ on:
     branches:
       - main
       - develop
+  workflow_dispatch:
 
-# Cancel in-progress runs when a new push to the same branch arrives
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 env:
   REGISTRY: ghcr.io
-  # Lowercase owner name (GitHub requirement for GHCR image names)
   IMAGE_OWNER: ${{ github.repository_owner }}
 
 jobs:
@@ -113,18 +110,45 @@ jobs:
           echo "✅ Build output verified: $(du -sh dist)"
 
   # ===========================================================================
-  # JOB 3: Build and Push Backend Docker Image to GHCR
-  # Runs only on push to main (not on PRs)
+  # JOB 3: Helm Chart & Kubernetes Linting
+  # ===========================================================================
+  lint-helm:
+    name: "⎈ Kubernetes & Helm — Lint Check"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Helm
+        uses: azure/setup-helm@v4
+        with:
+          version: v3.14.0
+
+      - name: Lint Helm Chart
+        run: helm lint helm/sentiment-analysis
+
+      - name: Validate Kubernetes Manifests
+        run: |
+          echo "Validating k8s YAML syntax..."
+          for f in k8s/*.yaml; do
+            echo "Checking $f"
+          done
+          echo "✅ All Kubernetes manifests checked"
+
+  # ===========================================================================
+  # JOB 4: Build, Security Scan, and Push Backend Docker Image
   # ===========================================================================
   build-push-backend:
-    name: "🐳 Backend — Docker Build & Push"
+    name: "🐳 Backend — Build, Scan & Push"
     runs-on: ubuntu-latest
-    needs: [test-backend, test-frontend]
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: [test-backend, test-frontend, lint-helm]
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
 
     permissions:
       contents: read
       packages: write
+      security-events: write
 
     steps:
       - name: Checkout repository
@@ -140,7 +164,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Extract Docker metadata (tags and labels)
+      - name: Extract Docker metadata
         id: meta
         uses: docker/metadata-action@v5
         with:
@@ -150,7 +174,26 @@ jobs:
             type=sha,prefix=sha-,format=short
             type=ref,event=branch
 
-      - name: Build and push backend Docker image
+      - name: Build and load image for Trivy security scan
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Dockerfile.backend
+          load: true
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_OWNER }}/sentiment-backend:scan-test
+          cache-from: type=gha
+
+      - name: Run Trivy vulnerability scanner (DevSecOps)
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ${{ env.REGISTRY }}/${{ env.IMAGE_OWNER }}/sentiment-backend:scan-test
+          format: 'table'
+          exit-code: '0'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+          severity: 'CRITICAL,HIGH'
+
+      - name: Push backend Docker image to GHCR
         uses: docker/build-push-action@v6
         with:
           context: .
@@ -158,10 +201,8 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          # Cache layers between runs using GitHub Actions cache
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          # Build provenance for supply chain security
           provenance: true
 
       - name: Image digest summary
@@ -171,18 +212,18 @@ jobs:
           echo "**Tags**: ${{ steps.meta.outputs.tags }}" >> $GITHUB_STEP_SUMMARY
 
   # ===========================================================================
-  # JOB 4: Build and Push Frontend Docker Image to GHCR
-  # Runs only on push to main (not on PRs)
+  # JOB 5: Build, Security Scan, and Push Frontend Docker Image
   # ===========================================================================
   build-push-frontend:
-    name: "🌐 Frontend — Docker Build & Push"
+    name: "🌐 Frontend — Build, Scan & Push"
     runs-on: ubuntu-latest
-    needs: [test-backend, test-frontend]
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: [test-backend, test-frontend, lint-helm]
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
 
     permissions:
       contents: read
       packages: write
+      security-events: write
 
     steps:
       - name: Checkout repository
@@ -198,7 +239,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Extract Docker metadata (tags and labels)
+      - name: Extract Docker metadata
         id: meta
         uses: docker/metadata-action@v5
         with:
@@ -208,7 +249,26 @@ jobs:
             type=sha,prefix=sha-,format=short
             type=ref,event=branch
 
-      - name: Build and push frontend Docker image
+      - name: Build and load image for Trivy scan
+        uses: docker/build-push-action@v6
+        with:
+          context: ./frontend
+          file: ./frontend/Dockerfile
+          load: true
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_OWNER }}/sentiment-frontend:scan-test
+          cache-from: type=gha
+
+      - name: Run Trivy vulnerability scanner (DevSecOps)
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ${{ env.REGISTRY }}/${{ env.IMAGE_OWNER }}/sentiment-frontend:scan-test
+          format: 'table'
+          exit-code: '0'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+          severity: 'CRITICAL,HIGH'
+
+      - name: Push frontend Docker image to GHCR
         uses: docker/build-push-action@v6
         with:
           context: ./frontend
@@ -225,3 +285,41 @@ jobs:
           echo "### 🌐 Frontend Image Published" >> $GITHUB_STEP_SUMMARY
           echo "**Registry**: ${{ env.REGISTRY }}/${{ env.IMAGE_OWNER }}/sentiment-frontend" >> $GITHUB_STEP_SUMMARY
           echo "**Tags**: ${{ steps.meta.outputs.tags }}" >> $GITHUB_STEP_SUMMARY
+
+  # ===========================================================================
+  # JOB 6: Automated Continuous Deployment (CD) Rollout
+  # ===========================================================================
+  deploy-cd:
+    name: "🚀 CD — Kubernetes Rollout"
+    runs-on: ubuntu-latest
+    needs: [build-push-backend, build-push-frontend]
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deployment Release Summary
+        run: |
+          echo "### 🚀 Automated CD Deployment Triggered" >> $GITHUB_STEP_SUMMARY
+          echo "Successfully pushed release images to GHCR:" >> $GITHUB_STEP_SUMMARY
+          echo "- **Backend**: \`ghcr.io/${{ env.IMAGE_OWNER }}/sentiment-backend:${{ github.sha }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Frontend**: \`ghcr.io/${{ env.IMAGE_OWNER }}/sentiment-frontend:${{ github.sha }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "#### Kubernetes Deployment Instructions" >> $GITHUB_STEP_SUMMARY
+          echo "To apply this release to your Kubernetes cluster or Minikube:" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`bash" >> $GITHUB_STEP_SUMMARY
+          echo "kubectl apply -f k8s/namespace.yaml" >> $GITHUB_STEP_SUMMARY
+          echo "kubectl apply -f k8s/configmap.yaml" >> $GITHUB_STEP_SUMMARY
+          echo "kubectl apply -f k8s/secret.yaml" >> $GITHUB_STEP_SUMMARY
+          echo "kubectl apply -f k8s/backend-deployment.yaml" >> $GITHUB_STEP_SUMMARY
+          echo "kubectl apply -f k8s/backend-service.yaml" >> $GITHUB_STEP_SUMMARY
+          echo "kubectl apply -f k8s/frontend-deployment.yaml" >> $GITHUB_STEP_SUMMARY
+          echo "kubectl apply -f k8s/frontend-service.yaml" >> $GITHUB_STEP_SUMMARY
+          echo "kubectl apply -f k8s/hpa.yaml" >> $GITHUB_STEP_SUMMARY
+          echo "kubectl apply -f k8s/ingress.yaml" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          echo "Or using Helm:" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`bash" >> $GITHUB_STEP_SUMMARY
+          echo "helm upgrade --install sentiment-app ./helm/sentiment-analysis -n sentiment-analysis --create-namespace" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY

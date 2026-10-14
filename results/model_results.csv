@@ -1,4 +1,8 @@
-,accuracy,macro_precision,macro_recall,macro_f1
-Logistic Regression,0.8663,0.8279,0.8544,0.8369
-Linear SVM,0.8722,0.837,0.8414,0.8391
-Multinomial Naive Bayes,0.7827,0.8303,0.6318,0.6114
+model,accuracy,macro_precision,macro_recall,macro_f1
+Logistic Regression,0.8569,0.8154,0.8403,0.8233
+Linear SVM,0.8602,0.8187,0.8205,0.8195
+Multinomial Naive Bayes,0.7749,0.8552,0.6159,0.5863
+SGDClassifier,0.853,0.8143,0.8088,0.8111
+RidgeClassifier,0.8382,0.7939,0.8143,0.8008
+VADER (Baseline),0.6171,0.5665,0.5668,0.5539
+DistilBERT (Transformer),0.9093,0.8793,0.9064,0.8906

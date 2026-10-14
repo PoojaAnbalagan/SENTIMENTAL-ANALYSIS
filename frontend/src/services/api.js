@@ -22,8 +22,8 @@ export const api = {
     return res.data;
   },
 
-  predictSentiment: async (text) => {
-    const res = await axios.post(`${API_BASE}/predict`, { text });
+  predictSentiment: async (text, modelType = 'all') => {
+    const res = await axios.post(`${API_BASE}/predict`, { text, model_type: modelType });
     return res.data;
   },
 
@@ -67,5 +67,19 @@ export const api = {
     if (filters.store && filters.store !== 'All Stores') params.append('store', filters.store);
     if (filters.search) params.append('search', filters.search);
     return `${API_BASE}/export?${params.toString()}`;
+  },
+
+  batchPredict: async (file, modelType = 'logistic_regression') => {
+    const formData = new FormData();
+    formData.append('file', file);
+    const res = await axios.post(`${API_BASE}/batch-predict?model_type=${encodeURIComponent(modelType)}`, formData, {
+      headers: { 'Content-Type': 'multipart/form-data' }
+    });
+    return res.data;
+  },
+
+  getSampleBatch: async (modelType = 'logistic_regression') => {
+    const res = await axios.get(`${API_BASE}/sample-batch?model_type=${encodeURIComponent(modelType)}`);
+    return res.data;
   }
 };

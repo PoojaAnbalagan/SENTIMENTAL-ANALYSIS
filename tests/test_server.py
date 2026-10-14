@@ -185,3 +185,19 @@ class TestPredictEndpoint:
             assert "predicted_sentiment" in data
             assert "confidence_percentage" in data
             assert "probabilities" in data
+
+
+# ---------------------------------------------------------------------------
+# 7. Prometheus Metrics endpoint
+# ---------------------------------------------------------------------------
+class TestPrometheusMetricsEndpoint:
+    """Tests for GET /metrics and GET /api/metrics/prometheus"""
+
+    def test_metrics_returns_200(self):
+        response = client.get("/metrics")
+        assert response.status_code == 200
+
+    def test_metrics_content_is_text(self):
+        response = client.get("/metrics")
+        assert "text" in response.headers.get("content-type", "")
+

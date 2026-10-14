@@ -1,0 +1,302 @@
+review,rating,true_sentiment,predicted_sentiment,error_category,prediction_confidence
+Really slowwwwwwwww action and no service at all,1,Positive,Negative,Negation Interaction,0.9372
+Good food and not many people,5,Positive,Neutral,Negation Interaction,0.8278
+Trouble not ever again,1,Neutral,Negative,Negation Interaction,0.7546
+Unique McDonald's in that they request you use the touch screen order kiosks. I was hesitant at 1st but actually very convenient. You can choose one of the numbered tables you sit at and they bring your food to you. And Quick service the couple of times I did.,5,Negative,Positive,Mixed Sentiment / Contrastive Clause,0.9122
+"Typical McDonald's Fast Food Restaurant if on a budget in South Beach this is ideal, store manager needs to deal with those coming into store and not purchasing food or drink can be intimidating for some people.",4,Negative,Positive,Negation Interaction,0.4077
+First ever mcdonald without toilet facilities and hand wash,3,Negative,Neutral,Negation Interaction,0.7957
+I don't do McDonald's a lot but this place was okay. They need to stay on the cleanliness and the dining room. Also check the calibration of the sodas constantly because the Sprite tasted like seltzer. They fixed it while I was there though.,3,Negative,Neutral,Mixed Sentiment / Contrastive Clause,0.7917
+Curb side ordering,5,Positive,Negative,Very Short Text (< 4 words),0.4959
+"Today 3/18/2022 restaurant is closed for renovation no date when will reopen, but Google maps shows as open",2,Negative,Neutral,Mixed Sentiment / Contrastive Clause,0.5567
+The first time I've ate McDonalds in a very long while. It was very fresh and a very pleasant change. I will be going back.,3,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.7403
+The lady at the drivethu WAS ABSOLUTELY WONDERFUL!!! I wish she could be cloned for all my future customer service/sales to my consumer endeavors .,5,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.4816
+You will be welcomed by friendly drug addicted homeless people,3,Negative,Positive,Domain Nuance / Uncategorized,0.9872
+"This is the worse service I ever seen in my life, they have all those emigrants working, slower than snails.",1,Neutral,Negative,Neutral Ambiguity / Borderline Polarity,0.782
+App never works here and the customer service is non existent.,1,Negative,Neutral,Negation Interaction,0.8899
+"Very crowded, not organized, bathrooms difficult to access and had no toilet paper in most stalls. Not very clean",1,Negative,Neutral,Negation Interaction,0.5242
+"Good food, especially late",4,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.9208
+Food was good fast and friendly random stranger cleaned parking lot with bag I have him community lending a helping hand,3,Neutral,Positive,Neutral Ambiguity / Borderline Polarity,0.969
+I like ice cream,4,Negative,Positive,Domain Nuance / Uncategorized,0.9175
+I love the bacon egg and cheese as well as other options on the menu.,3,Neutral,Positive,Neutral Ambiguity / Borderline Polarity,0.7471
+My giant got to act up w. The creatures.Fun for all!,4,Negative,Positive,Domain Nuance / Uncategorized,0.6433
+"They watered their parking lot with a poorly-engineered irrigation syztem right before days of hard freeze,let everyone skate through the ice for a day before closing during the majority of the freeze when everyone needed a hot meal. Whataburger stayed open and served a limited menu to support Roanoke.",2,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.5528
+This place is crazy packed. Our food came out at a decent time. It's worth a stop to experience it. Just be prepared to be in a crowd.,5,Negative,Positive,Domain Nuance / Uncategorized,0.9474
+Very cordial staff. Thank you!,4,Neutral,Positive,Neutral Ambiguity / Borderline Polarity,0.6238
+"Give me that filet o fish, give me that fish!",4,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.7332
+Loved the biscuit sausage egg and cheese and their coffee,5,Negative,Positive,Domain Nuance / Uncategorized,0.7062
+"Small venue, smaller than usual menu. Had the feeling of a food court version of the restaurant but in a major shopping center.",3,Negative,Neutral,Mixed Sentiment / Contrastive Clause,0.9232
+Eh.. is all I got sadly,1,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.8977
+At least they got my order right.,2,Positive,Negative,Domain Nuance / Uncategorized,0.6174
+The usual,2,Negative,Neutral,Very Short Text (< 4 words),0.8807
+Ashes for a cheese burger with no pickle or onion and even had ths sticker on the box. Still had pickle and onion on it,3,Negative,Neutral,Negation Interaction,0.5313
+The Egg sausage McMuffin is better and larger than in San Bernardino,5,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.8363
+"The kids had a blast! Very hectic and tons of folks are there. You order at a kiosk and then they bring your food to you. Our food arrived in an orderly time. Although, the fries were cold and we had to send them back. The kids enjoyed the play area and game area. I recommend you let your kids wear socks or bring some. Otherwise they run around the nasty floor barefooted when they are on the playground. They also have an icecream and dessert area.",4,Positive,Negative,Very Long / Narrative Review (> 60 words),0.9391
+"Hello everyone. First, I have to say that I have not been to McDonald's in forever!! With that being said, I went through the drive thru because I didn't want to get out. The young man who took my order was kind, that was the first window. 2nd window, a whole other story. Drive up, and right off the bat, this young lady looks mad that she is even working. You know, at least fake that you are Blessed to even have a job. I was scared to ask her for a cup holder, but I did any way, lol. I had the BigMac Meal and remember like I said I had not been in forever.... I DEVOURED THAT BIG MAC, it Was fresh, and so were the fries. I also had a Fish sandwich. So yes I recommend.",5,Positive,Negative,Very Long / Narrative Review (> 60 words),0.9033
+This garbage for 3.91 imagine,1,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.6393
+"Dnt let the long lines fool you, they move fast and efficiently. The restaurant dining area is always clean, im not afraid to use their drink machine lol . All nyc McDonald's should follow suit lol",5,Positive,Neutral,Negation Interaction,0.8875
+"Busy, so busy, it's hard to know when your foods ready if tour not standing up there the whole time. But is across from Pen Station, given the area and associated expectations of large crowds of people, service was good.",5,Negative,Neutral,Mixed Sentiment / Contrastive Clause,0.4317
+Cant hate on the workers... its Mcdonalds... just dont go to this location. And good luck trying the drive thru if you have plans in the next 2 hours,2,Neutral,Negative,Neutral Ambiguity / Borderline Polarity,0.8684
+"It's been alright, but there are times when they have vagrants hanging around making the place less pleasant to eat there.",3,Negative,Neutral,Mixed Sentiment / Contrastive Clause,0.7717
+Fries on point everything else cooked in microwave,1,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.6133
+"bring spam to the mainland, you cowards",5,Neutral,Negative,Neutral Ambiguity / Borderline Polarity,0.5236
+"In general, all McDonald's are the same, these ones here in NY have been very crowded lately and there is usually no space to sit at peak hours. But they are still the best option to eat for the prices of the combos.",3,Negative,Neutral,Mixed Sentiment / Contrastive Clause,0.7475
+"No good service! They took my recipe, and I ask salt on my french fries, and they give me hot pepper. The old lady's Attitude is imperious!!!",1,Positive,Negative,Domain Nuance / Uncategorized,0.5886
+I only took one glass and it was very thick. They should make them softer when drinking it.,4,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.8297
+Do not go! They don't have keys for customers to use the bathroom,1,Neutral,Negative,Negation Interaction,0.5354
+Good service during the day night manager,4,Neutral,Positive,Neutral Ambiguity / Borderline Polarity,0.9005
+"It looks like a market place, the security of the bathroom lacks class, he is a very shocking person, rude",1,Positive,Negative,Domain Nuance / Uncategorized,0.9457
+Always ready for good comforting meals!,4,Negative,Positive,Domain Nuance / Uncategorized,0.9608
+Food is good but getting what you order the first time is a whole new challenge,3,Neutral,Negative,Mixed Sentiment / Contrastive Clause,0.5476
+"The staff was nice, the restaurant is just a little small, so be aware.",4,Neutral,Positive,Neutral Ambiguity / Borderline Polarity,0.7231
+"BE CAREFUL WITH THEIR CARS. STEAL if you park it for 5 min. They break the glass because they know that MANY TOURISTS visit it. You will NEVER get your belongings back because not even the police are interested in solving the robbery. ME BEING YOU, I WOULD NEVER GO.",1,Neutral,Negative,Negation Interaction,0.8375
+"Well, I guess I checked something off my bucket list I didn't even know I had... The WORLD'S biggest McDonald's?! How cool!! Pasta on dishware - at McDonald's?! Yes please! The place was a madhouse, but worth it for the experience. It was our first night visiting Orlando so we didn't let our kiddo run around the H U G E play area... I know, kinda mean. But the amount of children in it and not knowing how often it was cleaned had me a little nervous. Definitely worth the visit, even for just a cheeseburger! And KUDOS to all employees, this place is NUTS! AND a drive-thru?! Bless y'all.",4,Negative,Neutral,Very Long / Narrative Review (> 60 words),0.4139
+Filthy and disgusting. Looks like they never clean the place.,1,Positive,Negative,Negation Interaction,0.5379
+Using the drive thru ? Check your orders !,2,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.5589
+"This McDonald's has probably been remodeled two or three times. The interior is TINY. Like REALLY TINY. If you're here hunting happy meal toys, they charge you $2 for the toy, some places will charge only $1. You can use the McDonald's app here, but beware the tricky mobile app order and pay. Mobile is a pain to use, they're not always able to know where your order is, and it takes way longer to order on your phone or at a kiosk than it does in person. Drive-through doesn't get too bad because there's tons of food options nearby.",4,Negative,Neutral,Very Long / Narrative Review (> 60 words),0.6649
+On sight security Nothin more to be said 4+ service tho,1,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.4662
+"Super slow. Trouble getting our order right even after repeating it back twice. Order was right, food that came out wasn't. Once again with McDonald's, if you must eat here the breakfast burritos are your best bet. And Diet Coke. McDonald's does Diet Coke right.",2,Negative,Neutral,Negation Interaction,0.6916
+Warning!! Use drive-thru ONLY! There is a Predatory Towing Company (ABC Towing) that WILL boot your car! And force you to pay CASH ONLY to have the boot removed.,1,Neutral,Negative,Neutral Ambiguity / Borderline Polarity,0.6126
+"I go to McD because it's familiar. Even when I want to try something new, I start researching my options but in the end I can't make up my mind and I'm getting hungry so I default to McD.",5,Positive,Neutral,Mixed Sentiment / Contrastive Clause,0.6474
+Most stores have been updated in appearance.... a few have also vastly improved service toom,4,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.7409
+"This is not a full features McDonald's. Most of the service at this McDonald's comes through the drive through, and there are only a couple of tables inside.",3,Negative,Neutral,Negation Interaction,0.9699
+They disregard promotion offers and very arrogance stuff and unfriendly boss. Very bad commercial for mcdonalds brands.,1,Neutral,Negative,Neutral Ambiguity / Borderline Polarity,0.7796
+Give it no stars I would these people cannot even get a cup of coffee right unbelievable and unacceptable I would never go there I would never eat there this place is the bottom of the barrel,1,Positive,Negative,Negation Interaction,0.8588
+"open 24 hours, free coffee refills, wifi",5,Negative,Positive,Domain Nuance / Uncategorized,0.4957
+"Never gets my order wrong, always tastes great",5,Negative,Positive,Domain Nuance / Uncategorized,0.9466
+Always have my order and it's modifications in a accurate and timely manner.,5,Positive,Negative,Domain Nuance / Uncategorized,0.5473
+"Reasonable service and good hot food. One Korean employee doesn't speak English so, train him or keep him in back, not at cash register. He ignore all and says don't have it to everyone. Need better management decisions. Need breakfast items available at 2pm as did before",3,Negative,Positive,Negation Interaction,0.7277
+Works for me.,5,Negative,Neutral,Very Short Text (< 4 words),0.6556
+"You get your food stowed in a bag as standard whether you want to eat in or take it with you. Sauce on the Mc fish fillet also oilier than normal. Furthermore, this Mc on 34th street was dingy.",2,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.6494
+"The line wS extremely big and was moving very slowly, plus they were out of apple pies and strawberry cream pies, but they gave me substitute cinnabun, the staff was very apologetic for being slow & they were out of pies, but it was middle of the night and they were extremely under-staffed.",4,Neutral,Negative,Mixed Sentiment / Contrastive Clause,0.9301
+Hi tech people from silicone valley,4,Neutral,Positive,Neutral Ambiguity / Borderline Polarity,0.8377
+Good service try to avoid sitting near the auto doors tho Brr,4,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.8709
+It's mc Donald's self explanatory,1,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.851
+Limited parking and alot of traffic,2,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.9047
+"The two times i went there for lunch my fries where stale and there is a bunch or ppl from some rehab near by that sits in there and trys to sell stuff or arguing with each other , security is there but doesn't do a good enough job in my opinion",2,Positive,Negative,Mixed Sentiment / Contrastive Clause,0.8462
+They are too lazy to serve you and they will say that they,1,Neutral,Negative,Neutral Ambiguity / Borderline Polarity,0.6893
+Usual,4,Negative,Neutral,Very Short Text (< 4 words),0.8966
+Its McDonald's food but a little crowded when I went,3,Negative,Neutral,Mixed Sentiment / Contrastive Clause,0.9339
+Went through the drive through was good service and fast inside looks big and spacious in case you prefer to eat inside,5,Neutral,Positive,Neutral Ambiguity / Borderline Polarity,0.5396
+"Under staffed, line wrapped around the block and didn't move.",1,Neutral,Negative,Negation Interaction,0.8666
+Was busy but service was nice. Touch menu needs update couldn't order my Frappuccino with extra caramel,4,Negative,Neutral,Mixed Sentiment / Contrastive Clause,0.7319
+"I saw a girl who works in the chips, blowing her nose over the chips.. no more mcdonalds snotty chips",1,Positive,Neutral,Negation Interaction,0.8217
+Regular mcdonalds experience. They never have what you want :(,4,Positive,Neutral,Negation Interaction,0.8855
+I'll Try.... [Gasping] It is Okay!,3,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.9813
+"Never eating here, I like my food with out fly's..",1,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.5832
+Prices are very similar in every state thumbups,4,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.6654
+Went to this location with my nieces and nephews and they enjoyed the indoor play yard.,5,Negative,Positive,Domain Nuance / Uncategorized,0.8112
+You can't add tomatoes to your burger,1,Negative,Neutral,Negation Interaction,0.6509
+Very good apple fritters!,4,Neutral,Positive,Neutral Ambiguity / Borderline Polarity,0.5555
+"This McDonald's just east of Broadway on Canal is a good McDonald's. Are here twice recently and the food was fine. This McDonald's is much better than the McDonald's about half a mile South on Broadway, south of Chambers. That south McDonald's had old, heat dried out food the four times I was there.",4,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.9299
+"The Order Pay Machines are Safe, Easy & Convenient",4,Negative,Positive,Domain Nuance / Uncategorized,0.6287
+"Even though there are many homeless people who enter, the service is good",4,Neutral,Negative,Mixed Sentiment / Contrastive Clause,0.4277
+It was cool to have a filet-o-fish and a small fry once in a blue moon lol.. Sorry no pictures LoL,4,Positive,Neutral,Negation Interaction,0.6871
+This McDonald s is by far the worse one I ve ever visited and I leave around the corner from it. McDonald,1,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.91
+Good food and attention. Good option to get out of trouble at all times,5,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.6227
+"Ordered ahead on the app and I could tell the staff was crazy busy but when they brought my order out the guy smiled, apologized for the wait and was great about the whole situation. Thanks!",5,Positive,Negative,Mixed Sentiment / Contrastive Clause,0.7588
+Hawaii Beach front McDonald's yes please,4,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.9589
+Its a McDonald's. Its gross. Smells like pee.,1,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.8562
+Very very busy! Food quality was very low even for a McDonalds.,2,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.6835
+The quickness and efficiency is good but the quality is missing a little. The nuggets weren,3,Negative,Positive,Mixed Sentiment / Contrastive Clause,0.6953
+Top of the line service. My husband and I came out from California to go to Disneyworld and the staff at this Mc Donald's was even more accommodating and friendly than Disney. The manager even came out to check on us. Just very impressed by how everything is running at this McDonald's.,5,Negative,Positive,Domain Nuance / Uncategorized,0.8143
+It's a McDonald's good for takeout.,4,Neutral,Positive,Neutral Ambiguity / Borderline Polarity,0.5618
+my country men was serve and assist my order. thankz,5,Positive,Negative,Domain Nuance / Uncategorized,0.6423
+Wonderful customer service!!!,5,Negative,Positive,Very Short Text (< 4 words),0.5723
+Very..very slow. Nice looking McDonald's but I won't go back to this one.,2,Positive,Negative,Mixed Sentiment / Contrastive Clause,0.5316
+They won t take anym,1,Positive,Negative,Domain Nuance / Uncategorized,0.5325
+Fast service but got our order wrong. Misstakes happen....,4,Neutral,Positive,Mixed Sentiment / Contrastive Clause,0.8303
+My express place going to work,4,Negative,Positive,Domain Nuance / Uncategorized,0.5268
+Never get an order right. Like ever,2,Positive,Negative,Domain Nuance / Uncategorized,0.8165
+It's McDonalds. What do you want?,4,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.9693
+Service by employees lackluster at best. Seems more of a burden for the help to take an order. Registers are off and voided transactions happen daily.,3,Positive,Negative,Domain Nuance / Uncategorized,0.9763
+"If you've ever been to McDonald's, you'll know what to expect.",5,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.8493
+"Due to the corona virus, we are only doing takeout. I used to do a drive-thru. A service where you can order on the app and pick it up at the counter seems convenient. It's a pity that my phone doesn't support it",4,Negative,Neutral,Negation Interaction,0.8468
+Great employee experiences with Brijot and before Caleb (I don't think he's there any more),5,Negative,Positive,Negation Interaction,0.8768
+Oh yes Love Mc Donald's sense little however I am Bother by The San Andreas Fault-line Going To Separate Not Enough Sewers To Drain The Ocean Water Of It Done might create a Domino AffectThe Great Wall of America The San Andreas Fault-line Emergency Plan SCUBA GEAR BEFORE THE SAM ANDREAS FAULT-LINE SEPARATE CASH APP GODHEADDIVA,5,Positive,Neutral,Mixed Sentiment / Contrastive Clause,0.7429
+This McDonalds smelled like pee,3,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.8722
+"The gold standard for all McDonalds and on to of that, you can get pizza and pasta! You order from the kiosk and take a tent number, get your drink cups from the cashier and find a table. Your food will be made to perfection (not exagerating, all of our food looked as good and put together as it does on the menu photos). There's an arcade on the third floor, stop in if you have a chance you won't regret it.",5,Negative,Positive,Very Long / Narrative Review (> 60 words),0.4793
+Lines were long both inside and out. But I went in instead of going through the drive through. I think it was still faster.,3,Negative,Neutral,Mixed Sentiment / Contrastive Clause,0.8855
+Simply tasty and sweet.,5,Neutral,Positive,Neutral Ambiguity / Borderline Polarity,0.9091
+They're good when they want to be. Surprisingly their ice cream machine always works. No lettuce on the McChicken is my favorite quote,3,Negative,Positive,Negation Interaction,0.4874
+Food was good service was god awful. If you're selling hamburgers how can you have no ketchup or mayo packets. Waited forever oh and they have the napkin police you can have 2 napkins LOL. The only reason why I'm giving a second star is the food was good and hot.,2,Neutral,Positive,Negation Interaction,0.3715
+"Waited too long for a regular order, if I didn't check, smoothies not in the bag, store is unorganized!",3,Neutral,Negative,Negation Interaction,0.4983
+No indoor seating yet. Went to Astro Burger instead. Wake up McDonalds.,3,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.5818
+"It's much cleaner now than it used to be. They also have touchscreen monitors you can order from now, which is convenient. I found things that I never knew was on the menu!",4,Negative,Neutral,Negation Interaction,0.776
+Drive thru only,1,Negative,Neutral,Very Short Text (< 4 words),0.6417
+This is the nastiest Mc Donalds on the planet. It's not unusual to see multiple homeless people sleeping inside and the diner is always filthy. I'm not even going to mention the bathroom. If this is what the front of the restaurant looks like imagine what the kitchen is like. I would never eat here. I wish I could attach pictures on here so you all can see what I'm saying.,1,Negative,Neutral,Very Long / Narrative Review (> 60 words),0.8018
+"For fast food taste, it's the same as every mcdonalds. But this location uses newer tech that allows you to put your order in with out talking to a person.",5,Negative,Positive,Mixed Sentiment / Contrastive Clause,0.9642
+The cleaning in this place is HORRIBLE. I walked around the entire restaurant and there was not ONE clean table to sit at,3,Neutral,Negative,Negation Interaction,0.8311
+Fries are a hit and miss at this place,2,Neutral,Positive,Neutral Ambiguity / Borderline Polarity,0.8925
+Very hot in the play area and it also smells like it's never cleaned.,2,Negative,Positive,Negation Interaction,0.7593
+"No restrooms, no seats to eat, no stars",1,Negative,Neutral,Negation Interaction,0.875
+No dollar menu here on the strip,2,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.7872
+"The quarter pounder looked like it had been dropped multiple times, was in 3 pieces and way over seasoned.",3,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.5226
+"Stopped here to get a quick bite, the place looks very dirty. Homeless people in the entrance and inside. The 2nd floor smelled like piss. Just go here if you want to go to the bathroom or are really really hungry!",2,Positive,Negative,Domain Nuance / Uncategorized,0.7879
+Lots of noisy kids. Maybe because of the play place. Food is ok. Nothing worth coming back to!,3,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.6291
+Reliable McDonald with drive-in facility.,4,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.9695
+I wish there was a way to not give any,1,Negative,Neutral,Negation Interaction,0.7432
+Fun times,2,Negative,Positive,Very Short Text (< 4 words),0.7908
+This is one of the better McDonald's locations in Austin. They often have special prices and deals not seen at other locations.,5,Negative,Neutral,Negation Interaction,0.5663
+They can't get anything right,1,Positive,Negative,Negation Interaction,0.9652
+25 mins for a drink very nice,1,Negative,Positive,Domain Nuance / Uncategorized,0.9787
+Everytime I DoorDash I night they say they,1,Neutral,Negative,Neutral Ambiguity / Borderline Polarity,0.7007
+The early morning staff is very courteous. My big complaint is the non payors that come in and decide the downstairs seating area should be their sleeping space and a place where they should put all their belongings on.,3,Positive,Negative,Domain Nuance / Uncategorized,0.5296
+Typical spot can always use customer service help... & get a order correct,3,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.7997
+The lady at the first window,1,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.91
+Human DNA found in mc burgers. Fact!,1,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.709
+"Can you say fast?! Double drive through lane getting stacked, I went in instead. Dining areas closed but clean and safe ordering from counter. The guy on cashier was fast and efficient. I don't need to be treated like I'm spending $1000 so the efficient process works for me. Food was as expected for any McD's..if you have little time and crave the golden arches, this location will have you on your way soon enough.",5,Negative,Positive,Very Long / Narrative Review (> 60 words),0.6207
+I thought it was good,5,Neutral,Positive,Neutral Ambiguity / Borderline Polarity,0.8824
+"High traffic fast food restaurant that doesnt fail on being exactly just that. In the process , however , it also us one of the few places in the area that offers a no frills area to eat your food AL FRESCO. And in this day in age , thats priceless.",5,Neutral,Positive,Mixed Sentiment / Contrastive Clause,0.6886
+Nothing special. Just McDuck like just McDuck.,3,Negative,Positive,Domain Nuance / Uncategorized,0.9504
+The biscuit was very bad,1,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.7795
+It was not too busy this time of year I did visit after 8 p.m. bathrooms were clean can't complain.,5,Negative,Neutral,Negation Interaction,0.9459
+"Went through Drive Thru, in and out fast, back to my office in no time.",5,Positive,Negative,Negation Interaction,0.5614
+Can't get a refill because of Covid? All you have to do is use a new cup. I think at a $1.79 per drink one cup won't cut into the profit margin that much. But I wouldn't want to send McDonald's into bankruptcy. Quit being cheap and hiding behind Covid for an excuse.,1,Positive,Negative,Mixed Sentiment / Contrastive Clause,0.6357
+Everything is chinese here! I'm loving mc-dimSums,5,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.841
+apparently if you ask for 2 cups of water here they will charge you for the 2nd cup,1,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.5094
+Ice coffee is my thing at McDonald's...4 to 5 a week....,4,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.9028
+This was a good McDonald s. I m not sure if it was,4,Positive,Neutral,Negation Interaction,0.9716
+"Look, it is good food for the money. It is fast food people, but I will rather go to McDonald's than all the other fast food burger places. Fries are off the chain everytime, honestly. Craving one as we speak!",4,Negative,Positive,Mixed Sentiment / Contrastive Clause,0.9859
+"Pretty typical NY McDonalds, from my experience",4,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.9836
+Thw employees make mistakes and unfriwnsly,1,Positive,Negative,Domain Nuance / Uncategorized,0.9724
+What do you expect at any mcds near a greyhound station? This however reminds me of the 2 near the Dallas greyhound station.,1,Positive,Neutral,Mixed Sentiment / Contrastive Clause,0.8747
+It's McDonald's... You know what you're gonna get. Lobby was closed at the hour we went but there were seating options out by the beach so that was fine. Its nice to have somewhere cheap and quick to eat late at night because everything else that was open was sit-down and much pricier.,4,Neutral,Positive,Mixed Sentiment / Contrastive Clause,0.7829
+Wait was too long. McGriddles were good.,3,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.7933
+Fry's!,5,Positive,Neutral,Very Short Text (< 4 words),0.9809
+Luckily the system makes the experience consistent wherever one you go too.,5,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.4333
+"Totally, not worth it. I've received better service and food at standard McDonald's locations. The prices are ridiculously high for a McDonald's, the people are ghetto, and the facility could have been a lot cleaner.",1,Negative,Positive,Negation Interaction,0.5254
+THIS MCDONALDS HAS A LOT OF DISCRIMINATION. 30 MINUTES TO EAT and TIME TO GET OUT. IF THEY ARE BUSY YOU GET 2 MINUTES to eat AND SECURITY ASK YOU TO LEAVE.. THAT'S DISCRIMINATION,1,Neutral,Negative,Neutral Ambiguity / Borderline Polarity,0.6851
+They dont know respect no customer service,1,Positive,Negative,Negation Interaction,0.9777
+Wasn't at mcdonalds.,5,Negative,Neutral,Very Short Text (< 4 words),0.9493
+Good as it gets!,5,Neutral,Positive,Neutral Ambiguity / Borderline Polarity,0.8807
+"This location Is usually clean,.. but not much Front counter assistance. Longest wait was 3 minutes.",3,Positive,Negative,Mixed Sentiment / Contrastive Clause,0.6344
+Food say on the counter for like 5 min before they handed me the bag.,3,Neutral,Negative,Neutral Ambiguity / Borderline Polarity,0.7278
+Too many homelesses,3,Negative,Neutral,Very Short Text (< 4 words),0.5903
+This place is not too bad...but i give it 3 stars,3,Negative,Positive,Negation Interaction,0.8621
+Well located and clean toilet. WiFi works well. I enjoyed my visit and was able to check what posts before hitting the road again.,4,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.5983
+Very good offer of Mac chiken,5,Neutral,Positive,Neutral Ambiguity / Borderline Polarity,0.5168
+"good food, but very shady location and people in the area feel unsafe here",1,Positive,Negative,Mixed Sentiment / Contrastive Clause,0.4327
+Thanks Williams for making me hate McDon,1,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.5015
+"The McDonalds is fine, they got our large order correct and everything tasted fine, just in kind of a sketchy neighborhood. Look out for creepy dudes talking to themselves, they might punch your car.",4,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.9684
+Very big. Lots of space for sitting,5,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.9605
+Fast service. Good icecream. But terrible smell and rude people.,2,Positive,Negative,Mixed Sentiment / Contrastive Clause,0.61
+People were friendly but service today was unbelievably slow.,3,Negative,Positive,Mixed Sentiment / Contrastive Clause,0.609
+Food is okay and same with service. Too many bums. Some stand next to the ordering machine outside when you're ordering by car.,3,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.8346
+The food came out in okay amount of time for 3 a.m. But they added a chicken sandwich to my tab and forgot the cheese i added.,3,Neutral,Negative,Mixed Sentiment / Contrastive Clause,0.9704
+The $1 cheeseburgers and chicken sandwiches I order from every McDonald s were noticeably better here. The extra onions were actually noticeable at this location but what really caught my attention was the beef patty. It was still hot when I got and juicy too so I know it was fresher than most other McDonald s. The chicken patty was still hot too and I could taste the spice more than usual as well. This would have been a 5/5 but the drive through speakers wasn,4,Negative,Positive,Very Long / Narrative Review (> 60 words),0.94
+Prefer Burger King so I'm biased.,2,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.5661
+Burger King,5,Negative,Neutral,Very Short Text (< 4 words),0.6353
+Visiting from out of town. I was very impressed with the manager Stephanie. She really stood out to me today because she was working very hard and every customer that came her way she made sure she assisted them with out rushing them even though they were very busy. She also took the time to pick up in lobby to keep the inside looking good. Thanks for that experience today Step!,5,Negative,Positive,Very Long / Narrative Review (> 60 words),0.708
+I save alot of money when using the McDonalds App about 50%,3,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.9606
+The brief interaction with the cashier was almost non existent. The large order of fries was more of a small order of fries.,2,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.6937
+Very small but clean,4,Positive,Neutral,Mixed Sentiment / Contrastive Clause,0.5931
+"Carlos, the young man running the front, was so friendly and all smiles even though he was getting overran and I myself was a bit of a problem for him as I had 5 kids who ordered 10 minutes apart from each other and changed their order twice. He still managed to take it all in stride and got us our food in a reasonable amount of time and with a smile on his face!",5,Positive,Negative,Very Long / Narrative Review (> 60 words),0.5026
+Bah yes yes yes dum,4,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.9429
+Food was ok. Waited too long to get my food,2,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.8744
+Th QP toke them long enough to make and then it was really dry.,3,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.4981
+we save you. As usual. The rest inedible or priceless,5,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.6803
+They need to stop hiring so many Spanish ppl makes me Donald's look trashy & cheap.&,1,Negative,Positive,Domain Nuance / Uncategorized,0.8124
+It's okay it's not the best part of town a lot of homeless people and Drug dealers around I was just applying for a job if it's the day I'm thinking of it gets crowded a lot of Travelers it's clean you have to get permission to get into the bathrooms that sucks,3,Negative,Neutral,Negation Interaction,0.5541
+I don't eat there is I don't have to.,1,Negative,Neutral,Negation Interaction,0.5519
+I would never eat MacDonald. I'll drink the coffee. But thefood is garbage.,1,Negative,Neutral,Mixed Sentiment / Contrastive Clause,0.8779
+No order in. Covid 19 you sure did a number on us.,2,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.5708
+"Always worth coming to McD. The drive through was stabil quick, order was waiting for me, everything inside and no problem asking for more ketchup. The classics like big Mac like you would expect and good as always. Parking possibilities rigth in front of restaurant and drive in has even 2 lines. 5x",5,Negative,Positive,Negation Interaction,0.6571
+Newly remodeled. Self ordering kiosks so 1 less person to screw up the order.,4,Positive,Negative,Domain Nuance / Uncategorized,0.8912
+"It's a tradition... After going through customs, fries",4,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.8293
+One of the nicer McDonald's I have been to even has a digital ordering screen.,5,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.8909
+People rely on places like McDonald s and other fast food restaurants in NYC for restroom use! For whatever reason the restrooms are closed and the,1,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.5332
+"New electronic ordering system, but the servers are not trained to use it. Servers don't use the table placards and instead keep calling out order # to look for customers. Also missing items from menu. Location renovated and looks nice, staff is incompetent.",1,Positive,Negative,Mixed Sentiment / Contrastive Clause,0.9488
+Fresh remodel with all the accommodations for everyone's special needs.,4,Negative,Positive,Domain Nuance / Uncategorized,0.9829
+The food is soo much bigger in Texas. Gives you a bigger bang for your buck.,4,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.5714
+"Thanks for the free order of French fries. Remember to get the $1.00 any size of French fries. If you have to wait till they are ready you can ask for a free desert, or. Free drink.",5,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.8283
+Highly recommend!! Pizza was,5,Neutral,Positive,Neutral Ambiguity / Borderline Polarity,0.7336
+Super fancy electric menu in the drive through. Pretty impressive,5,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.8442
+"Its McDonald's, not sure what to expect. Take about the same when I get a crazing for soy burgers. I want to try that experiment my self where you set out food from there and see if it denigrating or stays looking the same. I'll find out one day...",4,Negative,Neutral,Negation Interaction,0.7091
+They need to improve on their listening skills!!!,2,Negative,Positive,Domain Nuance / Uncategorized,0.7577
+I saw them hand mixing a shake and my Mcflurry wasnt even mixed. Best thing here are the animal sculptures.,2,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.5243
+"They can not get any order right. My order took 3 remakes and finally I had to go in to the restaurant, after placing my original order in the drive thru!",2,Neutral,Negative,Negation Interaction,0.9582
+"No inside dining. Grab and go. Rice, spam, and eggs interesting and good!",4,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.896
+Covid 19 precautionary and clean,5,Neutral,Positive,Neutral Ambiguity / Borderline Polarity,0.9739
+"Not clean, no ketchup and mayonnaise, the toilets are closed. Not tasty",1,Negative,Positive,Negation Interaction,0.9124
+Yes- i took a moment to rate a Mc Donalds. This is the one closest to my house and I have to say everyone is consistently courteous and professional so I want to recognize that,5,Negative,Positive,Domain Nuance / Uncategorized,0.434
+Granddaughter loves it so I'm happy,4,Negative,Positive,Domain Nuance / Uncategorized,0.5071
+I make this mistake every once in a while. It is terrify at night with all the homeless.,2,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.7789
+"It's the perfect place to finish a long day at the Dallas Zoo. This animal themed McDonald's has a very large play ground area and plenty of tables and seats to watch the kids while they play. The food and service was adequate although the bathroom could have been a a little cleaner. All in all, it's different enough and the kids liked it enough that we will likely come back after our next visit to the Dallas Zoo.",4,Negative,Positive,Very Long / Narrative Review (> 60 words),0.8779
+I always a Macdonald's fanatic!,5,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.8593
+Very busy but got our large order right...happy people,4,Negative,Neutral,Mixed Sentiment / Contrastive Clause,0.6723
+"To be honest, I usually frequent this local Santa Monica Micky D's for its coffee. I have to wake up pretty early, so a nice jolt of caffeine helps me start the day at 5am. With that being said, I will also say that because of Santa Monica's influx of homelessness over the years, this particular location gets alot of homeless patrons. Most are nice, and I buy some of the regulars a thing or two from time to time; however, it's the aggressive homeless patrons that make the place feel troublesome. The staff tries to placate situations, but you can tell they are getting frustrated more and more everyday. So, if you can't handle, talk, be patient, and react positively to people who are just trying to get through the day, the don't go here. I don't need you screaming and being annoyed at every little thing. Bye!!",4,Neutral,Negative,Very Long / Narrative Review (> 60 words),0.5375
+The usual stuff,3,Positive,Neutral,Very Short Text (< 4 words),0.7301
+"I mean it s a McDonald, so you know what you get. At the same time the prices around the place make you wanna come here !!",4,Positive,Negative,Domain Nuance / Uncategorized,0.5571
+"This McDonalds is nice, but when a conference is happening, you can easily wait 25-30 minutes for a standard cheeseburger (as I did). Overall, not terribly impressed.",3,Negative,Neutral,Mixed Sentiment / Contrastive Clause,0.5372
+Food was good but the coffee was watered down horribly,4,Positive,Neutral,Mixed Sentiment / Contrastive Clause,0.9527
+"for some reason, their egg mcmuffins are really addictive.",5,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.4863
+Very fast and efficient.,5,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.6494
+"I found a hair in my fries, and when I brought it to the staff's attention, they were unapologetic and didn't offer any compensation.",1,Neutral,Negative,Negation Interaction,0.9339
+Short line. Good service,5,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.6369
+Have to say for a McDonalds in the Waikiki area it could of been alot better self serve kiosk were not working lines where long because only 1 caisher was up front when they had 3 tills and couldent see a public bathroom in the place Food was a real disappoint asked for extra bacon and remove stuff but when I got back to our place to eat it was just the default of what the burger was Sorry would give more but place needs as little work it could be understaffed idk but its could be alot better,1,Negative,Positive,Very Long / Narrative Review (> 60 words),0.5563
+The burger was good but the fries wasn't fresh.,3,Negative,Positive,Mixed Sentiment / Contrastive Clause,0.9619
+Mmmm the food is good but sometimes they serve you badly,5,Positive,Neutral,Mixed Sentiment / Contrastive Clause,0.781
+It's McDonald's. I like getting breakfast here it tastes okay and is super convenient and fairly cheap.,3,Neutral,Positive,Neutral Ambiguity / Borderline Polarity,0.5263
+The tables are clean in sight but there is a lot of problem with homeless inside the restaurant. Preferably go through the drive thru,3,Negative,Neutral,Mixed Sentiment / Contrastive Clause,0.9427
+Just a standard maccies I would prefer during the drive thru thst the menu,4,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.9319
+"Need a better system for rush hour, waited almost an hour for breakfast.",1,Positive,Negative,Domain Nuance / Uncategorized,0.5455
+Honestly can't give a zero stars but I would if I could. This place was nasty. Dont know how they havent been shut down by health department.,1,Positive,Negative,Mixed Sentiment / Contrastive Clause,0.9823
+"it was interesting to have 2 levels, but i don t think it was as interesting as anticipa",3,Negative,Neutral,Mixed Sentiment / Contrastive Clause,0.8507
+Good customer service and short wait time.,4,Positive,Negative,Domain Nuance / Uncategorized,0.9017
+I absolutely never eat fast food but I couldn't find parking in little Tokyo and made one wrong turn then ended up within view of the golden arches. I then proceeded to order an oreo mcflurry. It was satisfactory.,5,Positive,Negative,Mixed Sentiment / Contrastive Clause,0.8533
+I ate he a r at least 5 times since I was in Miami and I never eat from this chain as I got older and more wiser.,5,Negative,Neutral,Negation Interaction,0.8377
+"You're paying for what you're receiving. This is a crowded McDonald's. Keep that in mind, lines are long, and the food is the same as any other McDonald's except for the specials here, pasta, pizza, and desserts. People are trying their best, so don't expect a 5-star restaurant treatment. If you have time and a limited budget, this will fulfill your curiosity. P.s. Always check for deals, they always have discounts.",4,Neutral,Negative,Very Long / Narrative Review (> 60 words),0.7323
+Service is good but you get harraesd by bums here. Security does nothing to get them out.,3,Negative,Positive,Mixed Sentiment / Contrastive Clause,0.7992
+Chaos during lunch,3,Positive,Negative,Very Short Text (< 4 words),0.7534
+Now with self-service kiosks so you can be sure to get a correct order.,4,Negative,Positive,Domain Nuance / Uncategorized,0.4372
+Earlier today a lady working there called my sister-in-law a bit**.,1,Positive,Negative,Domain Nuance / Uncategorized,0.6175
+Rushed us while ordering and mess up our Order twice while in the area for vacation.,3,Neutral,Negative,Mixed Sentiment / Contrastive Clause,0.8308
+Used the drive through. All was good.,5,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.7225
+Worse Mac Donald s on the planet and the most discussing rudest staff - I,1,Positive,Negative,Domain Nuance / Uncategorized,0.8144
+I went to this store last night (Oct 28) and one of the managers visible from the drive thru window wasnt wearing his mask. Very unsafe,1,Neutral,Negative,Neutral Ambiguity / Borderline Polarity,0.6895
+"I like it, good service. Super clean! The only thing that sometimes you have to check your order because they don't send you the other things well.",5,Neutral,Positive,Negation Interaction,0.9324
+It may have a section that is not to be desired but at least there's security present.,3,Negative,Neutral,Mixed Sentiment / Contrastive Clause,0.8912
+My daughter got locked in the bathroom .,3,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.5352
+"Its MCDonald's in Hawaii. It's busy, not the cleanest, but for a quick bite you can't go wrong.",5,Positive,Neutral,Mixed Sentiment / Contrastive Clause,0.6546
+Pretty good as far as McDonald's go.,3,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.7135
+Was not open for dining in on Friday at 11pm- even though it clear said open on the door and the line for the drive thru was ridiculous. Better McDonald s n,1,Negative,Neutral,Mixed Sentiment / Contrastive Clause,0.5142
+They was so unpleasant at pickup,1,Positive,Negative,Domain Nuance / Uncategorized,0.528
+Too bad I only bought two coffees and it took me more than 19 minutes and they still moved me to the parking lot and then I had to return because they didn't take what I bought with them lousy service,2,Neutral,Negative,Negation Interaction,0.6589
+One of the best Micky Ds in town.,5,Neutral,Positive,Neutral Ambiguity / Borderline Polarity,0.986
+Regular restuarant. Used WiFi. Heavy WiFi traffic,3,Positive,Neutral,Neutral Ambiguity / Borderline Polarity,0.7663
+"Everytime I go into the Santa Monica McDonald's, it able to handle the busy times. In my opinion consider the customer traffic, however they waist no time getting orders, if you do not have a cloud following, then you should get what you want. Bathrooms have intermittent traffic depending on the busy time. I see they want you to enjoy your meal, in my opinion. In the pictures you will available seating at a perfect time. I was satisfied!",5,Negative,Neutral,Very Long / Narrative Review (> 60 words),0.6336
+Its fast and convenient. Please clean up after yourselves and don't leave your McDonald's trash bag near the beach,3,Positive,Neutral,Negation Interaction,0.7182
+Organized on-time pickups,5,Negative,Neutral,Very Short Text (< 4 words),0.7634
+Awesome customer service and the only place that carries the strawberry creme pies. Lovely!!!,5,Neutral,Positive,Neutral Ambiguity / Borderline Polarity,0.9914
+DO NOT EAT HERE. Me and 2 friends work right near this McDonald's. We all have each gotten sick twice on completely different occasions each time we eat here. I'm pretty sure they cook these burgers on the floor.. Don't go here unless you like upset stomachs or puking.,1,Negative,Neutral,Negation Interaction,0.6111
+The second story is a lie. There is only 1 floor.,5,Positive,Negative,Domain Nuance / Uncategorized,0.5703
+"Crazy busy and usually encompassed with 8th Ave nutters but the security keeps everyone in check; they've always gotten my order right and regardless how busy, they always manage to get orders out pretty darn quick. #ghettoefficiency",4,Neutral,Positive,Mixed Sentiment / Contrastive Clause,0.4063
+"It is a very clean and recently revamped McDonald's but beware taking your kids here, as outside is, well a cockroach infested wonderland full of PB's finest citizens. That's all this Review gets. Use the drive through you wouldn't want to catch Hep.-C on your way to wash your hands!!!",2,Negative,Positive,Mixed Sentiment / Contrastive Clause,0.5386
+American icon,5,Positive,Neutral,Very Short Text (< 4 words),0.8952
+"I never thought I would rate a McDonald's as 5 stars but I did. Food was typical of a McDonald's but the staff were truly incredible for a fast food restaurant. They smiled, checked up on us, cleaned up our tables and looked far more professional than the normal locations.",5,Negative,Positive,Mixed Sentiment / Contrastive Clause,0.9718
+Awesome Bacon egg ^ cheese biscuit,5,Negative,Positive,Domain Nuance / Uncategorized,0.9387
+It is a small McDonalds in Manhattan. Not very crowded. The staff is grumpy. The food is what you can expect at McDonalds.,3,Positive,Neutral,Negation Interaction,0.6153
+Need more respectable Associates,1,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.6094
+Havent ate mcdonalds in a year.ordered a filet o fish.it was excellent. And the girl behind the register.dont know her name but she was a sweetheart. Dont see that often in mickey dees.,5,Positive,Neutral,Mixed Sentiment / Contrastive Clause,0.8264
+Alright food,3,Negative,Neutral,Very Short Text (< 4 words),0.945
+Something needs to be done about this McDonald's (granted i dont frequent any McDonald's) i just spent $8 on my breakfast and the only thing edible was the steak patty from my steak bagel...everyone there seemed to be tired too its 10am!!!...and how come no one speaks English there including the manager...is this miami south beach orrrrr??,1,Negative,Neutral,Negation Interaction,0.5303
+It's not the best like it was 2 years ago but not as bad as it has been in the past. They have to work out the mobile app ordering. They lose orders plus app says they're out of food.,2,Positive,Negative,Mixed Sentiment / Contrastive Clause,0.8468
+It is normal just like any other one. Nothing special.,3,Negative,Positive,Domain Nuance / Uncategorized,0.605
+"A Culinary Ode to McDonald's: The Epitome of Delicious and Affordable Dining Never cease to amaze us with your consistently appetizing offerings, and your unwavering commitment to providing mouthwatering meals at unbeatable prices. A true beacon of fast-food excellence, McDonald's has reigned supreme for generations, and its legendary menu items have captured the hearts and taste buds of millions around the world. One of the crowning jewels of McDonald's, their nuggets are nothing short of extraordinary. With a golden, crispy exterior and tender, juicy interior, these delectable nuggets are the epitome of culinary perfection. They are seasoned to perfection, giving each bite a harmonious blend of savory and flavorful goodness. It's no wonder that these little bites of heaven have become a staple in fast food history. And let us not forget the pi ce de r sistance that is the Quarter Pounder ld's dedication to providing affordable, high-quality dining experiences for all. Each bite of the Quarter Pounder boasts a succulent, juicy patty cooked to perfection, smothered in a tantalizing blend of cheese and crispy bacon. The mouthwatering aroma alone is enough to send my senses into overdrive. Paired with a generous serving of their world-famous fries and a refreshing beverage, the Quarter Pounder with Cheese & Bacon meal is a steal at just $8.99. It's no exaggeration to say that McDonald's is making a significant charitable contribution to society by providing these scrumptious meals at such affordable prices. They are not just satisfying our hunger but also nourishing our souls with the joy and comfort that only their delicious food can bring. So, to McDonald's, we raise our glasses (and our nuggets) in praise and admiration. Thank you for your unwavering dedication to quality, affordabilitynd the countless memories you've helped create around shared meals and moments of pure, palate-pleasing bliss.",5,Negative,Positive,Very Long / Narrative Review (> 60 words),0.964
+I had a drink n cheese burger n the burger n cheese was colder the ketchup.... it's rare to ever get a hot chburger at McDonald's,1,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.674
+"Got two Filet-O-Fish sandwiches. Both were good as expected. I ordered through the McDonald's app and opted to pickup my sandwiches at the drive thru. I told the employee at the speaker that I had an app order to pickup and gave her the code. She instructed me to go to the first window. There I was given the receipt, thanked, and told to go to the next window. At the 2nd window I was told to go to a 3rd window to pickup the order. The 3rd window is kind of funny, since it seems like an afterthought. Since it is at the corner of the building close to a sign, it is difficult to get close enough to be handed the order without scraping the side of your car. Then to leave you have to turn your wheels hard right. The employees were very friendly.",4,Positive,Negative,Very Long / Narrative Review (> 60 words),0.9355
+It's McDonald's there not allot that you can review the food was good and the options were great.,3,Neutral,Positive,Negation Interaction,0.9264
+"A mess all trash overflowing cashier more worried about who didn't come to work . I expected better from this md,s by the zoo. Clean up people.",1,Neutral,Negative,Negation Interaction,0.5876
+"It was nice, small but kinda clean",3,Neutral,Positive,Mixed Sentiment / Contrastive Clause,0.6032
+Dawg hurry tf up mannn I,2,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.9332
+Not bad at all just crowded,5,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.8445
+A little slow at times but always with a good attitude.,4,Positive,Neutral,Mixed Sentiment / Contrastive Clause,0.5932
+Fake but good food keep it 4 diabetics,4,Positive,Neutral,Mixed Sentiment / Contrastive Clause,0.6863
+"No drive thru, enough parking. Crowded but fairly quick. They had the front doors open and I could feel the air moving, not stuffy. Mask optional at the time (July/28/22). All employees were wearing masks. All employees were pleasant or acceptably neutral and doing a good job. Bathrooms and tables clean. Floors looked pretty good too considering the large amount of foot traffic. Indoor and outdoor tables. Whenever someone got up, a worker appeared shortly after to spray and wipe down the table. In person you can order at cashiers or use one of the 8 self-service screens. I believe you could also order through the app. There's a scanner at the bottom of the payment pinpad. Didn't have to wait very long for my food. Less than 5 minutes.",5,Negative,Positive,Very Long / Narrative Review (> 60 words),0.7672
+I like it a lot,5,Neutral,Positive,Neutral Ambiguity / Borderline Polarity,0.9548
+"Anytime I go, I have an enjoyable experience so far. If anything changes I'll post it.",4,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.6724
+chicken nuggets had a lot of those chewy fat pieces and was stiff. if ur gonna eat here get a burger or sumn. Fries were tasty tho!,3,Neutral,Negative,Neutral Ambiguity / Borderline Polarity,0.7686
+ABSOLUTELY UNSANITARITY,1,Negative,Neutral,Very Short Text (< 4 words),0.9349
+It would be okay if I could communicate with the people that work there I suppose I am suppose to learn Spanish,1,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.911
+Not big the food,2,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.6995
+Only go to Mc donalds for the ATM the food is garbage Atm is free depending on your bank,3,Negative,Neutral,Neutral Ambiguity / Borderline Polarity,0.779

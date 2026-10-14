@@ -3,7 +3,7 @@
 # =============================================================================
 # Install with: pip install -r requirements.txt
 
-# --- Web Framework & Server ---
+# --- Web Framework & REST API Server ---
 fastapi>=0.111.0,<1.0.0
 uvicorn[standard]>=0.30.0,<1.0.0
 pydantic>=2.0.0,<3.0.0
@@ -13,12 +13,24 @@ python-multipart>=0.0.9,<1.0.0
 pandas>=2.0.0,<3.0.0
 numpy>=1.24.0,<3.0.0
 
-# --- Machine Learning ---
+# --- Machine Learning & NLP ---
 scikit-learn>=1.3.0,<2.0.0
 joblib>=1.3.0,<2.0.0
-
-# --- NLP ---
+vaderSentiment>=3.3.2
 nltk>=3.8.0,<4.0.0
+
+# --- Deep Learning & Transformers ---
+torch>=2.0.0
+transformers>=4.35.0
+accelerate>=0.24.0
+
+# --- Visualization & Diagnostics ---
+matplotlib>=3.7.0
+seaborn>=0.12.0
+wordcloud>=1.9.0
+
+# --- Observability & Monitoring ---
+prometheus-client>=0.20.0,<1.0.0
 
 # --- Testing ---
 pytest>=8.0.0,<9.0.0

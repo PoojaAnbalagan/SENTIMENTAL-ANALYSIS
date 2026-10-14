@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { api } from '../services/api';
-import { FileText, Download, TrendingUp, Award } from 'lucide-react';
+import { Download } from 'lucide-react';
+import { FilterBar } from '../components/FilterBar';
 
-export function ReportsView({ analytics, filters, metrics }) {
+export function ReportsView({ analytics, filters, metrics, setFilters, stores }) {
   const [downloading, setDownloading] = useState(false);
 
   const filteredCount = analytics?.filtered_count || 0;
-  const avgRating = analytics?.average_rating || 0.0;
-  const domSentiment = analytics?.dominant_sentiment || 'N/A';
-  const bestAcc = ((metrics?.best_accuracy || 0.7405) * 100).toFixed(1);
-  const gain = ((metrics?.accuracy_gain || 0.0971) * 100).toFixed(1);
+  const avgRating = analytics?.average_rating !== undefined ? analytics.average_rating : 0.0;
+  const domSentiment = analytics?.dominant_sentiment || 'Negative';
+  const bestAcc = ((metrics?.best_accuracy || 0.8569) * 100).toFixed(1);
+  const gain = ((metrics?.accuracy_gain || 0.2398) * 100).toFixed(1);
+  const bestModelName = metrics?.best_model_name || 'Logistic Regression (Balanced)';
 
   const reportDate = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
@@ -39,10 +41,6 @@ export function ReportsView({ analytics, filters, metrics }) {
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div>
-          <h2 className="text-xl font-extrabold text-[var(--text-primary)]">Executive Review Intelligence Report</h2>
-          <p className="text-xs text-[var(--text-muted)]">Automated analytical summary generated dynamically from the currently filtered dataset scope.</p>
-        </div>
 
         <button
           onClick={handleDownloadCSV}
@@ -53,6 +51,16 @@ export function ReportsView({ analytics, filters, metrics }) {
           {downloading ? 'Exporting…' : 'Export Report Data (CSV)'}
         </button>
       </div>
+
+      {/* Filter Bar */}
+      {filters && setFilters && (
+        <FilterBar 
+          filters={filters} 
+          setFilters={setFilters} 
+          stores={stores} 
+          matchingCount={filteredCount} 
+        />
+      )}
 
       {/* Main Printable Report Card */}
       <div className="card-2026 p-6 space-y-6">
@@ -67,7 +75,7 @@ export function ReportsView({ analytics, filters, metrics }) {
           </div>
           <div className="text-xs text-[var(--text-muted)] font-semibold space-y-1">
             <div>Generated: <b>{reportDate}</b></div>
-            <div>Date Scope: <b>{filters.dateRange || 'All Time'}</b></div>
+            <div>Date Scope: <b>{filters?.dateRange || 'All Time'}</b></div>
           </div>
         </div>
 
@@ -91,10 +99,10 @@ export function ReportsView({ analytics, filters, metrics }) {
               <b>Average Satisfaction Rating:</b> Customer review satisfaction averages <span className="text-[var(--accent)] font-bold">{avgRating} / 5.0 Stars</span>.
             </li>
             <li>
-              <b>Machine Learning Advantage:</b> Multi-class Supervised Logistic Regression achieves <span className="text-[var(--positive)] font-bold">{bestAcc}% Accuracy</span>, outperforming rule-based VADER lexicons by <span className="text-[var(--positive)] font-bold">+{gain}%</span>.
+              <b>Machine Learning Advantage:</b> Multi-class Supervised Model (<span className="text-[var(--accent)] font-bold">{bestModelName}</span>) achieves <span className="text-[var(--positive)] font-bold">{bestAcc}% Accuracy</span>, outperforming rule-based VADER baseline by <span className="text-[var(--positive)] font-bold">+{gain}%</span>.
             </li>
             <li>
-              <b>Primary Complaint Drivers:</b> Lexical feature extraction identifies long drive-thru delays, cold fries, and order inaccuracies as top negative sentiment triggers.
+              <b>Primary Complaint Drivers:</b> Lexical feature extraction identifies long drive-thru delays, cold fries, order inaccuracies, and customer service responsiveness as top negative sentiment triggers.
             </li>
           </ul>
         </div>

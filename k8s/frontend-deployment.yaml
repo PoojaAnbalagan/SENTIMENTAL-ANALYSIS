@@ -45,10 +45,12 @@ spec:
     spec:
       terminationGracePeriodSeconds: 30
 
+      imagePullSecrets:
+        - name: ghcr-secret
+
       containers:
         - name: frontend
-          # ⚠️ Replace <YOUR_GITHUB_USERNAME> with your actual GitHub username
-          image: ghcr.io/<YOUR_GITHUB_USERNAME>/sentiment-frontend:latest
+          image: ghcr.io/poojaanbalagan/sentiment-frontend:latest
 
           imagePullPolicy: Always
 

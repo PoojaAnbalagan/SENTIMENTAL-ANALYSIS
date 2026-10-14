@@ -24,6 +24,8 @@ venv/
 env/
 ENV/
 .env
+powershell.exe
+powershell.bat
 
 # pytest / coverage
 .pytest_cache/

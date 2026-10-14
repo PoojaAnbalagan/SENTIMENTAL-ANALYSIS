@@ -1,15 +1,30 @@
 import React from 'react';
 import { Sparkles, Database } from 'lucide-react';
 
-export function Header({ filteredCount = 22366, totalCount = 22366, isApiOnline = true }) {
+const TAB_TITLES = {
+  'Overview': 'AI-Powered Customer Sentiment Analytics Platform',
+  'Live Predictor': 'Multi-Model Sentiment Inference & Head-to-Head Sandbox',
+  'Batch Upload': 'Batch Review Processing & Dataset Intelligence',
+  'Sentiment Analytics': 'Interactive Sentiment Analytics',
+  'Review Explorer': 'Review Dataset Explorer',
+  'Model Performance': 'Model Performance & Evaluation Metrics',
+  'Reports': 'Executive Review Intelligence Report',
+};
+
+export function Header({ filteredCount = 22366, totalCount = 22366, isApiOnline = true, currentTab = 'Overview' }) {
+  const isOverview = currentTab === 'Overview';
+  const title = TAB_TITLES[currentTab] || currentTab;
+
   return (
     <header className="flex flex-col md:flex-row md:items-center justify-between pb-4 mb-6 border-b border-[var(--border)] gap-4">
-      <div>
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider mb-1.5 bg-[var(--accent-bg)] text-[var(--accent)] border border-[var(--border)]">
-          <Sparkles className="w-3.5 h-3.5" /> Customer Review Intelligence
-        </div>
+      <div key={currentTab} className="animate-headerFadeIn">
+        {isOverview && (
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider mb-1.5 bg-[var(--accent-bg)] text-[var(--accent)] border border-[var(--border)]">
+            <Sparkles className="w-3.5 h-3.5" /> Customer Review Intelligence
+          </div>
+        )}
         <h1 className="text-2xl font-extrabold tracking-tight text-[var(--text-primary)]">
-          AI-Powered Customer Sentiment Analytics Platform
+          {title}
         </h1>
       </div>
 

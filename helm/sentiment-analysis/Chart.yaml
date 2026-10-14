@@ -1,0 +1,15 @@
+apiVersion: v2
+name: sentiment-analysis
+description: Helm chart for McDonald's Sentiment Analysis Platform (FastAPI Backend + React Nginx Frontend)
+type: application
+version: 1.0.0
+appVersion: "2026.1"
+keywords:
+  - sentiment-analysis
+  - machine-learning
+  - fastapi
+  - react
+  - nlp
+maintainers:
+  - name: Pooja Anbalagan
+    email: 22cds0412@ms.sab.ac.lk
