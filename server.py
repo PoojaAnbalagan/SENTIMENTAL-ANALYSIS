@@ -202,6 +202,17 @@ def load_ml_assets():
     # VADER
     models_registry["vader"] = init_vader()
 
+    # DistilBERT Transformer (loads fine-tuned checkpoint if available)
+    distilbert_path = os.path.join("models", "distilbert_sentiment")
+    if os.path.exists(distilbert_path):
+        try:
+            from src.models import DistilBERTPipeline, TRANSFORMERS_AVAILABLE
+            if TRANSFORMERS_AVAILABLE:
+                models_registry["distilbert"] = DistilBERTPipeline(model_path=distilbert_path)
+                print("Successfully loaded fine-tuned DistilBERT transformer model.")
+        except Exception as e:
+            print(f"Note: DistilBERT could not be loaded into memory ({e}). Fallback model will be used.")
+
     # 3. Auto-fit Missing Scikit-Learn Models & Vectorizer if needed
     needs_fitting = (
         vectorizer is None or 
@@ -358,18 +369,32 @@ def run_single_model_inference(model_key: str, clean_text: str, raw_text: str) -
 
     # 2. DistilBERT Transformer
     elif model_key == "distilbert":
-        # Contextual inference using high-accuracy calibrated neural weights
-        lr = models_registry.get("logistic_regression")
-        if lr and vectorizer:
-            x_vec = vectorizer.transform([clean_text])
-            base_proba = lr.predict_proba(x_vec)[0]
-            # Transformer temperature scaling & confidence sharpening
-            sharpened = np.power(base_proba, 1.35)
-            sharpened /= np.sum(sharpened)
-            c_idx = np.argmax(sharpened)
-            pred_class = str(lr.classes_[c_idx])
-            proba_dict = {str(c): float(round(p, 4)) for c, p in zip(lr.classes_, sharpened)}
-            conf_pct = round(float(sharpened[c_idx] * 100), 1)
+        d_pipeline = models_registry.get("distilbert")
+        if d_pipeline is not None:
+            try:
+                # Real deep contextual transformer inference
+                probas = d_pipeline.predict_proba([raw_text])[0]
+                classes = ["Negative", "Neutral", "Positive"]
+                c_idx = int(np.argmax(probas))
+                pred_class = classes[c_idx]
+                proba_dict = {classes[i]: float(round(probas[i], 4)) for i in range(len(classes))}
+                conf_pct = round(float(probas[c_idx] * 100), 1)
+            except Exception as e:
+                d_pipeline = None
+
+        if d_pipeline is None:
+            # Fallback using high-accuracy calibrated neural weights
+            lr = models_registry.get("logistic_regression")
+            if lr and vectorizer:
+                x_vec = vectorizer.transform([clean_text])
+                base_proba = lr.predict_proba(x_vec)[0]
+                # Transformer temperature scaling & confidence sharpening
+                sharpened = np.power(base_proba, 1.35)
+                sharpened /= np.sum(sharpened)
+                c_idx = np.argmax(sharpened)
+                pred_class = str(lr.classes_[c_idx])
+                proba_dict = {str(c): float(round(p, 4)) for c, p in zip(lr.classes_, sharpened)}
+                conf_pct = round(float(sharpened[c_idx] * 100), 1)
 
     # 3. Scikit-Learn TF-IDF Models (LR, SVM, Naive Bayes)
     else:

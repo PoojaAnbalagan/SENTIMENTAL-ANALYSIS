@@ -24,6 +24,10 @@ services:
     volumes:
       # Mount server.py for live code changes without rebuild
       - ./server.py:/app/server.py:ro
+      # Mount models so local model weights (including DistilBERT) are directly accessible
+      - ./models:/app/models:ro
+      # Mount dataset so processed reviews are directly accessible
+      - ./data:/app/data:ro
       # Mount results so you can update model outputs without rebuild
       - ./results:/app/results:ro
       # Mount static figures for diagnostics gallery
