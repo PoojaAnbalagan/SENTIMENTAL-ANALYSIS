@@ -36,6 +36,10 @@ Thumbs.db
 # Documentation and reports
 *.pdf
 *.docx
+*.pptx
+*.mp4
+Datasets/
+powershell.*
 README.md
 
 # Docker files (don't need to copy Dockerfiles into the image)
