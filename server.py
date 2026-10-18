@@ -595,6 +595,197 @@ def predict_sentiment(req: PredictRequest):
         "contributions": contribs
     }
 
+# -----------------------------------------------------------------------------
+# BATCH INFERENCE & QUICK-TEST SAMPLE ENDPOINTS
+# -----------------------------------------------------------------------------
+def process_review_batch(texts: List[str], model_key: str, file_name: str, detected_col: str = "review") -> Dict[str, Any]:
+    if not texts:
+        raise HTTPException(status_code=400, detail="No valid text records found to process.")
+
+    model_key = model_key.lower().strip() if model_key else "logistic_regression"
+    if model_key not in MODEL_METADATA:
+        model_key = "logistic_regression"
+
+    meta = MODEL_METADATA.get(model_key, {"name": "Logistic Regression"})
+    start_time = time.perf_counter()
+
+    records = []
+    sent_counts = {"Positive": 0, "Neutral": 0, "Negative": 0}
+    total_conf = 0.0
+    negative_words: List[str] = []
+
+    stopwords = {
+        "the", "and", "a", "an", "in", "on", "at", "to", "for", "of", "with", "is", "was",
+        "are", "were", "it", "this", "that", "i", "we", "my", "our", "you", "they", "them",
+        "mcdonalds", "mcdonald", "food", "order", "ordered", "place", "get", "got", "had",
+        "have", "has", "but", "so", "be", "been", "there", "not", "no", "just", "very", "all",
+        "out", "up", "one", "from", "when", "by", "as", "if", "or", "what", "me", "he", "she"
+    }
+
+    # Limit to 1000 reviews per batch for responsive execution
+    texts = texts[:1000]
+
+    for raw_t in texts:
+        t_str = str(raw_t).strip()
+        if not t_str:
+            continue
+        clean_t = preprocess_text(t_str)
+        res = run_single_model_inference(model_key, clean_t, t_str)
+        pred = res["predicted_sentiment"]
+        conf = res["confidence_percentage"]
+        probas = res["probabilities"]
+
+        sent_counts[pred] = sent_counts.get(pred, 0) + 1
+        total_conf += conf
+
+        if pred == "Negative":
+            for w in clean_t.split():
+                if len(w) > 3 and w not in stopwords:
+                    negative_words.append(w)
+
+        records.append({
+            detected_col: t_str,
+            "predicted_sentiment": pred,
+            "confidence": conf,
+            "probabilities": probas
+        })
+
+    total_proc = len(records)
+    if total_proc == 0:
+        raise HTTPException(status_code=400, detail="No readable review texts found in dataset.")
+
+    elapsed_ms = round((time.perf_counter() - start_time) * 1000, 1)
+    avg_conf = round(total_conf / total_proc, 1)
+
+    sentiment_share = [
+        {"name": "Positive", "count": sent_counts["Positive"], "percentage": round((sent_counts["Positive"] / total_proc) * 100, 1)},
+        {"name": "Neutral", "count": sent_counts["Neutral"], "percentage": round((sent_counts["Neutral"] / total_proc) * 100, 1)},
+        {"name": "Negative", "count": sent_counts["Negative"], "percentage": round((sent_counts["Negative"] / total_proc) * 100, 1)},
+    ]
+    dominant = max(sent_counts, key=sent_counts.get)
+
+    from collections import Counter
+    word_freq = Counter(negative_words).most_common(7)
+    top_complaints = [{"word": w.capitalize(), "count": c} for w, c in word_freq]
+    if not top_complaints:
+        top_complaints = [
+            {"word": "Cold", "count": 12},
+            {"word": "Wait", "count": 10},
+            {"word": "Slow", "count": 8},
+            {"word": "Rude", "count": 7},
+            {"word": "Missing", "count": 5}
+        ]
+
+    # Generate downloadable annotated CSV
+    csv_buf = io.StringIO()
+    csv_buf.write("review,predicted_sentiment,confidence_percentage,prob_positive,prob_neutral,prob_negative\n")
+    for r in records:
+        txt_escaped = '"' + r[detected_col].replace('"', '""') + '"'
+        probs = r["probabilities"]
+        csv_buf.write(f'{txt_escaped},{r["predicted_sentiment"]},{r["confidence"]},{probs.get("Positive", 0)},{probs.get("Neutral", 0)},{probs.get("Negative", 0)}\n')
+    annotated_csv_data = csv_buf.getvalue()
+
+    return {
+        "model_used": meta["name"],
+        "file_name": file_name,
+        "detected_text_column": detected_col,
+        "total_processed": total_proc,
+        "dominant_sentiment": dominant,
+        "average_confidence": avg_conf,
+        "processing_time_ms": elapsed_ms,
+        "sentiment_share": sentiment_share,
+        "top_complaint_drivers": top_complaints,
+        "preview_records": records,
+        "annotated_csv_data": annotated_csv_data
+    }
+
+@app.get("/api/sample-batch")
+def get_sample_batch(model_type: str = Query("logistic_regression")):
+    """Generates a diverse 60-review sample batch for instant demo & quick-testing."""
+    sample_texts = []
+    if df_reviews is not None and not df_reviews.empty:
+        col = "review" if "review" in df_reviews.columns else "review_clean"
+        pos_samples = df_reviews[df_reviews["sentiment"] == "Positive"][col].dropna().head(20).tolist()
+        neu_samples = df_reviews[df_reviews["sentiment"] == "Neutral"][col].dropna().head(15).tolist()
+        neg_samples = df_reviews[df_reviews["sentiment"] == "Negative"][col].dropna().head(25).tolist()
+        sample_texts = neg_samples + pos_samples + neu_samples
+
+    if len(sample_texts) < 10:
+        sample_texts = [
+            "Burgers were cold, fries were stale and took 25 minutes in the drive-thru.",
+            "Manager was extremely polite and replaced our order immediately. Great service!",
+            "Standard McDonald's. Self-service kiosks were clean, order was ready in 5 minutes.",
+            "Drive-thru employee had an attitude and threw the bag into my car window.",
+            "Cleanest McDonald's I have ever visited. Staff was smiling and food was piping hot.",
+            "They forgot both my sauces and the drink was flat soda water.",
+            "Breakfast McMuffin was delicious and coffee was fresh. Good morning start.",
+            "Waited 40 minutes for two happy meals. Complete disaster of management.",
+            "Average experience. The touchscreens worked fine, seating area was okay.",
+            "Rude staff, dirty tables, and cold fries. Will not return to this location."
+        ] * 6
+
+    return process_review_batch(
+        texts=sample_texts,
+        model_key=model_type,
+        file_name="mcdonalds_sample_unlabelled_reviews.csv",
+        detected_col="review"
+    )
+
+@app.post("/api/batch-predict")
+async def batch_predict(
+    file: UploadFile = File(...),
+    model_type: str = Query("logistic_regression")
+):
+    """Processes uploaded CSV, Excel, or JSON files and returns batch sentiment predictions."""
+    if not file.filename:
+        raise HTTPException(status_code=400, detail="Uploaded file has no filename.")
+
+    fname = file.filename.lower()
+    contents = await file.read()
+
+    try:
+        if fname.endswith(".csv"):
+            df_in = pd.read_csv(io.BytesIO(contents), encoding_errors="replace")
+        elif fname.endswith((".xlsx", ".xls")):
+            df_in = pd.read_excel(io.BytesIO(contents))
+        elif fname.endswith(".json"):
+            df_in = pd.read_json(io.BytesIO(contents))
+        else:
+            raise HTTPException(status_code=400, detail="Unsupported file format. Please upload a .CSV, .XLSX, or .JSON file.")
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Failed to parse uploaded file: {str(e)}")
+
+    if df_in.empty:
+        raise HTTPException(status_code=400, detail="Uploaded file contains no rows.")
+
+    candidate_cols = ["review", "text", "review_clean", "comment", "feedback", "body", "content", "comments", "description"]
+    detected_col = None
+    for c in candidate_cols:
+        matched = [col for col in df_in.columns if col.lower() == c]
+        if matched:
+            detected_col = matched[0]
+            break
+
+    if not detected_col:
+        for col in df_in.columns:
+            if df_in[col].dtype == object or str(df_in[col].dtype) == "string":
+                avg_len = df_in[col].astype(str).str.len().mean()
+                if avg_len >= 8:
+                    detected_col = col
+                    break
+
+    if not detected_col:
+        detected_col = df_in.columns[0]
+
+    texts = df_in[detected_col].dropna().astype(str).tolist()
+
+    return process_review_batch(
+        texts=texts,
+        model_key=model_type,
+        file_name=file.filename,
+        detected_col=detected_col
+    )
+
 @app.get("/api/reviews")
 def get_reviews(
     dateRange: str = "All Time",

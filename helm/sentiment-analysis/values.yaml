@@ -1,8 +1,7 @@
 # Default values for sentiment-analysis Helm Chart
 global:
   namespace: sentiment-analysis
-  imagePullSecrets:
-    - name: ghcr-secret
+  imagePullSecrets: []
 
 # Backend Configuration (FastAPI ML Service)
 backend:
