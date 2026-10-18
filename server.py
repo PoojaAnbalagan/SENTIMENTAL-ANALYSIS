@@ -56,20 +56,26 @@ def api_root():
 # PROMETHEUS OBSERVABILITY & METRICS
 # -----------------------------------------------------------------------------
 try:
-    from prometheus_client import Counter, Histogram, Gauge, generate_latest, CONTENT_TYPE_LATEST
+    from prometheus_client import Counter, Histogram, Gauge, generate_latest, CONTENT_TYPE_LATEST, REGISTRY
     PROMETHEUS_AVAILABLE = True
-    PREDICTIONS_COUNTER = Counter(
-        "sentiment_predictions_total",
-        "Total sentiment predictions performed",
-        ["model", "sentiment"]
-    )
-    INFERENCE_LATENCY = Histogram(
-        "sentiment_inference_duration_seconds",
-        "Latency of sentiment inference in seconds",
-        ["model"],
-        buckets=(0.001, 0.005, 0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1.0, 2.5)
-    )
-except ImportError:
+    if "sentiment_predictions_total" in REGISTRY._names_to_collectors:
+        PREDICTIONS_COUNTER = REGISTRY._names_to_collectors["sentiment_predictions_total"]
+    else:
+        PREDICTIONS_COUNTER = Counter(
+            "sentiment_predictions_total",
+            "Total sentiment predictions performed",
+            ["model", "sentiment"]
+        )
+    if "sentiment_inference_duration_seconds" in REGISTRY._names_to_collectors:
+        INFERENCE_LATENCY = REGISTRY._names_to_collectors["sentiment_inference_duration_seconds"]
+    else:
+        INFERENCE_LATENCY = Histogram(
+            "sentiment_inference_duration_seconds",
+            "Latency of sentiment inference in seconds",
+            ["model"],
+            buckets=(0.001, 0.005, 0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1.0, 2.5)
+        )
+except Exception:
     PROMETHEUS_AVAILABLE = False
 
 @app.get("/metrics")
