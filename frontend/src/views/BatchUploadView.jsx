@@ -440,6 +440,12 @@ export function BatchUploadView() {
                                       isNeu ? 'bg-[var(--neutral-bg)] text-[var(--neutral)] border-[var(--neutral-border)]' :
                                       'bg-[var(--negative-bg)] text-[var(--negative)] border-[var(--negative-border)]';
 
+                      const confRaw = row.confidence_percentage ?? row.confidence ?? 0;
+                      const confValue = typeof confRaw === 'number' ? confRaw.toFixed(1) : confRaw;
+                      const probPos = (row.prob_positive !== undefined ? row.prob_positive : (row.probabilities?.Positive ?? 0)) * 100;
+                      const probNeu = (row.prob_neutral !== undefined ? row.prob_neutral : (row.probabilities?.Neutral ?? 0)) * 100;
+                      const probNeg = (row.prob_negative !== undefined ? row.prob_negative : (row.probabilities?.Negative ?? 0)) * 100;
+
                       return (
                         <tr key={i} className="hover:bg-[var(--bg)] transition-colors">
                           <td className="p-3 text-[var(--text-muted)] font-bold">{(page - 1) * pageSize + i + 1}</td>
@@ -452,13 +458,13 @@ export function BatchUploadView() {
                             </span>
                           </td>
                           <td className="p-3 font-extrabold text-[var(--text-primary)]">
-                            {row.confidence_percentage}%
+                            {confValue}%
                           </td>
                           <td className="p-3 text-right">
                             <div className="inline-flex items-center gap-1.5 text-[10px] font-bold">
-                              <span className="text-[var(--positive)]">+{((row.prob_positive || 0)*100).toFixed(0)}%</span>
-                              <span className="text-[var(--neutral)]">~{((row.prob_neutral || 0)*100).toFixed(0)}%</span>
-                              <span className="text-[var(--negative)]">-{((row.prob_negative || 0)*100).toFixed(0)}%</span>
+                              <span className="text-[var(--positive)]">+{probPos.toFixed(0)}%</span>
+                              <span className="text-[var(--neutral)]">~{probNeu.toFixed(0)}%</span>
+                              <span className="text-[var(--negative)]">-{probNeg.toFixed(0)}%</span>
                             </div>
                           </td>
                         </tr>

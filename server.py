@@ -647,7 +647,11 @@ def process_review_batch(texts: List[str], model_key: str, file_name: str, detec
             detected_col: t_str,
             "predicted_sentiment": pred,
             "confidence": conf,
-            "probabilities": probas
+            "confidence_percentage": conf,
+            "probabilities": probas,
+            "prob_positive": probas.get("Positive", 0.0),
+            "prob_neutral": probas.get("Neutral", 0.0),
+            "prob_negative": probas.get("Negative", 0.0)
         })
 
     total_proc = len(records)
@@ -682,10 +686,11 @@ def process_review_batch(texts: List[str], model_key: str, file_name: str, detec
     for r in records:
         txt_escaped = '"' + r[detected_col].replace('"', '""') + '"'
         probs = r["probabilities"]
-        csv_buf.write(f'{txt_escaped},{r["predicted_sentiment"]},{r["confidence"]},{probs.get("Positive", 0)},{probs.get("Neutral", 0)},{probs.get("Negative", 0)}\n')
+        csv_buf.write(f'{txt_escaped},{r["predicted_sentiment"]},{r["confidence_percentage"]},{probs.get("Positive", 0)},{probs.get("Neutral", 0)},{probs.get("Negative", 0)}\n')
     annotated_csv_data = csv_buf.getvalue()
 
     return {
+        "status": "success",
         "model_used": meta["name"],
         "file_name": file_name,
         "detected_text_column": detected_col,
@@ -708,7 +713,10 @@ def get_sample_batch(model_type: str = Query("logistic_regression")):
         pos_samples = df_reviews[df_reviews["sentiment"] == "Positive"][col].dropna().head(20).tolist()
         neu_samples = df_reviews[df_reviews["sentiment"] == "Neutral"][col].dropna().head(15).tolist()
         neg_samples = df_reviews[df_reviews["sentiment"] == "Negative"][col].dropna().head(25).tolist()
-        sample_texts = neg_samples + pos_samples + neu_samples
+        # Interleave samples so previews display a balanced distribution of sentiments across pages
+        import itertools
+        interleaved = [x for x in itertools.chain.from_iterable(itertools.zip_longest(pos_samples, neg_samples, neu_samples)) if x is not None]
+        sample_texts = interleaved
 
     if len(sample_texts) < 10:
         sample_texts = [
@@ -1104,68 +1112,6 @@ def process_batch_dataframe(raw_df: pd.DataFrame, filename: str, model_type: str
         "annotated_csv_data": csv_str,
         "preview_records": preview_df.to_dict(orient="records")
     }
-
-@app.get("/api/sample-batch")
-def get_sample_batch(model_type: str = Query("logistic_regression")):
-    """Instant 1-click execution of a sample unlabelled batch of customer reviews."""
-    start_t = time.perf_counter()
-    if df_reviews is None or df_reviews.empty:
-        load_dataset()
-    if df_reviews is None or df_reviews.empty:
-        raise HTTPException(status_code=503, detail="Dataset not loaded.")
-    sample = df_reviews.sample(min(len(df_reviews), 60), random_state=123).copy()
-    cols = [c for c in ["reviewer_id", "store_name", "rating_num", "review", "review_clean"] if c in sample.columns]
-    sample = sample[cols]
-    return process_batch_dataframe(sample, "mcdonalds_sample_unlabelled_reviews.csv", model_type, start_t)
-
-@app.post("/api/batch-predict")
-async def batch_predict(
-    file: Optional[UploadFile] = File(None),
-    model_type: str = Query("logistic_regression")
-):
-    """
-    Accepts CSV / XLSX / JSON file uploads.
-    Automatically cleans, vectorizes, classifies sentiments, computes aggregate stats, and prepares annotated data.
-    """
-    start_t = time.perf_counter()
-    raw_df = None
-
-    if file:
-        filename = file.filename or "uploaded_dataset.csv"
-        contents = await file.read()
-        fname_lower = filename.lower()
-
-        # If empty or dummy sample file passed, fallback to sample batch
-        if len(contents) == 0:
-            if df_reviews is None or df_reviews.empty:
-                load_dataset()
-            if df_reviews is not None and not df_reviews.empty:
-                sample = df_reviews.sample(min(len(df_reviews), 60), random_state=123).copy()
-                cols = [c for c in ["reviewer_id", "store_name", "rating_num", "review", "review_clean"] if c in sample.columns]
-                return process_batch_dataframe(sample[cols], "mcdonalds_sample_unlabelled_reviews.csv", model_type, start_t)
-            raise HTTPException(status_code=400, detail="The uploaded file is empty (0 bytes). Please select a valid dataset.")
-
-        try:
-            if fname_lower.endswith(".csv"):
-                try:
-                    raw_df = pd.read_csv(io.BytesIO(contents), encoding="utf-8")
-                except UnicodeDecodeError:
-                    raw_df = pd.read_csv(io.BytesIO(contents), encoding="latin1")
-            elif fname_lower.endswith((".xlsx", ".xls")):
-                raw_df = pd.read_excel(io.BytesIO(contents))
-            elif fname_lower.endswith(".json"):
-                raw_df = pd.read_json(io.BytesIO(contents))
-            else:
-                try:
-                    raw_df = pd.read_csv(io.BytesIO(contents), encoding="utf-8")
-                except UnicodeDecodeError:
-                    raw_df = pd.read_csv(io.BytesIO(contents), encoding="latin1")
-        except Exception as e:
-            raise HTTPException(status_code=400, detail=f"Failed to parse uploaded file: {str(e)}")
-    else:
-        raise HTTPException(status_code=400, detail="No review file uploaded. Please upload a .csv, .xlsx, or .json file.")
-
-    return process_batch_dataframe(raw_df, filename, model_type, start_t)
 
 # -----------------------------------------------------------------------------
 # MAIN SERVER LAUNCH

@@ -42,12 +42,12 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
 
     # Nginx Ingress specific annotations
-    nginx.ingress.kubernetes.io/proxy-connect-timeout: "10"
-    nginx.ingress.kubernetes.io/proxy-read-timeout: "60"
-    nginx.ingress.kubernetes.io/proxy-send-timeout: "60"
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "15"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "180"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "180"
 
-    # Allow large request bodies (for any future file uploads)
-    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+    # Allow large request bodies (for batch review dataset uploads)
+    nginx.ingress.kubernetes.io/proxy-body-size: "25m"
 
     # Rewrite: strip /api prefix when proxying to backend
     # (FastAPI expects /api/health not /health)
