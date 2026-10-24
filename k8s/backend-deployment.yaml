@@ -43,13 +43,16 @@ spec:
         app: sentiment-backend
         version: "2026.1"
       annotations:
-        # Triggers rolling restart when ConfigMap content changes
-        configmap-hash: "{{ include (print $.Template.BasePath \"/configmap.yaml\") . | sha256sum }}"
+        app.kubernetes.io/config-version: "2026.1"
 
     spec:
       # Graceful shutdown: wait 30s for in-flight requests to complete
       terminationGracePeriodSeconds: 30
 
+      # Image pull secret for private registry access (GHCR)
+      # Create with: kubectl create secret docker-registry ghcr-secret \
+      #   --docker-server=ghcr.io --docker-username=<USER> --docker-password=<PAT> \
+      #   -n sentiment-analysis
       imagePullSecrets:
         - name: ghcr-secret
 
@@ -69,13 +72,14 @@ spec:
             - configMapRef:
                 name: sentiment-config
 
-          # Load sensitive config from Secret
+          # Load sensitive config from Secret (optional so pod boots even without optional secrets)
           env:
             - name: SECRET_KEY
               valueFrom:
                 secretKeyRef:
                   name: sentiment-secrets
                   key: SECRET_KEY
+                  optional: true
 
           # -----------------------------------------------------------------
           # Resource requests and limits

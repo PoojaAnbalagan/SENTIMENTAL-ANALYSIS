@@ -25,6 +25,10 @@ data:
   PYTHONDONTWRITEBYTECODE: "1"
   LOG_LEVEL: "info"
 
+  # Memory profile toggle: set to "false" on free tier / 512MB RAM hosts to
+  # operate purely on fast Scikit-Learn models (~160MB RSS) avoiding OOM kills.
+  ENABLE_TRANSFORMER: "true"
+
   # Number of uvicorn workers
   # Keep at 1 for ML models (each worker loads the full model into memory)
   UVICORN_WORKERS: "1"

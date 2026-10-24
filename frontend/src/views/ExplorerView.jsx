@@ -47,7 +47,7 @@ export function ExplorerView({ filters, setFilters, stores }) {
       URL.revokeObjectURL(blobUrl);
     } catch (err) {
       console.error('CSV download failed:', err);
-      alert('Export failed. Make sure the backend server is running at http://localhost:8000');
+      alert('Export failed. Please ensure the backend API service is reachable.');
     } finally {
       setDownloading(false);
     }

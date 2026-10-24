@@ -157,7 +157,7 @@ export function PredictorView() {
       const data = await api.predictSentiment(reviewText, selectedModel);
       setResult(data);
     } catch (err) {
-      const detail = err.response?.data?.detail || err.message || 'Ensure backend server is running on http://localhost:8000';
+      const detail = err.response?.data?.detail || err.message || 'Ensure backend API service is reachable.';
       setError(`Failed to analyze sentiment: ${detail}`);
     } finally {
       setLoading(false);

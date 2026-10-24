@@ -10,6 +10,12 @@ from typing import Optional, List, Dict, Any
 
 import io
 try:
+    import psutil
+    PSUTIL_AVAILABLE = True
+except ImportError:
+    PSUTIL_AVAILABLE = False
+
+try:
     from fastapi import FastAPI, Query, HTTPException, Response, UploadFile, File
     from fastapi.middleware.cors import CORSMiddleware
     from fastapi.staticfiles import StaticFiles
@@ -167,6 +173,27 @@ def init_vader():
             print(f"Warning: VADER unavailable: {e}")
             return None
 
+def get_distilbert_pipeline():
+    global models_registry
+    if models_registry.get("distilbert") is not None:
+        return models_registry["distilbert"]
+
+    enable_transformer = os.environ.get("ENABLE_TRANSFORMER", "true").lower() in ("true", "1", "yes")
+    if not enable_transformer:
+        return None
+
+    distilbert_path = os.path.join("models", "distilbert_sentiment")
+    if os.path.exists(distilbert_path):
+        try:
+            from src.models import DistilBERTPipeline, TRANSFORMERS_AVAILABLE
+            if TRANSFORMERS_AVAILABLE:
+                models_registry["distilbert"] = DistilBERTPipeline(model_path=distilbert_path)
+                print("Successfully loaded fine-tuned DistilBERT transformer model into memory.")
+                return models_registry["distilbert"]
+        except Exception as e:
+            print(f"Note: DistilBERT could not be loaded into memory ({e}). Fallback model will be used.")
+    return None
+
 def load_ml_assets():
     global model, vectorizer, models_registry
     os.makedirs("models", exist_ok=True)
@@ -208,16 +235,16 @@ def load_ml_assets():
     # VADER
     models_registry["vader"] = init_vader()
 
-    # DistilBERT Transformer (loads fine-tuned checkpoint if available)
-    distilbert_path = os.path.join("models", "distilbert_sentiment")
-    if os.path.exists(distilbert_path):
-        try:
-            from src.models import DistilBERTPipeline, TRANSFORMERS_AVAILABLE
-            if TRANSFORMERS_AVAILABLE:
-                models_registry["distilbert"] = DistilBERTPipeline(model_path=distilbert_path)
-                print("Successfully loaded fine-tuned DistilBERT transformer model.")
-        except Exception as e:
-            print(f"Note: DistilBERT could not be loaded into memory ({e}). Fallback model will be used.")
+    # DistilBERT Transformer (respects ENABLE_TRANSFORMER and lazy loading for memory optimization)
+    enable_transformer = os.environ.get("ENABLE_TRANSFORMER", "true").lower() in ("true", "1", "yes")
+    preload_transformer = os.environ.get("PRELOAD_TRANSFORMER", "false").lower() in ("true", "1", "yes")
+    
+    if enable_transformer and preload_transformer:
+        get_distilbert_pipeline()
+    elif not enable_transformer:
+        print("Note: DistilBERT disabled via ENABLE_TRANSFORMER=false (Low-Memory / Free-Tier profile active, ~160MB RSS).")
+    else:
+        print("Note: DistilBERT configured for on-demand lazy loading (Fast cold-start profile).")
 
     # 3. Auto-fit Missing Scikit-Learn Models & Vectorizer if needed
     needs_fitting = (
@@ -375,7 +402,7 @@ def run_single_model_inference(model_key: str, clean_text: str, raw_text: str) -
 
     # 2. DistilBERT Transformer
     elif model_key == "distilbert":
-        d_pipeline = models_registry.get("distilbert")
+        d_pipeline = models_registry.get("distilbert") or get_distilbert_pipeline()
         if d_pipeline is not None:
             try:
                 # Real deep contextual transformer inference
@@ -487,11 +514,23 @@ class PredictRequest(BaseModel):
 @app.get("/api/health")
 def get_health():
     is_loaded = any(v is not None for v in models_registry.values()) or (model is not None)
+    memory_mb = None
+    if PSUTIL_AVAILABLE:
+        try:
+            memory_mb = round(psutil.Process().memory_info().rss / (1024 * 1024), 1)
+        except Exception:
+            pass
+
+    enable_transformer = os.environ.get("ENABLE_TRANSFORMER", "true").lower() in ("true", "1", "yes")
+
     return {
         "status": "online",
         "model_loaded": is_loaded,
         "models_loaded": {k: (v is not None) for k, v in models_registry.items()},
         "vectorizer_loaded": vectorizer is not None,
+        "transformer_enabled": enable_transformer,
+        "distilbert_active": models_registry.get("distilbert") is not None,
+        "memory_usage_mb": memory_mb,
         "dataset_loaded": df_reviews is not None and len(df_reviews) > 0,
         "total_reviews": len(df_reviews) if df_reviews is not None else 0,
         "timestamp": datetime.datetime.now().isoformat()

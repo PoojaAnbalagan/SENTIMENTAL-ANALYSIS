@@ -261,7 +261,10 @@ The repository implements a fully automated 6-job CI/CD pipeline ([`.github/work
 | **CI** | `lint-helm` | Runs `helm lint helm/sentiment-analysis` and validates Kubernetes manifest YAML syntax across all `k8s/*.yaml` files | Schema invalidation, indentation errors, deprecated API versions |
 | **CD** | `build-push-backend` | Builds backend image via Docker Buildx with GitHub Actions layer cache (`type=gha`), generates SLSA build provenance, pushes to GitHub Container Registry (`ghcr.io`) | Docker build error, registry authentication failure |
 | **CD** | `build-push-frontend` | Builds frontend image with layer caching, tags with short git SHA and `latest`, pushes to GHCR | Docker build error, registry authentication failure |
-| **CD** | `deploy-cd` | Outputs automated release digests, generates step summaries, and triggers rolling Kubernetes deployment rollouts | Push failure |
+| **CD** | `deploy-cd` | Verifies release artifacts, generates step summary and operator runbook; triggers automated Helm cluster rollout with rollout verification when `KUBECONFIG` secret is provided | Helm upgrade failure, rollout timeout, or container crash |
+
+> [!NOTE]
+> **Deployment Architecture Disclosure**: Continuous Delivery handles verified container packaging and staging automatically. For cloud clusters, automated push-to-deploy is activated by supplying a `KUBECONFIG` secret; otherwise, deployments follow an operator-managed GitOps/Helm pattern.
 
 ---
 
@@ -269,16 +272,20 @@ The repository implements a fully automated 6-job CI/CD pipeline ([`.github/work
 The platform is deployed declaratively into a production-grade Kubernetes architecture:
 
 - **Namespaced Tenancy ([`k8s/namespace.yaml`](file:///k8s/namespace.yaml))**: Enforces resource isolation within a dedicated `sentiment-analysis` namespace.
+- **Dual Memory Hosting Profiles**:
+  - **Free-Tier / Low-Memory Profile (`ENABLE_TRANSFORMER=false`)**: Operates purely on the champion supervised linear models (Linear SVM, Logistic Regression, Naive Bayes, VADER). Startup RSS is only **~160 MB** with sub-millisecond inference, preventing OOMKilled crashes on 512 MB free tier hosts (Render, Fly.io, Railway, low-cost nodes).
+  - **Full Production Profile (`ENABLE_TRANSFORMER=true`)**: Supports fine-tuned DistilBERT contextual inference (~680 MB peak RSS). Weights are loaded on-demand (lazy-loaded) to guarantee fast container cold starts (<2s) and prevent startup probe timeouts.
 - **Zero-Downtime Rolling Updates**: Configured with `strategy.type: RollingUpdate` (`maxSurge: 1`, `maxUnavailable: 0`), guaranteeing zero dropped client requests during container updates.
 - **Three-Tier Probe Lifecycle**:
-  1. **`startupProbe`** (`failureThreshold: 12`, `periodSeconds: 5`): Grants up to 60 seconds for the ML service to deserialize heavy scikit-learn models, TF-IDF matrices, and DistilBERT PyTorch weights without premature kills.
+  1. **`startupProbe`** (`failureThreshold: 12`, `periodSeconds: 5`): Grants up to 60 seconds for the ML service to deserialize models and TF-IDF matrices without premature kills.
   2. **`readinessProbe`** (`periodSeconds: 10`): Ensures Kubernetes Service routers only dispatch customer traffic to replicas whose models are fully initialized.
   3. **`livenessProbe`** (`periodSeconds: 30`): Automatically detects deadlocks or frozen processes and restarts failed pods without human intervention.
 - **Horizontal Pod Autoscaling ([`k8s/hpa.yaml`](file:///k8s/hpa.yaml))**: Dynamically scales backend replicas from **2 to 8 pods** based on real-time resource utilization thresholds (**75% CPU** or **80% Memory**).
-- **12-Factor Decoupled Configuration**: Code is completely decoupled from configuration via [`ConfigMap`](file:///k8s/configmap.yaml) (log levels, runtime flags) and [`Secret`](file:///k8s/secret.yaml) (registry tokens, API credentials).
-- **Ingress Controller & Routing ([`k8s/ingress.yaml`](file:///k8s/ingress.yaml))**: Production Nginx Ingress Controller rules with:
-  - `nginx.ingress.kubernetes.io/proxy-body-size: "25m"`: Allows bulk multi-megabyte CSV/Excel batch review uploads.
-  - `nginx.ingress.kubernetes.io/proxy-read-timeout: "180"`: Prevents gateway 504 timeouts during intensive Transformer neural inference over large datasets.
+- **Secure Secret Architecture ([`k8s/secret.example.yaml`](file:///k8s/secret.example.yaml))**: Real credentials are never committed. Templates use safe `stringData` placeholders, version-controlled `.gitignore` rules prevent secret leakage, and backend deployments configure `secretKeyRef` with `optional: true` for resilient boots.
+- **Production Networking & Path Agreement**:
+  - Unified **25MB payload limits** across Nginx Ingress, frontend reverse proxy, and Helm values (`proxy-body-size: 25m`).
+  - Unified **180-second timeouts** (`proxy-read-timeout: 180`) to ensure bulk batch review inference completes without 504 Gateway Timeouts.
+  - Dual-service internal DNS resolution (`backend` and `backend-service` on port 8000) for seamless parity across Docker Compose and Kubernetes.
 
 ---
 

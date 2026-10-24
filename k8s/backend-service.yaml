@@ -34,3 +34,26 @@ spec:
       protocol: TCP
       port: 8000        # Service port (cluster-internal)
       targetPort: 8000  # Container port (matches containerPort in Deployment)
+
+---
+# -----------------------------------------------------------------------------
+# Secondary alias service "backend" for seamless DNS compatibility across
+# both Docker Compose (http://backend:8000) and Kubernetes environments
+# -----------------------------------------------------------------------------
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+  namespace: sentiment-analysis
+  labels:
+    app.kubernetes.io/name: sentiment-analysis
+    app.kubernetes.io/component: backend-alias
+spec:
+  type: ClusterIP
+  selector:
+    app: sentiment-backend
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8000
+      targetPort: 8000

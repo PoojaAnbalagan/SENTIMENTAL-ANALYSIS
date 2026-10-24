@@ -45,6 +45,8 @@ spec:
               value: {{ .Values.backend.env.pythonUnbuffered | quote }}
             - name: PYTHONDONTWRITEBYTECODE
               value: {{ .Values.backend.env.pythonDontWriteBytecode | quote }}
+            - name: ENABLE_TRANSFORMER
+              value: {{ .Values.backend.env.enableTransformer | default "true" | quote }}
           resources:
             {{- toYaml .Values.backend.resources | nindent 12 }}
           livenessProbe:
