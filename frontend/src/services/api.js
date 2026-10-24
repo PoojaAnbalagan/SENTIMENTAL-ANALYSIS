@@ -8,7 +8,7 @@ import axios from 'axios';
 //
 // If you ever need to point at a remote backend, set VITE_API_BASE_URL at build time:
 //   VITE_API_BASE_URL=https://api.yourdomain.com npm run build
-export const BACKEND_URL = import.meta.env.VITE_API_BASE_URL || '';
+export const BACKEND_URL = import.meta.env.VITE_API_BASE_URL_1 || '';
 const API_BASE = `${BACKEND_URL}/api`;
 
 export const api = {
