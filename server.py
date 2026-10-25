@@ -173,26 +173,73 @@ def init_vader():
             print(f"Warning: VADER unavailable: {e}")
             return None
 
+
 def get_distilbert_pipeline():
     global models_registry
+
     if models_registry.get("distilbert") is not None:
         return models_registry["distilbert"]
 
-    enable_transformer = os.environ.get("ENABLE_TRANSFORMER", "true").lower() in ("true", "1", "yes")
+    enable_transformer = (
+        os.environ.get("ENABLE_TRANSFORMER", "true").lower()
+        in ("true", "1", "yes")
+    )
     if not enable_transformer:
+        print("DistilBERT disabled via ENABLE_TRANSFORMER.")
         return None
 
-    distilbert_path = os.path.join("models", "distilbert_sentiment")
-    if os.path.exists(distilbert_path):
-        try:
-            from src.models import DistilBERTPipeline, TRANSFORMERS_AVAILABLE
-            if TRANSFORMERS_AVAILABLE:
-                models_registry["distilbert"] = DistilBERTPipeline(model_path=distilbert_path)
-                print("Successfully loaded fine-tuned DistilBERT transformer model into memory.")
-                return models_registry["distilbert"]
-        except Exception as e:
-            print(f"Note: DistilBERT could not be loaded into memory ({e}). Fallback model will be used.")
-    return None
+    # Resolve the model directory relative to server.py
+    backend_dir = os.path.dirname(os.path.abspath(__file__))
+    distilbert_path = os.path.join(
+        backend_dir, "models", "distilbert_sentiment"
+    )
+
+    # Set this to your Hugging Face model repository ID
+    model_id = os.environ.get("HF_MODEL_ID", "").strip()
+    hf_token = os.environ.get("HF_TOKEN") or None
+
+    try:
+        if model_id:
+            # Download the model files from Hugging Face
+            from huggingface_hub import snapshot_download
+
+            os.makedirs(distilbert_path, exist_ok=True)
+
+            snapshot_download(
+                repo_id=model_id,
+                local_dir=distilbert_path,
+                token=hf_token,
+            )
+
+            print(f"Downloaded DistilBERT model from {model_id}")
+
+        elif not os.path.isdir(distilbert_path):
+            print(
+                "DistilBERT unavailable: configure HF_MODEL_ID "
+                "or provide a local model directory."
+            )
+            return None
+
+        # Preserve your existing custom model-loading implementation
+        from src.models import (
+            DistilBERTPipeline,
+            TRANSFORMERS_AVAILABLE,
+        )
+
+        if not TRANSFORMERS_AVAILABLE:
+            print("Transformers dependencies are unavailable.")
+            return None
+
+        models_registry["distilbert"] = DistilBERTPipeline(
+            model_path=distilbert_path
+        )
+
+        print("Successfully loaded fine-tuned DistilBERT model.")
+        return models_registry["distilbert"]
+
+    except Exception as e:
+        print(f"DistilBERT loading failed: {type(e).__name__}: {e}")
+        return None
 
 def load_ml_assets():
     global model, vectorizer, models_registry
