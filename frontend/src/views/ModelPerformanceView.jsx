@@ -20,7 +20,6 @@ export function ModelPerformanceView({ modelsData }) {
   function toPercent(val) {
     const n = parseFloat(val);
     if (isNaN(n)) return 0;
-    // Already a percentage (> 1) means it was stored that way
     return parseFloat((n <= 1 ? n * 100 : n).toFixed(2));
   }
 
@@ -54,19 +53,19 @@ export function ModelPerformanceView({ modelsData }) {
       </div>
 
       {/* ── Benchmark Table ── */}
-      <div className="card-2026 p-5 space-y-4">
+      <div className="card-2026 p-4 md:p-5 space-y-4">
         <h3 className="text-xs font-extrabold uppercase tracking-wider text-[var(--text-primary)] pb-2 border-b border-[var(--border)]">
           Comparative Benchmark Metrics Table
         </h3>
-        <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs">
+        <div className="overflow-x-auto -mx-1">
+          <table className="w-full text-left text-xs min-w-[420px]">
             <thead className="bg-[var(--bg)] text-[var(--text-muted)] uppercase tracking-wider font-extrabold border-b border-[var(--border)]">
               <tr>
                 <th className="p-3">Algorithm / Model</th>
                 <th className="p-3">Accuracy</th>
-                <th className="p-3">Macro Precision</th>
-                <th className="p-3">Macro Recall</th>
-                <th className="p-3">Macro F1-Score</th>
+                <th className="p-3 hidden sm:table-cell">Precision</th>
+                <th className="p-3 hidden sm:table-cell">Recall</th>
+                <th className="p-3">F1-Score</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[var(--border)] text-[var(--text-primary)] font-semibold">
@@ -77,17 +76,19 @@ export function ModelPerformanceView({ modelsData }) {
                     key={i}
                     className={`transition-colors ${isBest ? 'bg-[var(--accent-bg)]' : 'hover:bg-[var(--bg)]'}`}
                   >
-                    <td className="p-3 font-extrabold text-[var(--accent)] flex items-center gap-2">
-                      {m.model}
-                      {isBest && (
-                        <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-[var(--positive-bg)] text-[var(--positive)] uppercase">
-                          Best
-                        </span>
-                      )}
+                    <td className="p-3 font-extrabold text-[var(--accent)]">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span>{m.model}</span>
+                        {isBest && (
+                          <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-[var(--positive-bg)] text-[var(--positive)] uppercase">
+                            Best
+                          </span>
+                        )}
+                      </div>
                     </td>
                     <td className="p-3">{toPercent(m.accuracy).toFixed(2)}%</td>
-                    <td className="p-3">{toPercent(m.macro_precision).toFixed(2)}%</td>
-                    <td className="p-3">{toPercent(m.macro_recall).toFixed(2)}%</td>
+                    <td className="p-3 hidden sm:table-cell">{toPercent(m.macro_precision).toFixed(2)}%</td>
+                    <td className="p-3 hidden sm:table-cell">{toPercent(m.macro_recall).toFixed(2)}%</td>
                     <td className="p-3 font-bold text-[var(--positive)]">{toPercent(m.macro_f1).toFixed(2)}%</td>
                   </tr>
                 );
@@ -98,15 +99,15 @@ export function ModelPerformanceView({ modelsData }) {
       </div>
 
       {/* ── Bar Chart ── */}
-      <div className="card-2026 p-5 space-y-4">
-        <div className="flex items-center justify-between">
+      <div className="card-2026 p-4 md:p-5 space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <h3 className="text-xs font-extrabold uppercase tracking-wider text-[var(--text-primary)]">
             Benchmark Metric Comparison
           </h3>
           <select
             value={selectedMetric}
             onChange={(e) => setSelectedMetric(e.target.value)}
-            className="bg-[var(--bg)] border border-[var(--border)] text-[var(--text-primary)] text-xs rounded-xl px-3 py-1.5 font-bold focus:outline-none"
+            className="bg-[var(--bg)] border border-[var(--border)] text-[var(--text-primary)] text-xs rounded-xl px-3 py-1.5 font-bold focus:outline-none self-start sm:self-auto"
           >
             {METRICS.map(m => (
               <option key={m.key} value={m.key}>{m.label}</option>
@@ -116,13 +117,13 @@ export function ModelPerformanceView({ modelsData }) {
 
         <div className="h-72">
           <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={chartData} margin={{ top: 5, right: 20, left: 0, bottom: 40 }}>
+            <BarChart data={chartData} margin={{ top: 5, right: 20, left: 0, bottom: 50 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
               <XAxis
                 dataKey="name"
                 stroke="var(--text-muted)"
                 tick={{ fontSize: 10, fontWeight: 'bold', fill: 'var(--text-secondary)' }}
-                angle={-15}
+                angle={-20}
                 textAnchor="end"
                 interval={0}
               />
@@ -153,7 +154,7 @@ export function ModelPerformanceView({ modelsData }) {
       </div>
 
       {/* ── Diagnostic Figures ── */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
         <div className="card-2026 p-4 space-y-2">
           <h4 className="text-xs font-extrabold text-[var(--text-primary)]">
             Logistic Regression — Confusion Matrix

@@ -141,7 +141,26 @@
   transform: translateY(0);
 }
 
-/* Smooth Entrance Keyframes & Animation Utilities */
+/* Mobile-safe tap targets & touch UX */
+@media (max-width: 768px) {
+  .kpi-card-2026:hover {
+    transform: none;
+  }
+  .card-2026:hover {
+    transform: none;
+  }
+}
+
+/* Safe bottom padding for mobile devices with home indicator */
+.mobile-safe-pb {
+  padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* Touch-friendly minimum tap area */
+.touch-manipulation {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
 @keyframes fadeInScale {
   0% {
     opacity: 0;

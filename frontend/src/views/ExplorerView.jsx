@@ -10,6 +10,7 @@ export function ExplorerView({ filters, setFilters, stores }) {
   const [sortBy, setSortBy] = useState('Newest First');
   const [selectedReview, setSelectedReview] = useState(null);
   const [downloading, setDownloading] = useState(false);
+  const [inspectorOpen, setInspectorOpen] = useState(false);
 
   useEffect(() => {
     fetchReviews();
@@ -53,13 +54,17 @@ export function ExplorerView({ filters, setFilters, stores }) {
     }
   };
 
+  const handleSelectReview = (row) => {
+    setSelectedReview(row);
+    setInspectorOpen(true);
+  };
+
   const totalPages = Math.ceil((reviewsData.total_filtered || 0) / 20);
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-
-        <div className="flex items-center gap-3">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div className="flex items-center gap-2 flex-wrap">
           <select
             value={sortBy}
             onChange={(e) => { setSortBy(e.target.value); setPage(1); }}
@@ -74,7 +79,7 @@ export function ExplorerView({ filters, setFilters, stores }) {
           <button
             onClick={handleDownloadCSV}
             disabled={downloading}
-            className="flex items-center gap-2 btn-primary px-3.5 py-2 text-xs disabled:opacity-60 disabled:cursor-wait"
+            className="flex items-center gap-2 btn-primary px-3.5 py-2 text-xs disabled:opacity-60 disabled:cursor-wait touch-manipulation"
           >
             <Download className="w-4 h-4" />
             {downloading ? 'Downloading…' : 'Download CSV'}
@@ -95,23 +100,23 @@ export function ExplorerView({ filters, setFilters, stores }) {
       {/* Main Content Layout */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
         {/* Review Data Table */}
-        <div className="md:col-span-8 card-2026 p-5 space-y-4">
+        <div className="md:col-span-8 card-2026 p-4 md:p-5 space-y-4">
           <div className="flex items-center justify-between text-xs font-bold text-[var(--text-muted)] pb-2 border-b border-[var(--border)]">
             <span>
-              {loading ? 'Loading…' : `Displaying ${reviewsData.reviews?.length || 0} of ${reviewsData.total_filtered?.toLocaleString() || 0} reviews`}
+              {loading ? 'Loading…' : `Showing ${reviewsData.reviews?.length || 0} of ${reviewsData.total_filtered?.toLocaleString() || 0} reviews`}
             </span>
             <span>Page {page} of {totalPages || 1}</span>
           </div>
 
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto -mx-1">
             <table className="w-full text-left text-xs">
               <thead className="bg-[var(--bg)] text-[var(--text-muted)] uppercase tracking-wider font-extrabold border-b border-[var(--border)]">
                 <tr>
-                  <th className="p-3">Store</th>
-                  <th className="p-3">Rating</th>
-                  <th className="p-3">Sentiment</th>
-                  <th className="p-3">Review Preview</th>
-                  <th className="p-3 text-right">Action</th>
+                  <th className="p-2 md:p-3 hidden sm:table-cell">Store</th>
+                  <th className="p-2 md:p-3">Rating</th>
+                  <th className="p-2 md:p-3">Sentiment</th>
+                  <th className="p-2 md:p-3">Review Preview</th>
+                  <th className="p-2 md:p-3 text-right">View</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[var(--border)] text-[var(--text-primary)]">
@@ -124,11 +129,11 @@ export function ExplorerView({ filters, setFilters, stores }) {
                     <td colSpan={5} className="p-6 text-center text-[var(--text-muted)]">No reviews match your filters.</td>
                   </tr>
                 ) : reviewsData.reviews?.map((row, i) => (
-                  <tr key={i} className="hover:bg-[var(--bg)] transition-colors cursor-pointer" onClick={() => setSelectedReview(row)}>
-                    <td className="p-3 font-bold truncate max-w-[120px]">{row.store_name || 'N/A'}</td>
-                    <td className="p-3 font-extrabold text-[var(--accent)]">{row.rating_num}★</td>
-                    <td className="p-3">
-                      <span className={`px-2 py-0.5 rounded-full text-[10px] font-extrabold ${
+                  <tr key={i} className="hover:bg-[var(--bg)] active:bg-[var(--bg)] transition-colors cursor-pointer" onClick={() => handleSelectReview(row)}>
+                    <td className="p-2 md:p-3 font-bold truncate max-w-[100px] hidden sm:table-cell">{row.store_name || 'N/A'}</td>
+                    <td className="p-2 md:p-3 font-extrabold text-[var(--accent)]">{row.rating_num}★</td>
+                    <td className="p-2 md:p-3">
+                      <span className={`px-2 py-0.5 rounded-full text-[10px] font-extrabold whitespace-nowrap ${
                         row.sentiment === 'Positive' ? 'bg-[var(--positive-bg)] text-[var(--positive)]' :
                         row.sentiment === 'Neutral' ? 'bg-[var(--neutral-bg)] text-[var(--neutral)]' :
                         'bg-[var(--negative-bg)] text-[var(--negative)]'
@@ -136,11 +141,11 @@ export function ExplorerView({ filters, setFilters, stores }) {
                         {row.sentiment}
                       </span>
                     </td>
-                    <td className="p-3 truncate max-w-[220px] text-[var(--text-secondary)]">"{row.review_clean}"</td>
-                    <td className="p-3 text-right">
+                    <td className="p-2 md:p-3 truncate max-w-[140px] sm:max-w-[220px] text-[var(--text-secondary)]">"{row.review_clean}"</td>
+                    <td className="p-2 md:p-3 text-right">
                       <button
-                        onClick={(e) => { e.stopPropagation(); setSelectedReview(row); }}
-                        className="p-1.5 rounded-lg bg-[var(--accent-bg)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-white transition-all"
+                        onClick={(e) => { e.stopPropagation(); handleSelectReview(row); }}
+                        className="p-1.5 rounded-lg bg-[var(--accent-bg)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-white transition-all touch-manipulation"
                       >
                         <Eye className="w-3.5 h-3.5" />
                       </button>
@@ -156,7 +161,7 @@ export function ExplorerView({ filters, setFilters, stores }) {
             <button
               onClick={() => setPage(p => Math.max(1, p - 1))}
               disabled={page === 1}
-              className="flex items-center gap-1 px-3 py-1.5 rounded-xl border border-[var(--border)] bg-[var(--bg)] font-bold text-[var(--text-primary)] disabled:opacity-40"
+              className="flex items-center gap-1 px-3 py-1.5 rounded-xl border border-[var(--border)] bg-[var(--bg)] font-bold text-[var(--text-primary)] disabled:opacity-40 touch-manipulation"
             >
               <ChevronLeft className="w-4 h-4" /> Previous
             </button>
@@ -164,18 +169,28 @@ export function ExplorerView({ filters, setFilters, stores }) {
             <button
               onClick={() => setPage(p => Math.min(totalPages, p + 1))}
               disabled={page >= totalPages}
-              className="flex items-center gap-1 px-3 py-1.5 rounded-xl border border-[var(--border)] bg-[var(--bg)] font-bold text-[var(--text-primary)] disabled:opacity-40"
+              className="flex items-center gap-1 px-3 py-1.5 rounded-xl border border-[var(--border)] bg-[var(--bg)] font-bold text-[var(--text-primary)] disabled:opacity-40 touch-manipulation"
             >
               Next <ChevronRight className="w-4 h-4" />
             </button>
           </div>
         </div>
 
-        {/* Selected Review Inspector */}
-        <div className="md:col-span-4 card-2026 p-5 space-y-4">
-          <h3 className="text-xs font-extrabold uppercase tracking-wider text-[var(--text-primary)] pb-2 border-b border-[var(--border)]">
-            Detailed Review Inspector
-          </h3>
+        {/* Selected Review Inspector – desktop sidebar / mobile bottom sheet */}
+        <div className={`md:col-span-4 card-2026 p-4 md:p-5 space-y-4 ${
+          inspectorOpen ? 'block' : 'hidden md:block'
+        }`}>
+          <div className="flex items-center justify-between pb-2 border-b border-[var(--border)]">
+            <h3 className="text-xs font-extrabold uppercase tracking-wider text-[var(--text-primary)]">
+              Detailed Review Inspector
+            </h3>
+            <button
+              onClick={() => setInspectorOpen(false)}
+              className="md:hidden text-[11px] font-bold text-[var(--text-muted)] hover:text-[var(--text-primary)] touch-manipulation"
+            >
+              ✕ Close
+            </button>
+          </div>
 
           {selectedReview ? (
             <div className="space-y-4 text-xs">

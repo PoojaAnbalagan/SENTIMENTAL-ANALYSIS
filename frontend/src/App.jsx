@@ -3,6 +3,9 @@ import { ThemeProvider } from './context/ThemeContext';
 import { api } from './services/api';
 import { Sidebar } from './components/Sidebar';
 import { Header } from './components/Header';
+import { 
+  LayoutDashboard, Zap, BarChart3, Database, Cpu, FileText, UploadCloud
+} from 'lucide-react';
 
 import { OverviewView } from './views/OverviewView';
 import { PredictorView } from './views/PredictorView';
@@ -12,8 +15,17 @@ import { ExplorerView } from './views/ExplorerView';
 import { ModelPerformanceView } from './views/ModelPerformanceView';
 import { ReportsView } from './views/ReportsView';
 
+const BOTTOM_NAV = [
+  { id: 'Overview', icon: LayoutDashboard },
+  { id: 'Live Predictor', icon: Zap },
+  { id: 'Sentiment Analytics', icon: BarChart3 },
+  { id: 'Review Explorer', icon: Database },
+  { id: 'Reports', icon: FileText },
+];
+
 export default function App() {
   const [currentTab, setTab] = useState('Overview');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [metrics, setMetrics] = useState(null);
   const [analytics, setAnalytics] = useState(null);
   const [modelsData, setModelsData] = useState(null);
@@ -84,17 +96,22 @@ export default function App() {
   return (
     <ThemeProvider>
       <div className="flex min-h-screen">
-        {/* Sidebar */}
-        <Sidebar currentTab={currentTab} setTab={setTab} />
+        {/* Sidebar (desktop + mobile drawer) */}
+        <Sidebar 
+          currentTab={currentTab} 
+          setTab={setTab} 
+          mobileMenuOpen={mobileMenuOpen}
+          setMobileMenuOpen={setMobileMenuOpen}
+        />
 
         {/* Main Content Area */}
-        <main className="flex-1 p-6 md:p-8 overflow-y-auto">
+        <main className="flex-1 min-w-0 p-4 md:p-6 lg:p-8 overflow-y-auto pb-20 md:pb-8">
           {!isApiOnline && (
-            <div className="mb-4 p-3 rounded-2xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-bold flex items-center justify-between animate-pulse">
+            <div className="mb-4 p-3 rounded-2xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-bold flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 animate-pulse">
               <span>⚠️ Backend API is offline. Ensure Python server (`python server.py`) is running on port 8000.</span>
               <button 
                 onClick={checkHealth}
-                className="px-3 py-1 bg-rose-600 text-white rounded-lg text-[11px] font-extrabold hover:bg-rose-700"
+                className="px-3 py-1 bg-rose-600 text-white rounded-lg text-[11px] font-extrabold hover:bg-rose-700 shrink-0 touch-manipulation"
               >
                 Retry Connection
               </button>
@@ -107,6 +124,7 @@ export default function App() {
             totalCount={metrics?.total_corpus_count || 22124} 
             isApiOnline={isApiOnline}
             currentTab={currentTab}
+            onMenuToggle={() => setMobileMenuOpen(prev => !prev)}
           />
 
           {/* Dynamic Tab Views */}
@@ -149,6 +167,35 @@ export default function App() {
             )}
           </div>
         </main>
+
+        {/* ── Mobile Bottom Navigation Bar ── */}
+        <nav className="fixed bottom-0 left-0 right-0 z-30 md:hidden bg-[var(--surface)] border-t border-[var(--border)] flex items-center justify-around px-2 py-2 shadow-lg" style={{ paddingBottom: 'max(0.5rem, env(safe-area-inset-bottom))' }}>
+          {BOTTOM_NAV.map(({ id, icon: Icon }) => {
+            const isActive = currentTab === id;
+            return (
+              <button
+                key={id}
+                onClick={() => setTab(id)}
+                className={`flex flex-col items-center gap-0.5 px-2 py-1.5 rounded-xl transition-all touch-manipulation ${
+                  isActive
+                    ? 'text-[var(--accent)] bg-[var(--accent-bg)]'
+                    : 'text-[var(--text-muted)]'
+                }`}
+              >
+                <Icon className="w-5 h-5" />
+                <span className="text-[9px] font-bold leading-none truncate max-w-[52px]">{id.split(' ')[0]}</span>
+              </button>
+            );
+          })}
+          {/* "More" opens the full sidebar drawer */}
+          <button
+            onClick={() => setMobileMenuOpen(true)}
+            className="flex flex-col items-center gap-0.5 px-2 py-1.5 rounded-xl text-[var(--text-muted)] touch-manipulation"
+          >
+            <UploadCloud className="w-5 h-5" />
+            <span className="text-[9px] font-bold leading-none">More</span>
+          </button>
+        </nav>
       </div>
     </ThemeProvider>
   );

@@ -417,11 +417,11 @@ export function BatchUploadView() {
               <table className="w-full text-left text-xs">
                 <thead className="bg-[var(--bg)] text-[var(--text-muted)] uppercase tracking-wider font-extrabold border-b border-[var(--border)]">
                   <tr>
-                    <th className="p-3">#</th>
+                    <th className="p-3 hidden sm:table-cell">#</th>
                     <th className="p-3">Customer Review Text</th>
                     <th className="p-3">Predicted Sentiment</th>
-                    <th className="p-3">Confidence</th>
-                    <th className="p-3 text-right">Probability Distribution</th>
+                    <th className="p-3 hidden sm:table-cell">Confidence</th>
+                    <th className="p-3 text-right hidden md:table-cell">Probability Distribution</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-[var(--border)] text-[var(--text-primary)]">
@@ -448,8 +448,8 @@ export function BatchUploadView() {
 
                       return (
                         <tr key={i} className="hover:bg-[var(--bg)] transition-colors">
-                          <td className="p-3 text-[var(--text-muted)] font-bold">{(page - 1) * pageSize + i + 1}</td>
-                          <td className="p-3 font-medium max-w-md truncate" title={text}>
+                          <td className="p-3 text-[var(--text-muted)] font-bold hidden sm:table-cell">{(page - 1) * pageSize + i + 1}</td>
+                          <td className="p-3 font-medium max-w-[160px] sm:max-w-xs md:max-w-md truncate" title={text}>
                             "{text}"
                           </td>
                           <td className="p-3">
@@ -457,10 +457,10 @@ export function BatchUploadView() {
                               {row.predicted_sentiment}
                             </span>
                           </td>
-                          <td className="p-3 font-extrabold text-[var(--text-primary)]">
+                          <td className="p-3 font-extrabold text-[var(--text-primary)] hidden sm:table-cell">
                             {confValue}%
                           </td>
-                          <td className="p-3 text-right">
+                          <td className="p-3 text-right hidden md:table-cell">
                             <div className="inline-flex items-center gap-1.5 text-[10px] font-bold">
                               <span className="text-[var(--positive)]">+{probPos.toFixed(0)}%</span>
                               <span className="text-[var(--neutral)]">~{probNeu.toFixed(0)}%</span>
@@ -480,7 +480,7 @@ export function BatchUploadView() {
               <button
                 onClick={() => setPage(p => Math.max(1, p - 1))}
                 disabled={page === 1}
-                className="flex items-center gap-1 px-3 py-1.5 rounded-xl border border-[var(--border)] bg-[var(--bg)] font-bold text-[var(--text-primary)] disabled:opacity-40"
+                className="flex items-center gap-1 px-3 py-1.5 rounded-xl border border-[var(--border)] bg-[var(--bg)] font-bold text-[var(--text-primary)] disabled:opacity-40 touch-manipulation"
               >
                 <ChevronLeft className="w-4 h-4" /> Previous
               </button>
@@ -490,7 +490,7 @@ export function BatchUploadView() {
               <button
                 onClick={() => setPage(p => Math.min(totalPages, p + 1))}
                 disabled={page >= totalPages}
-                className="flex items-center gap-1 px-3 py-1.5 rounded-xl border border-[var(--border)] bg-[var(--bg)] font-bold text-[var(--text-primary)] disabled:opacity-40"
+                className="flex items-center gap-1 px-3 py-1.5 rounded-xl border border-[var(--border)] bg-[var(--bg)] font-bold text-[var(--text-primary)] disabled:opacity-40 touch-manipulation"
               >
                 Next <ChevronRight className="w-4 h-4" />
               </button>

@@ -38,18 +38,18 @@ export function FilterBar({ filters, setFilters, stores = [], matchingCount = 0 
 
   return (
     <div className="card-2026 p-4 mb-6 space-y-4">
-      <div className="flex items-center justify-between border-b border-[var(--border)] pb-3">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-[var(--border)] pb-3 gap-2">
         <div className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-[var(--text-primary)]">
           <Filter className="w-4 h-4 text-[var(--accent)]" /> Global Analytics Filters
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 flex-wrap">
           <span className="text-xs font-bold text-[var(--accent)] bg-[var(--accent-bg)] px-2.5 py-1 rounded-lg border border-[var(--border)]">
             {matchingCount.toLocaleString()} matching reviews
           </span>
           {activeChips.length > 0 && (
             <button
               onClick={resetFilters}
-              className="flex items-center gap-1 text-xs font-bold text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"
+              className="flex items-center gap-1 text-xs font-bold text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors touch-manipulation"
             >
               <RotateCcw className="w-3.5 h-3.5" /> Reset Filters
             </button>

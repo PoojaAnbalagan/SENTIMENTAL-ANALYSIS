@@ -194,7 +194,7 @@ export function PredictorView() {
               <button
                 key={m.id}
                 onClick={() => handleModelChange(m.id)}
-                className={`flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-all duration-300 ${
+                className={`flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 touch-manipulation ${
                   isSelected
                     ? 'bg-[var(--accent)] text-white shadow-md shadow-purple-500/20 scale-[1.02]'
                     : 'text-[var(--text-secondary)] hover:bg-[var(--surface-elevated)] hover:text-[var(--text-primary)] border border-transparent'

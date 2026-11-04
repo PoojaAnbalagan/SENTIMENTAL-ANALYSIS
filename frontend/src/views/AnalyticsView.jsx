@@ -133,7 +133,7 @@ export function AnalyticsView({ analytics, filters, setFilters, stores }) {
 
           {/* Chart 3: Top Stores Volume */}
           <div className="md:col-span-2 card-2026 p-5">
-            <div className="flex justify-between items-center mb-3">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-1">
               <h3 className="text-xs font-extrabold uppercase tracking-wider text-[var(--text-primary)]">
                 Top Store Locations by Review Volume
               </h3>
@@ -150,13 +150,13 @@ export function AnalyticsView({ analytics, filters, setFilters, stores }) {
                     dataKey="store" 
                     type="category" 
                     stroke="var(--text-muted)" 
-                    tick={{ fontSize: 11, fontWeight: '700', fill: 'var(--text-secondary)' }} 
-                    width={210} 
+                    tick={{ fontSize: 10, fontWeight: '700', fill: 'var(--text-secondary)' }} 
+                    width={130}
                     tickFormatter={(val) => {
                       if (!val) return '';
                       const parts = val.split(',');
                       if (parts.length >= 2) return `${parts[0].trim()}, ${parts[1].trim()}`;
-                      return val.length > 26 ? val.substring(0, 24) + '…' : val;
+                      return val.length > 20 ? val.substring(0, 18) + '…' : val;
                     }}
                   />
                   <Tooltip 

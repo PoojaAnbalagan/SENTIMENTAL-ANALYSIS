@@ -19,7 +19,7 @@ export function KpiCards({ metrics, filteredCount, analytics }) {
   return (
     <div className="space-y-4 mb-6">
       {/* KPI Cards Row */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
         {/* Card 1 - Filtered Dataset */}
         <div className="kpi-card-2026 border-l-4 border-l-purple-600">
           <div className="w-10 h-10 rounded-xl bg-purple-600/10 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-3">
@@ -62,7 +62,7 @@ export function KpiCards({ metrics, filteredCount, analytics }) {
       </div>
 
       {/* Sentiment Breakdown Row */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
         {/* Positive Card */}
         <div className="p-4 rounded-2xl bg-[var(--positive-bg)] border border-[var(--positive-border)]">
           <div className="flex items-center justify-between mb-1">
