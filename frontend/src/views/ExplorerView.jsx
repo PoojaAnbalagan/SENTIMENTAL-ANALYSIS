@@ -216,10 +216,10 @@ export function ExplorerView({ filters, setFilters, stores }) {
                 {selectedReview.label_source && (
                   <div className="flex justify-between items-center font-bold">
                     <span className="text-[var(--text-muted)]">Label Source:</span>
-                    <span className={`px-2 py-0.5 rounded text-[10px] font-extrabold ${
+                    <span className={`px-2 py-0.5 rounded text-[10px] font-extrabold border ${
                       selectedReview.label_source === 'human_annotated'
-                        ? 'bg-purple-100 text-purple-700 dark:bg-purple-950 dark:text-purple-300'
-                        : 'bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300'
+                        ? 'bg-[var(--accent-bg)] text-[var(--accent)] border-[var(--border)]'
+                        : 'bg-[var(--neutral-bg)] text-[var(--neutral)] border-[var(--neutral-border)]'
                     }`}>
                       {selectedReview.label_source === 'human_annotated' ? 'Human Pilot Gold' : 'Model Pseudo-Label'}
                     </span>

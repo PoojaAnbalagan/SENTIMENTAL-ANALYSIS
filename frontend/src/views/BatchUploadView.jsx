@@ -181,14 +181,14 @@ export function BatchUploadView() {
           </div>
 
           {selectedFile && (
-            <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-white/70 text-[var(--positive)] border border-[var(--positive-border)]">
+            <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-[var(--surface)] text-[var(--positive)] border border-[var(--positive-border)] shadow-sm">
               Ready to process ({(selectedFile.size / 1024).toFixed(1)} KB)
             </span>
           )}
         </div>
 
         {error && (
-          <div className="p-3 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-bold flex items-center gap-2 animate-slideUpFade">
+          <div className="p-3 rounded-xl bg-[var(--negative-bg)] border border-[var(--negative-border)] text-[var(--negative)] text-xs font-bold flex items-center gap-2 animate-slideUpFade">
             <AlertCircle className="w-4 h-4 shrink-0" />
             <span>{error}</span>
           </div>

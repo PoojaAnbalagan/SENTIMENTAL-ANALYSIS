@@ -183,27 +183,37 @@ export function Sidebar({ currentTab, setTab, mobileMenuOpen = false, setMobileM
 
         {/* Desktop Footer - Theme Toggle + Version */}
         <div className={`pt-3 border-t border-[var(--border)] text-[11px] text-[var(--text-muted)] ${collapsed ? 'text-center' : ''}`}>
-          <div className="flex items-center justify-between mb-2">
+          <div className="mb-2">
             {!collapsed ? (
               <button
                 onClick={toggleTheme}
-                className="flex items-center gap-1.5 text-[11px] font-bold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+                className="w-full flex items-center justify-between px-2.5 py-1.5 rounded-xl bg-[var(--bg)] border border-[var(--border)] text-xs font-bold text-[var(--text-primary)] hover:border-[var(--border-hover)] transition-all touch-manipulation"
                 title={`Switch to ${theme === 'Light' ? 'Dark' : 'Light'} Mode`}
               >
-                {theme === 'Light' ? <Moon className="w-3.5 h-3.5 text-indigo-500" /> : <Sun className="w-3.5 h-3.5 text-amber-400" />}
-                <span>{theme === 'Light' ? 'Dark Mode' : 'Light Mode'}</span>
+                <span className="flex items-center gap-2">
+                  {theme === 'Light' ? <Moon className="w-3.5 h-3.5 text-indigo-500" /> : <Sun className="w-3.5 h-3.5 text-amber-400" />}
+                  <span>{theme === 'Light' ? 'Dark Mode' : 'Light Mode'}</span>
+                </span>
+                <span className="text-[10px] px-1.5 py-0.5 rounded bg-[var(--surface)] text-[var(--text-muted)] border border-[var(--border)] font-semibold">
+                  {theme}
+                </span>
               </button>
             ) : (
               <button
                 onClick={toggleTheme}
-                className="w-full flex justify-center p-1 rounded hover:bg-[var(--bg)] transition-colors"
+                className="w-full flex justify-center p-2 rounded-xl bg-[var(--bg)] border border-[var(--border)] hover:border-[var(--border-hover)] text-[var(--text-primary)] transition-all"
                 title={`Switch to ${theme === 'Light' ? 'Dark' : 'Light'} Mode`}
               >
                 {theme === 'Light' ? <Moon className="w-4 h-4 text-indigo-500" /> : <Sun className="w-4 h-4 text-amber-400" />}
               </button>
             )}
           </div>
-          {!collapsed && <p className="font-extrabold text-[var(--text-primary)]">v2026.1</p>}
+          {!collapsed && (
+            <div className="flex items-center justify-between px-1 text-[10px] text-[var(--text-muted)]">
+              <span className="font-extrabold text-[var(--text-primary)]">v2026.1</span>
+              <span>McDonald's Analytics</span>
+            </div>
+          )}
         </div>
       </aside>
     </>

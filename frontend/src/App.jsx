@@ -107,11 +107,11 @@ export default function App() {
         {/* Main Content Area */}
         <main className="flex-1 min-w-0 p-4 md:p-6 lg:p-8 overflow-y-auto pb-20 md:pb-8">
           {!isApiOnline && (
-            <div className="mb-4 p-3 rounded-2xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-bold flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 animate-pulse">
+            <div className="mb-4 p-3 rounded-2xl bg-[var(--negative-bg)] border border-[var(--negative-border)] text-[var(--negative)] text-xs font-bold flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 animate-pulse">
               <span>⚠️ Backend API is offline. Ensure Python server (`python server.py`) is running on port 8000.</span>
               <button 
                 onClick={checkHealth}
-                className="px-3 py-1 bg-rose-600 text-white rounded-lg text-[11px] font-extrabold hover:bg-rose-700 shrink-0 touch-manipulation"
+                className="px-3 py-1 bg-[var(--negative)] text-white rounded-lg text-[11px] font-extrabold hover:opacity-90 shrink-0 touch-manipulation"
               >
                 Retry Connection
               </button>
@@ -120,8 +120,6 @@ export default function App() {
 
           {/* Hero Header */}
           <Header 
-            filteredCount={analytics?.filtered_count || metrics?.total_corpus_count || 22124} 
-            totalCount={metrics?.total_corpus_count || 22124} 
             isApiOnline={isApiOnline}
             currentTab={currentTab}
             onMenuToggle={() => setMobileMenuOpen(prev => !prev)}

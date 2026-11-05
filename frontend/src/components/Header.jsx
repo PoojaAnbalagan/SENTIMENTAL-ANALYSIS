@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, Database, Menu } from 'lucide-react';
+import { Sparkles, Menu } from 'lucide-react';
 
 const TAB_TITLES = {
   'Overview': 'AI-Powered Customer Sentiment Analytics Platform',
@@ -22,66 +22,56 @@ const TAB_TITLES_SHORT = {
   'Reports': 'Reports',
 };
 
-export function Header({ filteredCount = 22366, totalCount = 22366, isApiOnline = true, currentTab = 'Overview', onMenuToggle }) {
+export function Header({ isApiOnline = true, currentTab = 'Overview', onMenuToggle }) {
   const isOverview = currentTab === 'Overview';
   const title = TAB_TITLES[currentTab] || currentTab;
   const titleShort = TAB_TITLES_SHORT[currentTab] || currentTab;
 
   return (
     <header className="pb-4 mb-6 border-b border-[var(--border)]">
-      {/* Top Row: Hamburger (mobile) + Status Badges */}
-      <div className="flex items-center justify-between gap-3 mb-3 md:mb-0">
+      {/* Top Row: Hamburger (mobile) + Mobile Title + API Status (Mobile Only) */}
+      <div className="flex md:hidden items-center justify-between gap-3 mb-3">
         {/* Hamburger – mobile only */}
         <button
           onClick={onMenuToggle}
-          className="md:hidden p-2 rounded-xl border border-[var(--border)] bg-[var(--surface)] text-[var(--text-primary)] hover:bg-[var(--bg)] transition-all touch-manipulation shrink-0"
+          className="p-2 rounded-xl border border-[var(--border)] bg-[var(--surface)] text-[var(--text-primary)] hover:bg-[var(--bg)] transition-all touch-manipulation shrink-0"
           aria-label="Open navigation menu"
         >
           <Menu className="w-5 h-5" />
         </button>
 
-        {/* Mobile title (shown between hamburger and badges) */}
-        <div className="md:hidden flex-1 min-w-0">
+        {/* Mobile title */}
+        <div className="flex-1 min-w-0">
           <h1 className="text-base font-extrabold tracking-tight text-[var(--text-primary)] truncate">
             {titleShort}
           </h1>
         </div>
 
-        {/* Status badges row (always visible, right-aligned on mobile) */}
-        <div className="flex items-center gap-2 shrink-0">
-          <div className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border shadow-sm text-xs font-bold transition-all ${
-            isApiOnline 
-              ? 'border-[var(--positive-border)] bg-[var(--positive-bg)] text-[var(--positive)]' 
-              : 'border-[var(--negative-border)] bg-[var(--negative-bg)] text-[var(--negative)]'
-          }`}>
-            <span className="relative flex h-2.5 w-2.5 shrink-0">
-              {isApiOnline ? (
-                <>
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                </>
-              ) : (
-                <>
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-rose-500"></span>
-                </>
-              )}
-            </span>
-            <span className="text-[11px] font-extrabold hidden sm:inline">
-              {isApiOnline ? 'API Online' : 'API Offline'}
-            </span>
-            <span className="text-[11px] font-extrabold sm:hidden">
-              {isApiOnline ? '●' : '✕'}
-            </span>
-          </div>
-
-          <div className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border border-[var(--border)] bg-[var(--surface)] shadow-sm text-xs font-extrabold text-[var(--text-primary)]">
-            <Database className="w-3.5 h-3.5 text-[var(--accent)]" />
-            <span>{filteredCount.toLocaleString()}</span>
-            <span className="text-[var(--text-muted)]">/</span>
-            <span>{totalCount.toLocaleString()}</span>
-            <span className="hidden lg:inline text-[var(--text-muted)] font-semibold">Reviews</span>
-          </div>
+        {/* Status badge (mobile) */}
+        <div className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border shadow-sm text-xs font-bold transition-all shrink-0 ${
+          isApiOnline 
+            ? 'border-[var(--positive-border)] bg-[var(--positive-bg)] text-[var(--positive)]' 
+            : 'border-[var(--negative-border)] bg-[var(--negative-bg)] text-[var(--negative)]'
+        }`}>
+          <span className="relative flex h-2.5 w-2.5 shrink-0">
+            {isApiOnline ? (
+              <>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+              </>
+            ) : (
+              <>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-rose-500"></span>
+              </>
+            )}
+          </span>
+          <span className="text-[11px] font-extrabold hidden sm:inline">
+            {isApiOnline ? 'API Online' : 'API Offline'}
+          </span>
+          <span className="text-[11px] font-extrabold sm:hidden">
+            {isApiOnline ? '●' : '✕'}
+          </span>
         </div>
       </div>
 
@@ -120,11 +110,6 @@ export function Header({ filteredCount = 22366, totalCount = 22366, isApiOnline 
             <span className="text-[11px] font-extrabold">
               {isApiOnline ? 'API Online' : 'API Offline (Backend Down)'}
             </span>
-          </div>
-
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-[var(--border)] bg-[var(--surface)] shadow-sm text-xs font-extrabold text-[var(--text-primary)]">
-            <Database className="w-4 h-4 text-[var(--accent)]" />
-            <span>{filteredCount.toLocaleString()}</span> / <span>{totalCount.toLocaleString()}</span> Reviews Analyzed
           </div>
         </div>
       </div>

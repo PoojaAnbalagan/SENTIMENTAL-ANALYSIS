@@ -4,6 +4,7 @@
 
 @layer base {
   :root, [data-theme="Light"] {
+    color-scheme: light;
     --bg: #F5F3FF;
     --surface: #FFFFFF;
     --surface-elevated: #F3E8FF;
@@ -28,7 +29,8 @@
     --shadow-hover: 0 10px 25px rgba(124, 58, 237, 0.2);
   }
 
-  [data-theme="Dark"] {
+  [data-theme="Dark"], html.dark, .dark {
+    color-scheme: dark;
     --bg: #090B13;
     --surface: #121526;
     --surface-elevated: #1B1E36;
@@ -39,16 +41,16 @@
     --border-hover: #8B5CF6;
     --accent: #8B5CF6;
     --accent-hover: #7C3AED;
-    --accent-bg: #271A4E;
+    --accent-bg: rgba(139, 92, 246, 0.16);
     --positive: #10B981;
-    --positive-bg: #064E3B;
-    --positive-border: #047857;
+    --positive-bg: rgba(16, 185, 129, 0.16);
+    --positive-border: rgba(16, 185, 129, 0.32);
     --neutral: #38BDF8;
-    --neutral-bg: #0C4A6E;
-    --neutral-border: #0284C7;
+    --neutral-bg: rgba(56, 189, 248, 0.16);
+    --neutral-border: rgba(56, 189, 248, 0.32);
     --negative: #F43F5E;
-    --negative-bg: #4C0519;
-    --negative-border: #9F1239;
+    --negative-bg: rgba(244, 63, 94, 0.16);
+    --negative-border: rgba(244, 63, 94, 0.32);
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
     --shadow-hover: 0 10px 25px rgba(139, 92, 246, 0.25);
   }
@@ -63,6 +65,11 @@
   select option {
     background-color: var(--surface);
     color: var(--text-primary);
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: var(--text-muted);
+    opacity: 0.7;
   }
 }
 

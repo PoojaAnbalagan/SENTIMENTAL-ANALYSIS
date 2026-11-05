@@ -242,7 +242,7 @@ export function PredictorView() {
           </div>
 
           {error && (
-            <div className="text-xs text-rose-500 font-bold bg-rose-50 p-2.5 rounded-xl border border-rose-200 animate-slideUpFade">
+            <div className="text-xs text-[var(--negative)] font-bold bg-[var(--negative-bg)] p-2.5 rounded-xl border border-[var(--negative-border)] animate-slideUpFade">
               {error}
             </div>
           )}
@@ -315,7 +315,7 @@ export function PredictorView() {
                     'bg-[var(--negative-bg)] border-[var(--negative-border)]'
                   }`}>
                     <div className="flex items-center gap-3">
-                      <div className="p-2 rounded-full bg-white/40 shadow-sm shrink-0">
+                      <div className="p-2 rounded-full bg-[var(--surface)] border border-[var(--border)] shadow-sm shrink-0">
                         <SentimentFaceEmoji sentiment={result.consensus_sentiment} size={32} />
                       </div>
                       <div>
@@ -329,11 +329,11 @@ export function PredictorView() {
                     </div>
 
                     <div className="flex items-center gap-2.5 text-xs font-bold">
-                      <div className="px-3 py-1.5 rounded-xl bg-white/60 dark:bg-black/20 border border-[var(--border)]">
+                      <div className="px-3 py-1.5 rounded-xl bg-[var(--surface)] border border-[var(--border)] shadow-sm">
                         <span className="text-[var(--text-muted)]">Agreement:</span>{' '}
                         <b className="text-[var(--text-primary)]">{result.agreement_percentage}%</b> ({result.agreement_count}/{result.total_models})
                       </div>
-                      <div className="px-3 py-1.5 rounded-xl bg-white/60 dark:bg-black/20 border border-[var(--border)] flex items-center gap-1.5 text-[var(--accent)]">
+                      <div className="px-3 py-1.5 rounded-xl bg-[var(--surface)] border border-[var(--border)] shadow-sm flex items-center gap-1.5 text-[var(--accent)]">
                         <Zap className="w-3.5 h-3.5" />
                         <span>Fastest: <b>{result.fastest_model}</b></span>
                       </div>
@@ -386,7 +386,7 @@ export function PredictorView() {
                           </div>
 
                           {/* Smooth Mini Probabilities Distribution */}
-                          <div className="w-full h-1.5 bg-black/10 rounded-full overflow-hidden flex">
+                          <div className="w-full h-1.5 bg-black/10 dark:bg-white/10 rounded-full overflow-hidden flex">
                             <div style={{ width: `${(m.probabilities?.Positive || 0) * 100}%` }} className="h-full bg-[var(--positive)] transition-all duration-700" title={`Positive: ${((m.probabilities?.Positive || 0)*100).toFixed(1)}%`} />
                             <div style={{ width: `${(m.probabilities?.Neutral || 0) * 100}%` }} className="h-full bg-[var(--neutral)] transition-all duration-700" title={`Neutral: ${((m.probabilities?.Neutral || 0)*100).toFixed(1)}%`} />
                             <div style={{ width: `${(m.probabilities?.Negative || 0) * 100}%` }} className="h-full bg-[var(--negative)] transition-all duration-700" title={`Negative: ${((m.probabilities?.Negative || 0)*100).toFixed(1)}%`} />
@@ -404,7 +404,7 @@ export function PredictorView() {
                     result.predicted_sentiment === 'Neutral' ? 'bg-[var(--neutral-bg)] border-[var(--neutral-border)]' :
                     'bg-[var(--negative-bg)] border-[var(--negative-border)]'
                   }`}>
-                    <div className="inline-flex p-2.5 rounded-full mb-2 bg-white/30 shadow-sm">
+                    <div className="inline-flex p-2.5 rounded-full mb-2 bg-[var(--surface)] border border-[var(--border)] shadow-sm">
                       <SentimentFaceEmoji sentiment={result.predicted_sentiment} size={36} />
                     </div>
                     <div className="text-2xl font-extrabold text-[var(--text-primary)]">{result.predicted_sentiment} Sentiment</div>
@@ -429,7 +429,7 @@ export function PredictorView() {
                             <span>{cat}</span>
                             <span>{pct}%</span>
                           </div>
-                          <div className="w-full h-2 bg-black/10 rounded-full overflow-hidden">
+                          <div className="w-full h-2 bg-black/10 dark:bg-white/10 rounded-full overflow-hidden">
                             <div className="h-full rounded-full transition-all duration-700 ease-out" style={{ width: `${pct}%`, backgroundColor: color }} />
                           </div>
                         </div>

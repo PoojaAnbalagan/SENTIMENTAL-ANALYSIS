@@ -88,7 +88,7 @@ export function OverviewView({ analytics, metrics, filters, setFilters, stores }
                 {(sentimentData.find(s => s.name === 'Positive')?.percentage || 0)}% Positive Ratio
               </span>
             </div>
-            <div className="w-full h-3 bg-black/10 rounded-full overflow-hidden flex">
+            <div className="w-full h-3 bg-black/10 dark:bg-white/10 rounded-full overflow-hidden flex">
               {sentimentData.map((s) => (
                 <div 
                   key={s.name} 

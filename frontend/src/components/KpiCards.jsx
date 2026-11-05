@@ -74,7 +74,7 @@ export function KpiCards({ metrics, filteredCount, analytics }) {
           <div className="text-xl font-extrabold text-[var(--text-primary)]">
             {posData.count.toLocaleString()} <span className="text-xs font-semibold text-[var(--text-muted)]">reviews</span>
           </div>
-          <div className="w-full h-1.5 bg-black/10 rounded-full overflow-hidden mt-2">
+          <div className="w-full h-1.5 bg-black/10 dark:bg-white/10 rounded-full overflow-hidden mt-2">
             <div className="h-full bg-[var(--positive)] rounded-full transition-all" style={{ width: `${posData.percentage}%` }} />
           </div>
         </div>
@@ -90,7 +90,7 @@ export function KpiCards({ metrics, filteredCount, analytics }) {
           <div className="text-xl font-extrabold text-[var(--text-primary)]">
             {neuData.count.toLocaleString()} <span className="text-xs font-semibold text-[var(--text-muted)]">reviews</span>
           </div>
-          <div className="w-full h-1.5 bg-black/10 rounded-full overflow-hidden mt-2">
+          <div className="w-full h-1.5 bg-black/10 dark:bg-white/10 rounded-full overflow-hidden mt-2">
             <div className="h-full bg-[var(--neutral)] rounded-full transition-all" style={{ width: `${neuData.percentage}%` }} />
           </div>
         </div>
@@ -106,7 +106,7 @@ export function KpiCards({ metrics, filteredCount, analytics }) {
           <div className="text-xl font-extrabold text-[var(--text-primary)]">
             {negData.count.toLocaleString()} <span className="text-xs font-semibold text-[var(--text-muted)]">reviews</span>
           </div>
-          <div className="w-full h-1.5 bg-black/10 rounded-full overflow-hidden mt-2">
+          <div className="w-full h-1.5 bg-black/10 dark:bg-white/10 rounded-full overflow-hidden mt-2">
             <div className="h-full bg-[var(--negative)] rounded-full transition-all" style={{ width: `${negData.percentage}%` }} />
           </div>
         </div>
