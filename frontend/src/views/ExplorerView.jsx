@@ -129,7 +129,7 @@ export function ExplorerView({ filters, setFilters, stores }) {
                     <td colSpan={5} className="p-6 text-center text-[var(--text-muted)]">No reviews match your filters.</td>
                   </tr>
                 ) : reviewsData.reviews?.map((row, i) => (
-                  <tr key={i} className="hover:bg-[var(--bg)] active:bg-[var(--bg)] transition-colors cursor-pointer" onClick={() => handleSelectReview(row)}>
+                  <tr key={i} className="hover:bg-[var(--surface-elevated)] active:bg-[var(--surface-elevated)] transition-colors cursor-pointer" onClick={() => handleSelectReview(row)}>
                     <td className="p-2 md:p-3 font-bold truncate max-w-[100px] hidden sm:table-cell">{row.store_name || 'N/A'}</td>
                     <td className="p-2 md:p-3 font-extrabold text-[var(--accent)]">{row.rating_num}★</td>
                     <td className="p-2 md:p-3">

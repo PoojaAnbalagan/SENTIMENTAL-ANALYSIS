@@ -74,7 +74,7 @@ export function Sidebar({ currentTab, setTab, mobileMenuOpen = false, setMobileM
             </div>
             <button
               onClick={() => setMobileMenuOpen(false)}
-              className="p-2 rounded-xl text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--bg)] border border-[var(--border)] transition-all touch-manipulation"
+              className="p-2 rounded-xl text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-elevated)] border border-[var(--border)] transition-all touch-manipulation"
               aria-label="Close menu"
             >
               <X className="w-4 h-4" />
@@ -96,7 +96,7 @@ export function Sidebar({ currentTab, setTab, mobileMenuOpen = false, setMobileM
                   className={`w-full flex items-center gap-3 px-3.5 py-3 rounded-xl text-xs font-bold transition-all touch-manipulation ${
                     isActive
                       ? 'bg-[var(--accent-bg)] text-[var(--accent)] border-l-4 border-l-[var(--accent)] border border-[var(--border)] shadow-sm'
-                      : 'text-[var(--text-secondary)] hover:bg-[var(--bg)] hover:text-[var(--text-primary)] border border-transparent active:bg-[var(--bg)]'
+                      : 'text-[var(--text-secondary)] hover:bg-[var(--surface-elevated)] hover:text-[var(--text-primary)] border border-transparent active:bg-[var(--surface-elevated)]'
                   }`}
                 >
                   <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-[var(--accent)]' : 'text-[var(--text-muted)]'}`} />
@@ -148,7 +148,7 @@ export function Sidebar({ currentTab, setTab, mobileMenuOpen = false, setMobileM
             <button
               onClick={() => setCollapsed(!collapsed)}
               title={collapsed ? "Expand Sidebar" : "Collapse Sidebar"}
-              className="p-1.5 rounded-lg text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--bg)] border border-transparent hover:border-[var(--border)] transition-all shrink-0"
+              className="p-1.5 rounded-lg text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-elevated)] border border-transparent hover:border-[var(--border)] transition-all shrink-0"
             >
               {collapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
             </button>
@@ -170,7 +170,7 @@ export function Sidebar({ currentTab, setTab, mobileMenuOpen = false, setMobileM
                   className={`w-full flex items-center gap-3 ${collapsed ? 'justify-center px-2 py-2.5' : 'px-3 py-2.5'} rounded-xl text-xs font-bold transition-all ${
                     isActive
                       ? 'bg-[var(--accent-bg)] text-[var(--accent)] border-l-4 border-l-[var(--accent)] border border-[var(--border)] shadow-sm'
-                      : 'text-[var(--text-secondary)] hover:bg-[var(--bg)] hover:text-[var(--text-primary)] border border-transparent'
+                      : 'text-[var(--text-secondary)] hover:bg-[var(--surface-elevated)] hover:text-[var(--text-primary)] border border-transparent'
                   }`}
                 >
                   <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-[var(--accent)]' : 'text-[var(--text-muted)]'}`} />

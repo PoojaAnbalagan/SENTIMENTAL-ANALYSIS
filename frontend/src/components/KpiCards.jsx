@@ -22,7 +22,7 @@ export function KpiCards({ metrics, filteredCount, analytics }) {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
         {/* Card 1 - Filtered Dataset */}
         <div className="kpi-card-2026 border-l-4 border-l-purple-600">
-          <div className="w-10 h-10 rounded-xl bg-purple-600/10 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-3">
+          <div className="w-10 h-10 rounded-xl bg-purple-600/10 dark:bg-purple-500/20 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-3">
             <Database className="w-5 h-5" />
           </div>
           <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)]">Filtered Dataset</div>
@@ -32,7 +32,7 @@ export function KpiCards({ metrics, filteredCount, analytics }) {
 
         {/* Card 2 - Supervised Accuracy */}
         <div className="kpi-card-2026 border-l-4 border-l-teal-500">
-          <div className="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-3">
+          <div className="w-10 h-10 rounded-xl bg-teal-500/10 dark:bg-teal-400/20 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-3">
             <Target className="w-5 h-5" />
           </div>
           <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)]">Supervised Accuracy</div>
@@ -42,7 +42,7 @@ export function KpiCards({ metrics, filteredCount, analytics }) {
 
         {/* Card 3 - Macro F1-Score */}
         <div className="kpi-card-2026 border-l-4 border-l-emerald-500">
-          <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-3">
+          <div className="w-10 h-10 rounded-xl bg-emerald-500/10 dark:bg-emerald-400/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-3">
             <TrendingUp className="w-5 h-5" />
           </div>
           <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)]">Macro F1-Score</div>
@@ -52,7 +52,7 @@ export function KpiCards({ metrics, filteredCount, analytics }) {
 
         {/* Card 4 - Gain vs VADER */}
         <div className="kpi-card-2026 border-l-4 border-l-indigo-500">
-          <div className="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-3">
+          <div className="w-10 h-10 rounded-xl bg-indigo-500/10 dark:bg-indigo-400/20 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-3">
             <Award className="w-5 h-5" />
           </div>
           <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)]">Gain vs VADER</div>
@@ -64,7 +64,7 @@ export function KpiCards({ metrics, filteredCount, analytics }) {
       {/* Sentiment Breakdown Row */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
         {/* Positive Card */}
-        <div className="p-4 rounded-2xl bg-[var(--positive-bg)] border border-[var(--positive-border)]">
+        <div className="p-4 rounded-2xl bg-[var(--positive-bg)] border border-[var(--positive-border)] shadow-[var(--shadow)] transition-all">
           <div className="flex items-center justify-between mb-1">
             <span className="font-bold text-xs flex items-center gap-1.5 text-[var(--positive)]">
               <CheckCircle className="w-4 h-4" /> Positive Sentiment
@@ -80,7 +80,7 @@ export function KpiCards({ metrics, filteredCount, analytics }) {
         </div>
 
         {/* Neutral Card */}
-        <div className="p-4 rounded-2xl bg-[var(--neutral-bg)] border border-[var(--neutral-border)]">
+        <div className="p-4 rounded-2xl bg-[var(--neutral-bg)] border border-[var(--neutral-border)] shadow-[var(--shadow)] transition-all">
           <div className="flex items-center justify-between mb-1">
             <span className="font-bold text-xs flex items-center gap-1.5 text-[var(--neutral)]">
               <MinusCircle className="w-4 h-4" /> Neutral Sentiment
@@ -96,7 +96,7 @@ export function KpiCards({ metrics, filteredCount, analytics }) {
         </div>
 
         {/* Negative Card */}
-        <div className="p-4 rounded-2xl bg-[var(--negative-bg)] border border-[var(--negative-border)]">
+        <div className="p-4 rounded-2xl bg-[var(--negative-bg)] border border-[var(--negative-border)] shadow-[var(--shadow)] transition-all">
           <div className="flex items-center justify-between mb-1">
             <span className="font-bold text-xs flex items-center gap-1.5 text-[var(--negative)]">
               <AlertCircle className="w-4 h-4" /> Negative Sentiment

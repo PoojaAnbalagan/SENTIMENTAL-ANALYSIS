@@ -34,7 +34,7 @@ export function Header({ isApiOnline = true, currentTab = 'Overview', onMenuTogg
         {/* Hamburger – mobile only */}
         <button
           onClick={onMenuToggle}
-          className="p-2 rounded-xl border border-[var(--border)] bg-[var(--surface)] text-[var(--text-primary)] hover:bg-[var(--bg)] transition-all touch-manipulation shrink-0"
+          className="p-2 rounded-xl border border-[var(--border)] bg-[var(--surface)] text-[var(--text-primary)] hover:bg-[var(--surface-elevated)] transition-all touch-manipulation shrink-0"
           aria-label="Open navigation menu"
         >
           <Menu className="w-5 h-5" />

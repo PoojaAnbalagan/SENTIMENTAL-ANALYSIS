@@ -95,7 +95,7 @@ export default function App() {
 
   return (
     <ThemeProvider>
-      <div className="flex min-h-screen">
+      <div className="flex min-h-screen bg-[var(--bg)] text-[var(--text-primary)] transition-colors duration-200">
         {/* Sidebar (desktop + mobile drawer) */}
         <Sidebar 
           currentTab={currentTab} 
@@ -105,7 +105,7 @@ export default function App() {
         />
 
         {/* Main Content Area */}
-        <main className="flex-1 min-w-0 p-4 md:p-6 lg:p-8 overflow-y-auto pb-20 md:pb-8">
+        <main className="flex-1 min-w-0 p-4 md:p-6 lg:p-8 overflow-y-auto pb-20 md:pb-8 bg-[var(--bg)]">
           {!isApiOnline && (
             <div className="mb-4 p-3 rounded-2xl bg-[var(--negative-bg)] border border-[var(--negative-border)] text-[var(--negative)] text-xs font-bold flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 animate-pulse">
               <span>⚠️ Backend API is offline. Ensure Python server (`python server.py`) is running on port 8000.</span>

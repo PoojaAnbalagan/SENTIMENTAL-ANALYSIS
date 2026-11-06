@@ -86,7 +86,7 @@ export function FilterBar({ filters, setFilters, stores = [], matchingCount = 0 
                   className={`px-2.5 py-1.5 rounded-lg font-bold text-[11px] border transition-all ${
                     isSel 
                       ? 'bg-[var(--accent-bg)] border-[var(--accent)] text-[var(--accent)] shadow-sm'
-                      : 'bg-[var(--bg)] border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--text-primary)]'
+                      : 'bg-[var(--bg)] border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:border-[var(--border-hover)]'
                   }`}
                 >
                   {s}
@@ -109,7 +109,7 @@ export function FilterBar({ filters, setFilters, stores = [], matchingCount = 0 
                   className={`w-7 h-7 rounded-lg font-bold text-xs flex items-center justify-center border transition-all ${
                     isSel 
                       ? 'bg-[var(--accent-bg)] border-[var(--accent)] text-[var(--accent)] shadow-sm'
-                      : 'bg-[var(--bg)] border-[var(--border)] text-[var(--text-muted)]'
+                      : 'bg-[var(--bg)] border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:border-[var(--border-hover)]'
                   }`}
                 >
                   {r}★

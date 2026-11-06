@@ -74,7 +74,7 @@ export function ModelPerformanceView({ modelsData }) {
                 return (
                   <tr
                     key={i}
-                    className={`transition-colors ${isBest ? 'bg-[var(--accent-bg)]' : 'hover:bg-[var(--bg)]'}`}
+                    className={`transition-colors ${isBest ? 'bg-[var(--accent-bg)]' : 'hover:bg-[var(--surface-elevated)]'}`}
                   >
                     <td className="p-3 font-extrabold text-[var(--accent)]">
                       <div className="flex items-center gap-2 flex-wrap">
@@ -159,7 +159,7 @@ export function ModelPerformanceView({ modelsData }) {
           <h4 className="text-xs font-extrabold text-[var(--text-primary)]">
             Logistic Regression — Confusion Matrix
           </h4>
-          <div className="rounded-xl overflow-hidden bg-[var(--bg)] border border-[var(--border)] p-2">
+          <div className="rounded-xl overflow-hidden bg-white border border-[var(--border)] p-2 shadow-sm">
             <img
               src={`${BACKEND_URL}/static/figures/07_confusion_matrix.png`}
               alt="LR Confusion Matrix"
@@ -173,7 +173,7 @@ export function ModelPerformanceView({ modelsData }) {
           <h4 className="text-xs font-extrabold text-[var(--text-primary)]">
             Top Predictive Terms (Feature Importance)
           </h4>
-          <div className="rounded-xl overflow-hidden bg-[var(--bg)] border border-[var(--border)] p-2">
+          <div className="rounded-xl overflow-hidden bg-white border border-[var(--border)] p-2 shadow-sm">
             <img
               src={`${BACKEND_URL}/static/figures/09_top_predictive_words.png`}
               alt="Feature Importance"
@@ -187,7 +187,7 @@ export function ModelPerformanceView({ modelsData }) {
           <h4 className="text-xs font-extrabold text-[var(--text-primary)]">
             Model Comparison Chart
           </h4>
-          <div className="rounded-xl overflow-hidden bg-[var(--bg)] border border-[var(--border)] p-2">
+          <div className="rounded-xl overflow-hidden bg-white border border-[var(--border)] p-2 shadow-sm">
             <img
               src={`${BACKEND_URL}/static/figures/08_model_comparison.png`}
               alt="Model Comparison"
@@ -201,7 +201,7 @@ export function ModelPerformanceView({ modelsData }) {
           <h4 className="text-xs font-extrabold text-[var(--text-primary)]">
             VADER Confusion Matrix (Baseline)
           </h4>
-          <div className="rounded-xl overflow-hidden bg-[var(--bg)] border border-[var(--border)] p-2">
+          <div className="rounded-xl overflow-hidden bg-white border border-[var(--border)] p-2 shadow-sm">
             <img
               src={`${BACKEND_URL}/static/figures/11_vader_confusion_matrix.png`}
               alt="VADER Confusion Matrix"

@@ -19,10 +19,13 @@ export function ThemeProvider({ children }) {
       localStorage.setItem('app_theme', theme);
     } catch (e) {}
     document.documentElement.setAttribute('data-theme', theme);
+    document.body.setAttribute('data-theme', theme);
     if (theme === 'Dark') {
       document.documentElement.classList.add('dark');
+      document.body.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
+      document.body.classList.remove('dark');
     }
   }, [theme]);
 

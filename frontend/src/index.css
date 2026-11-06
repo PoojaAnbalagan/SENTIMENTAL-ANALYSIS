@@ -38,24 +38,25 @@
     --text-secondary: #CBD5E1;
     --text-muted: #94A3B8;
     --border: #232742;
-    --border-hover: #8B5CF6;
-    --accent: #8B5CF6;
-    --accent-hover: #7C3AED;
-    --accent-bg: rgba(139, 92, 246, 0.16);
-    --positive: #10B981;
-    --positive-bg: rgba(16, 185, 129, 0.16);
-    --positive-border: rgba(16, 185, 129, 0.32);
+    --border-hover: #4F46E5;
+    --accent: #A78BFA;
+    --accent-hover: #C4B5FD;
+    --accent-bg: #1B1838;
+    --positive: #34D399;
+    --positive-bg: #0B251E;
+    --positive-border: #164E3D;
     --neutral: #38BDF8;
-    --neutral-bg: rgba(56, 189, 248, 0.16);
-    --neutral-border: rgba(56, 189, 248, 0.32);
-    --negative: #F43F5E;
-    --negative-bg: rgba(244, 63, 94, 0.16);
-    --negative-border: rgba(244, 63, 94, 0.32);
+    --neutral-bg: #0B2236;
+    --neutral-border: #13466B;
+    --negative: #FB7185;
+    --negative-bg: #2A111A;
+    --negative-border: #5C1E2E;
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
     --shadow-hover: 0 10px 25px rgba(139, 92, 246, 0.25);
   }
 
-  body {
+  html, body {
+    min-height: 100vh;
     background-color: var(--bg);
     color: var(--text-primary);
     font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;

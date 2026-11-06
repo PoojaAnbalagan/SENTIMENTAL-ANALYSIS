@@ -447,7 +447,7 @@ export function BatchUploadView() {
                       const probNeg = (row.prob_negative !== undefined ? row.prob_negative : (row.probabilities?.Negative ?? 0)) * 100;
 
                       return (
-                        <tr key={i} className="hover:bg-[var(--bg)] transition-colors">
+                        <tr key={i} className="hover:bg-[var(--surface-elevated)] transition-colors">
                           <td className="p-3 text-[var(--text-muted)] font-bold hidden sm:table-cell">{(page - 1) * pageSize + i + 1}</td>
                           <td className="p-3 font-medium max-w-[160px] sm:max-w-xs md:max-w-md truncate" title={text}>
                             "{text}"

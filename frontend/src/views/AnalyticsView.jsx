@@ -184,7 +184,7 @@ export function AnalyticsView({ analytics, filters, setFilters, stores }) {
           {figFiles.map((fig, i) => (
             <div key={i} className="card-2026 p-4 space-y-2">
               <h4 className="text-xs font-extrabold text-[var(--text-primary)]">{fig.title}</h4>
-              <div className="rounded-xl overflow-hidden bg-[var(--bg)] border border-[var(--border)] p-2">
+              <div className="rounded-xl overflow-hidden bg-white border border-[var(--border)] p-2 shadow-sm">
                 <img 
                   src={`${BACKEND_URL}/static/figures/${fig.name}`} 
                   alt={fig.title} 
